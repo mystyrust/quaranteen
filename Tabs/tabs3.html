@@ -1,0 +1,61 @@
+<link href="../Tabs/tabs3.css" rel="stylesheet" />
+
+<!-- <a href="#tab1">Tab 1</a>
+<a href="#tab2">Tab 2</a>
+
+<a id="tab1"></a>
+<a id="tab2"></a>
+
+<div class="tab tab1 default-tab">Some content</div>
+<div class="tab tab2">Some other content</div> -->
+
+<!-- you must pick tab 1 or tab 2 at least once before tab 3 is available
+    it would be nice if we could enforce tab1 AND tab2 before tab3 instead of EITHER of them
+-->
+
+<a id="tab0" name="tab0"></a>
+<div class="tab tab0"name="tab1">
+    tab 0 content
+    <a href="#root-tab">start over</a>
+</div>
+
+<a id="tab1" name="tab1"></a>
+<div class="tab tab1"name="tab1">
+    tab 1 content
+    <a href="#root-tab">start over</a>
+</div>
+
+<a id="tab2" name="tab2"></a>
+<div class="tab tab2" name="tab2">
+    tab 2 content
+    <a href="#root-tab">start over</a>
+</div>
+
+<a id="tab3" name="tab3"></a>
+<div class="tab tab3" name="tab3">
+    tab 3 content -> lets only make this visible after clicking at least one other link??
+    <a href="#tab4">tab4</a>
+</div>
+
+<a id="tab4" name="tab4"></a>
+<div class="tab tab4" name="tab4">
+    tab 4 content -> can only be from tab 3
+    <a href="#start">from beginning</a>
+</div>
+
+<a id="root-tab" name="root-tab"></a>
+<div class="tab root-tab" name="root-tab">
+    this is the intro, pick a path
+    <a href="#tab1">Tab 1</a>
+    <a href="#tab2">Tab 2</a>
+    <a href="#tab3" id="last">Tab 3</a>
+</div>
+
+<a id="start" name="start"></a>
+<div class="default-tab start"  name="start">
+    this is the intro, pick a path
+    <a href="#tab1">Tab 1</a>
+    <a href="#tab2">Tab 2</a>
+</div>
+
+

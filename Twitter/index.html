@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AO3 Tweet Fic HTML Generator</title>
+<link rel="stylesheet" href="../CSS/twitter.css">
+<script type="text/javascript" src="../JS/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="../JS/form.js"></script>
+<!-- todo add bootstrap and prettify page -->
+</head>
+
+<body>
+<!-- todo: create form/textboxes -->
+<h1>AO3 Tweet Fic HTML Generator</h1>
+<div>
+    <!-- 1/3 display inputs -->
+    <label for="pic">Profile Pic</label>
+    <input type="text" name="pic" id="pic"> <br>
+
+    <label for="username">Username</label>
+    <input type="text" name="username" id="username"> <br>
+
+    <label for="handle">Handle</label>
+    <input type="text" name="handle" id="handle"> <br>
+
+    <input type="radio" name="accountStatus" value="verified"> Verified (+ Public)<br>
+    <input type="radio" name="accountStatus" value="none"> Public <br>
+    <input type="radio" name="accountStatus" value="private"> Private <br>
+
+
+    <label for="tweet">Tweet</label>
+    <input type="text" name="tweet" id="tweet"> <br>
+
+    <label for="date">Date</label>
+    <input type="date" name="date" id="date"> <br>
+
+    <label for="likes">Likes</label>
+    <input type="number" name="likes" id="likes"> <br>
+
+    <label for="retweets">Retweets</label>
+    <input type="number" name="retweets" id="retweets"> <br>
+
+    <label for="replys">Replys</label>
+    <input type="number" name="replys" id="replys"> <br>
+
+    <button type="button" onclick="tweet()">Tweet</button>
+</div>
+
+<div id="mockupOutput">
+    <!-- display mockup -->
+</div>
+<button type="button" onclick="clearAll()">Clear All</button>
+
+<div id="srcCode">
+        <textarea id="story" name="story"
+                rows="5" cols="33">
+        </textarea>
+    <!-- copy paste source code figure out how to make this look better--> 
+</div>
+
+<button type="button" onclick="restoreProgress()">Restore Progress</button>
+
+</body>
+
+</html>

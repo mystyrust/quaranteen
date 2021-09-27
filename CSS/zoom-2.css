@@ -1,0 +1,61 @@
+
+.zoom-chatbox {
+    max-width: 300px;
+    border: .02em solid #dddddd;
+    margin-left: auto;
+    background-color: whtie;
+    margin-right: auto;
+}
+
+.zoom-title {
+    margin: 0em;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Arial Black", Gadget, sans-serif;
+    background-color: #dddddd;
+    margin-bottom: 0.5em;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+}
+
+.zoom-content {
+    padding-left: 0.5em;
+    padding-bottom: 0.5em;
+   
+}
+
+.zoom-from {
+    padding-left: 0.5em;
+    /* padding-bottom: 0.5em; */
+    /* padding-top: 0.8em; */
+    font-size: small;
+    color: rgb(140,140,140);
+    font-family: Tahoma, Geneva, sans-serif;
+
+}
+
+.zoom-msg {
+    padding-left: 0.5em;
+    margin-top: 0em;
+    margin-bottom: 0em;
+    /* padding-bottom: 0.5em; */
+    font-size: 13.5px;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+
+.zoom-private {
+    color: red !important;
+    font-family: inherit;
+}
+
+.zoom-public {
+    color: blue !important;
+    /* font-family: Tahoma, Geneva, sans-serif; */
+}
+.zoom-enter-box {
+    height: 15px;
+    border-top:.02em solid #dddddd; 
+    margin-top: 1.5em;
+    margin-right: 0em;
+    margin-left: 0em;
+}

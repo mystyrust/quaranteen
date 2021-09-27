@@ -1,0 +1,19 @@
+/* https://stackoverflow.com/questions/3354279/default-target-with-css */
+
+.tab {display:none}
+
+.default-tab {display:block}
+:target ~ .default-tab {display:none}
+
+:target {
+    display: block;
+}
+
+/* #tab1:target ~ .tab1,
+#tab1:target ~ .tab2,
+#tab1:target ~ .tab3,
+#tab1:target ~ .tab4,
+#tab1:target ~ .start,
+#tab2:target ~ .root-tab {
+  display: block
+} */

@@ -1,0 +1,38 @@
+.story-container{
+    margin: 0 auto;
+  overflow: hidden;
+  width: 100%;
+  /* display: table; */
+  height: 300px;
+}
+
+.page {
+  margin-top: 25px;
+  height: 250px;
+  overflow-y: auto;
+  display: table-cell;
+}
+
+
+#workskin .page::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+  
+  #workskin .page::-webkit-scrollbar:vertical {
+    width: 12px;
+  }
+  
+  #workskin .page::-webkit-scrollbar:horizontal {
+    height: 12px;
+  }
+  
+  #workskin .page::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+  }
+  
+  #workskin .page::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #ffffff;
+  }

@@ -1,0 +1,30 @@
+.tabbed {
+  display: none;
+  padding-top: 150px;
+  top: -150px;
+  position: absolute;
+}
+
+.tabbed:target {
+  display: inline;
+  text-decoration: none;
+  border: none;
+}
+
+.tab {
+  padding: 5px;
+  border: thin solid black;
+  position: relative;
+  z-index: 2;
+}
+
+.displaybox {
+  border: thin solid black;
+  width: 100%;
+  min-height: 5em;
+  position: relative;
+}
+
+.displaybox p {
+  margin: 0;
+}

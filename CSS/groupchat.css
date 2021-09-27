@@ -1,0 +1,406 @@
+/* https://archiveofourown.org/works/19249828 */
+
+/* Blue (base color): #0099ff
+Pale Blue: #44bec7
+Yellow: #ffc300
+Red: #ff3c4c
+Lavender: #d696bb
+Green: #13cf13
+Orange: #ff7e29
+Light Red: #e68585
+Purple: #7646ff
+Light Blue: #20cef5
+Pink: #ff5ca1 */
+
+ .phone {
+    max-width: 300px;
+    /* font-family: "Segoe UI"; */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    display: table;
+    margin: auto;
+  }
+
+   .messagebody {
+    background-color: #FFFFFF;
+    display: table;
+    padding-left: .5em;
+    padding-right: .5em;
+  }
+
+   .header {
+    min-width: 300px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eaeaea;
+    border-top: 1px solid #eaeaea;
+    color: #000000;
+    font-weight: bold;
+    padding-bottom: .5em;
+    padding-top: .5em;
+    margin-left: -.5em;
+    margin-right: -.5em;
+    margin-bottom: -2em;
+    text-align: center;
+    text-transform: capitalize;
+    display: table;
+  }
+
+   .reply {
+    float: right;
+    color: #FFFFFF;
+    margin: 0 0 0.5em;
+    border-radius: 1.5em;
+    padding: 0.5em 1em;
+    background: #0099ff;
+    max-width: 75%;
+    clear: both;
+    position: relative;
+  }
+  
+   .reply1 {
+    float: right;
+    color: #FFFFFF;
+    margin: 0 0 0.15em;
+    border-radius: 1.5em;
+    border-bottom-right-radius: 0.25em;
+    padding: 0.5em 1em;
+    background: #0099ff;
+    max-width: 75%;
+    clear: both;
+    position: relative;
+  }
+  
+   .reply2 {
+    float: right;
+    color: #FFFFFF;
+    margin: 0 0 0.15em;
+    border-radius: 1.5em;
+    border-top-right-radius: 0.25em;
+    border-bottom-right-radius: 0.25em;
+    padding: 0.5em 1em;
+    background: #0099ff;
+    max-width: 75%;
+    clear: both;
+    position: relative;
+  }
+  
+   .reply3 {
+    float: right;
+    color: #FFFFFF;
+    margin: 0 0 0.5em;
+    border-radius: 1.5em;
+    border-top-right-radius: 0.25em;
+    padding: 0.5em 1em;
+    background: #0099ff;
+    max-width: 75%;
+    clear: both;
+    position: relative;
+  }
+
+   .text {
+    float: left;
+    color: #000000;
+    margin: 0 0 0.5em;
+    border-radius: 1.5em;
+    padding: 0.5em 1em;
+    background: #e5e5ea;
+    max-width: 75%;
+    clear: both;
+    word-wrap: break-word;
+    position: relative;
+  }
+  
+  .text::after {
+    content: "";
+    position: absolute;
+    left: -.5em;
+    bottom: 0;
+    width: 0.5em;
+    height: 1em;
+    border-right: 0.5em solid #e5e5ea;
+    border-bottom-right-radius: 1em 0.5em;
+  }
+  
+
+   .text1 {
+    float: left;
+    color: #000000;
+    margin: 0 0 0.15em;
+    border-radius: 1.5em;
+    border-bottom-left-radius: 0.25em;
+    padding: 0.5em 1em;
+    background: #f1f0f0;
+    max-width: 75%;
+    clear: both;
+    position: relative;
+  }
+  
+   .text2 {
+    float: left;
+    color: #000000;
+    margin: 0 0 0.15em;
+    border-radius: 1.5em;
+    border-top-left-radius: 0.25em;
+    border-bottom-left-radius: 0.25em;
+    padding: 0.5em 1em;
+    background: #f1f0f0;
+    max-width: 75%;
+    clear: both;
+    position: relative;
+  }
+  
+   .text3 {
+    float: left;
+    color: #000000;
+    margin: 0 0 0.5em;
+    border-radius: 1.5em;
+    border-top-left-radius: 0.25em;
+    padding: 0.5em 1em;
+    background: #f1f0f0;
+    max-width: 75%;
+    clear: both;
+    position: relative;
+  }
+
+   .time {
+    min-width: 295px;
+    color: #999999;
+    font-size: .75em;
+    padding-bottom: .5em;
+    padding-top: .5em;
+    margin-left: -.5em;
+    margin-right: -.5em;
+    margin-bottom: -.5em;
+    text-align: center;
+    display: table;
+  }
+
+   .grouptext {
+    color: #999999;
+    font-size: .75em;
+    padding-bottom: .3m;
+    padding-top: 0;
+    margin-left: .75em;
+    margin-bottom: -1.5em;
+    text-align: left;
+    display: table;
+    clear: both;
+  }
+
+ .greply {
+    float: right;
+    color: #FFFFFF;
+    margin: 0 0 0.5em;
+    border-radius: 1em;
+    padding: 0.5em 1em;
+    background: #35cb24;
+    max-width: 75%;
+    clear: both;
+    position: relative;
+  }
+  
+ .greply::after {
+    content: "";
+    position: absolute;
+    right: -0.5em;
+    bottom: 0;
+    width: 0.5em;
+    height: 1em;
+    border-left: 0.5em solid #35cb24;
+    border-bottom-left-radius: 1em 0.5em;
+  }
+
+ .breply {
+    float: right;
+    color: #FFFFFF;
+    margin: 0 0 0.5em;
+    border-radius: 1em;
+    padding: 0.5em 1em;
+    background: #1289fe;
+    max-width: 75%;
+    clear: both;
+    word-break: break-word;
+    position: relative;
+  }
+  
+ .breply::after {
+    content: "";
+    position: absolute;
+    right: -0.5em;
+    bottom: 0;
+    width: 0.5em;
+    height: 1em;
+    border-left: 0.5em solid #1289fe;
+    border-bottom-left-radius: 1em 0.5em;
+  }
+
+  
+
+
+ .typing-indicator {
+    background-color: #e6e7ed;
+    width: auto;
+    border-radius: 1em;
+    padding: .5em 1em;
+    display: table;
+    margin: 0 0 .5em;
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+    clear: both;
+  }
+  
+ .typing-indicator::before,
+ .typing-indicator::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: -2px;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: #e6e7ed;
+  }
+  
+ .typing-indicator::after {
+    height: 6px;
+    width: 6px;
+    left: -6px;
+    bottom: -6px;
+  }
+  
+ .typing-indicator span {
+    height: 15px;
+    width: 15px;
+    float: left;
+    margin: 0 1px;
+    background-color: #9E9EA1;
+    display: block;
+    border-radius: 50%;
+    opacity: 0.4;
+  }
+  
+ .typing-indicator span {
+    height: .65em;
+    width: .65em;
+    float: left;
+    margin: .425em 0 .425em .25em;
+    margin-left: 0.25em;
+    background-color: #9e9ea1;
+    display: inline-block;
+    border-radius: 50%;
+    opacity: .5;
+  }
+  
+ .typing-indicator span:first-child {
+    margin-left: 0;
+  }
+  
+ .typing-indicator span:nth-child(1) {
+    opacity: .85;
+  }
+  
+ .typing-indicator span:nth-child(2) {
+    opacity: .65;
+  }
+
+  .readreceipt {
+    color: #7B7C80;
+    font-size: .75em;
+    float: right;
+    position: relative;
+    clear: both;
+    margin: -.75em -1.25em 0.5em 0;
+    padding: 0 1em 0.5em;
+  }
+
+  .image-boat {
+    float: left;
+    margin: 0 0 0.5em;
+    border-radius: 1em;
+    width: 50%;
+    min-height: 75%;
+    clear: both;
+    position: relative;
+    background-image: url("https://i.pinimg.com/originals/a0/59/c3/a059c30070e6fab75a4c43f51a5ab961.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    padding-top: 28%;
+  }
+
+  .image-noo {
+    float: right;
+    margin: 0 0 0.5em;
+    border-radius: 1em;
+    width: 50%;
+    min-height: 75%;
+    clear: both;
+    position: relative;
+    background-image: url("https://memegenerator.net/img/instances/73681748/nooooooooo-please-noooo.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    padding-top: 28%;
+  }
+
+  .image-interesting {
+    float: left;
+    margin: 0 0 0.5em;
+    border-radius: 1em;
+    width: 50%;
+    min-height: 75%;
+    clear: both;
+    position: relative;
+    background-image: url("https://i.kym-cdn.com/photos/images/newsfeed/001/528/504/195.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    padding-top: 36%;
+  }
+
+  .image-perish {
+    float: left;
+    margin: 0 0 0.5em;
+    border-radius: 1em;
+    width: 50%;
+    min-height: 75%;
+    clear: both;
+    position: relative;
+    background-image: url("https://i.kym-cdn.com/entries/icons/original/000/024/221/upload.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    padding-top: 27%;
+  }
+  
+  .image-obama-rpf {
+    float: left;
+    margin: 0 0 0.5em;
+    border-radius: 1em;
+    width: 50%;
+    min-height: 75%;
+    clear: both;
+    position: relative;
+    background-image: url("https://i.imgur.com/cFUpdHM.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    padding-top: 26%;
+  }
+  
+  
+  .image-bugs-no {
+    float: right;
+    margin: 0 0 0.5em;
+    border-radius: 1em;
+    width: 50%;
+    min-height: 75%;
+    clear: both;
+    position: relative;
+    background-image: url("https://cdnmetv.metv.com/z50xp-1619719725-16226-list_items-no.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    padding-top: 50%;
+  }
+  

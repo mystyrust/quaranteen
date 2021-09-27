@@ -1,0 +1,168 @@
+/* 
+avatars gallery https://imgur.com/gallery/iWRQtBe
+dead x  https://i.imgur.com/2mKACTG.png
+i voted https://i.imgur.com/prwqCtY.png 
+*/
+
+
+p {
+    line-height: 1em;
+    margin: 0.5em;
+}
+
+.amongus-content {
+    /* margin-top: -4.5em; */
+    line-height: 1em;
+    margin: 0.5em;
+    margin-left: 65px;
+    display: inline-block; 
+}
+
+.amongus-room {
+    font-weight: bold;
+    text-align: center;
+    font-family: "Arial Black", Gadget, sans-serif;
+}
+.amongus-chatbox {
+    border: .2em solid black;
+    border-radius: .5em;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 0.5em;
+    padding-right: 1em;
+    padding-left: 1em;
+    background-color: rgb(171,177,187);
+}
+
+.amongus-msg {
+    /* display: table; */
+    /* display: flex; */
+    /* justify-content: flex-start; */
+    width: 100%;
+    min-height: 40px;
+    display: inline-block; 
+    border: .05em;
+    background-color: white;
+    border-right: 0.2em solid rgb(140,140,140);
+    border-bottom: 0.2em solid rgb(140,140,140);
+    border-radius: .4em;
+    /* padding-bottom: 0.9em;
+    padding-top: 0.2em; */
+    margin-bottom: 0.5em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+div.amongus-vote > p {
+    margin-top: 0;
+}
+
+/* clip the avatars to show only the top half */
+.amongus-avi {
+    width: 50px;
+    clip: rect(0px,50px,40px,0px);
+    position: absolute;
+    margin-left: 0.5em;
+    z-index: 1;
+    margin-right: 0.5em;
+}
+
+/* "i voted" or "X" for dead */
+.amongus-icon {
+    padding-top: 10px;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    z-index: 2;
+}
+
+.amongus-name {
+    font-weight: bold; 
+    font-size: medium;
+    color: black;
+    /* text-shadow:
+        0px 0px 0 #000,
+      -1px -1px 0 #000,  
+       1px -1px 0 #000,
+       -1px 1px 0 #000,
+        1px 1px 0 #000; */
+}
+
+.amongus-text {
+    font-size: small;
+    margin-top: 0.3em;
+    margin-right: 0.3em;
+    /* margin-left: 0.5em; */
+}
+
+/* classes for discussion / vote */
+.amongus-vote {
+    /* margin: 0 30 5 25;
+    padding: 0 0 5 5; */
+    padding-top: 0.2em;
+    margin-left: 1.8em;
+    width: 90%;
+}
+.amongus-vote-msg {
+    padding-top: 0.4em;
+    margin-left: 60px;
+    font-size: small;
+    font-weight: bold;
+    color: green;
+    /* text-shadow:
+        0px 0px 0 #000,
+      -1px -1px 0 #000,  
+       1px -1px 0 #000,
+       -1px 1px 0 #000,
+        1px 1px 0 #000; */
+}
+
+/*  use with "amongus-name" can be combined with "amongus-player" class */
+.amongus-imposter {
+    color: red !important;
+}
+
+/* use with "amongus-msg" class. can be combined with "amongus-player" class */
+.amongus-dead {
+    background-color: rgb(204,211,219) !important;
+}
+
+
+/* 
+when you add the "amongus-player" alongside the "amongus-msg" class
+the direction of the icons, avatar, and text alignment are flipped. 
+to show your POV as if you are the player
+*/
+
+/*
+sadly, AO3 doesn't allow the justify-content property 
+.amongus-player {
+    justify-content: flex-end !important;
+    
+} */
+
+div.amongus-player > p.amongus-content {
+    margin-left: auto;  /* undo margin-left from base class */
+    margin-right: 64px;
+    float: right;
+    /* display: inline-block; */
+}
+
+div.amongus-player > p > img.amongus-avi {
+    transform: translate(465%) scaleX(-1)
+}
+
+div.amongus-player > p > img.amongus-icon {
+    transform: translate(870%);
+}
+
+div.amongus-player > p.amongus-content > span.amongus-name, 
+div.amongus-player > p.amongus-content > span.amongus-text
+{
+    float: right;
+}
+
+/* div.amongus-msg > p.amongus-player > p.amongus-images {
+    transform: translate(50%);
+} */

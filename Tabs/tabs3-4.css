@@ -1,0 +1,71 @@
+/* https://stackoverflow.com/questions/3354279/default-target-with-css */
+
+.tab, 
+.tab0,
+:target ~ .default-tab {display:none}
+
+.default-tab {display:block}
+/* :target ~ .default-tab {display:none} */
+
+/* :target {
+    display: block;
+} */
+
+#tab1:target ~ .tab1,
+#tab2:target ~ .tab2,
+#tab3:target ~ .tab3,
+#tab4:target ~ .tab4,
+#start:target ~ .start,
+#root-tab:target ~ .root-tab {
+  display: block
+}
+
+.choice {
+  display: inline-block;
+}
+
+.choice1 ~ .choice {
+  /* padding-bottom: 100px; */
+}
+
+/* .choice1:not(:visited), */
+.choice1 ~ .choice:not(:visited) 
+/* .choice1 ~ .choice3:not(:visited) */
+ {
+   color: pink;
+  /* padding-bottom: 100px; */
+  /* transition: padding-bottom 2s; */
+}
+
+/* :is(.choice:not(:visited)) {
+  padding-bottom: 90px;
+}
+
+:is(.choice:visited) {
+  padding-bottom: 0px;
+} */
+
+/* :where(.choice:visited) a {
+  padding-bottom: 0px;
+} */
+
+.choice1 ~ .choice:visited {
+/* .choice1 ~ .choice3:visited { */
+  /* padding-bottom: 0px; */
+  color: orange
+}
+
+/* this works */
+ul > li > a ~ a:not(:visited) {
+  color: red;
+  /* padding-bottom: 50px; */
+}
+
+ul > li > a ~ a:visited {
+  color: orange;
+  padding-top: 30px;
+}
+
+ul > li > a:last-child::after { 
+  content: "after";
+}

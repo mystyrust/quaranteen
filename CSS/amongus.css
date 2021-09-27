@@ -1,0 +1,107 @@
+.amongus-room {
+    text-align: center;
+    font-family: "Arial Black", Gadget, sans-serif;
+}
+.amongus-chatbox {
+    border: .2em solid black;
+    border-radius: .5em;
+    max-width: 400px;
+      margin-left: auto;
+    margin-right: auto;
+    padding-top: 0.5em;
+    padding-right: 1em;
+    padding-left: 1em;
+    background-color: rgb(171,177,187);
+}
+
+.amongus-msg {
+    border: .05em;
+    background-color: white;
+    border-right: 0.2em solid rgb(140,140,140);
+    border-bottom: 0.2em solid rgb(140,140,140);
+    border-radius: .4em;
+    padding-bottom: 0.9em;
+    padding-top: 0.2em;
+    margin-bottom: 0.5em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.amongus-vote {
+    padding-right: 30px;
+}
+.amongus-vote-msg {
+
+    position: relative;
+    font-size: medium;
+    color: green;
+    text-shadow:
+        0px 0px 0 #000,
+      -1px -1px 0 #000,  
+       1px -1px 0 #000,
+       -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+.amongus-dead {
+    background-color: rgb(204,211,219) !important;
+}
+
+
+.amongus-avi {
+    width: 50px;
+    clip: rect(0px,50px,40px,0px);
+    position: absolute;
+    margin-left: 0.5em;
+    /* margin-right: 0.4em; */
+    padding-bottom: 0.5em;
+    /* border-radius: 20px; */
+}
+
+.amongus-icon {
+    padding-top: 10px;
+    height: 30px;
+    position: absolute;
+    z-index: 2;
+}
+
+.amongus-player-avi {
+    width: 50px;
+    transform: scaleX(-1);
+    clip: rect(0px,50px,40px,0px);
+    position: relative;
+    right: -85%;
+    margin-left: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.amongus-name {
+    position: relative;
+    font-size: medium;
+    color: white;
+    text-shadow:
+        0px 0px 0 #000,
+      -1px -1px 0 #000,  
+       1px -1px 0 #000,
+       -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+.amongus-imposter {
+    color: red !important;
+}
+
+.amongus-text {
+    font-size: small;
+    margin-top: 0.3em;
+    /* position: relative; */
+}
+
+
+.amongus-content {
+    margin-left: 60px;
+}
+.amongus-player-content {
+    margin-top: -60px;
+    margin-right: 60px;
+    text-align: right;
+}

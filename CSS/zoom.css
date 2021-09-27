@@ -1,0 +1,46 @@
+.zoom-chatbox {
+    max-width: 400px;
+    border: .02em solid #dddddd;
+    margin-left: auto;
+    background-color: whtie;
+    margin-right: auto;
+}
+
+.zoom-title {
+    text-align: center;
+    font-family: "Arial Black", Gadget, sans-serif;
+    background-color: #dddddd;
+    margin-bottom: 0.5em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+}
+
+.zoom-content {
+    padding-left: 0.5em;
+    padding-bottom: 0.5em;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+
+.zoom-from {
+    padding-top: 0.8em;
+    font-size: small;
+    color: rgb(140,140,140)
+
+}
+
+.zoom-msg {
+    font-size: 13.5px;
+}
+
+.zoom-private {
+    color: red !important
+}
+
+.zoom-public {
+    color: blue !important
+}
+.zoom-enter-box {
+    height: 15px;
+    border-top:.02em solid #dddddd; 
+    margin-top: 1.5em;
+}

@@ -1,0 +1,159 @@
+.tw-banner-avatar {
+    background-color: white;
+    border: 4px solid white;
+    border-radius: 100%;
+    max-height: 90px;
+    min-height: 65px;
+    margin-left: 0.7em;
+    margin-top: 148px;
+    clear: both;
+    float: left;
+    position: relative;
+    display: inline-flex;
+}
+
+.tw-banner {
+    display: block;
+    background: url(https://wallpaperaccess.com/full/201322.jpg);
+    height: 200px;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tw-profile-container {
+    color: #2a2a2a;
+    background-color: #fff;
+    font-family: 'Lucida Grande','Lucida Sans Unicode','GNU Unifont',Verdana,Helvetica,sans-serif;
+    word-wrap: break-word;
+    font-size: 13px;
+    vertical-align: baseline;
+    list-style: none;
+    border: solid thin lightgray;
+    padding: 0;
+    display: table;
+    margin: auto;
+    max-width: 500px;
+    min-width: 300px;
+    width: 96%;
+}
+
+.tw-profile-container .new-tw {
+    max-width: none;
+}
+
+.tw-profile-tweet {
+    border-top: .05em solid #ddd;
+}
+
+.tw-profile-contact {
+    margin: 12px;
+    padding-left: 3em;
+}
+.tw-profile-contact:before{
+    content: "";
+    position: absolute;
+    cursor: pointer;
+    /* left: 1em; */
+    /* top: 0; */
+    margin-top: 1em;
+    margin-left: -2em;
+    /* bottom: 0; */
+    /* margin: auto; */
+    width: 0.75em;
+    height: 0.75em;
+    border-left: 2.5px solid black;
+    border-bottom: 2.5px solid black;
+    transform: rotate(45deg);
+}
+
+.tw-profile-username {
+    font-size: large;
+    font-weight: bold;
+}
+
+.tw-profile-handle {
+    font-size: smaller;
+    color: gray;
+}
+
+.tw-profile-info {
+    padding: 1em 0;
+    display: inline-block;
+}
+
+.tw-profile-stats {
+    display: inline-flex;
+    padding-bottom: 1em;
+}
+
+.tw-profile-stats > span {
+    padding-top: 3px;
+    padding-left: 5px;
+}
+
+.tw-profile-opts {
+    float: right;
+    margin-right: 1em;
+    margin-top: 0.5em;
+}
+
+.tw-profile-opts img {
+    cursor: pointer;
+    border: black solid thin;
+    border-radius: 100%;
+    transform: scale(0.8);
+}
+
+.tw-follow {
+    background: black;
+    color: white;
+    cursor: pointer;
+    padding: 6px;
+    width: 5em;
+    float: right;
+    text-align: center;
+    margin-left: 0.4em;
+    /* display: inline-flex; */
+    margin-top: 0.1em;
+    border-radius: 20px;
+    /* vertical-align: middle; */
+}
+
+.tw-profile-bio {
+    margin-top: 3em;
+    padding: 14px 0 17px 16px;
+    margin-bottom: -1.3em;
+}
+
+.tw-profile-tabs {
+    text-align: center;
+    padding: 0 1em 1em;
+    margin-bottom: -1.3em;
+}
+
+.tw-profile-tabs > p {
+    margin: 0;
+}
+
+.tw-profile-tabs span {
+    padding: 1em;
+    margin-bottom: -1em;
+    display: inline-block;
+}
+
+.tw-selected {
+    border-bottom: #1da1f3 3px solid;
+}
+
+.tw-profile-container div.fadeout {
+    color: #777777;
+}
+
+.tw-profile-container div.new-twText {
+    padding: 7px 3px;
+}
+
+/* .tw-profile-container span.new-twHandle {
+    top: 0;
+} */

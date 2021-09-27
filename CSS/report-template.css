@@ -1,0 +1,121 @@
+
+
+.letter-report {
+   background: #fafafa;
+   /* font-family: sans-serif; */
+   color: #000;
+   padding: 15px;
+   z-index: 17;
+   min-width: 250px;
+   max-width: 500px;
+   width: 83%;
+   margin: 0 auto 25px;
+   display: block;
+   box-shadow: 0 0 10px rgba(0,0,0,0.3);
+   position: relative;
+   text-align: justify;
+}
+
+.letter-report:before, .letter-report:after {
+   content: "";
+   height: 98%;
+   position: absolute;
+   width: 100%;
+       z-index: -1; 
+   }
+
+.letter-report:before {
+   background: #f6f6f6;
+   box-shadow: 0 0 8px rgba(0,0,0,0.2);
+   left: -5px;
+   width: 96%;
+   top: 10px;
+   transform: rotate(-1.5deg);
+}
+
+.letter-report:after {
+   background: white;
+   box-shadow: 0 0 8px rgba(0,0,0,0.2);
+   right: -3px;
+   top: 5px;
+   height: 98%;
+    /* transform: rotate(-1.4deg);  */
+}
+
+p.paperclip > img {
+   position: absolute;
+   top: -16px;
+   right: 0;
+   z-index: 20;
+   max-height: 150px;
+}
+
+.graph1 {
+   width: 150px;
+   float: right;
+   padding: 0px 0px 0px 10px;
+}
+
+.graph2 {
+   width: 150px;
+   float: left;
+   padding: 0px 10px 0px 0px;
+}
+
+.coffee-stain {
+   position: absolute;
+   filter:  hue-rotate(45deg);
+   opacity: 0.3;
+   bottom: 10em;
+   right: 1em;
+   max-width: 170px;
+}
+.coffee-stain-2 {
+   position: absolute;
+   filter:  hue-rotate(45deg);
+   opacity: 0.3;
+   max-width: 170px;
+   left: 1em;
+}
+
+.side-note {
+   /* display: inline-block; */
+   background-color: #ffff99;
+   color: #000000;
+   text-decoration: none;
+   font-family: "comic sans ms", "chalkboard se", sans-serif;
+   max-width: 10em;
+   z-index: -1;
+   min-width: 7em;
+   left: -100px;
+   top: 1;
+   /* z-index: -6; */
+   position: absolute;
+   padding: 1em;
+   box-shadow: 0 0 10px rgba(0,0,0,0.3);
+ }
+
+ .report-title {
+   font-size: 23px;
+   margin-top: -10px;
+   margin-bottom: 0px;
+   text-decoration: underline;
+   text-align: left;
+ }
+ .report-subtitle {
+    font-size: 10px;
+ }
+ .report-topic {
+    font-size: 18px;
+    margin: 0 auto;
+    border-bottom: black thin solid;
+ }
+
+ .letter-report p:not(.report-title, .report-subtitle, .report-topic) {
+    /* color: red; */
+    font-size: 12px;
+ } 
+
+ .letter-report p:not(.paperclip) {
+    /* margin: 0 auto; */
+ }
