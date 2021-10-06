@@ -1,0 +1,180 @@
+ .anh {
+    border: none;
+    padding: 0em 3em;
+  }
+  
+   .anh:after {
+    content: ' ';
+    display: block;
+    border-top: 1px solid #2a2a2a;
+    border-bottom: none;
+  }
+  
+   .fakenotes {
+    padding: 0em 4.5em;
+    margin-top: 0px;
+  }
+  
+   .bline {
+    text-align: right;
+    float: right;
+  }
+  
+   a.button-end {
+    border-radius: 4px;
+    border: 1px solid #BBBBBB;
+    margin: 4px 2px;
+    background: linear-gradient(#FFFFFF, #dbdbdb);
+    box-shadow: inset 0px -1px #c9c9c9;
+    color: #2a2a2a;
+    padding: 2px;
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  a.button-end > span {
+    padding: 8px 10px;
+    font-size: .95em;
+  }
+
+  a.button-end > span > img {
+    position: absolute;
+    display: none;
+    height: 2.95em;
+    margin-top: -.5em;
+  }
+
+  a.button-end .topb > img {
+    margin-left: -4em;
+  }
+
+  a.button-end .kudosb > img {
+    margin-left: -5em;
+    width: 6em;
+  }
+
+  a.button-end .collectionb > img {
+    margin-left: -9em;
+    width: 10em;
+  }
+
+  a.button-end .bookmarkb > img {
+    margin-left: -5.5em;
+    width: 6.5em;
+  }
+
+  a.button-end .commentsb > img {
+    margin-left: -7em;
+    width: 8em;
+  }
+
+  a.button-end:hover > span > img {
+    display: inline-block;
+  }
+  
+   a.button-end:hover {
+    color: #990000;
+    box-shadow: inset 2px 2px 2px #c9c9c9;
+    cursor: not-allowed;
+  }
+
+  .bline:hover ~ .convo-container-invisible > .convo-hidden {
+      display: flex;
+  }
+
+  
+   /* .topb:before {
+    content: "↑ Top";
+    padding: 8px 10px;
+    font-size: .95em;
+  } */
+  
+   /* .kudosb:before {
+    content: "Kudos ♥";
+    padding: 8px 10px;
+    font-size: .95em;
+  } */
+  
+   /* .collectionb:before {
+    content: "Add to Collections";
+    padding: 8px 10px;
+    font-size: .95em;
+  } */
+/*   
+   .bookmarkb:before {
+    content: "Bookmark";
+    padding: 8px 10px;
+    font-size: .95em;
+  } */
+  
+   /* .commentsb:before {
+    content: "Comments (2)";
+    padding: 8px 10px;
+    font-size: .95em;
+  } */
+
+  .convo-container-invisible {
+    display: table;
+    background-color: transparent;
+    padding: 10px;
+    min-width: 300px;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    font-family: sans-serif;
+    font-size: 13px;
+  }
+
+  .convo-hidden {
+      display: none;
+  }
+
+.cyoa-choice {
+    display: inline-block;
+    width: 115px;
+    height: 25px;
+    background: #4E9CAF; /* #04ae0a; */
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 25px;
+    z-index: 10;
+    /* background: url("https://i.imgur.com/Ys1XcUY.png");
+    background-size: cover; */
+}
+
+.cyoa-choice > span {
+    z-index: 15;
+    position: relative;
+}
+
+.gear1 {
+    z-index: 12;
+    position: absolute;
+    height: 4em;
+    margin-left: -5em;
+    margin-top: -1em;
+    /* opacity: 0.5; */
+}
+
+.gear2 {
+    height: 3em;
+    position: absolute;
+    margin-top: -0.5em;
+    margin-left: 4em;
+}
+
+.living-room {
+    background: url("https://i.imgur.com/zElmRc0.png") no-repeat center center scroll;
+    background-size: cover;
+    background-attachment:fixed;
+}
+
+.lab {
+    background: url("https://i.imgur.com/Dzy0Hce.png") no-repeat center center scroll;
+    background-size: cover;
+    background-attachment:fixed;
+}
