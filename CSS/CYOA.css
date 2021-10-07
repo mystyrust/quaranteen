@@ -178,3 +178,9 @@
     background-size: cover;
     background-attachment:fixed;
 }
+
+.kitchen {
+  background: url("https://i.imgur.com/6M2HxWF.png") no-repeat center center scroll;
+  background-size: cover;
+  background-attachment:fixed;
+}
