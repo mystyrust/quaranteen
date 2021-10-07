@@ -11,6 +11,8 @@ Let's see I used
 * imgur for static image hosting
 * [MDN](https://developer.mozilla.org/en-US/docs/Learn) / [W3Schools](https://www.w3schools.com/) (and ofcourse, google) to reference CSS documentation. 
 * [icons8](https://icons8.com/) for icons 
+* [LunaPic](https://www11.lunapic.com/editor/) for simple photo edits (crops, bg transparency)
+* [pngjoy](https://www.pngjoy.com/) for a couple png resources (the noise effect in ch 6)
 * google image search for background shots from the show
 
 
