@@ -1,3 +1,9 @@
+  #workskin {
+    /* z-index: 1000; */
+    overflow: inherit;
+    /* position: relative; */
+  }
+
  .anh {
     border: none;
     padding: 0em 3em;
@@ -78,7 +84,7 @@
     cursor: not-allowed;
   }
 
-  .bline:hover ~ .convo-container-invisible > .convo-hidden {
+  .bline:hover ~ .convo-container > .convo-hidden {
       display: flex;
   }
 
@@ -112,19 +118,6 @@
     padding: 8px 10px;
     font-size: .95em;
   } */
-
-  .convo-container-invisible {
-    display: table;
-    background-color: transparent;
-    padding: 10px;
-    min-width: 300px;
-    max-width: 450px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 10px;
-    font-family: sans-serif;
-    font-size: 13px;
-  }
 
   .convo-hidden {
       display: none;
@@ -181,6 +174,18 @@
 
 .kitchen {
   background: url("https://i.imgur.com/6M2HxWF.png") no-repeat center center scroll;
+  background-size: cover;
+  background-attachment:fixed;
+}
+
+.room {
+  background: url("https://i.imgur.com/ru3NuvQ.png") no-repeat center center scroll;
+  background-size: cover;
+  background-attachment:fixed;
+}
+
+.amity-night {
+  background: url("https://i.imgur.com/dUzMIet.png") no-repeat center center scroll;
   background-size: cover;
   background-attachment:fixed;
 }

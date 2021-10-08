@@ -703,7 +703,7 @@ a.clear-link:visited {
   
   .convo-container {
     display: table;
-    background-color: green;
+    /* background-color: green; */
     padding: 10px;
     min-width: 300px;
     max-width: 416px;
