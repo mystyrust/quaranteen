@@ -1,11 +1,17 @@
   #workskin {
     /* z-index: 1000; */
     overflow: inherit;
+    max-width: 100%;
     /* position: relative; */
+  }
+
+  body {
+    background: white;
   }
 
  .anh {
     border: none;
+    color: #2a2a2a;
     padding: 0em 3em;
   }
   
@@ -17,6 +23,7 @@
   }
   
    .fakenotes {
+     color: #2a2a2a;
     padding: 0em 4.5em;
     margin-top: 0px;
   }
@@ -85,9 +92,12 @@
   }
 
   .bline:hover ~ .convo-container > .convo-hidden {
-      display: flex;
+      display: flex !important;
   }
 
+  .convo-hidden {
+    display: none !important;
+  }
   
    /* .topb:before {
     content: "↑ Top";
@@ -119,8 +129,27 @@
     font-size: .95em;
   } */
 
-  .convo-hidden {
-      display: none;
+  .noise {
+    position: absolute;
+    /* right: -4.1em;
+    width: 120%; */
+    right: -7.1em;
+    width: 149%;
+    max-width: none;
+    height: 23em;
+    z-index: 2;
+    background: linear-gradient(to bottom, rgba(255,255,255, 0), white);
+  }
+
+  .white-overflow {
+    background: #fff;
+    position: absolute;
+    padding-right: 3em;
+    /* padding-bottom: 10em; */
+    z-index: 10;
+    left: -3em;
+    width: 100%;
+    border: 3.5em #fff solid;
   }
 
 .cyoa-choice {
@@ -139,6 +168,80 @@
     background-size: cover; */
 }
 
+.cyoa-choice-4:hover {
+  cursor: pointer;
+}
+.cyoa-choice-4 {
+  display: inline-block;
+  /* height: 25px; */
+  background: white; /* #04ae0a; */
+  text-align: center;
+  line-height: 25px;
+  /* background: url("https://i.imgur.com/Ys1XcUY.png");
+  background-size: cover; */
+}
+
+.cyoa-choice-4 img {
+  height: 80px;
+  float: left;
+}
+
+.cyoa-choice-4 span {
+  text-decoration: underline;
+  display: inline-block;
+  padding-top: 33px;
+  color: black;
+  font-weight: bold;
+}
+
+.cyoa-choice-3 {
+  display: inline-block;
+  width: 130px;
+  height: 40px;
+  background: #4E9CAF; /* #04ae0a; */
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: black;
+  font-weight: bold;
+  line-height: 25px;
+  z-index: 10;
+  background: url("https://i.pinimg.com/originals/4f/97/1b/4f971b0d6bacdd50c85333a2af80ddaf.gif");
+  background-size: 160px 60px;
+  background-repeat: no-repeat;
+}
+
+
+.cyoa-choice-2 {
+  display: inline-block;
+  width: 130px;
+  height: 40px;
+  background: #4E9CAF; /* #04ae0a; */
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: black;
+  font-weight: bold;
+  line-height: 25px;
+  z-index: 10;
+  background: url("https://i.imgur.com/i72pfRh.png");
+  background-size: 160px 60px;
+  background-repeat: no-repeat;
+}
+
+.cyoa-choice-2 span {
+  display: inline-block;
+  text-decoration: underline;
+  padding: 8px 0 0 8px;
+}
+
+.cyoa-choice-2:hover {
+  background: url("https://i.giphy.com/media/i2tLw5ZyikSFdkeGHT/giphy.webp");
+  background-size: 160px 60px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
 .cyoa-choice > span {
     z-index: 15;
     position: relative;
@@ -150,7 +253,14 @@
     height: 4em;
     margin-left: -5em;
     margin-top: -1em;
+    transition: height 1s, margin 1s, z-index 0s;
     /* opacity: 0.5; */
+}
+
+.cyoa-choice:hover .gear1 {
+  z-index: -1;
+  height: 5em;
+  margin-left: -6em;
 }
 
 .gear2 {
