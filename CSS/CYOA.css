@@ -152,122 +152,80 @@
     border: 3.5em #fff solid;
   }
 
-.cyoa-choice {
-    display: inline-block;
-    width: 115px;
-    height: 25px;
-    background: #4E9CAF; /* #04ae0a; */
-    padding: 10px;
-    text-align: center;
-    border-radius: 5px;
-    color: white;
-    font-weight: bold;
-    line-height: 25px;
-    z-index: 10;
-    /* background: url("https://i.imgur.com/Ys1XcUY.png");
-    background-size: cover; */
+.cyoa-visited {
+  height: 40px;
+  width: 100px;
+  position: absolute;
+  margin-left: -100px;
 }
 
-.cyoa-choice-4:hover {
+.cyoa-choice-5 {
   cursor: pointer;
-}
-.cyoa-choice-4 {
   display: inline-block;
-  /* height: 25px; */
-  background: white; /* #04ae0a; */
-  text-align: center;
-  line-height: 25px;
-  /* background: url("https://i.imgur.com/Ys1XcUY.png");
-  background-size: cover; */
 }
 
-.cyoa-choice-4 img {
-  height: 80px;
-  float: left;
-}
-
-.cyoa-choice-4 span {
+.cyoa-choice-5 span {
   text-decoration: underline;
-  display: inline-block;
-  padding-top: 33px;
-  color: black;
   font-weight: bold;
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  border: 2px solid #8f8e8f;
+  border-radius: 10px;
+  max-width: 470px;
+  padding: 10px;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  height: auto;
 }
 
-.cyoa-choice-3 {
-  display: inline-block;
-  width: 130px;
-  height: 40px;
-  background: #4E9CAF; /* #04ae0a; */
-  padding: 10px;
-  text-align: center;
-  border-radius: 5px;
-  color: black;
-  font-weight: bold;
-  line-height: 25px;
-  z-index: 10;
-  background: url("https://i.pinimg.com/originals/4f/97/1b/4f971b0d6bacdd50c85333a2af80ddaf.gif");
-  background-size: 160px 60px;
-  background-repeat: no-repeat;
+.cyoa-choice-5 span:after {
+  content: '';
+    border: 10px solid transparent;
+    border-right-color: #8f8e8f;
+    border-left: 0;
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    margin-top: -10px;
 }
 
-
-.cyoa-choice-2 {
+.cyoa-start-over span {
+  background: black;
+  color: white;
+  text-decoration: underline;
+  position: absolute;
+  margin-left: 100px;
+  margin-top: 135px;
   display: inline-block;
-  width: 130px;
-  height: 40px;
-  background: #4E9CAF; /* #04ae0a; */
+  text-align: left;
+  border: 2px solid #8f8e8f;
+  border-radius: 10px;
+  max-width: 470px;
   padding: 10px;
-  text-align: center;
-  border-radius: 5px;
-  color: black;
-  font-weight: bold;
-  line-height: 25px;
-  z-index: 10;
+  /* margin-top: 3%; */
+  /* margin-bottom: 3%; */
+  height: auto;
+  width: auto;
+}
+
+.cyoa-start-over {
   background: url("https://i.imgur.com/i72pfRh.png");
-  background-size: 160px 60px;
   background-repeat: no-repeat;
-}
-
-.cyoa-choice-2 span {
+  /* background-size: 400px 400px; */
   display: inline-block;
-  text-decoration: underline;
-  padding: 8px 0 0 8px;
+  height: 300px;
+  width: 300px;
 }
 
-.cyoa-choice-2:hover {
+.cyoa-start-over:hover {
   background: url("https://i.giphy.com/media/i2tLw5ZyikSFdkeGHT/giphy.webp");
-  background-size: 160px 60px;
   background-repeat: no-repeat;
+  /* background-size: 400px 400px; */
+  display: inline-block;
+  height: 300px;
+  width: 300px;
   cursor: pointer;
-}
-
-.cyoa-choice > span {
-    z-index: 15;
-    position: relative;
-}
-
-.gear1 {
-    z-index: 12;
-    position: absolute;
-    height: 4em;
-    margin-left: -5em;
-    margin-top: -1em;
-    transition: height 1s, margin 1s, z-index 0s;
-    /* opacity: 0.5; */
-}
-
-.cyoa-choice:hover .gear1 {
-  z-index: -1;
-  height: 5em;
-  margin-left: -6em;
-}
-
-.gear2 {
-    height: 3em;
-    position: absolute;
-    margin-top: -0.5em;
-    margin-left: 4em;
 }
 
 .living-room {
