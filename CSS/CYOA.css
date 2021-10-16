@@ -1,8 +1,8 @@
   #workskin {
-    /* z-index: 1000; */
+    z-index: 1000;
     overflow: inherit;
     max-width: 100%;
-    /* position: relative; */
+    position: relative;
   }
 
   body {
@@ -114,12 +114,9 @@
   .white-overflow {
     background: #fff;
     position: absolute;
-    padding-right: 3em;
-    /* padding-bottom: 10em; */
     z-index: 10;
-    left: -3em;
     width: 100%;
-    border: 3.5em #fff solid;
+    outline: 3em solid #fff;
   }
 
 .cyoa-visited {
@@ -132,6 +129,9 @@
 .cyoa-choice-5 {
   cursor: pointer;
   display: inline-block;
+  float: left;
+  margin-top: 60px;
+  width: 50%;
 }
 
 .cyoa-choice-5 span {
@@ -267,6 +267,10 @@ border: none;
   display: inline-block;
   height: 300px;
   width: 300px;
+}
+
+.tall {
+  height: 30em;
 }
 
 .cyoa-start-over:hover {
