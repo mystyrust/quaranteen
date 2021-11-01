@@ -116,7 +116,8 @@
     position: absolute;
     z-index: 10;
     width: 100%;
-    outline: 3em solid #fff;
+    left: 0;
+    outline: 3.2em solid #fff;
   }
 
 .cyoa-visited {
@@ -252,12 +253,45 @@ border: none;
   height: auto;
 }
 
-.convo-left > p > .dia-thinking {
+/* .convo-left > p > .dia-thinking {
   margin-left: 3%;
 }
 
 .convo-right > p > .dia-thinking {
   margin-right: 3%;
+} */
+
+.thinking-small:after, .thinking-small:before {
+  content: ''
+} 
+
+.convo-left .thinking-small:after {
+  left: -.5em !important;
+  /* top: 31% !important; */
+  width: 1em !important;
+  height: 1em !important;
+}
+.convo-left .thinking-small:before {
+  left: -1em !important;
+    width: 0.5em !important;
+    top: 40% !important;
+    height: 0.5em !important;
+}
+
+.convo-right .thinking-small:after {
+  right: -0.75em !important;
+  /* left: -.5em !important; */
+  /* top: 31% !important; */
+  width: 1em !important;
+  height: 1em !important;
+}
+.convo-right .thinking-small:before {
+  /* left: -1em !important; */
+  
+  right: -1.1em !important;
+    width: 0.5em !important;
+    top: 40% !important;
+    height: 0.5em !important;
 }
 
 .cyoa-start-over {
@@ -271,6 +305,16 @@ border: none;
 
 .tall {
   height: 30em;
+}
+
+.tall-fadeout:before {
+  content: '';
+  width: 108%;
+  height: 12em;
+  bottom: -75px;
+  left: -13px;
+  position: absolute;
+  background: linear-gradient(to bottom, rgba(255,255,255, 0), white);
 }
 
 .cyoa-start-over:hover {
