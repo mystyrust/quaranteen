@@ -1,29 +1,33 @@
   #workskin {
-    z-index: 1000;
+    /* z-index: 1000; */
     overflow: inherit;
     max-width: 100%;
     position: relative;
   }
 
-  body {
+  /* body {
     background: white;
-  }
+  } */
 
  .anh {
     border: none;
-    color: #2a2a2a;
+    /* color: #2a2a2a; */
+    /* color: inherit; */
     padding: 0em 3em;
   }
   
    .anh:after {
     content: ' ';
     display: block;
-    border-top: 1px solid #2a2a2a;
+    border-top: 1px solid;
+    /* border-top-color:  #2a2a2a; */
+    /* border-top-color: inherit; */
     border-bottom: none;
   }
   
    .fakenotes {
-     color: #2a2a2a;
+     /* color: #2a2a2a; */
+    /* color: inherit; */
     padding: 0em 4.5em;
     margin-top: 0px;
   }
@@ -34,15 +38,15 @@
   }
   
    a.button-end {
-    border-radius: 4px;
-    border: 1px solid #BBBBBB;
     margin: 4px 2px;
+    padding: 2px;
+    /* border-radius: 4px;
+    border: 1px solid #BBBBBB;
     background: linear-gradient(#FFFFFF, #dbdbdb);
     box-shadow: inset 0px -1px #c9c9c9;
     color: #2a2a2a;
-    padding: 2px;
     display: inline-block;
-    text-decoration: none;
+    text-decoration: none; */
   }
 
   a.button-end > span {
@@ -111,13 +115,25 @@
     background: linear-gradient(to bottom, rgba(255,255,255, 0), white);
   }
 
+  .choices {
+    padding-left: 3em;
+  }
+
   .white-overflow {
-    background: #fff;
+    /* background: #fff;
     position: absolute;
     z-index: 10;
     width: 100%;
     left: 0;
-    outline: 3.2em solid #fff;
+    outline: 3.2em solid #fff; */
+    /* margin: auto -2.5em; */
+    outline: 2.5em solid;
+    border: none;
+    box-shadow: none;
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    left: 0;
   }
 
 .cyoa-visited {
@@ -133,6 +149,7 @@
   float: left;
   margin-top: 60px;
   width: 50%;
+  border-bottom: none;
 }
 
 .cyoa-choice-5 span {
@@ -317,8 +334,57 @@ border: none;
   background: linear-gradient(to bottom, rgba(255,255,255, 0), white);
 }
 
+.img-bottle-container {
+  max-width: 200px;
+}
+
+.img-egg-inside {
+  position: absolute;
+    left: 0;
+    right: 0;
+    width: 220px;
+    margin-top: 10em;
+}
+
+.img-egg-outside {
+  width: 220px;
+  /* margin-left: -3em; */
+  /* margin: 0 auto;
+  position: relative; */
+}
+
+.img-banana-outside {
+  width: 280px;
+}
+.img-banana-inside {
+  position: absolute;
+    transform: rotate(-19deg);
+    opacity: 0.75;
+    filter: hue-rotate(15deg);
+    left: 0;
+    right: 0;
+    width: 280px;
+    /* margin-right: 0em; */
+    padding-top: 5em;
+    padding-right: 2em;
+}
+
+.img-knife-pos {
+  transform: rotate(75deg);
+  position: absolute;
+  /* width: 250px; */
+  margin-top: -2em;
+}
+
+.img-eavesdrop {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-top: 9em;
+}
+
 .cyoa-start-over:hover {
-  background: url("https://i.giphy.com/media/i2tLw5ZyikSFdkeGHT/giphy.webp");
+  /* background: url("https://i.giphy.com/media/i2tLw5ZyikSFdkeGHT/giphy.webp"); */
   background-repeat: no-repeat;
   /* background-size: 400px 400px; */
   display: inline-block;
@@ -330,29 +396,34 @@ border: none;
 .living-room {
   background: url("https://i.imgur.com/zElmRc0.png") no-repeat center center scroll;
   background-size: cover;
-  background-attachment:fixed;
+  -webkit-background-size: contain;
+  background-attachment: fixed;
 }
 
 .lab {
   background: url("https://i.imgur.com/Dzy0Hce.png") no-repeat center center scroll;
   background-size: cover;
-  background-attachment:fixed;
+  -webkit-background-size: contain;
+  background-attachment: fixed;
 }
 
 .kitchen {
   background: url("https://i.imgur.com/6M2HxWF.png") no-repeat center center scroll;
   background-size: cover;
-  background-attachment:fixed;
+  -webkit-background-size: contain;
+  background-attachment: fixed;
 }
 
 .room {
   background: url("https://i.imgur.com/ru3NuvQ.png") no-repeat center center scroll;
   background-size: cover;
-  background-attachment:fixed;
+  -webkit-background-size: contain;
+  background-attachment: fixed;
 }
 
 .amity-night {
   background: url("https://i.imgur.com/dUzMIet.png") no-repeat center center scroll;
   background-size: cover;
-  background-attachment:fixed;
+  -webkit-background-size: contain;
+  background-attachment: fixed;
 }

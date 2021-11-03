@@ -729,38 +729,44 @@ a.clear-link:visited {
   .gz {
     background: url("https://i.imgur.com/ig6AvJU.png") no-repeat center center scroll;
     background-size: cover;
-    background-attachment:fixed;
+    -webkit-background-size: contain;
+    background-attachment: fixed;
   }
 
   .gz2 {
     background: url("https://i.imgur.com/Ys1XcUY.png") no-repeat center center scroll;
     background-size: cover;
-    background-attachment:fixed;
+    -webkit-background-size: contain;
+    background-attachment: fixed;
 
   }
   
   .sky {
     background: url("https://i.imgur.com/6t98zdt.jpg") no-repeat center center scroll;
     background-size: cover;
-    background-attachment:fixed;
+    -webkit-background-size: contain;
+    background-attachment: fixed;
   }
 
   .amity-gen {
     background: url("https://i.imgur.com/nz78O6K.png") no-repeat center center scroll;
     background-size: cover;
-    background-attachment:fixed;
+    -webkit-background-size: contain;
+    background-attachment: fixed;
   }
 
   .frozen-out {
     background: url("https://i.imgur.com/8M9MLHk.png") no-repeat center center scroll;
     background-size: cover;
-    background-attachment:fixed;
+    -webkit-background-size: contain;
+    background-attachment: fixed;
   }
 
   .frozen-in {
     background: url("https://i.imgur.com/InBX2nI.png") no-repeat center center scroll;
     background-size: cover;
-    background-attachment:fixed;
+    -webkit-background-size: contain;
+    background-attachment: fixed;
   }
   
   .red {
