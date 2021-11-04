@@ -1,5 +1,5 @@
 # About
-* Just the raw html and css for [tired quaranteens](https://archiveofourown.org/works/27314074/chapters/66735937), a social media themed Danny Phantom fanfic hosted on ao3. I had an imagination and I decided to make that everyone's problem. 
+* Just the raw html and css for [tired quaranteens](https://archiveofourown.org/works/27314074/chapters/66735937), a social media themed Danny Phantom fanfic hosted on ao3. 
 * AO3 friendly css. 
 * Base Fic is in Quaranteens folder. OtherHtml folder has some sprinkles of coding for other fics. If you've noticed reused twitter usernames, it's because I reused my twitter template (a twitter cinematic universe lmao). 
 * Other folder and Tabs folder have some css experiments I was messing around with. tabs3-3 is the most successful exp so far.
@@ -8,11 +8,12 @@
 # Tools 
 Let's see I used
 * [Visual Studio Code](https://code.visualstudio.com/download) - free to download, light weight text editor from that lets you wirte and organize code 
-* imgur for static image hosting
-* [MDN](https://developer.mozilla.org/en-US/docs/Learn) / [W3Schools](https://www.w3schools.com/) (and ofcourse, google) to reference CSS documentation. 
+* [imgur](https://imgur.com/) for static image hosting
+* [MDN](https://developer.mozilla.org/en-US/docs/Learn) / [W3Schools](https://www.w3schools.com/) to reference CSS documentation. 
+  * where would i be without google and stackoverflow?
 * [icons8](https://icons8.com/) for icons 
 * [LunaPic](https://www11.lunapic.com/editor/) for simple photo edits (crops, bg transparency)
-* [pngjoy](https://www.pngjoy.com/) for a couple png resources (the noise effect in ch 6)
+* [pngjoy](https://www.pngjoy.com/) and [pngwing](https://www.pngwing.com/) for a couple of gimmicky png resources
 * google image search for background shots from the show
 
 
