@@ -1,0 +1,508 @@
+<link href="../../CSS/uploaded-to-ao3-v5.css" rel="stylesheet" />
+<link href="../../CSS/CYOA.css" rel="stylesheet" />
+<link href="../../Tabs/tabs-cyoa.css" rel="stylesheet" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- dummy first tag -->
+<a id="tab0" name="tab0"></a>
+<div class="tab tab0"name="tab0">
+    tab 0 content
+    <a href="#root-tab">start over</a>
+</div>
+
+<!-- intro v2 - after making 1 choice - white-overflow -->
+<a id="main" name="main"></a>
+<div name="main" class="main tab secondary logged-in white-overflow">
+    <div class="convo-container">
+        <div class="convo-left"> 
+            <p><img class="convo-icon" src="https://i.imgur.com/BDlGgi9.png" height="auto" /></p>
+            <p><span class="dia white">Phew, that was rough!</span></p>
+        </div>
+        <p class="convo-break"></p>
+        <div class="convo-left"> 
+            <p><img class="convo-icon" src="https://i.imgur.com/BDlGgi9.png" height="auto" /></p>
+            <p><span class="dia white">That didn't go how I expected. </span></p>
+        </div><p class="convo-break"></p>
+        <div class="convo-left"> 
+            <p><img class="convo-icon" src="https://i.imgur.com/BDlGgi9.png" height="auto" /></p>
+            <p><span class="dia white"> Maybe I should try something different this time. </span></p>
+        </div><p class="convo-break"></p>
+        <div class="convo-left"> 
+            <p><img class="convo-icon" src="https://i.imgur.com/BDlGgi9.png" height="auto" /></p>
+            <p><span class="dia white"> What should I do?</span></p>
+        </div>
+    </div>
+        <!-- show 4 options -->
+    <div class="convo-container tall choices">
+        <a class="cyoa-choice-5" href="#ask-jazz">
+            <span class="">Ask Jazz =></span>
+            <!-- <img class="cyoa-visited" src="https://i.imgur.com/8ehwsNR.png" > -->
+        </a> <a class="cyoa-choice-5" href="#ask-sam">
+            <span class="">Ask Sam =></span>
+            <img class="cyoa-visited" src="https://i.imgur.com/8ehwsNR.png" >
+        </a>
+        <br /><br />
+        <a class="cyoa-choice-5" href="#ask-tucker">
+            <span class="">Ask Tucker =></span>
+            <img class="cyoa-visited" src="https://i.imgur.com/8ehwsNR.png" >
+        </a> <a class="cyoa-choice-5" href="#ask-elle">
+            <span class="">Ask Elle =></span>
+            <img class="cyoa-visited" src="https://i.imgur.com/8ehwsNR.png" >
+        </a>
+        <br /><br />
+        <a class="cyoa-choice-5" href="#ask-none">
+            <span class="">Ask no one =></span>
+            <img class="cyoa-visited" src="https://i.imgur.com/8ehwsNR.png" >
+        </a>
+    </div>
+    
+    <!-- show fake footer -->
+    <h3 class="anh region">Notes:</h3>
+    <p class="fakenotes region">How many times can I embarass Danny in an identity reveal? Which one was your favorite?</p>
+    <p class="bline actions">
+        <a class="button-end"><span class="topb">
+            ↑ Top
+            <img src="https://i.imgur.com/RJmQlzw.png" />
+        </span></a>
+        <a class="button-end"><span class="kudosb">
+            Kudos ♥ 
+            <img src="https://i.imgur.com/RJmQlzw.png" /></span></a>
+        <a class="button-end"><span class="collectionb">
+            Add to Collections 
+            <img src="https://i.imgur.com/RJmQlzw.png" /></span></a>
+        <a class="button-end"><span class="bookmarkb">
+            Bookmark 
+            <img src="https://i.imgur.com/RJmQlzw.png" /></span></a>
+        <a class="button-end"><span class="commentsb">
+            Comments (2) 
+            <img src="https://i.imgur.com/RJmQlzw.png" /></span></a>
+    </p>
+    <p class="convo-break"></p>
+    
+    <div class="convo-container tall">
+        <div class="convo-right">
+            <p><span class="dia white">Trying to skip to the end?</span></p>
+            <p><img class="convo-icon" src="https://i.imgur.com/0TDqcrx.png" height="auto" /></p>
+        </div>
+        <p class="convo-break"></p>
+        <div class="convo-right">
+            <p><span class="dia white">You have to finish reading first.</span></p>
+            <p><img class="convo-icon" src="https://i.imgur.com/0TDqcrx.png" height="auto" /></p>
+        </div>
+        <p class="convo-break"></p>
+        <div class="convo-right convo-hidden">
+            <p><span class="dia white">That's very nice of you</span></p>
+            <p><img class="convo-icon" src="https://i.imgur.com/0TDqcrx.png" height="auto" /></p>
+        </div>
+        <p class="convo-break"></p>
+        <div class="convo-right convo-hidden">
+            <p><span class="dia white">But hold your applause <br/>until the finale!</span></p>
+            <p><img class="convo-icon" src="https://i.imgur.com/0TDqcrx.png" height="auto" /></p>
+        </div>
+    </div>
+</div>
+
+<!-- 5 choices - white-overflow -->
+<!-- ask elle -->
+<a id="ask-elle" name="ask-elle"></a>
+<div name="ask-elle" class="ask-elle tab secondary logged-in white-overflow">
+    <div class="dm-container">
+        <p class="dm-contact"> 
+            <img class="dm-icon" src ="https://i.imgur.com/3Wci28o.png" />
+            <span class="dm-username">elle phantom</span> <br />
+            <span class="dm-handle">@elleventeen</span> 
+        </p>
+        <p class="dm-block">
+            <span class="dm-right-init"> hey elle so im planning to tell mom and dad the big news today</span>
+            <span class="dm-right"> you know the news that im a half ghost</span>
+            <span class="tw-time-right">2:15 pm <span class="tw-check"> ✓ </span></span>
+            
+            <span class="dm-left-init"> omg </span>
+            <span class="dm-left"> good luck!</span>
+            <span class="tw-time-left">2:20 pm</span>
+            <span><img class="dm-chat-icon" src ="https://i.imgur.com/3Wci28o.png" /></span>
+            
+            <span class="dm-right-init"> actually i was wondering if you had any last minute advice (point left right emojis)</span>
+            <span class="tw-time-right">2:22 pm <span class="tw-check"> ✓ </span></span>
+    
+            <span class="dm-left-init"> so ur not ready, is what im hearing</span>
+            <span class="tw-time-left">2:25 pm</span>
+            <span><img class="dm-chat-icon" src ="https://i.imgur.com/3Wci28o.png" /></span>
+            
+            <span class="dm-right-init"> i am too ready. i just</span>
+            <span class="dm-right"> dont have a solid plan.</span>
+            <span class="dm-right"> i need ideas</span>
+            <span class="tw-time-right">2:27 pm <span class="tw-check"> ✓ </span></span>
+        
+            <span class="dm-left-init"> ive never done something like this before. vlad always knew and valerie found out. </span>
+            <span class="dm-left"> oh! she found out bc she caught me eating food when we met. </span>
+            <span class="dm-left"> well, stealing food. and then i saved her from a collapsing building.</span>
+            <span class="dm-left"> she saw me transform when i saved her</span>
+            <span class="tw-time-left">2:34 pm</span>
+            <span><img class="dm-chat-icon" src ="https://i.imgur.com/3Wci28o.png" /></span>
+        
+            <span class="dm-right-init"> oh wow</span>
+            <span class="dm-right"> i dont want like... life or death to force my secret out. i want to tell them of my own free will you know</span>
+            <span class="dm-right"> so i dont think ill collapse a building any time soon </span>
+            <span class="dm-right"> thanks for sharing that thou. i had no idea thats how you and valerie met</span>
+            <span class="tw-time-right">2:37 pm <span class="tw-check"> ✓ </span></span>
+        
+            <span class="dm-left-init"> what i mean to say is</span>
+            <span class="dm-left"> she saw me as human. a ghost who was a little human. </span>
+            <span class="dm-left"> prob bc of the fact that i needed food</span>
+            <span class="dm-left"> so try something like that</span>
+            <span class="dm-left"> show that your a ghost whos human. a "humane" ghost? a ghost with human needs? </span>
+            <span class="tw-time-left">2:42 pm</span>
+            <span><img class="dm-chat-icon" src ="https://i.imgur.com/3Wci28o.png" /></span>
+        
+            <span class="dm-right-init"> hey thats a great idea! thanks!</span>
+            <span class="tw-time-right">2:43 pm <span class="tw-check"> ✓ </span></span>
+            
+            <span class="dm-left-init"> anytime danny </span>
+            <span class="tw-time-left">2:45 pm</span>
+            <span><img class="dm-chat-icon" src ="https://i.imgur.com/3Wci28o.png" /></span>
+        </p>
+    </div>
+    <div class="dm-container dm-type">
+        <p class="dm-typebox"></p>
+    </div>
+    
+    <br /><br />
+    
+    <div class="convo-container kitchen">
+        <div class="convo-left">
+            <p><img class="convo-icon" src="https://i.imgur.com/3EsrGVC.png" height="auto" /></p>
+            <p><span class="dia white"> (I should have them catch me doing something I'd only do if I was a human! </span></p>
+        </div>
+        <div class="convo-left">
+            <p><img class="convo-icon" src="https://i.imgur.com/3EsrGVC.png" height="auto" /></p>
+            <p><span class="dia white"> (Mom and dad have always been wanting to study Phantom too, so...) </span></p>
+        </div>
+        <div class="convo-left">
+            <p><img class="convo-icon" src="https://i.imgur.com/3EsrGVC.png" height="auto" /></p>
+            <p><span class="dia white"> Alright, what do ywe hae in the fridge?</span></p>
+        </div>
+        <div class="convo-left">
+            <p><img class="convo-icon" src="https://i.imgur.com/3EsrGVC.png" height="auto" /></p>
+            <p><span class="dia white"> Not much, huh. </span></p>
+        </div>
+        <div class="convo-left">
+            <p><img class="convo-icon" src="https://i.imgur.com/3EsrGVC.png" height="auto" /></p>
+            <p><span class="dia white"> There is ice cream in the freezer! Might as well get myself a bowl.</span></p>
+        </div>
+    
+        <div class="convo-right">
+            <p><span class="dia white"> Kids, what would you like for dinn- </span></p>
+            <p><img class="convo-icon" src="https://i.imgur.com/MACHzm7.png" height="auto" /></p>
+        </div>
+        <div class="convo-right">
+            <p><span class="dia white"> Phantom? </span></p>
+            <p><img class="convo-icon" src="https://i.imgur.com/MACHzm7.png" height="auto" /></p>
+        </div>
+    
+        <div class="convo-left">
+            <p><img class="convo-icon" src="https://i.imgur.com/3EsrGVC.png" height="auto" /></p>
+            <p><span class="dia white"> (giff of eaeting ice cream)</span></p>
+        </div>
+        <div class="convo-right">
+            <p><span class="dia white"> eye emoji…  </span></p>
+            <p><img class="convo-icon" src="https://i.imgur.com/MACHzm7.png" height="auto" /></p>
+        </div>
+        <div class="convo-left">
+            <p><img class="convo-icon" src="https://i.imgur.com/3EsrGVC.png" height="auto" /></p>
+            <p><span class="dia white">… </span></p>
+        </div>
+        <p class="convo-break"></p>
+    
+        <div class="convo-right">
+            <p><span class="dia white">… </span></p>
+            <p><img class="convo-icon" src="https://i.imgur.com/MACHzm7.png" height="auto" /></p>
+        </div>
+        <div class="convo-left">
+            <p><img class="convo-icon" src="https://i.imgur.com/3EsrGVC.png" height="auto" /></p>
+            <p><span class="dia white">...</span></p>
+        </div>
+    
+        <div class="convo-right">
+            <p><span class="dia white"> Madds we should get pizz - </span></p>
+            <p><img class="convo-icon" src="https://i.imgur.com/7U4pVLw.png" height="auto" /></p>
+        </div>
+        <div class="convo-right">
+            <p><span class="dia white"> Oh boy. Ghost boy. In our kitchen. Eating.</span></p>
+            <p><img class="convo-icon" src="https://i.imgur.com/7U4pVLw.png" height="auto" /></p>
+        </div>
+        <div class="convo-right">
+            <p><span class="dia white"> My Chocolate Fudge Rocky Road flavored ice cream HOW COULD YOU?!?</span></p>
+            <p><img class="convo-icon" src="https://i.imgur.com/7U4pVLw.png" height="auto" /></p>
+        </div>
+    
+        <div class="convo-left">
+            <p><img class="convo-icon" src="https://i.imgur.com/3EsrGVC.png" height="auto" /></p>
+            <p><span class="dia white"> ...It tasted good.</span></p>
+        </div>
+        <div class="convo-right">
+            <p><span class="dia white"> Phantom you have good taste, I'll give you that. </span></p>
+            <p><img class="convo-icon" src="https://i.imgur.com/7U4pVLw.png" height="auto" /></p>
+        </div>
+        <div class="convo-right">
+            <p><span class="dia white"> I know my kids give you our equipment, so you might not consider that “stealing”  </span></p>
+            <p><img class="convo-icon" src="https://i.imgur.com/MACHzm7.png" height="auto" /></p>
+        </div>
+        <div class="convo-right">
+            <p><span class="dia white"> But this? Most definitely is a kind of stealing </span></p>
+            <p><img class="convo-icon" src="https://i.imgur.com/MACHzm7.png" height="auto" /></p>
+        </div>
+        <div class="convo-left">
+            <p><img class="convo-icon" src="https://i.imgur.com/3EsrGVC.png" height="auto" /></p>
+            <p><span class="dia white"> But I wanted to -</span></p>
+        </div>
+        <div class="convo-right">
+            <p><span class="dia white"> You could have taken that ice cream and left. Like you do our weapons. </span></p>
+            <p><img class="convo-icon" src="https://i.imgur.com/MACHzm7.png" height="auto" /></p>
+        </div>
+        <div class="convo-left">
+            <p><img class="convo-icon" src="https://i.imgur.com/3EsrGVC.png" height="auto" /></p>
+            <p><span class="dia white"> - sho you that -</span></p>
+        </div>
+        <div class="convo-right">
+            <p><span class="dia white"> I tolerate your use of our Fenton ghost fighting tools </span></p>
+            <p><img class="convo-icon" src="https://i.imgur.com/MACHzm7.png" height="auto" /></p>
+        </div>
+        <div class="convo-right">
+            <p><span class="dia white"> But this isnt your house </span></p>
+            <p><img class="convo-icon" src="https://i.imgur.com/MACHzm7.png" height="auto" /></p>
+        </div>
+        <p class="convo-break"></p>
+        <div class="convo-left">
+            <p><img class="convo-icon" src="https://i.imgur.com/3EsrGVC.png" height="auto" /></p>
+            <p><span class="dia white"> (but... it is)</span></p>
+        </div>
+        <p class="convo-break"></p>
+        <div class="convo-right">
+            <p><span class="dia white"> Get. Out.  </span></p>
+            <p><img class="convo-icon" src="https://i.imgur.com/MACHzm7.png" height="auto" /></p>
+        </div>
+        <p class="convo-break"></p>
+        <div class="convo-left">
+            <p><img class="convo-icon" src="https://i.imgur.com/3EsrGVC.png" height="auto" /></p>
+            <p><span class="dia white"> ...okay...</span></p>
+        </div>
+        <p class="convo-break"></p>
+        <div class="convo-right">
+            <p><span class="dia white"> Do ghosts like ice cream or something? </span></p>
+            <p><img class="convo-icon" src="https://i.imgur.com/7U4pVLw.png" height="auto" /></p>
+        </div>
+    </div>
+    
+     <br /><br />
+    
+    <div class="convo-container gz2">
+        <div class="convo-right">
+            <p><span class="dia white">She screamed for ice cream, didn't she? </span></p>
+            <p><img class="convo-icon" src="https://i.imgur.com/0TDqcrx.png" height="auto" /></p>
+        </div>
+         <div class="convo-left">
+             <p><img class="convo-icon" src="https://i.imgur.com/3EsrGVC.png" height="auto" /></p>
+             <p><span class="dia white"> ...in a way, I guess.</span></p>
+        </div>
+    </div>
+    
+    <div class="convo-container">
+        <a class="cyoa-start-over" href="#main">
+            <span>Start Over =></span>
+        </a>
+    </div>
+    
+    <!-- show fake footer -->
+    <h3 class="anh region">Notes:</h3>
+    <p class="fakenotes region">How many times can I embarass Danny in an identity reveal? Which one was your favorite?</p>
+    <p class="bline actions">
+        <a class="button-end"><span class="topb">
+            ↑ Top
+            <img src="https://i.imgur.com/RJmQlzw.png" />
+        </span></a>
+        <a class="button-end"><span class="kudosb">
+            Kudos ♥ 
+            <img src="https://i.imgur.com/RJmQlzw.png" /></span></a>
+        <a class="button-end"><span class="collectionb">
+            Add to Collections 
+            <img src="https://i.imgur.com/RJmQlzw.png" /></span></a>
+        <a class="button-end"><span class="bookmarkb">
+            Bookmark 
+            <img src="https://i.imgur.com/RJmQlzw.png" /></span></a>
+        <a class="button-end"><span class="commentsb">
+            Comments (2) 
+            <img src="https://i.imgur.com/RJmQlzw.png" /></span></a>
+    </p>
+    <p class="convo-break"></p>
+    
+    <div class="convo-container tall">
+        <div class="convo-right">
+            <p><span class="dia white">Trying to skip to the end?</span></p>
+            <p><img class="convo-icon" src="https://i.imgur.com/0TDqcrx.png" height="auto" /></p>
+        </div>
+        <p class="convo-break"></p>
+        <div class="convo-right">
+            <p><span class="dia white">You have to finish reading first.</span></p>
+            <p><img class="convo-icon" src="https://i.imgur.com/0TDqcrx.png" height="auto" /></p>
+        </div>
+        <p class="convo-break"></p>
+        <div class="convo-right convo-hidden">
+            <p><span class="dia white">That's very nice of you</span></p>
+            <p><img class="convo-icon" src="https://i.imgur.com/0TDqcrx.png" height="auto" /></p>
+        </div>
+        <p class="convo-break"></p>
+        <div class="convo-right convo-hidden">
+            <p><span class="dia white">But hold your applause <br/>until the finale!</span></p>
+            <p><img class="convo-icon" src="https://i.imgur.com/0TDqcrx.png" height="auto" /></p>
+        </div>
+    </div>
+</div>
+
+<!-- ask jazz -->
+<!-- ask none -->
+<!-- ask sam -->
+<!-- ask tucker -->
+
+<!-- intro v3 - all choices picked - white-overflow -->
+
+<!-- vent - end + real a/n (no overflow!) -->
+
+<!--intro v1 start-->
+<a id="start" name="start"></a>
+<div name="start" class="default-tab start tab secondary logged-in white-overflow">
+<div class="convo-container room">
+    <div class="convo-left"> 
+        <p><img class="convo-icon" src="https://i.imgur.com/BDlGgi9.png" height="auto" /></p>
+        <p><span class="dia-thinking thinking-small white"> (Okay, it's been a few days since the first dose of that ghost vaccine.)</span></p>
+    </div>
+    <div class="convo-left"> 
+        <p><img class="convo-icon" src="https://i.imgur.com/BDlGgi9.png" height="auto" /></p>
+        <p><span class="dia-thinking thinking-small white"> (Frostbite thought I'd get a mild fever, but it wasn't that bad.)</span></p>
+    </div>
+    <div class="convo-left"> 
+        <p><img class="convo-icon" src="https://i.imgur.com/BDlGgi9.png" height="auto" /></p>
+        <p><span class="dia-thinking thinking-small white"> (And I feel better now. So today's the day!)</span></p>
+    </div>
+    <p class="convo-break"></p>
+<!-- </div>
+--
+<div class="convo-container"> -->
+    <div class="convo-left"> 
+        <p><img class="convo-icon" src="https://i.imgur.com/BDlGgi9.png" height="auto" /></p>
+        <p><span class="dia white"> I'm just- </span></p>
+    </div>
+    <p class="convo-break"></p>
+    <div class="convo-left"> 
+        <p><img class="convo-icon" src="https://i.imgur.com/BDlGgi9.png" height="auto" /></p>
+        <p><span class="dia white"> -really nervous</span></p>
+    </div>
+    <div class="convo-left"> 
+        <p><img class="convo-icon" src="https://i.imgur.com/BDlGgi9.png" height="auto" /></p>
+        <p><span class="dia-thinking thinking-small white"> (Deep breaths, deep breaths) </span></p>
+    </div>
+    <!-- <div class="tall tall-fadeout"></div> -->
+</div>
+
+<div class="convo-container">
+    <div class="convo-left"> 
+        <p><img class="convo-icon" src="https://i.imgur.com/BDlGgi9.png" height="auto" /></p>
+        <p><span class="dia-thinking thinking-small white"> (Okay.)</span></p>
+    </div>
+    <p class="convo-break"></p>
+    <div class="convo-left"> 
+        <p><img class="convo-icon" src="https://i.imgur.com/BDlGgi9.png" height="auto" /></p>
+        <p><span class="dia-thinking thinking-small white"> (It'll be okay.)</span></p>
+    </div>
+    <div class="convo-left"> 
+        <p><img class="convo-icon" src="https://i.imgur.com/BDlGgi9.png" height="auto" /></p>
+        <p><span class="dia white"> I'm gonna tell Mom and Dad that I'm half ghost and,</span></p>
+    </div>
+    <div class="convo-left"> 
+        <p><img class="convo-icon" src="https://i.imgur.com/BDlGgi9.png" height="auto" /></p>
+        <p><span class="dia white"> I Hope I dont mess it up</span></p>
+    </div>
+    <div class="convo-left"> 
+        <p><img class="convo-icon" src="https://i.imgur.com/BDlGgi9.png" height="auto" /></p>
+        <p><span class="dia white"> Worst case scenario I guess I could ask Clockwork's help to undo it?</span></p>
+    </div>
+    <div class="convo-left"> 
+        <p><img class="convo-icon" src="https://i.imgur.com/BDlGgi9.png" height="auto" /></p>
+        <p><span class="dia white"> Hopefully I won't have to.</span></p>
+    </div>
+    <div class="convo-left"> 
+        <p><img class="convo-icon" src="https://i.imgur.com/BDlGgi9.png" height="auto" /></p>
+        <p><span class="dia-thinking thinking-small white"> (Okay, but before I go...)</span></p>
+    </div>
+    <div class="convo-left"> 
+        <p><img class="convo-icon" src="https://i.imgur.com/BDlGgi9.png" height="auto" /></p>
+        <p><span class="dia-thinking thinking-small white"> (Maybe I should... ask someone for advice?)</span></p>
+    </div>
+</div>
+
+<!-- show 4 options -->
+<div class="convo-container tall choices">
+    <a class="cyoa-choice-5" href="#ask-jazz">
+        <span class="">Ask Jazz =></span>
+        <!-- <img class="cyoa-visited" src="https://i.imgur.com/8ehwsNR.png" > -->
+    </a> <a class="cyoa-choice-5" href="#ask-sam">
+        <span class="">Ask Sam =></span>
+        <img class="cyoa-visited" src="https://i.imgur.com/8ehwsNR.png" >
+    </a>
+    <br /><br />
+    <a class="cyoa-choice-5" href="#ask-tucker">
+        <span class="">Ask Tucker =></span>
+        <img class="cyoa-visited" src="https://i.imgur.com/8ehwsNR.png" >
+    </a> <a class="cyoa-choice-5" href="#ask-elle">
+        <span class="">Ask Elle =></span>
+        <img class="cyoa-visited" src="https://i.imgur.com/8ehwsNR.png" >
+    </a>
+    <br /><br />
+</div>
+
+<!-- show fake footer -->
+<h3 class="anh region">Notes:</h3>
+<p class="fakenotes region">How many times can I embarass Danny in an identity reveal? Which one was your favorite?</p>
+<p class="bline actions">
+    <a class="button-end"><span class="topb">
+        ↑ Top
+        <img src="https://i.imgur.com/RJmQlzw.png" />
+    </span></a>
+    <a class="button-end"><span class="kudosb">
+        Kudos ♥ 
+        <img src="https://i.imgur.com/RJmQlzw.png" /></span></a>
+    <a class="button-end"><span class="collectionb">
+        Add to Collections 
+        <img src="https://i.imgur.com/RJmQlzw.png" /></span></a>
+    <a class="button-end"><span class="bookmarkb">
+        Bookmark 
+        <img src="https://i.imgur.com/RJmQlzw.png" /></span></a>
+    <a class="button-end"><span class="commentsb">
+        Comments (2) 
+        <img src="https://i.imgur.com/RJmQlzw.png" /></span></a>
+</p>
+<p class="convo-break"></p>
+
+<div class="convo-container tall">
+    <div class="convo-right">
+        <p><span class="dia white">Trying to skip to the end?</span></p>
+        <p><img class="convo-icon" src="https://i.imgur.com/0TDqcrx.png" height="auto" /></p>
+    </div>
+    <p class="convo-break"></p>
+    <div class="convo-right">
+        <p><span class="dia white">You have to finish reading first.</span></p>
+        <p><img class="convo-icon" src="https://i.imgur.com/0TDqcrx.png" height="auto" /></p>
+    </div>
+    <p class="convo-break"></p>
+    <div class="convo-right convo-hidden">
+        <p><span class="dia white">That's very nice of you</span></p>
+        <p><img class="convo-icon" src="https://i.imgur.com/0TDqcrx.png" height="auto" /></p>
+    </div>
+    <p class="convo-break"></p>
+    <div class="convo-right convo-hidden">
+        <p><span class="dia white">But hold your applause <br/>until the finale!</span></p>
+        <p><img class="convo-icon" src="https://i.imgur.com/0TDqcrx.png" height="auto" /></p>
+    </div>
+</div>
+
+</div>

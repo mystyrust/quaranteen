@@ -13,7 +13,8 @@
     border: none;
     /* color: #2a2a2a; */
     /* color: inherit; */
-    padding: 0em 3em;
+    /* padding: 0em 3em; */
+    padding: 0px 2em;
   }
   
    .anh:after {
@@ -26,9 +27,10 @@
   }
   
    .fakenotes {
-     /* color: #2a2a2a; */
+    /* color: #2a2a2a; */
     /* color: inherit; */
-    padding: 0em 4.5em;
+    /* padding: 0em 4.5em; */
+    padding: 0px 3.5em;
     margin-top: 0px;
   }
   
@@ -127,13 +129,24 @@
     left: 0;
     outline: 3.2em solid #fff; */
     /* margin: auto -2.5em; */
-    outline: 2.5em solid;
-    border: none;
+    /* outline: 2.5em solid; */
+
+    /* border: none;
     box-shadow: none;
     position: absolute;
     z-index: 10;
     right: 0;
+    left: 0; */
+
+    border: none;
+    right: 0;
     left: 0;
+    box-shadow: none;
+    margin: 0 -3.2em;
+    padding: 0 3.2em;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 10;
   }
 
 .cyoa-visited {
@@ -385,45 +398,40 @@ border: none;
 
 .cyoa-start-over:hover {
   /* background: url("https://i.giphy.com/media/i2tLw5ZyikSFdkeGHT/giphy.webp"); */
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   /* background-size: 400px 400px; */
-  display: inline-block;
+  /* display: inline-block;
   height: 300px;
-  width: 300px;
+  width: 300px; */
   cursor: pointer;
 }
 
 .living-room {
-  background: url("https://i.imgur.com/zElmRc0.png") no-repeat center center scroll;
-  background-size: cover;
-  -webkit-background-size: contain;
+  background: url("https://i.imgur.com/zElmRc0.png") repeat center center scroll;
+  background-size: contain;
   background-attachment: fixed;
 }
 
 .lab {
-  background: url("https://i.imgur.com/Dzy0Hce.png") no-repeat center center scroll;
-  background-size: cover;
-  -webkit-background-size: contain;
+  background: url("https://i.imgur.com/Dzy0Hce.png") repeat center center scroll;
+  background-size: contain;
   background-attachment: fixed;
 }
 
 .kitchen {
-  background: url("https://i.imgur.com/6M2HxWF.png") no-repeat center center scroll;
-  background-size: cover;
-  -webkit-background-size: contain;
+  background: url("https://i.imgur.com/6M2HxWF.png") repeat center center scroll;
+  background-size: contain;
   background-attachment: fixed;
 }
 
 .room {
-  background: url("https://i.imgur.com/ru3NuvQ.png") no-repeat center center scroll;
-  background-size: cover;
-  -webkit-background-size: contain;
+  background: url("https://i.imgur.com/ru3NuvQ.png") repeat center center scroll;
+  background-size: contain;
   background-attachment: fixed;
 }
 
 .amity-night {
-  background: url("https://i.imgur.com/dUzMIet.png") no-repeat center center scroll;
-  background-size: cover;
-  -webkit-background-size: contain;
+  background: url("https://i.imgur.com/dUzMIet.png") repeat center center scroll;
+  background-size: contain;
   background-attachment: fixed;
 }
