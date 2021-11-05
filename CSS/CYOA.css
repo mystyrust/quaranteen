@@ -154,6 +154,8 @@
   width: 100px;
   position: absolute;
   margin-left: -100px;
+  margin-top: 4px;
+  opacity: 0.85;
 }
 
 .cyoa-choice-5 {

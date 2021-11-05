@@ -5,29 +5,10 @@
 :target ~ .default-tab {display:none}
 
 .default-tab {display:block}
-/* :target ~ .default-tab {display:none} */
 
-/* :target {
-    display: block;
-} */
-
-#tab1:target ~ .tab1,
-#tab2:target ~ .tab2,
-#tab3:target ~ .tab3,
-#tab4:target ~ .tab4,
-/* #start:target ~ .start, */
-#root-tab:target ~ .root-tab {
-  display: block
-}
-
-/* attempt */
-/* .start {display:block} */
-
-:target ~ .start {display:none}
-
-#root:target ~ .root, /* start of ch */
 #start:target ~ .start, /* after making 1 choice */
 #start2:target ~ .start2, /* after making all 5 choices */
+#root:target ~ .root, /* start of ch */
 #ask-elle:target ~ .ask-elle,
 #ask-sam:target ~ .ask-sam,
 #ask-jazz:target ~ .ask-jazz,
