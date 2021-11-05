@@ -25,9 +25,9 @@
 
 :target ~ .start {display:none}
 
-#root:target ~ .root,
-#start:target ~ .start,
-#start2:target ~ .start2,
+#root:target ~ .root, /* start of ch */
+#start:target ~ .start, /* after making 1 choice */
+#start2:target ~ .start2, /* after making all 5 choices */
 #ask-elle:target ~ .ask-elle,
 #ask-sam:target ~ .ask-sam,
 #ask-jazz:target ~ .ask-jazz,

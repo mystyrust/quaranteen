@@ -167,6 +167,8 @@
 
 .cyoa-choice-5 span {
   text-decoration: underline;
+  background: black;
+  color: white;
   font-weight: bold;
   position: relative;
   display: inline-block;
@@ -335,7 +337,7 @@ border: none;
 }
 
 .tall {
-  height: 30em;
+  height: 35em;
 }
 
 .tall-fadeout:before {
