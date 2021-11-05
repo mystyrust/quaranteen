@@ -440,3 +440,11 @@ border: none;
   background-size: contain;
   background-attachment: fixed;
 }
+
+#chapter-6 #notes p {
+  display: none;
+}
+
+.vent {
+  position: relative !important;
+}
