@@ -2285,7 +2285,7 @@ p.paperclip > img {
 .tab0,
 :target ~ .default-tab {display:none}
 
-.default-tab {display:block}
+.default-tab { display:block; margin-top: -1em; }
 
 #start:target ~ .start, /* after making 1 choice */
 #start2:target ~ .start2, /* after making all 5 choices */
@@ -2296,7 +2296,8 @@ p.paperclip > img {
 #ask-tucker:target ~ .ask-tucker,
 #ask-none:target ~ .ask-none,
 #vent:target ~ .vent{
-  display: block
+  display: block;
+  margin-top: -1em;
 }
 
 #workskin {
@@ -2705,4 +2706,8 @@ background-attachment: fixed;
 
 #chapter-6 #notes p {
 display: none;
+}
+
+blockquote.userstuff p {
+  display: block !important;
 }
