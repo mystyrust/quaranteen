@@ -2283,9 +2283,10 @@ p.paperclip > img {
 
 .tab, 
 .tab0,
-:target ~ .default-tab {display:none}
+:target ~ .default-tab { display: none }
 
-.default-tab { display:block; margin-top: -1em; }
+.default-tab { display: block; }
+.root { margin-top: -1em !important; }
 
 #start:target ~ .start, /* after making 1 choice */
 #start2:target ~ .start2, /* after making all 5 choices */
