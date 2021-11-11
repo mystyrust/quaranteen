@@ -1,0 +1,158 @@
+
+<svg version="1.1"
+     width="900" height="1000"
+     xmlns="http://www.w3.org/2000/svg">
+
+    <style>
+    .letter {
+    background-color: red;
+    color: #000;
+    padding: 15px;
+    max-width: 500px;
+    margin: 0 auto 25px;
+    z-index: 10;
+    display: block;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    position: relative;
+    text-align: justify;
+  }
+  
+.letter:before,
+.letter:after {
+    content: "";
+    height: 98%;
+    position: absolute;
+    width: 100%;
+    z-index: -1; 
+  }
+  
+.letter:before {
+    background: green;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    /* left: -5px;
+    top: 4px; */
+    transform: rotate(-2.5deg);
+  }
+  
+.letter:after {
+    background: purple;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    /* right: -3px;
+    top: 1px; */
+    transform: rotate(1.4deg);
+  }
+
+  .side-note {
+    /* display: inline-block; */
+    background-color: #ffff99;
+    color: #000000;
+    text-decoration: none;
+    font-family: "comic sans ms", "chalkboard se", sans-serif;
+    /* max-height: 10em; */
+    max-width: 10em;
+    z-index: -1;
+    /* right: 0; */
+    /* margin-right: 18px; */
+    min-width: 7em;
+    left: -100px;
+    top: 1;
+    /* z-index: -6; */
+    position: absolute;
+    /* min-height: 7em; */
+    padding: 1em;
+    /* text-align: left; */
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    /* -moz-box-shadow: 5px 5px 7px rgba(33,33,33,1); */
+    /* -webkit-box-shadow: 5px 5px 7px rgb(33 33 33 / 70%); */
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    /* -webkit-transform: rotate(
+-6deg); */
+    /* -o-transform: rotate(-6deg); */
+    /* -moz-transform: rotate(-6deg); */
+    /* transform: rotate(
+-6deg); */
+  }
+
+  .letter-messy ,
+  .letter-messy-2,
+  .letter-messy-3 {
+     display: flex;
+     color: black;
+  }
+
+  .letter-messy div {
+      height: 100%;
+      max-width: 500px;
+  }
+
+  .letter-messy :nth-child(2) {
+    background-color: pink;
+    /* display: flex; */
+    color: #000;
+    padding: 15px;
+    max-width: 500px;
+    margin: 0 auto 25px;
+    z-index: 10;
+    display: block;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    position: relative;
+    text-align: justify;
+  }
+
+  .letter-messy :nth-child(3) {
+    background-color: purple;
+    /* display: flex; */
+    /* color: #000; */
+    padding: 5px;
+    height: 100%;
+    position: absolute;
+    z-index: -2;
+    transform: translateX(45%) rotate(4deg);
+    width: 100%;
+    /* max-width: 500px; */
+    /* margin: 0 auto 25px; */
+    /* z-index: 10; */
+    /* display: block; */
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    /* position: relative; */
+    /* text-align: justify; */
+  }
+
+  .letter-messy div:nth-child(4) {
+    background-color: green;
+    /* display: flex; */
+    /* color: #000; */
+    padding: 5px;
+    height: 100%;
+    position: absolute;
+    margin-top: -1em;
+    transform: translateX(50%) rotate(4deg);
+    z-index: -1;
+    width: 100%;
+    /* max-width: 500px; */
+    /* margin: 0 auto 25px; */
+    /* z-index: 10; */
+    /* display: block; */
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    /* position: relative; */
+    /* text-align: justify; */
+  }
+    </style>
+
+    <foreignObject class="node" x="46" y="22" width="900" height="900">   
+        <div xmlns="http://www.w3.org/1999/xhtml" class="letter-messy">
+            <div xmlns="http://www.w3.org/1999/xhtml">
+            <!-- this works!!!! need to add xhtml dec on every node. easy to do w multiline edit -->
+                <p xmlns="http://www.w3.org/1999/xhtml">Dear Friends,</p>
+                <p xmlns="http://www.w3.org/1999/xhtml">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod porta tempor. Donec pulvinar turpis nec velit pellentesque quis rhoncus sapien facilisis. Mauris quis massa dui, rhoncus viverra quam. Nulla tempus, augue ut consectetur facilisis, arcu elit pellentesque arcu, sed rutrum orci turpis pulvinar augue. Donec eget arcu mauris. Vestibulum tristique consequat lacus eget laoreet. Integer sed nisl sed nibh pulvinar ornare quis nec quam. Aenean rhoncus ligula ut lectus placerat a commodo quam vulputate. In eu metus turpis.</p>
+                <p xmlns="http://www.w3.org/1999/xhtml">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus facilisis erat in nibh auctor at aliquet velit vestibulum. Curabitur turpis diam, malesuada eu consequat eget, ultricies sed nunc. Aenean sed odio massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare vulputate congue. Quisque leo metus, condimentum nec molestie et, egestas luctus libero.</p>
+                <p xmlns="http://www.w3.org/1999/xhtml">Mauris porta odio augue. Nam turpis dui, volutpat id feugiat vitae, sagittis a justo. Nam iaculis aliquet erat non varius. Suspendisse justo arcu, tincidunt sed auctor sit amet, fermentum id turpis. Suspendisse sed enim quis lorem vestibulum fermentum a ut nulla.</p>
+                <p xmlns="http://www.w3.org/1999/xhtml">Nullam tincidunt elit quis nibh blandit interdum. Duis ullamcorper pellentesque pretium. Nulla facilisi. Morbi semper nisi et justo varius non fermentum metus ornare. Proin vehicula, mi vel volutpat accumsan, libero lacus euismod massa, id feugiat velit enim nec ligula. Aliquam ipsum est, volutpat aliquam tincidunt id, sagittis et velit. Nunc vitae massa vel dui facilisis consectetur vel id sem.</p>
+            
+                <p xmlns="http://www.w3.org/1999/xhtml">Aenean pulvinar, lacus ultrices euismod viverra, nulla diam interdum ligula, id mollis mi erat quis lectus. Morbi quis felis ut turpis condimentum dictum porttitor id mauris. Nam non tincidunt mauris. Donec viverra eleifend pharetra. Nulla eu ipsum et elit consectetur rutrum. Integer lorem purus, ultricies ac laoreet quis, feugiat vel dolor. Donec eu turpis neque. Nullam molestie sapien eu nibh semper sed convallis est pretium.</p>
+                <p xmlns="http://www.w3.org/1999/xhtml" class="side-note"> oh no</p>
+            </div>
+        </div>
+    </foreignObject>
+</svg>
