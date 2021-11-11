@@ -1,0 +1,19 @@
+/* https://stackoverflow.com/questions/3354279/default-target-with-css */
+
+.tab, 
+.tab0,
+:target ~ .default-tab {display:none}
+
+.default-tab {display:block}
+
+#start:target ~ .start, /* after making 1 choice */
+#start2:target ~ .start2, /* after making all 5 choices */
+#root:target ~ .root, /* start of ch */
+#ask-elle:target ~ .ask-elle,
+#ask-sam:target ~ .ask-sam,
+#ask-jazz:target ~ .ask-jazz,
+#ask-tucker:target ~ .ask-tucker,
+#ask-none:target ~ .ask-none,
+#vent:target ~ .vent{
+  display: block
+}
