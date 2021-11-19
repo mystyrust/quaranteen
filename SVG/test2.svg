@@ -140,7 +140,7 @@
   }
     </style>
 
-    <foreignObject class="node" x="46" y="22" width="900" height="900">   
+    <foreignObject class="node" x="0" y="0" width="900" height="900">   
         <div xmlns="http://www.w3.org/1999/xhtml" class="letter-messy">
             <div xmlns="http://www.w3.org/1999/xhtml">
             <!-- this works!!!! need to add xhtml dec on every node. easy to do w multiline edit -->
