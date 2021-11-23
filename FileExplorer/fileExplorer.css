@@ -1,0 +1,72 @@
+.file-browser {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.file-address {
+    border: red solid;
+    margin-left: 10px;
+}
+
+.headerview {
+    /* display: block; */
+    display: table-caption;
+    border: purple;
+    border-style: solid;
+    height: 20px;
+}
+
+.sidebar {
+    /* display: inline-block; */
+    display: table-cell;
+    width: 100px;
+    height: 200px;
+    border: blue;
+    border-style: solid;
+}
+
+.sidebar-item span,
+.headerview span {
+    display: inline-flex;
+}
+
+.sidebar-item {
+    cursor: pointer;
+}
+
+.arrow-reverse {
+    transform: rotate(180deg);
+    margin: 0 10px 0 10px;
+}
+
+/* .sidebar-item:before {
+    content: url(https://i.imgur.com/7kBV9ZQ.png);
+    transform: scale(0.3,0.3);
+} */
+/* 
+.favicon-img {
+    height: 18px;
+    width: 18px;
+} */
+.mainview {
+    display: table;
+}
+.middlepane {
+    display: table-cell;
+    width: 400px;
+    height: 200px;
+    border: blue;
+    border-style: solid;
+}
+
+.footerview {
+    display: block;
+    border: orange solid;
+}
+
+#trash:target ~ .trash,
+#pictures:target ~ .pictures,
+#documents:target ~ .documents {
+  display: block;
+}

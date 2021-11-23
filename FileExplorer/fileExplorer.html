@@ -1,0 +1,41 @@
+<link href="../CSS/uploaded-to-ao3-v6.css" rel="stylesheet" />
+<link href="./fileExplorer.css" rel="stylesheet" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<div class="file-browser">
+    <div class="headerview">header</div>
+    <div class="headerview">
+        <span>
+            <img src="https://img.icons8.com/material-rounded/18/000000/arrow.png" class="arrow-reverse" />
+            <img src="https://img.icons8.com/material-rounded/18/000000/arrow.png" />
+            <span class="file-address">this is the file path</span>
+        </span>
+    </div>
+    <div class="mainview">
+    <div class="sidebar">
+        <div class="sidebar-item"><span><img src="https://img.icons8.com/color/18/000000/folder-invoices--v1.png"/> <a href="#documents">Documents</a></span></div>
+        <div class="sidebar-item"><span><img src="https://img.icons8.com/color/18/000000/folder-invoices--v1.png"/> <a href="#pictures">Pictures</a></span></div>
+        <div class="sidebar-item"><span><a href="#trash"> <img src="https://img.icons8.com/office/18/000000/trash.png"/> Trash</a></span></div>
+    </div>
+    <div class="middlepane">
+        mainview
+        <a id="trash" name="trash"></a>
+        <div name="trash" class="trash tab">
+            this is the trash
+        </div>
+        
+        <a id="pictures" name="pictures"></a>
+        <div name="pictures" class="pictures tab">
+            this is the pictures
+        </div>
+
+        <a id="documents" name="documents"></a>
+        <div name="documents" class="documents tab default-tab">
+            this is the documents
+            click <a href="#pictures">here</a> to go to pictures
+        </div>
+        
+    </div>
+    </div>
+    <div class="footerview">footerview if any</div>
+</div>
