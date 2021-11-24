@@ -2283,9 +2283,9 @@ p.paperclip > img {
 
 .tab, 
 .tab0,
-:target ~ .default-tab { display: none }
+:target ~ .default-tab { display: none; visibility: hidden; }
 
-.default-tab { display: block; }
+.default-tab { display: block; visibility: visible; }
 .root { margin-top: -1em !important; }
 
 #start:target ~ .start, /* after making 1 choice */
