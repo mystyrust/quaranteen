@@ -13,6 +13,7 @@
     font-size: 15.4px !important;
     min-width: 300px;
     overflow: scroll;
+    border: lightblue solid thin;
 }
 
 .hide {
@@ -20,17 +21,28 @@
 }
 
 .file-address {
-    border: red solid thin;
-    margin-left: 10px;
+    border: lightgray solid thin;
+    margin-left: -15px;
     display: none;
 }
 
 .headerview {
     /* display: block; */
-    display: table-caption;
-    border: purple solid thin;
+    /* display: table-caption; */
+    /* border: purple solid thin; */
     background: white;
     height: 20px;
+    border-bottom: lightblue solid thin;
+}
+
+.header-right {
+    float: right;
+    padding: 5px 5px 0 0;
+    cursor: pointer;
+}
+.header-left {
+    float: left;
+    margin: 5px 0 0 5px;
 }
 
 .sidebar {
@@ -38,7 +50,8 @@
     display: table-cell;
     min-width: 115px;
     height: 200px;
-    border: blue solid thin;
+    /* border: blue solid thin; */
+    border-right: lightblue thin solid;
 }
 
 
@@ -86,24 +99,26 @@
     position: relative;
     width: 400px;
     height: 200px;
-    border: blue solid thin;
+    /* border: blue solid thin; */
 }
 
 .footerview {
     display: block;
-    border: orange solid thin;
+    /* border: orange solid thin; */
 }
 
 .file-address-default {
     /* display: none; */
-    border: red solid thin;
-    margin-left: 10px;
+    border: lightgray solid thin;
+    margin-left: -15px;
     display: inline-flex;
     visibility: visible;
     position: absolute;
-    top: -0.6em;
+    top: -0.1em;
     height: auto !important;
-    width: 80% !important;
+    width: 90% !important;
+    padding-left: 10px;
+    /* font-size: 14.5px; */
 }
 
 /* .middlepane .tab:not(.default-tab) {
@@ -123,9 +138,9 @@
     z-index: 1;
     /* width: 400px; */
     max-width: 400px;
-    height: 189px;
+    height: 200px;
     overflow: auto;
-    margin-top: 254px;
+    margin-top: 244px;
 }
 
   /* .mainview.tab::-webkit-scrollbar , 
@@ -157,21 +172,27 @@
     display: inline-flex;
     visibility: visible;
     position: absolute;
-    top: -0.6em;
+    top: -0.1em;
     height: auto;
-    width: 80%;
+    width: 90%;
+    padding-left: 10px;
+    font-size: 14.5px;
+
+    /* overflow: hidden; */
+    /* white-space: nowrap; */
     /* margin-top: -3.2em; */
     /* margin-top: -32px; */
 }
 
-.default-tab.mainview:not() { 
+.default-tab.mainview { 
+    visibility: visible;
     position: absolute;
     z-index: 1;
-    margin-top: 254px;
-    width: 400px;
-    height: 189px;
+    /* width: 400px; */
+    max-width: 400px;
+    height: 200px;
     overflow: auto;
-    margin-top: 254px;
+    margin-top: 244px;
   }
 
 /* ao3 fixes */
