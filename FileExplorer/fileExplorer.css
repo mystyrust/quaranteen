@@ -7,6 +7,7 @@
 .file-address {
     border: red solid;
     margin-left: 10px;
+    display: none;
 }
 
 .headerview {
@@ -26,8 +27,8 @@
     border-style: solid;
 }
 
-.sidebar-item span,
-.headerview span {
+/* .headerview span , */
+.sidebar-item span {
     display: inline-flex;
 }
 
@@ -65,8 +66,27 @@
     border: orange solid;
 }
 
-#trash:target ~ .trash,
+.file-address-default {
+    /* display: none; */
+    border: red solid;
+    margin-left: 10px;
+    position: absolute;
+    margin-top: -32px;
+}
+
+#mainview:target ~ .mainview,
+#documents:target ~ .documents,
 #pictures:target ~ .pictures,
-#documents:target ~ .documents {
+#trash:target ~ .trash {
   display: block;
+}
+
+#mainview:target ~ .file-address.mainview,
+#documents:target ~ .file-address.documents,
+#pictures:target ~ .file-address.pictures,
+#trash:target ~ .file-address.trash {
+    /* visibility: visible; */
+    display: inline-flex;
+    position: absolute;
+    margin-top: -32px;
 }
