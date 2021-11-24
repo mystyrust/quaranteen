@@ -1,7 +1,10 @@
 .file-browser {
     display: table;
+    position: relative;
     margin-left: auto;
     margin-right: auto;
+    background-color: white;
+    font-family: sans-serif;
 }
 
 .file-address {
@@ -21,19 +24,31 @@
 .sidebar {
     /* display: inline-block; */
     display: table-cell;
-    width: 100px;
+    width: 115px;
     height: 200px;
     border: blue;
     border-style: solid;
 }
 
-/* .headerview span , */
-.sidebar-item span {
+
+.sidebar-item a {
     display: inline-flex;
+    text-decoration: none;
+    border-bottom: none;
+}
+
+.sidebar-item:hover {
+    background-color: lightblue;
 }
 
 .sidebar-item {
     cursor: pointer;
+    padding: 3px;
+}
+
+.sidebar-item img {
+    margin-right: 4px;
+    margin-top: -0.1em;
 }
 
 .arrow-reverse {
@@ -52,9 +67,12 @@
 } */
 .mainview {
     display: table;
+    position: relative;
 }
+
 .middlepane {
     display: table-cell;
+    position: relative;
     width: 400px;
     height: 200px;
     border: blue;
@@ -71,7 +89,13 @@
     border: red solid;
     margin-left: 10px;
     position: absolute;
-    margin-top: -32px;
+    top: -2em;
+}
+
+.middlepane .tab:not(.file-address-default) {
+    padding-top: 150px;
+    top: -150px;
+    position: absolute;
 }
 
 #mainview:target ~ .mainview,
@@ -88,5 +112,21 @@
     /* visibility: visible; */
     display: inline-flex;
     position: absolute;
-    margin-top: -32px;
+    top: -2em;
+    /* margin-top: -3.2em; */
+    /* margin-top: -32px; */
+}
+
+/* ao3 fixes */
+.headerview p ,
+.sidebar-item p {
+    display: inline;
+}
+
+.file-browser p:first-child,
+.sidebar p:first-child,
+.middlepane p:first-child {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
 }
