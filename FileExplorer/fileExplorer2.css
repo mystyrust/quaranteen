@@ -35,6 +35,10 @@
     border-bottom: lightblue solid thin;
 }
 
+.file-browser > :nth-child(2) {
+    border-bottom: none;
+}
+
 .header-right {
     float: right;
     padding: 5px 5px 0 0;
@@ -75,10 +79,10 @@
     border-bottom: none;
 }
 
-.sidebar-item img {
+/* .sidebar-item img {
     margin-right: 7px;
     margin-top: -0.1em;
-}
+} */
 
 .arrow-reverse {
     transform: rotate(180deg);
@@ -134,6 +138,7 @@
 
 
 #mainview:target ~ .mainview,
+#files-list:target ~ .files-list,
 #documents:target ~ .documents,
 #pictures:target ~ .pictures,
 #trash:target ~ .trash {
@@ -151,6 +156,7 @@
 }
 
   .mainview.tab::-webkit-scrollbar , 
+  /* .files-list.tab::-webkit-scrollbar , */
   .documents.tab::-webkit-scrollbar ,
   .pictures.tab::-webkit-scrollbar ,
   .trash.tab::-webkit-scrollbar {
@@ -158,6 +164,7 @@
   }
    
   .mainview.tab::-webkit-scrollbar-track , 
+  /* .files-list.tab::-webkit-scrollbar-track ,  */
   .documents.tab::-webkit-scrollbar-track ,
   .pictures.tab::-webkit-scrollbar-track ,
   .trash.tab::-webkit-scrollbar-track {
@@ -165,6 +172,7 @@
   }
    
   .mainview.tab::-webkit-scrollbar-thumb , 
+  /* .files-list.tab::-webkit-scrollbar-thumb ,  */
   .documents.tab::-webkit-scrollbar-thumb ,
   .pictures.tab::-webkit-scrollbar-thumb ,
   .trash.tab::-webkit-scrollbar-thumb {
@@ -173,6 +181,7 @@
   }
 
 #mainview:target ~ .file-address.mainview,
+#files-list:target ~ .file-address.files-list,
 #documents:target ~ .file-address.documents,
 #pictures:target ~ .file-address.pictures,
 #trash:target ~ .file-address.trash {
@@ -183,7 +192,7 @@
     height: auto;
     width: 90%;
     padding-left: 10px;
-    font-size: 14.5px;
+    font-size: 14px;
 
     /* overflow: hidden; */
     /* white-space: nowrap; */
@@ -206,6 +215,10 @@
     /* margin-top: 244px; */
 }
 
+.files-list {
+    overflow: hidden;
+}
+
 .file-icon {
     display: inline-block;
     text-decoration: none;
@@ -216,7 +229,9 @@
 
 .file-icon span {
     /* margin-left: -80px; */
-    margin-left: 14px;
+    /* margin-left: 14px; */
+    display: flex;
+    justify-content: center;
 }
 
 /* .file-icon img {
@@ -236,3 +251,51 @@
     padding: 0;
     line-height: 1;
 }
+/* ao3 fixes end */
+
+.file-address-default a,
+.file-address a {
+    text-decoration: none;
+}
+
+.locked-view {
+    width: 100%;
+    text-align: center;
+    /* transform: translateY(-50%);
+    top: 50%;
+    position: absolute; */
+    padding: 70px 0;
+    background-color: lightgray;
+}
+
+/* icons */
+.folder-img:before {
+    content: url(https://img.icons8.com/color/18/000000/folder-invoices--v1.png);
+    margin-right: 7px;
+    margin-top: -0.1em;
+}
+
+.trash-img:before {
+    content: url(https://img.icons8.com/color/18/000000/trash.png);
+    margin-right: 7px;
+    margin-top: -0.1em;
+}
+
+.file-tree-img:before {
+    content: url(https://img.icons8.com/color/18/000000/folder-tree.png);
+    margin-right: 7px;
+    margin-top: -0.1em;
+}
+
+td.folder-img {
+    display: inline-flex;
+}
+
+table { width: 100%; border-collapse: collapse; }
+
+tr th {
+    /* float: left; */
+    text-align: left;
+}
+
+tbody tr:hover {background-color: #D6EEEE;}

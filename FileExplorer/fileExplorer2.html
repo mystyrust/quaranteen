@@ -1,7 +1,7 @@
 <link href="../CSS/uploaded-to-ao3-v6.css" rel="stylesheet" />
 <link href="./fileExplorer2.css" rel="stylesheet" />
-<!-- <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script> -->
-<script type="text/javascript" src="../JS/jquery-3.3.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+<!-- <script type="text/javascript" src="../JS/jquery-3.3.1.min.js"></script> -->
 <script type="text/javascript" src="./fileExplorer.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -19,20 +19,19 @@
     <div class="mainview">
         <div class="sidebar">
             <p>
-            <a class="sidebar-item" href="#documents">
-                <img src="https://img.icons8.com/color/18/000000/folder-invoices--v1.png"/> 
+            <a class="sidebar-item folder-img" href="#documents">
                 <span>Documents</span>
-            </a> <br /><a class="sidebar-item" href="#pictures">
-                <img src="https://img.icons8.com/color/18/000000/folder-invoices--v1.png"/> 
+            </a> <br /><a class="sidebar-item folder-img" href="#pictures">
                 <span>Pictures</span>
-            </a> <br /> <a class="sidebar-item" href="#trash"> 
-                <img src="https://img.icons8.com/office/18/000000/trash.png"/> 
+            </a> <br /> <a class="sidebar-item trash-img" href="#trash"> 
                 <span>Trash</span>
             </a>
             </p>
         </div>
         <div class="middlepane">
-            <a id="trash" name="trash"></a><span class="file-address trash">this is the trash path</span>
+            <a id="trash" name="trash"></a><span class="file-address trash">
+                <a href="#mainview">Networks</a> &nbsp; > &nbsp; <a href="#files-list">Vlad's PC</a> &nbsp; > &nbsp; <a href="#trash">Trash</a>
+            </span>
             <div name="trash" class="trash tab">
                 this is the trash
                 this is the trash this is the trash this is the trash this is the trash this is the trash this is the trash
@@ -59,21 +58,66 @@
                 
             </div>
             
-            <a id="pictures" name="pictures"></a><span class="file-address pictures">this is the pictures path</span>
+            <a id="pictures" name="pictures"></a><span class="file-address pictures">
+                <a href="#mainview">Networks</a> &nbsp; > &nbsp; <a href="#files-list">Vlad's PC</a> &nbsp; > &nbsp; <a href="#pictures">Pictures</a>
+            </span>
             <div name="pictures" class="pictures tab">
-                this is the pictures
+            <div class="locked-view">
+                <label for="pwd">Enter password to view locked data or directory:</label> <br>
+                <input type="password" id="pwd" name="pwd"> <br><br>
+                <button>submit</button>
+            </div>
             </div>
 
-            <a id="documents" name="documents"></a><span class="file-address documents">this is the documents path</span>
+            <a id="documents" name="documents"></a><span class="file-address documents">
+                <a href="#mainview">Networks</a> &nbsp; > &nbsp; <a href="#files-list">Vlad's PC</a> &nbsp; > &nbsp; <a href="#documents">Documents</a>
+            </span>
             <div name="documents" class="documents tab">
-                this is the documents
-                click <a href="#pictures">here</a> to go to pictures
+                <table>
+                    <thead> <tr> <th>Filename</th> <th>Size</th> <th>Date Modified</th></tr> </thead>
+                    <tbody>
+                        <tr> <td class="folder-img"><span>file.exe </span></td>  <td>asdf</td>  <td>asdf</td> </tr>
+                        <tr> <td class="folder-img"><span>file.exe </span></td>  <td>asdf</td>  <td>asdf</td> </tr>
+                        <tr> <td class="folder-img"><span>file.exe </span></td>  <td>asdf</td>  <td>asdf</td> </tr>
+                        <tr> <td class="folder-img"><span>file.exe </span></td>  <td>asdf</td>  <td>asdf</td> </tr>
+                        <tr> <td class="folder-img"><span>file.exe </span></td>  <td>asdf</td>  <td>asdf</td> </tr>
+                        <tr> <td class="folder-img"><span>file.exe </span></td>  <td>asdf</td>  <td>asdf</td> </tr>
+                        <tr> <td class="folder-img"><span>file.exe </span></td>  <td>asdf</td>  <td>asdf</td> </tr>
+                        <tr> <td class="folder-img"><span>file.exe </span></td>  <td>asdf</td>  <td>asdf</td> </tr>
+                        <tr> <td class="folder-img"><span>file.exe </span></td>  <td>asdf</td>  <td>asdf</td> </tr>
+                        <tr> <td class="folder-img"><span>file.exe </span></td>  <td>asdf</td>  <td>asdf</td> </tr>
+                        <tr> <td class="folder-img"><span>file.exe </span></td>  <td>asdf</td>  <td>asdf</td> </tr>
+                        <tr> <td class="folder-img"><span>file.exe </span></td>  <td>asdf</td>  <td>asdf</td> </tr>
+                        <tr> <td class="folder-img"><span>file.exe </span></td>  <td>asdf</td>  <td>asdf</td> </tr>
+                        <tr> <td class="folder-img"><span>file.exe </span></td>  <td>asdf</td>  <td>asdf</td> </tr>
+                        <tr> <td class="folder-img"><span>file.exe </span></td>  <td>asdf</td>  <td>asdf</td> </tr>
+                    </tbody>
+                </table>
             </div>
 
-            <a id="mainview" name="mainview"></a><span class="mainview default-tab tab file-address-default">Networks</span>
+            <a id="files-list" name="files-list"></a><span class="files-list tab file-address files-list">
+                <a href="#mainview">Networks</a> &nbsp; > &nbsp; <a href="#files-list">Vlad's PC</a>
+            </span>
+            <div name="files-list" class="files-list tab">
+                <!-- list of files-->
+                <a class="file-icon" href="#documents">
+                    <img src="https://img.icons8.com/color/96/000000/folder-invoices.png"/><span>Documents</span>
+                </a>
+                <a class="file-icon" href="#downloads">
+                    <img src="https://img.icons8.com/color/96/000000/folder-invoices.png"/><span>Downloads</span>
+                </a>
+                <a class="file-icon" href="#pictures">
+                    <img src="https://img.icons8.com/color/96/000000/folder-invoices.png"/><span>Pictures</span>
+                </a>
+                <a class="file-icon" href="#trash">
+                    <img src="https://img.icons8.com/color/96/000000/trash.png"/><span>Trash</span>
+                </a>
+            </div>
+
+            <a id="mainview" name="mainview"></a><span class="mainview default-tab tab file-address-default"><a href="#mainview">Networks</a> </span>
             <div name="mainview" class="mainview default-tab tab">
                 <!-- mainview default -->
-                <a class="file-icon" href="">
+                <a class="file-icon" href="#files-list">
                     <img src="https://img.icons8.com/color/96/000000/individual-server.png"/><span>Vlad's PC</span>
                 </a>
             </div>
