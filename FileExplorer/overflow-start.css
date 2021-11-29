@@ -1,0 +1,32 @@
+.overflow-top {
+    height: 6000px;
+    top: -900px;
+    z-index: 20;
+    overflow: initial;
+    line-height: 1.125;
+}
+
+.overflow-top p {
+    max-width: 160px;
+    padding-top: 100px;
+    position: sticky;
+    top: 0;
+}
+
+/* .overflow::-webkit-scrollbar {
+    display: none;
+} */
+
+.start-hack span {
+    display: inline-block;
+    font-size: 15px;
+    background: black;
+    color: white;
+    text-decoration: underline;
+    border: 2px solid #8f8e8f;
+    border-radius: 10px;
+    max-width: 470px;
+    padding: 10px;
+    height: auto;
+    width: auto;
+}
