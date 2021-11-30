@@ -1,0 +1,98 @@
+.row {
+    display: flex;
+  }
+  
+  /* Create two equal columns that sits next to each other */
+  .col {
+    flex: 50%;
+    padding: 10px;
+    float: left;
+  }
+
+  .handwriting {
+    width: 60%;
+    text-align: center;
+    display: inline-block;
+    font-family: cursive;
+    border-bottom: black solid 1px;
+  }
+
+
+
+ tr:hover,td:hover { background: none; }
+
+ .paper {
+    width: 97%;
+    height: 100%;
+    background: linear-gradient(to bottom,#ffffff 24px,#00b0d7 1px);
+    margin: 10px auto;
+    background-size: 100% 25px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    -webkit-box-shadow: 3px 3px 3px rgba(0,0,0,.2),0px 0px 6px rgba(0,0,0,.2);
+    -moz-box-shadow: 3px 3px 3px rgba(0,0,0,.2),0px 0px 6px rgba(0,0,0,.2);
+    -ms-box-shadow: 3px 3px 3px rgba(0,0,0,.2),0px 0px 6px rgba(0,0,0,.2);
+    -o-box-shadow: 3px 3px 3px rgba(0,0,0,.2),0px 0px 6px rgba(0,0,0,.2);
+    box-shadow: 3px 3px 3px rgba(0,0,0,.2),0px 0px 6px rgba(0,0,0,.2);
+  }
+  
+ .paper::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 10%;
+    height: 100%;
+    width: 1px;
+    background: #db4034;
+  }
+  
+ .header-paper {
+    height: 80px;
+    width: 100%;
+    background: #ffffff;
+    background-size: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-radius: 5px;
+  }
+  
+ .titletext {
+    font-size: 15px;
+    line-height: 15px;
+    padding-left: 0;
+    text-align: center;
+    margin-left: 8%;
+    margin-top: 84px;
+    margin-bottom: 10px;
+    color: #000000;
+    font-weight: bold;
+    text-decoration: underline;
+    font-family: helvetica neue, helvetica, arial, sans-serif;
+  }
+  
+  .textwmar {
+    margin-left: 11%;
+    margin-top: 100px;
+    font-size: 15px;
+    line-height: 25px;
+    color: #000000;
+    font-family: helvetica neue, helvetica, arial, sans-serif;
+  }
+  
+ .text {
+    margin-left: 11%;
+    font-size: 15px;
+    line-height: 25px;
+    color: #000000;
+    font-family: helvetica neue, helvetica, arial, sans-serif;
+  }
+  
+ .hide {
+    display: none;
+  }
+  
