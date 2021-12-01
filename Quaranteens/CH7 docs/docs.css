@@ -9,6 +9,10 @@
     float: left;
   }
 
+  .underline {
+    text-decoration: underline 0.15em;
+  }
+
   .handwriting {
     width: 60%;
     text-align: center;
@@ -22,13 +26,16 @@
  tr:hover,td:hover { background: none; }
 
  .paper {
-    width: 97%;
-    height: 100%;
+    /* width: 97%; */
+    width: -webkit-fill-available;
+    min-width: 300px;
+    max-width: 600px;
+    /* height: 100%; */
     background: linear-gradient(to bottom,#ffffff 24px,#00b0d7 1px);
     margin: 10px auto;
     background-size: 100% 25px;
     position: relative;
-    overflow: hidden;
+    /* overflow: hidden; */
     border-radius: 5px;
     -webkit-box-shadow: 3px 3px 3px rgba(0,0,0,.2),0px 0px 6px rgba(0,0,0,.2);
     -moz-box-shadow: 3px 3px 3px rgba(0,0,0,.2),0px 0px 6px rgba(0,0,0,.2);
@@ -83,6 +90,34 @@
     color: #000000;
     font-family: helvetica neue, helvetica, arial, sans-serif;
   }
+
+  .textwmar p {
+      line-height: unset;
+  }
+
+  .bullet-outside {
+    display: list-item;
+    list-style-type: disc;
+    list-style-position: outside;
+  }
+
+  .bullet-inside {
+    display: list-item;
+    list-style-type: disc;
+    list-style-position: inside;
+  }
+
+  .redacted {
+      background-color: black;
+  }
+  .redacted:active {
+    background-color: gray;
+  }
+
+  .notes-header {
+      text-decoration: underline;
+      text-align: left;
+  }
   
  .text {
     margin-left: 11%;
@@ -96,3 +131,152 @@
     display: none;
   }
   
+  .letter-doc {
+    background: #fafafa;
+    /* font-family: sans-serif; */
+    color: #000;
+    padding: 15px;
+    /* z-index: 17; */
+    min-width: 250px;
+    max-width: 600px;
+    /* width: 83%; */
+    margin: 0 auto 25px;
+    display: block;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    position: relative;
+    /* text-align: justify; */
+  }
+
+
+
+  /* donut pie */
+
+  .donut-container {
+      transform: scale(0.5);
+  }
+
+  .block {
+    margin: 25px 25px 0 0;
+    background: #fafafa;
+    border-radius: 5px;
+    float: left;
+    width: 300px;
+    overflow: hidden;
+  }
+  
+  .donut-chart-block {
+    overflow: hidden;
+  }
+  
+  .donut-chart {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 2rem auto;
+    border-radius: 100%
+  }
+  
+  .donut-chart .center {
+    background: #fafafa;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    height: 140px;
+    width: 140px;
+    border-radius: 70px;
+  }
+  
+  .clip {
+    border-radius: 50%;
+    clip: rect(0px, 200px, 200px, 100px);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .item {
+    border-radius: 50%;
+    clip: rect(0px, 100px, 200px, 0px);
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    font-family: monospace;
+    font-size: 1.5rem;
+  }
+  
+  #section1 {
+    transform: rotate(0deg);
+  }
+  
+  #section1 .item {
+    background-color: #E64C65;
+    transform: rotate(76deg);
+  }
+  
+  #section2 {
+    transform: rotate(76deg);
+  }
+  
+  #section2 .item {
+    background-color: #11A8AB;
+    transform: rotate(140deg);
+  }
+  
+  #section3 {
+    transform: rotate(215deg);
+  }
+  
+  #section3 .item {
+    background-color: #4FC4F6;
+    transform: rotate(113deg);
+  }
+  
+  #section4 {
+    transform: rotate(-32deg);
+  }
+  
+  #section4 .item {
+    background-color: #FCB150;
+    transform: rotate(32deg);
+  }
+
+  .percent-display {
+    display: inline-block;
+    padding-top: 47px;
+    font-size: 40px;
+  }
+
+
+  /* sticky notes */
+  .sticky-container {
+    display: inline-flex;
+  }
+
+  .sticky {
+    position: absolute;
+    display: inline-block;
+    background-color: #ffff99;
+    color: #000000;
+    text-decoration: none;
+    font-family: "comic sans ms", "chalkboard se", sans-serif;
+    /* max-height: 10em;
+    max-width: 10em;
+    min-width: 7em;
+    min-height: 7em; */
+    right: 0;
+    height: 8em;
+    width: 8em;
+    padding: 1em;
+    text-align: left;
+    margin-top: -5em;
+    margin-right: 2em;
+    /* margin-left: auto;
+    margin-right: auto; */
+    -moz-box-shadow: 5px 5px 7px rgba(33,33,33,1);
+    -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    -webkit-transform: rotate(-6deg);
+    -o-transform: rotate(-6deg);
+    -moz-transform: rotate(-6deg);
+    transform: rotate(-6deg);
+  }
