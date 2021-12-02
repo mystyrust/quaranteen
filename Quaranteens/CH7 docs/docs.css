@@ -124,7 +124,7 @@
       background-color: black;
   }
   .redacted:active, .redacted:hover {
-    background-color: gray;
+    background-color: lightgray;
   }
 
   .notes-header {
