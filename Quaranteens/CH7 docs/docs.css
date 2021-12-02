@@ -165,27 +165,33 @@
   /* donut pie */
 
   .donut-container {
-      transform: scale(0.5);
+      /* transform: scale(0.5); */
   }
 
-  .block {
-    margin: 25px 25px 0 0;
+  .donut-chart-block {
     background: #fafafa;
+    display: flex;
+    /* margin: 25px 25px 0 0;
     border-radius: 5px;
     float: left;
     width: 300px;
-    overflow: hidden;
+    overflow: hidden; */
   }
-  
-  .donut-chart-block {
-    overflow: hidden;
+
+  .donut-caption {
+    margin: auto auto auto -3.5em;
+    /* margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    margin-left: -3.5em; */
   }
   
   .donut-chart {
     position: relative;
     width: 200px;
     height: 200px;
-    margin: 2rem auto;
+    transform: scale(0.6) translate(-50px, 0px);
+    /* margin: 2rem auto; */
     border-radius: 100%
   }
   
@@ -225,8 +231,8 @@
   }
   
   .section1 .item {
-    background-color: #E64C65;
-    transform: rotate(76deg);
+    background-color: #11A8AB;
+    transform: rotate(80deg);
   }
   
   .section2 {
@@ -243,16 +249,88 @@
   }
   
   .section3 .item {
-    background-color: #4FC4F6;
-    transform: rotate(113deg);
+    background-color: #11A8AB;
+    transform: rotate(87deg);
   }
   
   .section4 {
-    transform: rotate(-32deg);
+    transform: rotate(300deg);
   }
   
   .section4 .item {
-    background-color: #FCB150;
+    background-color: lightgray;
+    transform: rotate(60deg);
+  }
+
+  .section5 {
+    transform: rotate(0deg);
+  }
+  
+  .section5 .item {
+    background-color: #11A8AB;
+    transform: rotate(76deg);
+  }
+  
+  .section6 {
+    transform: rotate(76deg);
+  }
+  
+  .section6 .item {
+    background-color: #11A8AB;
+    transform: rotate(140deg);
+  }
+  
+  .section7 {
+    transform: rotate(215deg);
+  }
+  
+  .section7 .item {
+    background-color: lightgray;
+    transform: rotate(113deg);
+  }
+  
+  .section8 {
+    transform: rotate(-32deg);
+  }
+  
+  .section8 .item {
+    background-color: lightgray;
+    transform: rotate(32deg);
+  }
+
+  .section9 {
+    transform: rotate(0deg);
+  }
+  
+  .section9 .item {
+    background-color: #11A8AB;
+    transform: rotate(76deg);
+  }
+  
+  .section10 {
+    transform: rotate(76deg);
+  }
+  
+  .section10 .item {
+    background-color: #11A8AB;
+    transform: rotate(140deg);
+  }
+  
+  .section11 {
+    transform: rotate(215deg);
+  }
+  
+  .section11 .item {
+    background-color: lightgray;
+    transform: rotate(113deg);
+  }
+  
+  .section12 {
+    transform: rotate(-32deg);
+  }
+  
+  .section12 .item {
+    background-color: lightgray;
     transform: rotate(32deg);
   }
 
