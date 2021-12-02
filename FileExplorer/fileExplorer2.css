@@ -291,11 +291,12 @@ td.folder-img {
     display: inline-flex;
 }
 
-table { width: 100%; border-collapse: collapse; }
 
-tr th {
+table.document-list { width: 100%; border-collapse: collapse; }
+
+.document-list tr th {
     /* float: left; */
     text-align: left;
 }
 
-tbody tr:hover {background-color: #D6EEEE;}
+.document-list tbody tr:hover {background-color: #D6EEEE;}

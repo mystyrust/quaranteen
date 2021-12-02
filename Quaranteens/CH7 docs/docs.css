@@ -1,16 +1,21 @@
-.row {
+  /* Create two equal columns that sits next to each other */
+/* .row {
     display: flex;
   }
   
-  /* Create two equal columns that sits next to each other */
   .col {
     flex: 50%;
     padding: 10px;
     float: left;
-  }
+  } */
 
   .underline {
     text-decoration: underline 0.15em;
+  }
+
+  .physical-center {
+      display: block;
+      text-align: center;
   }
 
   .handwriting {
@@ -21,6 +26,14 @@
     border-bottom: black solid 1px;
   }
 
+  .handwriting2 {
+    font-family:'Lucida Handwriting', 'Monotype Corsiva', Zapfino, 'URW Chancery L', 'Courier New', Courier, monospace;
+    width: 60%;
+    text-align: center;
+    display: inline-block;
+    border-bottom: black solid 1px;
+    line-height: 1em;
+  }
 
 
  tr:hover,td:hover { background: none; }
@@ -110,7 +123,7 @@
   .redacted {
       background-color: black;
   }
-  .redacted:active {
+  .redacted:active, .redacted:hover {
     background-color: gray;
   }
 
@@ -202,40 +215,43 @@
     width: 100%;
     font-family: monospace;
     font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
+    line-height: unset;
   }
   
-  #section1 {
+  .section1 {
     transform: rotate(0deg);
   }
   
-  #section1 .item {
+  .section1 .item {
     background-color: #E64C65;
     transform: rotate(76deg);
   }
   
-  #section2 {
+  .section2 {
     transform: rotate(76deg);
   }
   
-  #section2 .item {
+  .section2 .item {
     background-color: #11A8AB;
     transform: rotate(140deg);
   }
   
-  #section3 {
+  .section3 {
     transform: rotate(215deg);
   }
   
-  #section3 .item {
+  .section3 .item {
     background-color: #4FC4F6;
     transform: rotate(113deg);
   }
   
-  #section4 {
+  .section4 {
     transform: rotate(-32deg);
   }
   
-  #section4 .item {
+  .section4 .item {
     background-color: #FCB150;
     transform: rotate(32deg);
   }
@@ -249,7 +265,7 @@
 
   /* sticky notes */
   .sticky-container {
-    display: inline-flex;
+    display: inline;
   }
 
   .sticky {
@@ -279,4 +295,18 @@
     -o-transform: rotate(-6deg);
     -moz-transform: rotate(-6deg);
     transform: rotate(-6deg);
+  }
+
+
+  /* report card */
+  table.report-card {
+    border-collapse: collapse;
+    margin: auto;
+    width: 60%;
+    text-align: left;
+  }
+
+  .report-card th , .report-card td {
+      padding: 5px;
+      border-bottom: 1px solid #ddd;
   }
