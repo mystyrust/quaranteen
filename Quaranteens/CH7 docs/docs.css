@@ -35,7 +35,6 @@
     line-height: 1em;
   }
 
-
  tr:hover,td:hover { background: none; }
 
  .paper {
@@ -146,44 +145,62 @@
   
   .letter-doc {
     background: #fafafa;
-    /* font-family: sans-serif; */
     color: #000;
     padding: 15px;
-    /* z-index: 17; */
     min-width: 250px;
     max-width: 600px;
-    /* width: 83%; */
     margin: 0 auto 25px;
     display: block;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
     position: relative;
-    /* text-align: justify; */
   }
 
-
+  .letter-doc.dna:before, .letter-doc.dna:after {
+    content: "";
+    height: 98%;
+    position: absolute;
+    width: 100%;
+        z-index: -1; 
+    }
+  
+  .letter-doc.dna:before {
+    background: #f6f6f6;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    left: -5px;
+    width: 96%;
+    top: 0;
+    transform: rotate(-1.5deg);
+  }
 
   /* donut pie */
-
-  .donut-container {
-      /* transform: scale(0.5); */
+  .dna-report {
+      display: inline-block;
   }
 
   .donut-chart-block {
     background: #fafafa;
-    display: flex;
-    /* margin: 25px 25px 0 0;
-    border-radius: 5px;
-    float: left;
-    width: 300px;
-    overflow: hidden; */
+    display: inline-block;
+    margin: 10px;
+    width: 130px;
   }
 
   .donut-caption {
-    margin: auto auto auto -3.5em;
-    /* margin-top: auto;
-    margin-bottom: auto;
-    margin-right: auto;
-    margin-left: -3.5em; */
+    text-align: center;
+    margin-top: -2em;
+  }
+
+  .donut-desc {
+    text-align: center;
+    margin-bottom: -1em;
+  }
+
+  .donut-row {
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  .donut-endnotes {
+    margin-top: -0.5em;
   }
   
   .donut-chart {
@@ -191,7 +208,6 @@
     width: 200px;
     height: 200px;
     transform: scale(0.6) translate(-50px, 0px);
-    /* margin: 2rem auto; */
     border-radius: 100%
   }
   
@@ -317,12 +333,12 @@
   }
   
   .section11 {
-    transform: rotate(215deg);
+    transform: rotate(166deg);
   }
   
   .section11 .item {
     background-color: lightgray;
-    transform: rotate(113deg);
+    transform: rotate(166deg);
   }
   
   .section12 {
@@ -335,9 +351,11 @@
   }
 
   .percent-display {
-    display: inline-block;
-    padding-top: 47px;
+    /* display: inline-block;
+    padding-top: 47px; */
     font-size: 40px;
+    text-align: center;
+    margin-top: 1.1em;
   }
 
 
@@ -358,14 +376,12 @@
     min-width: 7em;
     min-height: 7em; */
     right: 0;
-    height: 8em;
-    width: 8em;
+    height: 9em;
+    width: 9em;
     padding: 1em;
     text-align: left;
     margin-top: -5em;
     margin-right: 2em;
-    /* margin-left: auto;
-    margin-right: auto; */
     -moz-box-shadow: 5px 5px 7px rgba(33,33,33,1);
     -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
     box-shadow: 5px 5px 7px rgba(33,33,33,.7);
@@ -382,9 +398,62 @@
     margin: auto;
     width: 60%;
     text-align: left;
+    border: 1px solid #ddd;
   }
+
+  .report-card thead tr {
+      background-color: #ddd;
+  }
+
 
   .report-card th , .report-card td {
       padding: 5px;
       border-bottom: 1px solid #ddd;
+  }
+
+  /* adoption certificate */
+.cert-cont{
+    border-style: dotted dashed;
+    border-color: firebrick;
+    padding: 28px;
+    margin: 0;
+    text-align: center;
+}
+
+.cert-title {
+    font-family: Luminari, fantasy;
+    font-size: 25px;
+    display: block;
+    /* text-align: center; */
+}
+
+.cert-bow {
+    position: absolute;
+    width: 166px;
+    left: 50%;
+    transform: translate(-50%,0);
+    top: 56%;
+    opacity: 0.43;
+}
+
+.handwriting-right {
+    float: right;
+    font-size: 14px;
+    font-family:'Lucida Handwriting', 'Monotype Corsiva', Zapfino, 'URW Chancery L', 'Courier New', Courier, monospace;
+    /* width: 60%; */
+    text-align: center;
+    display: inline-block;
+    border-bottom: black solid 1px;
+    line-height: 1em;
+  }
+
+  .handwriting-left{
+    float: left;
+    font-size: 14px;
+    font-family:'Lucida Handwriting', 'Monotype Corsiva', Zapfino, 'URW Chancery L', 'Courier New', Courier, monospace;
+    /* width: 60%; */
+    text-align: center;
+    display: inline-block;
+    border-bottom: black solid 1px;
+    line-height: 1em;
   }
