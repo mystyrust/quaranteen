@@ -131,14 +131,15 @@
       text-align: left;
   }
   
- .text {
+ /* .text {
     margin-left: 11%;
     font-size: 15px;
     line-height: 25px;
     color: #000000;
     font-family: helvetica neue, helvetica, arial, sans-serif;
   }
-  
+   */
+
  .hide {
     display: none;
   }
@@ -456,4 +457,82 @@
     display: inline-block;
     border-bottom: black solid 1px;
     line-height: 1em;
+  }
+
+  /* groupchat imgs */
+  .image-minions-yay {
+    float: left;
+    margin: 0 0 0.5em;
+    border-radius: 1em;
+    width: 50%;
+    min-height: 75%;
+    clear: both;
+    position: relative;
+    background-image: url("https://c.tenor.com/g_a_ehluKycAAAAC/minions-yay.gif");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    padding-top: 23%;
+  }
+  
+  .image-clap-yay {
+    float: left;
+    margin: 0 0 0.5em;
+    border-radius: 1em;
+    width: 50%;
+    min-height: 75%;
+    clear: both;
+    position: relative;
+    background-image: url("https://c.tenor.com/YTBAJPeBFTsAAAAM/yay-hive.gif");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    padding-top: 49%;
+  }
+
+
+  
+  .image-yay-3 {
+    float: right;
+    margin: 0 0 0.5em;
+    border-radius: 1em;
+    width: 50%;
+    min-height: 75%;
+    clear: both;
+    position: relative;
+    background-image: url("https://c.tenor.com/PK_ln6GnJksAAAAM/jonah-hill-yay.gif");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    padding-top: 34%;
+  }
+
+  .image-yay-4 {
+    float: right;
+    margin: 0 0 0.5em;
+    border-radius: 1em;
+    width: 50%;
+    min-height: 75%;
+    clear: both;
+    position: relative;
+    background-image: url("https://i.giphy.com/media/10LKovKon8DENq/giphy.webp");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    padding-top: 29%;
+  }
+
+  .image-hello {
+    float: left;
+    margin: 0 0 0.5em;
+    border-radius: 1em;
+    width: 50%;
+    min-height: 75%;
+    clear: both;
+    position: relative;
+    background-image: url("https://i.gifer.com/origin/55/55f1f99ec4fceab6af26e290a9bccdcd.gif");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    padding-top: 49%;
   }
