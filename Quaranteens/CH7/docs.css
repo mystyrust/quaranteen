@@ -28,7 +28,7 @@
 
  .paper {
     /* width: 97%; */
-    width: -webkit-fill-available;
+    /* width: -webkit-fill-available; */
     min-width: 300px;
     max-width: 600px;
     /* height: 100%; */
@@ -186,13 +186,13 @@
     position: relative;
   }
 
-  .letter-doc.dna:before, .letter-doc.dna:after {
+  /* .letter-doc.dna:before, .letter-doc.dna:after {
     content: "";
     height: 98%;
     position: absolute;
     width: 100%;
-        z-index: -1; 
-    }
+    z-index: -1; 
+  }
   
   .letter-doc.dna:before {
     background: #f6f6f6;
@@ -201,7 +201,7 @@
     width: 96%;
     top: 0;
     transform: rotate(-1.5deg);
-  }
+  } */
 
   .dna-clip {
     position: absolute;
