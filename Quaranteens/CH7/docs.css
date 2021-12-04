@@ -186,7 +186,7 @@
     position: relative;
   }
 
-  /* .letter-doc.dna:before, .letter-doc.dna:after {
+  .letter-doc.dna:before, .letter-doc.dna:after {
     content: "";
     height: 98%;
     position: absolute;
@@ -201,7 +201,7 @@
     width: 96%;
     top: 0;
     transform: rotate(-1.5deg);
-  } */
+  }
 
   .dna-clip {
     position: absolute;
