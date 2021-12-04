@@ -122,12 +122,12 @@
   .eraser1 {
     width: 100px;
     position: absolute;
-    top: 40;
-    left: 0;
+    top: 70;
+    left: 6px;
     /* opacity: 0.5; */
     transform: rotate(303deg);
   }
-
+  
   .doodle1 {
     position: absolute;
     height: 95;
