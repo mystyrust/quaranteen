@@ -119,6 +119,56 @@
     list-style-position: inside;
   }
 
+  .eraser1 {
+    width: 100px;
+    position: absolute;
+    top: 40;
+    left: 0;
+    /* opacity: 0.5; */
+    transform: rotate(303deg);
+  }
+
+  .doodle1 {
+    position: absolute;
+    height: 95;
+    left: 40;
+    top: 10;
+    opacity: 0.7;
+    transform: rotate(347deg);
+  }
+
+  .stain1 {
+    position: absolute;
+    width: 100px;
+    top: 0;
+    left: 10;
+    opacity: 0.2;
+  }
+
+  .eraser2 {
+    width: 100px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .doodle2 {
+    position: absolute;
+    transform: rotate(7deg);
+    width: 101px;
+    right: 4px;
+    top: 25;
+    opacity: 0.6;
+  }
+
+  .stain2 {
+    position: absolute;
+    width: 100px;
+    top: 0;
+    right: 10;
+    opacity: 0.2;
+  }
+
   .redacted {
       background-color: black;
   }
@@ -130,15 +180,6 @@
       text-decoration: underline;
       text-align: left;
   }
-  
- /* .text {
-    margin-left: 11%;
-    font-size: 15px;
-    line-height: 25px;
-    color: #000000;
-    font-family: helvetica neue, helvetica, arial, sans-serif;
-  }
-   */
 
  .hide {
     display: none;
@@ -171,6 +212,13 @@
     width: 96%;
     top: 0;
     transform: rotate(-1.5deg);
+  }
+
+  .dna-clip {
+    position: absolute;
+    height: 150px;
+    top: -13px;
+    right: 0;
   }
 
   /* donut pie */
@@ -372,10 +420,6 @@
     color: #000000;
     text-decoration: none;
     font-family: "comic sans ms", "chalkboard se", sans-serif;
-    /* max-height: 10em;
-    max-width: 10em;
-    min-width: 7em;
-    min-height: 7em; */
     right: 0;
     height: 9em;
     width: 9em;
@@ -390,6 +434,17 @@
     -o-transform: rotate(-6deg);
     -moz-transform: rotate(-6deg);
     transform: rotate(-6deg);
+  }
+
+  .sticky2 {
+    z-index: 1;
+    left: 40;
+    background: lightblue;
+    transform: rotate(11deg);
+  }
+
+  .sticky-sign {
+      float: right;
   }
 
 
@@ -416,9 +471,14 @@
 .cert-cont{
     border-style: dotted dashed;
     border-color: firebrick;
+    background-color: #fafafa;
     padding: 28px;
     margin: 0;
     text-align: center;
+}
+
+.letter-doc.cert {
+    background-color: pink;
 }
 
 .cert-title {
@@ -535,4 +595,8 @@
     background-size: 100%;
     display: inline-block;
     padding-top: 49%;
+  }
+
+  .maxw300 {
+    max-width: 300px;
   }
