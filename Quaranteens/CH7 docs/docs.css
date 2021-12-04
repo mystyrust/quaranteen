@@ -1,14 +1,3 @@
-  /* Create two equal columns that sits next to each other */
-/* .row {
-    display: flex;
-  }
-  
-  .col {
-    flex: 50%;
-    padding: 10px;
-    float: left;
-  } */
-
   .underline {
     text-decoration: underline 0.15em;
   }
@@ -127,7 +116,7 @@
     /* opacity: 0.5; */
     transform: rotate(303deg);
   }
-  
+
   .doodle1 {
     position: absolute;
     height: 95;
@@ -565,21 +554,6 @@
     background-size: 100%;
     display: inline-block;
     padding-top: 34%;
-  }
-
-  .image-yay-4 {
-    float: right;
-    margin: 0 0 0.5em;
-    border-radius: 1em;
-    width: 50%;
-    min-height: 75%;
-    clear: both;
-    position: relative;
-    background-image: url("https://i.giphy.com/media/10LKovKon8DENq/giphy.webp");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    display: inline-block;
-    padding-top: 29%;
   }
 
   .image-hello {
