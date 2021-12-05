@@ -91,8 +91,11 @@
 .arrow-reverse {
     transform: rotate(180deg);
     margin: 0 10px 0 10px;
+    cursor: pointer;
 }
-
+.arrow {
+    cursor: pointer;
+}
 /* .sidebar-item:before {
     content: url(https://i.imgur.com/7kBV9ZQ.png);
     transform: scale(0.3,0.3);
@@ -129,7 +132,8 @@
     position: absolute;
     top: 0;
     height: auto !important;
-    width: 90% !important;
+    margin-left: -40px;
+    /* width: 90% !important; */
     padding-left: 10px;
     /* font-size: 14.5px; */
 }
@@ -164,7 +168,7 @@
 }
 
   .mainview.tab::-webkit-scrollbar , 
-  /* .files-list.tab::-webkit-scrollbar , */
+  .files-list.tab::-webkit-scrollbar ,
   .documents.tab::-webkit-scrollbar ,
   .pictures.tab::-webkit-scrollbar ,
   .trash.tab::-webkit-scrollbar {
@@ -172,7 +176,7 @@
   }
    
   .mainview.tab::-webkit-scrollbar-track , 
-  /* .files-list.tab::-webkit-scrollbar-track ,  */
+  .files-list.tab::-webkit-scrollbar-track , 
   .documents.tab::-webkit-scrollbar-track ,
   .pictures.tab::-webkit-scrollbar-track ,
   .trash.tab::-webkit-scrollbar-track {
@@ -180,7 +184,7 @@
   }
    
   .mainview.tab::-webkit-scrollbar-thumb , 
-  /* .files-list.tab::-webkit-scrollbar-thumb ,  */
+  .files-list.tab::-webkit-scrollbar-thumb , 
   .documents.tab::-webkit-scrollbar-thumb ,
   .pictures.tab::-webkit-scrollbar-thumb ,
   .trash.tab::-webkit-scrollbar-thumb {
@@ -198,9 +202,10 @@
     position: absolute;
     top: 0;
     height: auto;
-    width: 90%;
+    /* width: 90%; */
     padding-left: 10px;
     font-size: 14px;
+    margin-left: -40px;
 
     /* overflow: hidden; */
     /* white-space: nowrap; */
@@ -274,11 +279,44 @@
     position: absolute; */
     padding: 61px 0;
     background-color: lightgray;
+    display: block;
+}
+
+.unlocked-view {
+    display: none;
+}
+
+.incorrect-pwd {
+    position: absolute;
+    display: inline-block;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 10px;
+    color: red;
+    visibility: hidden;
 }
 
 /* icons */
 .folder-img:before {
     content: url(https://img.icons8.com/color/18/000000/folder-invoices--v1.png);
+    margin-right: 7px;
+    margin-top: -0.1em;
+}
+
+.excel-img:before {
+    content: url(https://img.icons8.com/color/18/000000/new-spreadsheet.png);
+    margin-right: 7px;
+    margin-top: -0.1em;
+}
+
+.word-img:before{
+    content: url(https://img.icons8.com/color/18/000000/word.png);
+    margin-right: 7px;
+    margin-top: -0.1em;
+}
+
+.png-img:before {
+    content: url(https://img.icons8.com/color/18/000000/png.png);
     margin-right: 7px;
     margin-top: -0.1em;
 }
