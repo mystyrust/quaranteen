@@ -83,6 +83,10 @@
     margin-right: 7px;
     margin-top: -0.1em;
 } */
+.arrow-cont {
+    position: absolute;
+    display: flex !important;
+}
 
 .arrow-reverse {
     transform: rotate(180deg);
@@ -264,7 +268,7 @@
     /* transform: translateY(-50%);
     top: 50%;
     position: absolute; */
-    padding: 70px 0;
+    padding: 61px 0;
     background-color: lightgray;
 }
 
