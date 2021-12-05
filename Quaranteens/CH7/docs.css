@@ -432,6 +432,10 @@
     transform: rotate(11deg);
   }
 
+  .sticky2 del {
+    text-decoration-thickness: 4.5px;
+  }
+
   .sticky-sign {
       float: right;
   }

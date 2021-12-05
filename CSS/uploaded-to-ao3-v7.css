@@ -3154,6 +3154,10 @@ tr:hover,td:hover { background: none; }
   transform: rotate(11deg);
 }
 
+.sticky2 del {
+  text-decoration-thickness: 4.5px;
+}
+
 .sticky-sign {
     float: right;
 }
