@@ -140,6 +140,10 @@
     position: absolute;
 } */
 
+.tab, 
+:target ~ .default-tab { display: none }
+
+.default-tab { display: block; }
 
 #mainview:target ~ .mainview,
 #files-list:target ~ .files-list,
