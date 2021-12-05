@@ -2126,7 +2126,7 @@ p {
     background: black;
     color: white;
     cursor: pointer;
-    padding: 4.5px;
+    padding: 6px;
     width: 5em;
     float: right;
     text-align: center;
@@ -2283,9 +2283,9 @@ p.paperclip > img {
 
 .tab, 
 .tab0,
-:target ~ .default-tab { display: none; visibility: hidden; }
+:target ~ .default-tab { display: none }
 
-.default-tab { display: block; visibility: visible; }
+.default-tab { display: block; }
 .root { margin-top: -1em !important; }
 
 #start:target ~ .start, /* after making 1 choice */
