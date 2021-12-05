@@ -42,7 +42,7 @@
 .header-right {
     float: right;
     padding: 5px 5px 0 0;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 .header-left {
     float: left;
@@ -274,9 +274,7 @@
 .locked-view {
     width: 100%;
     text-align: center;
-    /* transform: translateY(-50%);
-    top: 50%;
-    position: absolute; */
+    height: -webkit-fill-available;
     padding: 61px 0;
     background-color: lightgray;
     display: block;
@@ -296,7 +294,26 @@
     visibility: hidden;
 }
 
+.download-all {
+    display: inline-flex;
+    border: lightblue solid thin;
+    padding: 4px;
+    margin: 6px;
+}
+
+.download-all:hover {
+    background-color: lightblue;
+    cursor: pointer;
+}
+
 /* icons */
+.download-all:before {
+    content: url(https://img.icons8.com/color/18/000000/download--v1.png);
+    margin-right: 7px;
+    margin-top: -0.1em;
+    /* display: inline-flex; */
+}
+
 .folder-img:before {
     content: url(https://img.icons8.com/color/18/000000/folder-invoices--v1.png);
     margin-right: 7px;
@@ -316,7 +333,7 @@
 }
 
 .png-img:before {
-    content: url(https://img.icons8.com/color/18/000000/png.png);
+    content: url(https://img.icons8.com/color/18/000000/image.png);
     margin-right: 7px;
     margin-top: -0.1em;
 }
@@ -327,13 +344,34 @@
     margin-top: -0.1em;
 }
 
+.video-img:before {
+    content: url(https://img.icons8.com/color/18/000000/video.png);
+    margin-right: 7px;
+    margin-top: -0.1em;
+}
+
+.pdf-img:before {
+    content: url(https://img.icons8.com/color/18/000000/pdf.png);
+    margin-right: 7px;
+    margin-top: -0.1em;
+}
+
 .file-tree-img:before {
     content: url(https://img.icons8.com/color/18/000000/folder-tree.png);
     margin-right: 7px;
     margin-top: -0.1em;
 }
 
-td.folder-img {
+/* .download-all, */
+td.folder-img,
+td.excel-img,
+td.word-img,
+td.png-img,
+td.trash-img,
+td.video-img,
+td.pdf-img,
+td.file-tree-img
+{
     display: inline-flex;
 }
 
@@ -346,3 +384,8 @@ table.document-list { width: 100%; border-collapse: collapse; }
 }
 
 .document-list tbody tr:hover {background-color: #D6EEEE;}
+
+/* hints */
+.hint {
+    display: none;
+}
