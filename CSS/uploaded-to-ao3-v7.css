@@ -2753,6 +2753,7 @@ tr:hover,td:hover { background: none; }
   /* width: -webkit-fill-available; */
   min-width: 300px;
   max-width: 600px;
+  width: 97%;
   /* height: 100%; */
   background: linear-gradient(to bottom,#ffffff 24px,#00b0d7 1px);
   margin: 10px auto;
@@ -2902,6 +2903,7 @@ tr:hover,td:hover { background: none; }
   padding: 15px;
   min-width: 250px;
   max-width: 600px;
+  width: 89%;
   margin: 0 auto 25px;
   display: block;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
@@ -3307,6 +3309,10 @@ table.report-card {
 #init:target ~ .init {
 display: block;
 margin-top: -1em;
+}
+
+#rest:target ~ .rest {
+  overflow-x: hidden;
 }
 
 .overflow-top {
