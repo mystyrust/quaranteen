@@ -36,6 +36,29 @@
                 <a href="#mainview">Networks</a> &nbsp; > &nbsp; <a href="#files-list">Vlad's PC</a> &nbsp; > &nbsp; <a href="#trash">Trash</a>
             </span>
             <div name="trash" class="trash tab">
+                <table class="document-list">
+                    <thead> 
+                        <tr> <th>Filename</th> <th>Size</th></tr> 
+                    </thead>
+                    <tbody>
+                        <!-- <tr> <td class="word-img"><span>maddie_x_vlad_fanfic.docx </span></td>  <td>35mb</td>   </tr> -->
+                        <!-- <tr> <td class="word-img"><span>spurned_affection.docx </span></td>  <td>32mb</td>   </tr> -->
+                        <tr> <td class="excel-img"><span>corrupted_data.csv </span></td>  <td>10mb</td>   </tr>
+                        <tr> <td class="video-img"><span>fenton_feed_100.mov </span></td>  <td>2.1mb</td>   </tr>
+                        <tr> <td class="png-img"><span>cats_10.png </span></td>  <td>22mb</td> </tr>
+                        <tr> <td class="word-img"><span>a;lsdfjkal;sdkf.docx </span></td>  <td>27mb</td> </tr>
+                        <tr> <td class="word-img"><a href="#viewPwd"><span>passwords.docx </span></a></td>  <td>1mb</td> </tr>
+                    </tbody>
+                </table>
+                <!-- <div class="viewtext">
+                    the password is <code>iLov3Maddie</code>
+                </div> -->
+            </div>
+
+            <a id="viewPwd" name="viewPwd"></a><span class="file-address viewPwd">
+                ... &nbsp; <a href="#files-list">Vlad's PC</a> &nbsp; > &nbsp; <a href="#trash">Trash</a> &nbsp; > &nbsp; <a href="#viewPwd">Passwords.docx</a>
+            </span>
+            <div name="viewPwd" class="viewPwd tab">
                 <div class="viewtext">
                     the password is <code>iLov3Maddie</code>
                 </div>
@@ -45,7 +68,24 @@
                 <a href="#mainview">Networks</a> &nbsp; > &nbsp; <a href="#files-list">Vlad's PC</a> &nbsp; > &nbsp; <a href="#pictures">Pictures</a>
             </span>
             <div name="pictures" class="pictures tab">
-            <div class="locked-view">
+                <table class="document-list">
+                    <thead> 
+                        <tr> <th>Filename</th> <th>Size</th></tr> 
+                    </thead>
+                    <tbody>
+                        <tr> <td class="png-img"><span>cat1.png</span></td>  <td>2mb</td> </tr> 
+                        <tr> <td class="png-img"><span>maddie_casual.png</span></td>  <td>1mb</td> </tr> 
+                        <tr> <td class="png-img"><span>maddie_formal.png</span></td>  <td>0.9kb</td> </tr> 
+                        <tr> <td class="png-img"><span>maddie_lab.png</span></td>  <td>1.5mb</td> </tr> 
+                        <tr> <td class="png-img"><span>maddie_yearbook.png</span></td>  <td>1mb</td> </tr> 
+                        <tr> <td class="video-img"><span>fenton_feed_1.mov</span></td>  <td>500mb</td> </tr> 
+                        <tr> <td class="video-img"><span>fenton_feed_2.mov</span></td>  <td>500mb</td> </tr> 
+                        <tr> <td class="video-img"><span>fenton_feed_3.mov</span></td>  <td>500mb</td> </tr> 
+                        <tr> <td class="video-img"><span>fenton_feed_4.mov</span></td>  <td>500mb</td> </tr> 
+                        <tr> <td class="png-img"><span>cat7.png </span></td>  <td>1.2mb</td> </tr> 
+                    </tbody>
+                </table>
+            <!-- <div class="locked-view">
                 <label for="pwd">Enter password to view locked data or directory:</label> <br>
                 <input type="password" id="pwd" name="pwd"> <br><br>
                 <button id="submit">submit</button> <br>
@@ -53,25 +93,85 @@
             </div>
             <div class="unlocked-view">
                 this is the unlocked pictures view
-            </div>
+            </div> -->
             </div>
 
             <a id="documents" name="documents"></a><span class="file-address documents">
                 <a href="#mainview">Networks</a> &nbsp; > &nbsp; <a href="#files-list">Vlad's PC</a> &nbsp; > &nbsp; <a href="#documents">Documents</a>
             </span>
             <div name="documents" class="documents tab">
+                <div class="locked-view">
+                    <label for="pwd">Enter password to view locked data or directory:</label> <br>
+                    <input type="password" id="pwd" name="pwd"> <br><br>
+                    <button id="submit">Submit</button> <br>
+                    <span class="incorrect-pwd">Incorrect Password</span> 
+                </div>
+                <div class="unlocked-view">
                 <table class="document-list">
                     <thead> 
                         <tr> <th>Filename</th> <th>Size</th></tr> 
                     </thead>
                     <tbody>
-                        <tr> <td class="folder-img"><a href="#pictures"><span>Data</span></a></td>  <td></td> </tr>
-                        <tr> <td class="folder-img"><span>Schematics</span></td>  <td></td> </tr> 
-                        <tr> <td class="folder-img"><span>Research</span></td>  <td></td> </tr> 
-                        <tr> <td class="folder-img"><span>Important </span></td>  <td></td> </tr> 
+                        <tr> <td class="folder-img"><a href="#schematics"><span>Schematics</span> </a> </td>  <td></td> </tr> 
+                        <tr> <td class="folder-img"><a href="#research"><span>Research</span> </a> </td>  <td></td> </tr> 
+                        <tr> <td class="folder-img"><a href="#important"><span>Important </span> </a> </td>  <td></td> </tr> 
+                    </tbody>
+                </table>
+                <!-- <span class="btn-row"><span class="download-all">Download All</span></span> -->
+                </div>
+            </div>
+
+            <a id="schematics" name="schematics"></a><span class="file-address schematics">
+                ... &nbsp; > &nbsp; <a href="#files-list">Vlad's PC</a> &nbsp; > &nbsp; <a href="#documents">Documents</a> &nbsp; > &nbsp; <a href="#schematics">Schematics</a>
+            </span>
+            <div name="schematics" class="schematics tab">
+                <table class="document-list">
+                    <thead> 
+                        <tr> <th>Filename</th> <th>Size</th></tr> 
+                    </thead>
+                    <tbody>
+                        <tr> <td class="folder-img"><span>MaddieAI</span></td>  <td></td> </tr> 
+                        <tr> <td class="folder-img"><span>GhostPortal</span></td>  <td></td> </tr> 
+                        <tr> <td class="folder-img"><span>Weapons</span></td>  <td></td> </tr> 
+                    </tbody>
+                </table>
+            </div>
+
+            <a id="research" name="research"></a><span class="file-address research">
+                ... &nbsp; > &nbsp; <a href="#files-list">Vlad's PC</a> &nbsp; > &nbsp; <a href="#documents">Documents</a> &nbsp; > &nbsp; <a href="#research">Research</a>
+            </span>
+            <div name="research" class="research tab">
+                <table class="document-list">
+                    <thead> 
+                        <tr> <th>Filename</th> <th>Size</th></tr> 
+                    </thead>
+                    <tbody>
+                        <tr> <td class="excel-img"><span>drug_analysis_7.csv</span></td>  <td>3.4mb</td> </tr> 
+                        <tr> <td class="word-img"><span>drug_synth_10.docx</span></td>  <td>6.3mb</td> </tr> 
+                        <tr> <td class="word-img"><span>ecto_acne_notes.docx</span></td>  <td>3.1mb</td> </tr> 
+                        <tr> <td class="png-img"><span>reality_gauntlet.jpeg</span></td>  <td>0.9mb</td> </tr> 
+                        <tr> <td class="word-img"><span>ghost_throne_notes.docx</span></td>  <td>20mb</td> </tr> 
+                        <tr> <td class="word-img"><span>ghost_powers_notes.txt</span></td>  <td>36mb</td> </tr> 
+                        <tr> <td class="word-img"><span>clone_synth_notes.docx</span></td>  <td>77mb</td> </tr> 
+                        <tr> <td class="word-img"><span>ecto_dna_notes.txt</span></td>  <td>50mb</td> </tr> 
                     </tbody>
                 </table>
                 <span class="btn-row"><span class="download-all">Download All</span></span>
+            </div>
+
+            <a id="important" name="important"></a><span class="file-address important">
+                ... &nbsp; > &nbsp; <a href="#files-list">Vlad's PC</a> &nbsp; > &nbsp; <a href="#documents">Documents</a> &nbsp; > &nbsp; <a href="#important">Important</a>
+            </span>
+            <div name="important" class="important tab">
+                <table class="document-list">
+                    <thead> 
+                        <tr> <th>Filename</th> <th>Size</th></tr> 
+                    </thead>
+                    <tbody>
+                        <tr> <td class="folder-img"><span>PropertyDeeds</span></td>  <td></td> </tr> 
+                        <tr> <td class="folder-img"><span>Blackmail</span></td>  <td></td> </tr> 
+                    </tbody>
+                </table>
             </div>
 
             <a id="downloads" name="downloads"></a><span class="file-address downloads">
@@ -88,12 +188,12 @@
                         <tr> <td class="word-img"><span>spurned_affection.docx </span></td>  <td>32mb</td>   </tr>
                         <tr> <td class="pdf-img"><span>tax_evasion_101.pdf </span></td>  <td>10mb</td>   </tr>
                         <tr> <td class="video-img"><span>cats.mov </span></td>  <td>2.1mb</td>   </tr>
-                        <!-- <tr> <td class="png-img"><span>virus_test.exe </span></td>  <td>asdf</td>   </tr> -->
                         <tr> <td class="excel-img"><span>data_100.csv </span></td>  <td>100mb</td>   </tr>
                         <tr> <td class="pdf-img"><span>how_to_mayor_dummies.pdf </span></td>  <td>40mb</td> </tr>
+                        <tr> <td class="pdf-img"><span>hip_lingo_for_oldppl.pdf </span></td>  <td>22mb</td> </tr>
                     </tbody>
                 </table>
-                <span class="btn-row"><span class="download-all">Download All</span></span>
+                <!-- <span class="btn-row"><span class="download-all">Download All</span></span> -->
             </div>
 
             <a id="files-list" name="files-list"></a><span class="files-list tab file-address files-list">
@@ -131,7 +231,61 @@
 <div class="convo-container pictures-hint hint">
     <div class="convo-left">
         <p><img class="convo-icon" src="https://i.imgur.com/YLIBJth.png" height="auto" /></p>
-        <p><span class="dia white"> pictures hint  locked hint </span></p>
+        <p><span class="dia white"> I did not need to know these existed. Seriously very creepy.</span></p>
+    </div>
+    <div class="convo-left">
+        <p><img class="convo-icon" src="https://i.imgur.com/YLIBJth.png" height="auto" /></p>
+        <p><span class="dia white"> But there's no Elle docs here either.</span></p>
+    </div>
+</div>
+
+<div class="convo-container mainview-hint hint">
+    <div class="convo-left">
+        <p><img class="convo-icon" src="https://i.imgur.com/YLIBJth.png" height="auto" /></p>
+        <p><span class="dia white"> Hah! Easy peezy firewalls. Let's check out what we can find on Vlad's computer.</span></p>
+    </div>
+</div>
+
+<div class="convo-container downloads-hint hint">
+    <div class="convo-left">
+        <p><img class="convo-icon" src="https://i.imgur.com/YLIBJth.png" height="auto" /></p>
+        <p><span class="dia white"> He's got some weird stuff here, but nothing looks useful. Let's try a different folder.</span></p>
+    </div>
+</div>
+
+<div class="convo-container documents-hint hint locked-hint">
+    <div class="convo-left">
+        <p><img class="convo-icon" src="https://i.imgur.com/YLIBJth.png" height="auto" /></p>
+        <p><span class="dia white">Password? I can cross firewalls but I can't get past a simple password?
+            Can I find the passwords in any of the other folders?</span></p>
+    </div>
+</div>
+
+<!-- <div class="convo-container documents-hint hint unlocked-hint">
+    <div class="convo-left">
+        <p><img class="convo-icon" src="https://i.imgur.com/YLIBJth.png" height="auto" /></p>
+        <p><span class="dia white">More folders? Okay, let's see what's in there. </span></p>
+    </div>
+</div> -->
+
+<div class="convo-container viewPwd-hint hint">
+    <div class="convo-left">
+        <p><img class="convo-icon" src="https://i.imgur.com/YLIBJth.png" height="auto" /></p>
+        <p><span class="dia white">Sweet! Let's use this where ever we find a locked directory!</span></p>
+    </div>
+</div>
+
+<div class="convo-container trash-hint hint">
+    <div class="convo-left">
+        <p><img class="convo-icon" src="https://i.imgur.com/YLIBJth.png" height="auto" /></p>
+        <p><span class="dia white">Wait, a password document! Let's try clicking it!</span></p>
+    </div>
+</div>
+
+<div class="convo-container files-list-hint hint">
+    <div class="convo-left">
+        <p><img class="convo-icon" src="https://i.imgur.com/YLIBJth.png" height="auto" /></p>
+        <p><span class="dia white"> Okay, let's try looking into each folder and see if we find any lab reports or data from when Elle was made.</span></p>
     </div>
 </div>
 

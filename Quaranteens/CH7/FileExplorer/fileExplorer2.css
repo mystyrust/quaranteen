@@ -152,9 +152,13 @@
 #mainview:target ~ .mainview,
 #files-list:target ~ .files-list,
 #documents:target ~ .documents,
+#schematics:target ~ .schematics,
+#research:target ~ .research,
+#important:target ~ .important,
 #downloads:target ~ .downloads,
 #pictures:target ~ .pictures,
-#trash:target ~ .trash {
+#trash:target ~ .trash,
+#viewPwd:target ~ .viewPwd {
     display: block;
     visibility: visible;
     position: absolute;
@@ -171,6 +175,9 @@
   .mainview.tab::-webkit-scrollbar , 
   .files-list.tab::-webkit-scrollbar ,
   .documents.tab::-webkit-scrollbar ,
+  .schematics.tab::-webkit-scrollbar ,
+  .research.tab::-webkit-scrollbar ,
+  .important.tab::-webkit-scrollbar ,
   .downloads.tab::-webkit-scrollbar ,
   .pictures.tab::-webkit-scrollbar ,
   .trash.tab::-webkit-scrollbar {
@@ -180,6 +187,9 @@
   .mainview.tab::-webkit-scrollbar-track , 
   .files-list.tab::-webkit-scrollbar-track , 
   .documents.tab::-webkit-scrollbar-track ,
+  .schematics.tab::-webkit-scrollbar-track ,
+  .research.tab::-webkit-scrollbar-track ,
+  .important.tab::-webkit-scrollbar-track ,
   .downloads.tab::-webkit-scrollbar-track ,
   .pictures.tab::-webkit-scrollbar-track ,
   .trash.tab::-webkit-scrollbar-track {
@@ -189,6 +199,9 @@
   .mainview.tab::-webkit-scrollbar-thumb , 
   .files-list.tab::-webkit-scrollbar-thumb , 
   .documents.tab::-webkit-scrollbar-thumb ,
+  .schematics.tab::-webkit-scrollbar-thumb ,
+  .research.tab::-webkit-scrollbar-thumb ,
+  .important.tab::-webkit-scrollbar-thumb ,
   .downloads.tab::-webkit-scrollbar-thumb ,
   .pictures.tab::-webkit-scrollbar-thumb ,
   .trash.tab::-webkit-scrollbar-thumb {
@@ -199,9 +212,13 @@
 #mainview:target ~ .file-address.mainview,
 #files-list:target ~ .file-address.files-list,
 #documents:target ~ .file-address.documents,
+#schematics:target ~ .file-address.schematics,
+#research:target ~ .file-address.research,
+#important:target ~ .file-address.important,
 #downloads:target ~ .file-address.downloads,
 #pictures:target ~ .file-address.pictures,
-#trash:target ~ .file-address.trash {
+#trash:target ~ .file-address.trash,
+#viewPwd:target ~ .file-address.viewPwd {
     display: inline-flex;
     visibility: visible;
     position: absolute;
@@ -283,7 +300,7 @@
     height: -webkit-fill-available;
 }
 
-.locked-view:not(.hint) {
+.locked-view {
     width: 100%;
     text-align: center;
     height: -webkit-fill-available;
@@ -292,11 +309,11 @@
     display: block;
 }
 
-.locked-view.hint {
+/* .locked-view.hint {
     display: table;
-}
+} */
 
-.unlocked-view {
+.unlocked-view, .unlocked-hint {
     display: none;
 }
 

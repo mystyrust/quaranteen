@@ -1,5 +1,6 @@
 $(document).ready(function() {
     // console.log('ready')
+    $(".hint").css('display', 'none')
     var currentTarget = location.hash
     // var fileBrowserHistory = []
 
@@ -41,7 +42,8 @@ $(document).ready(function() {
             $(".locked-view").css('display', 'none');
             $(".unlocked-view").css('display', 'block');
 
-            // $()
+            $(".unlocked-hint").css('display', 'table');
+            $(".locked-hint").css('display', 'none');
             
         } else {
             $(".incorrect-pwd").css('visibility', 'visible');
