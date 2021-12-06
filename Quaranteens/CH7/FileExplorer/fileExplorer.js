@@ -49,4 +49,26 @@ $(document).ready(function() {
             $(".incorrect-pwd").css('visibility', 'visible');
         }
     })
+
+    $(".download-all").click(() => {
+        console.log('clicked download')
+        // downloading
+        $(".download-all").toggle()
+        $(".research .document-list").toggle()
+        $(".loader").toggle()
+
+        // then, download complete
+        setTimeout(() => { 
+            $(".loader-complete").toggle()
+        }, 1000)
+
+        setTimeout(() => { 
+            $(".download-all").toggle()
+            $(".research .document-list").toggle()
+            $(".loader").toggle()
+            $(".loader-complete").toggle()
+            // then show new danny hint afterwards too
+        }, 2000)
+    })
+
 })
