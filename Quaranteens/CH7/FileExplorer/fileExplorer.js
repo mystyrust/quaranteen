@@ -1,15 +1,17 @@
 $(document).ready(function() {
     // console.log('ready')
     var currentTarget = location.hash
+    // var fileBrowserHistory = []
+
     if (currentTarget)
     {
         var currentHint = "." + currentTarget.substr(1) + "-hint"
         $(currentHint).css('display', 'table')
     }
    
-
     $("a").click((event) => {
-        var target = event.currentTarget.innerText.toLowerCase()
+        var target = event.currentTarget.hash.substr(1)
+        // var target = event.currentTarget.name;
         // var target = $(this).attr("href");
         console.log(target)
 
@@ -17,6 +19,9 @@ $(document).ready(function() {
 
         var currentHint = "."+ target+"-hint"
         $(currentHint).css('display', 'table')
+
+        // location.replace("#" + target)
+        // fileBrowserHistory[historyIndex] = target;
     });
 
     $(".arrow-reverse").click(() => {
@@ -35,6 +40,9 @@ $(document).ready(function() {
             $(".incorrect-pwd").css('visibility', 'hidden');
             $(".locked-view").css('display', 'none');
             $(".unlocked-view").css('display', 'block');
+
+            // $()
+            
         } else {
             $(".incorrect-pwd").css('visibility', 'visible');
         }

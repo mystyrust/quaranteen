@@ -152,6 +152,7 @@
 #mainview:target ~ .mainview,
 #files-list:target ~ .files-list,
 #documents:target ~ .documents,
+#downloads:target ~ .downloads,
 #pictures:target ~ .pictures,
 #trash:target ~ .trash {
     display: block;
@@ -170,6 +171,7 @@
   .mainview.tab::-webkit-scrollbar , 
   .files-list.tab::-webkit-scrollbar ,
   .documents.tab::-webkit-scrollbar ,
+  .downloads.tab::-webkit-scrollbar ,
   .pictures.tab::-webkit-scrollbar ,
   .trash.tab::-webkit-scrollbar {
     width: 1em;
@@ -178,6 +180,7 @@
   .mainview.tab::-webkit-scrollbar-track , 
   .files-list.tab::-webkit-scrollbar-track , 
   .documents.tab::-webkit-scrollbar-track ,
+  .downloads.tab::-webkit-scrollbar-track ,
   .pictures.tab::-webkit-scrollbar-track ,
   .trash.tab::-webkit-scrollbar-track {
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
@@ -186,6 +189,7 @@
   .mainview.tab::-webkit-scrollbar-thumb , 
   .files-list.tab::-webkit-scrollbar-thumb , 
   .documents.tab::-webkit-scrollbar-thumb ,
+  .downloads.tab::-webkit-scrollbar-thumb ,
   .pictures.tab::-webkit-scrollbar-thumb ,
   .trash.tab::-webkit-scrollbar-thumb {
     background-color: darkgrey;
@@ -195,6 +199,7 @@
 #mainview:target ~ .file-address.mainview,
 #files-list:target ~ .file-address.files-list,
 #documents:target ~ .file-address.documents,
+#downloads:target ~ .file-address.downloads,
 #pictures:target ~ .file-address.pictures,
 #trash:target ~ .file-address.trash {
     display: inline-flex;
@@ -271,13 +276,24 @@
     text-decoration: none;
 }
 
-.locked-view {
+.viewtext {
+    padding: 10px;
+    border: black solid thin;
+    margin: 10px;
+    height: -webkit-fill-available;
+}
+
+.locked-view:not(.hint) {
     width: 100%;
     text-align: center;
     height: -webkit-fill-available;
     padding: 61px 0;
     background-color: lightgray;
     display: block;
+}
+
+.locked-view.hint {
+    display: table;
 }
 
 .unlocked-view {
@@ -376,7 +392,10 @@ td.file-tree-img
 }
 
 
-table.document-list { width: 100%; border-collapse: collapse; }
+table.document-list { 
+    width: 100%; 
+    border-collapse: collapse; 
+}
 
 .document-list tr th {
     /* float: left; */
