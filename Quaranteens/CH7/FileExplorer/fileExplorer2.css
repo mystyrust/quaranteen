@@ -167,6 +167,7 @@
     margin-top: -20px;
     max-width: 400px;
     width: -webkit-fill-available;
+    top: 20px;
     height: 200px;
     overflow: auto;
     /* margin-top: 244px; */
@@ -371,6 +372,12 @@
     margin-top: -0.1em;
 }
 
+.txt-img:before {
+    content: url(https://img.icons8.com/color/48/000000/txt.png);
+    margin-right: 7px;
+    margin-top: -0.1em;
+}
+
 .trash-img:before {
     content: url(https://img.icons8.com/color/18/000000/trash.png);
     margin-right: 7px;
@@ -401,6 +408,7 @@ td.excel-img,
 td.word-img,
 td.png-img,
 td.trash-img,
+td.txt-img,
 td.video-img,
 td.pdf-img,
 td.file-tree-img
