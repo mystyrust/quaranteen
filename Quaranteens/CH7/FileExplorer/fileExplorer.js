@@ -1,39 +1,62 @@
 $(document).ready(function() {
-    // console.log('ready')
     $(".hint").css('display', 'none')
     var currentTarget = location.hash
 
     var fileBrowserHistory = []
-    var historyIndex = 0
+    var historyIndex = 1
 
-    if (currentTarget)
+    if (currentTarget && !currentTarget.includes("undefined"))
     {
         var currentHint = "." + currentTarget.substr(1) + "-hint"
         $(currentHint).css('display', 'table')
+    } else {
+        $(".mainview-hint").css('display', 'table')
     }
    
     $("a").click((event) => {
         var target = event.currentTarget.hash.substr(1)
-        // var target = event.currentTarget.name;
-        // var target = $(this).attr("href");
-        console.log(target)
 
         $(".hint").css('display', 'none')
 
         var currentHint = "."+ target+"-hint"
         $(currentHint).css('display', 'table')
 
-        // location.replace("#" + target)
+        location.replace("#" + target)
         fileBrowserHistory[historyIndex] = target;
         historyIndex++
     });
 
     $(".arrow-reverse").click(() => {
-        window.history.back();
+        if (historyIndex == fileBrowserHistory.length)
+        {
+            historyIndex-=2
+        } else { 
+            historyIndex--
+        }
+
+        var target = fileBrowserHistory[historyIndex];
+        // console.log('currently at '+ location.hash + ', want to go back to ' + target)
+        location.replace("#" + target)
+
+        $(".hint").css('display', 'none')
+        var currentHint = target ? "."+ target+"-hint" : ".mainview-hint" 
+        $(currentHint).css('display', 'table')
+
     }) 
 
     $(".arrow").click(() => {
-        window.history.forward();
+        console.log("go forward if possible", historyIndex, fileBrowserHistory)
+        
+        if (historyIndex < fileBrowserHistory.length)
+        {
+            historyIndex++
+            var target = fileBrowserHistory[historyIndex];
+            location.replace("#" + target)
+
+            $(".hint").css('display', 'none')
+            var currentHint = target ? "."+ target+"-hint" : ".mainview-hint" 
+            $(currentHint).css('display', 'table')
+        }
     }) 
 
     $("#submit").click((event) => {
@@ -58,7 +81,6 @@ $(document).ready(function() {
     })
 
     $(".download-final").click(() => {
-        console.log('clicked download')
         // downloading
         $(".download-all").toggle()
         $(".research .document-list").toggle()
@@ -83,7 +105,6 @@ $(document).ready(function() {
     })
 
     $(".download-weapons").click(() => {
-        console.log('clicked download')
         // downloading
         $(".download-all").toggle()
         $(".weapons .document-list").toggle()
@@ -103,13 +124,10 @@ $(document).ready(function() {
             // then show new danny hint afterwards too
 
             $(".weapons-hint").remove();
-            $(".weapons-hint-downloaded ")
-                .removeClass("weapons-hint-downloaded ")
+            $(".weapons-hint-downloaded")
+                .removeClass("weapons-hint-downloaded")
                 .addClass("weapons-hint")
                 .css('display', 'table');
-            // hide all previous hints
-            // $(".research-downloaded").removeClass("hint").css('display', 'table');
-            // $(".hint:not(.research-downloaded)").remove();
         }, 2000)
     })
 
