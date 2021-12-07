@@ -155,6 +155,8 @@
 #schematics:target ~ .schematics,
 #research:target ~ .research,
 #important:target ~ .important,
+#blackmail:target ~ .blackmail,
+#weapons:target ~ .weapons,
 #downloads:target ~ .downloads,
 #pictures:target ~ .pictures,
 #trash:target ~ .trash,
@@ -179,6 +181,8 @@
   .schematics.tab::-webkit-scrollbar ,
   .research.tab::-webkit-scrollbar ,
   .important.tab::-webkit-scrollbar ,
+  .blackmail.tab::-webkit-scrollbar ,
+  .weapons.tab::-webkit-scrollbar ,
   .downloads.tab::-webkit-scrollbar ,
   .pictures.tab::-webkit-scrollbar ,
   .trash.tab::-webkit-scrollbar {
@@ -191,6 +195,8 @@
   .schematics.tab::-webkit-scrollbar-track ,
   .research.tab::-webkit-scrollbar-track ,
   .important.tab::-webkit-scrollbar-track ,
+  .blackmail.tab::-webkit-scrollbar-track ,
+  .weapons.tab::-webkit-scrollbar-track ,
   .downloads.tab::-webkit-scrollbar-track ,
   .pictures.tab::-webkit-scrollbar-track ,
   .trash.tab::-webkit-scrollbar-track {
@@ -203,6 +209,8 @@
   .schematics.tab::-webkit-scrollbar-thumb ,
   .research.tab::-webkit-scrollbar-thumb ,
   .important.tab::-webkit-scrollbar-thumb ,
+  .blackmail.tab::-webkit-scrollbar-thumb ,
+  .weapons.tab::-webkit-scrollbar-thumb ,
   .downloads.tab::-webkit-scrollbar-thumb ,
   .pictures.tab::-webkit-scrollbar-thumb ,
   .trash.tab::-webkit-scrollbar-thumb {
@@ -216,6 +224,8 @@
 #schematics:target ~ .file-address.schematics,
 #research:target ~ .file-address.research,
 #important:target ~ .file-address.important,
+#blackmail:target ~ .file-address.blackmail,
+#weapons:target ~ .file-address.weapons,
 #downloads:target ~ .file-address.downloads,
 #pictures:target ~ .file-address.pictures,
 #trash:target ~ .file-address.trash,
@@ -242,6 +252,7 @@
     position: absolute;
     z-index: 1;
     font-size: 14px;
+    top: 0px !important;
     /* width: 400px; */
     max-width: 400px;
     margin-top: -20px;
@@ -432,6 +443,11 @@ table.document-list {
 /* hints */
 .hint {
     display: none;
+}
+
+.dia-desc.black a,
+.dia-desc.black a:visited {
+    color: white;
 }
 
 .loader {
