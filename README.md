@@ -13,7 +13,7 @@ Let's see I used
   * where would i be without google and stackoverflow?
 * [icons8](https://icons8.com/) for icons 
 * [LunaPic](https://www11.lunapic.com/editor/) for simple photo edits (crops, bg transparency)
-* [pngjoy](https://www.pngjoy.com/) and [pngwing](https://www.pngwing.com/) and a few other few sites for gimmicky png resources
+* [pngjoy](https://www.pngjoy.com/) and [pngwing](https://www.pngwing.com/) and a few other free sites for gimmicky png resources
 * google image search for background shots from the show
 
 # Other
