@@ -450,6 +450,24 @@ table.document-list {
     color: white;
 }
 
+.research-downloaded img:not(.convo-icon) {
+    display: block;
+    margin: 0 auto;
+}
+
+.research-downloaded .dia-desc {
+    margin-top: -162px;
+    display: block;
+    left: 50%;
+    transform: translate(-50%);
+    margin-left: unset;
+    margin-right: unset;
+}
+
+.research-downloaded .convo-left {
+    margin-bottom: -50px;
+}
+
 .loader {
     border: 16px solid #f3f3f3;
     border-radius: 50%;

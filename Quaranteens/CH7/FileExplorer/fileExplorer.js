@@ -35,7 +35,6 @@ $(document).ready(function() {
         }
 
         var target = fileBrowserHistory[historyIndex];
-        // console.log('currently at '+ location.hash + ', want to go back to ' + target)
         location.replace("#" + target)
 
         $(".hint").css('display', 'none')
@@ -45,8 +44,6 @@ $(document).ready(function() {
     }) 
 
     $(".arrow").click(() => {
-        console.log("go forward if possible", historyIndex, fileBrowserHistory)
-        
         if (historyIndex < fileBrowserHistory.length)
         {
             historyIndex++
