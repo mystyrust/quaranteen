@@ -2883,6 +2883,7 @@ tr:hover,td:hover { background: none; }
 
 .redacted {
     background-color: black;
+    color: black;
 }
 .redacted:active, .redacted:hover {
   background-color: lightgray;
