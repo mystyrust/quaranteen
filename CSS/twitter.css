@@ -1,3 +1,7 @@
+.ytLink {
+    border-bottom-style: none;
+  }
+  
 /*If you still want to use image formatted tweets. Don't feel bad.*/
 .reddit {
     /* max-width: 300px; */
