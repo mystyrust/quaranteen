@@ -2958,7 +2958,7 @@ tr:hover,td:hover { background: none; }
 }
 
 .donut-row {
-  width: fit-content;
+  display: table;
   margin: 0 auto;
 }
 
