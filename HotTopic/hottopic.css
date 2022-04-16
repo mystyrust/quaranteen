@@ -1,0 +1,1502 @@
+/* ------------------ snapchat mock ------------------*/
+/* from https://archiveofourown.org/works/26777200 */
+/* might use images from / remix with https://archiveofourown.org/works/24273862/chapters/58503859 as well  */
+
+.snp-box {
+    /* max-width: 500px;
+    min-width: 300px;
+    float: center; */
+    width: 300px;
+    margin: 0 auto;
+    font-family: 'Roboto', 'Helvetica Neue LT Std', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-size: 13px;
+    background: white;
+    color: black;
+  }
+  
+  .snp-header {
+    width: auto;
+    height: 60px;
+    padding-left: 7px;
+    /* padding-bottom: 10px; */
+    border-bottom: 1px solid #ababab;
+  }
+  
+  .snp-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    float: left;
+    margin-top: 9px;
+  }
+  
+  .snp-contact {
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 15px;
+    top: 14px;
+    position: relative;
+  }
+  
+  .snp-body {
+    padding: 10px;
+    padding-top: 0px;
+    /* overflow: auto; */
+    /* width: auto; */
+    /* max-height: 600px; */
+  }
+  .snp-body p {
+    margin-left: -5px;
+  }
+  
+  .snp-name-yellow {
+    color: #ecdd46;
+  }
+  
+  .snp-msg-yellow,
+  .snp-img-yellow {
+    border-left: 4px solid #ecdd46;
+  }
+  
+  .snp-name-green {
+    color: #66b28b;
+  }
+  
+  .snp-msg-green,
+  .snp-img-green {
+    border-left: 4px solid #66b28b;
+  }
+  
+  .snp-name-blue {
+    color: #50bfe5;
+  }
+  
+  .snp-msg-blue,
+  .snp-img-blue {
+    border-left: 4px solid #50bfe5;
+  }
+  
+  .snp-name-red {
+    color: #e0496f;
+  }
+  
+  .snp-msg-red,
+  .snp-img-red {
+    border-left: 4px solid #e0496f;
+  }
+  
+  .snp-img-blue,
+  .snp-img-green,
+  .snp-img-red,
+  .snp-img-yellow {
+    /* max-width: 300px; */
+    max-width: 200px;
+    padding-left: 5px;
+  }
+  
+  .snp-name-green,
+  .snp-name-red,
+  .snp-name-blue,
+  .snp-name-yellow {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8em;
+  }
+  
+  .snp-msg-green,
+  .snp-msg-red,
+  .snp-msg-blue,
+  .snp-msg-yellow {
+    padding-left: 5px;
+    display: inline-block;
+  }
+  
+  .snp-timestamp {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    color: #757575;
+    text-align: center;
+    margin-bottom: -20px;
+  }
+  
+  .snp-bottom {
+    background-image: url(https://i.imgur.com/MivfOeH.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    /* width: 100%; */
+    /* overflow: hidden; */
+    height: 40px;
+    background-size: contain;
+    /* margin-left: -10px; */
+    /* height: 0px; */
+  }
+  
+  .snap {
+      display: table;
+      box-sizing: border-box;
+      border-radius: 4px;
+      border: 1px solid rgba(0,0,0, 0.15);
+      background: rgba(255,255,255, 0.3);
+      color: black;
+    width: 226px;
+  }
+  
+  /* Image part */
+  .snap:before {
+      display: table-cell;
+      content: "";
+      width: 3rem;
+      background-repeat: no-repeat;
+      background-size: auto 1rem;
+      background-position: center;
+  }
+  
+  /* Text part */
+  .snap:after {
+      display: table-cell;
+      font-weight: bold;
+      padding: 0.5rem;
+      padding-left: 0;
+  }
+  
+  
+  /* Hidden backup */
+  .snap i {
+      display: none;
+  }
+  
+  /*
+   * Opened
+   */
+  .snap.opened:after {
+      content: "Opened";
+  }
+  /* Outgoing (arrow) */
+  .out.snap.opened:before {       background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/opened_red.png");}
+  .out.snap.opened.purple:before {background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/opened_purple.png");}
+  .out.snap.opened.blue:before {  background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/opened_blue.png");}
+  /* Incoming (arrow) */
+  .in.snap.opened:before {       background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/viewed_red.png");}
+  .in.snap.opened.purple:before {background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/viewed_purple.png");}
+  .in.snap.opened.blue:before {  background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/viewed_blue.png");}
+  
+  /*
+   * Unopened
+   */
+  .snap.unopened:after {
+      content: "Delivered";
+  }
+  /* Outgoing (arrow) */
+  .out.snap.unopened:before {       background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/sent_red.png");}
+  .out.snap.unopened.purple:before {background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/sent_purple.png");}
+  .out.snap.unopened.blue:before {  background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/sent_blue.png");}
+  /* Incoming (box) */
+  .in.snap.unopened:after {
+      content: "Tap to view";
+  }
+  .in.snap.unopened:before {       background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/received_red.png");}
+  .in.snap.unopened.purple:before {background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/received_purple.png");}
+  .in.snap.unopened.blue:before {  background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/received_blue.png");}
+  
+  /*
+   * Screenshot
+   */
+  .snap.screenshot:after {
+      content: "Screenshot!";
+  }
+  .snap.screenshot:before {       background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/screenshot_red.png");}
+  .snap.screenshot.purple:before {background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/screenshot_purple.png");}
+  .snap.screenshot.blue:before {  background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/screenshot_blue.png");}
+  
+  /*
+   * Replay
+   */
+  .snap.replay:after {
+      content: "Replay!";
+  }
+  .snap.replay:before {       background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/replay_red.png");}
+  .snap.replay.purple:before {background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/replay_purple.png");}
+
+  
+    /* ----------------------------------------------------------------- */
+/* ------------------ discord mock v1 ------------------*/
+/* https://archiveofourown.org/works/26534413/chapters/74599071 */
+/* with edits */
+
+.channel {
+    /* position: sticky; */
+    top: 0;
+    background: #36393f;
+  }
+  
+  .darkmode > div:last-child {
+    /* position: sticky; */
+    bottom: 0;
+  }
+  
+  .pinged-you, .pinged-you:hover {
+    background-color: #494440 !important;
+    border-left: 3px solid #f0ab42;
+    padding: 1.5px 16px 1.5px 13px!important;
+  }
+  
+  .reaction {
+    padding: 3px 8px 3px 6px;
+    margin-right: 1px;
+    border-radius: 30%;
+    background: #303136;
+    display: inline-block;
+  }
+  
+  .reaction-yours {
+    border: 1px solid #5d68ce;
+    padding: 2px 5px 1px 5px;
+    margin-right: 4px;
+    border-radius: 30%;
+    background: #3c4159;
+    display: inline-block;
+  }
+  
+  /* The overall discord module */
+  .discord {
+      /* max-width: 710px; */
+      /* margin: 2em auto; */
+      /* padding-bottom: 1.286em; */
+      font-family: "Whitney", "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, Arial, sans-serif;
+      /* border-radius: 8px; */
+      position: relative;
+      box-shadow: 0 0 8px #aaaa;
+      /* width: 257px; */
+      font-size: 12px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    /* Background colors for dark and light mode */
+    .darkmode {
+      background: #36393f;
+      color: #dcddde;
+    }
+    .lightmode {
+      background: #fff;
+      color: #2e3338;
+    }
+    
+    /* Aligning the text and system messages */
+    .discord > div.message,
+    .discord > div.system {
+        margin: 0;
+        padding: 13px 16px;
+      display: grid;
+        grid-template-columns: 2.7em 1fr;
+        column-gap: 16px;
+        
+    }
+    
+    .discord > div.message p,
+    .discord > div.system p {
+        width: 100%;
+      margin: 0;
+    }
+    
+    .darkmode > div.message:hover,
+    .darkmode > div.system:hover { background-color: rgba(4, 4, 5, 0.07); }
+    .lightmode > div.message:hover,
+    .lightmode > div.system:hover { background-color: rgba(6, 6, 7, 0.02); }
+    
+    /* Sizing the icons */
+    .discord > div p:first-child > img {
+      width: 2.7em;
+      height: 2.7em;
+      /* object-fit: cover; Property not allowed on AO3 */
+      border-radius: 100%;
+      margin-top: 2px;
+    }
+    
+    /* Making large images in text messages display correctly */
+    .discord img { max-width: 180px; }
+    
+    /* Making usernames act like links when hovered */
+    .discord .name { cursor: pointer; }
+    .discord .name:hover { text-decoration: underline; }
+    
+    /* Colors for system messages */
+    .darkmode .system { color: #8e9297; }
+    .lightmode .system { color: #6a7480; }
+    
+    /* General layouts for system message icons */
+    .discord .system::before {
+      content: "";
+      height: 16px;
+      width: 2.7em;
+      text-align: center;
+      display: block;
+      background: transparent no-repeat center;
+      background-size: 16px 16px;
+      margin-top: 4px;
+    }
+    
+    /* System message: Welcome
+    Original image URL: https://discord.com/assets/e06a573355c490f7ce6e3125ac01db81.svg */
+    .discord .system.welcome::before { background-image: url("https://i.imgur.com/4lneHce.png"); }
+    
+    /* System message: Pinned message
+    Original image URL: https://discord.com/assets/5da4cdab01d4d89c593c48c62ae0d937.svg */
+    .discord .system.pin::before { background-image: url("https://i.imgur.com/SdqqXPO.png"); }
+    
+    /* Colors for dark and light mode; channel headers, default usernames, timestamps, typing bar placeholder */
+    .darkmode .name,
+    .darkmode .channel .channelname {
+      color: #fff;
+      font-weight: 600;
+    }
+    .lightmode .name,
+    .lightmode .channel .channelname {
+      color: #060607;
+      font-weight: 600;
+    }
+    
+    .darkmode .hash,
+    .darkmode > div:last-child .placeholder,
+    .darkmode .timestamp {
+      color: #72767d;
+    }
+    .lightmode .hash,
+    .lightmode > div:last-child .placeholder,
+    .lightmode .timestamp {
+      color: #747f8d;
+    }
+    
+    /* Alignment and sizing of channel headers and their content */
+    .discord .channel > p {
+      padding: 6px 12px;
+      display: grid;
+      grid-template-columns: 24px auto 1fr auto;
+      /* align-items: center; Property not allowed on AO3 */
+      margin: -3px 0 3px;
+    }
+    
+    .discord .channel *,
+    .discord .channel *::after {
+      margin: auto 0; /* Since align-items isn't allowed on AO3 */
+    }
+    
+    .discord .hash {
+      font-size: 1.6em;
+      font-weight: normal;
+      text-align: center;
+    }
+    
+    .discord .channel .channelname {
+      font-size: 1.07em;
+      padding-left: 8px;
+    }
+    
+    .discord .channel .description {
+      font-size: 0.93em;
+      font-weight: 500;
+      margin-left: 8.25px;
+      padding: 0 8px;
+      border-left: solid thin;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      position: relative;
+    }
+    
+    /* Right side's fade-out for channel description */
+    .discord .channel .description::after {
+      content: "";
+      display: inline-block;
+      width: 12px;
+      height: 2em;
+      position: absolute;
+      right: 2%;
+    }
+    .darkmode .channel .description::after {
+        background: linear-gradient(90deg,rgba(54,57,63,0) 0,#36393f);
+    }
+    .lightmode .channel .description::after {
+        background: linear-gradient(90deg,rgba(54,57,63,0) 0,#fff);
+    }
+    
+    /* Shading for the channel header */
+    .darkmode .channel { box-shadow: #2c2f33bd 0 2px 1px; }
+    .lightmode .channel { box-shadow: #2c2f332e 0 2px 1px; }
+    
+    /* Colors for the channel description and its border */
+    .darkmode .channel > p { color: #b9bbbe; }
+    .lightmode .channel > p { color: #4f5660; }
+    
+    .darkmode .channel .description { border-left-color: #ffffff0f; }
+    .lightmode .channel .description { border-left-color: #06060714; }
+    
+    /* The three icons to the right of the channel header. Normal */
+    .discord .channel > p::after {
+      grid-column: 4;
+      content: "";
+      height: 1.4em;
+      width: 6.7em;
+      background: transparent no-repeat center;
+      background-size: 6.7em auto;
+      margin-right: 10px;
+    }
+    .darkmode .channel > p:not(.newpins)::after { background-image: url(https://i.imgur.com/2Jo3bI3.png); }
+    .lightmode .channel > p:not(.newpins)::after { background-image: url(https://i.imgur.com/L8KR3n0.png); }
+    
+    /* The three icons to the right of the channel header. When there are new pins */
+    .darkmode .channel > p.newpins::after { background-image: url(https://i.imgur.com/GClC6WS.png); }
+    .lightmode .channel > p.newpins::after { background-image: url(https://i.imgur.com/xtoAXUx.png); }
+    
+    /* Top-of-channel header: alignment */
+    .discord .channeltop {
+      padding-left: 16px;
+      padding-right: 4.5%;
+    }
+    
+    /* Top-of-channel header: hash symbol */
+    .discord .channeltop h1:first-child::before {
+      content: '#';
+      display: block;
+      height: 1.413px;
+      width: 1.413px;
+      font-weight: 400;
+      font-size: 1.5em;
+      text-align: center;
+      line-height: 1.3;
+      border-radius: 100%;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    .darkmode .channeltop h1::before { background-color: #4f545c; }
+    .lightmode .channeltop h1::before { background-color: #747f8d; }
+    
+    /* Top-of-channel header: heading */
+    .discord .channeltop h1 {
+      font-family: "Whitney", "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, Arial, sans-serif;
+      font-weight: 700;
+      font-size: 2.13em;
+      text-align: left;
+      margin-bottom: 8px;
+    }
+    .darkmode .channeltop h1 { color: #ffffff; }
+    .lightmode .channeltop h1 { color: #060607; }
+    
+    /* Top-of-channel header: description */
+    .discord .channeltop p {
+      padding-bottom: 13px;
+      margin-top: 0;
+      margin-bottom: 0.5em;
+      border-bottom: thin solid;
+    }
+    .darkmode .channeltop p {
+      border-bottom-color: #ffffff0f;
+      color: #b9bbbe;
+    }
+    .lightmode .channeltop p {
+      border-bottom-color: #06060714;
+      color: #4f5660;
+    }
+    
+    /* Colors and decoration for links and pings */
+    .discord a {
+      border: none;
+      cursor: pointer;
+    }
+    
+    .discord a:not(.ping):hover { text-decoration: underline; }
+    
+    .discord a.ping,
+    .discord a.ping:link,
+    .discord a.ping:hover {
+      border-radius: 3px;
+      padding: 0 2px;
+      font-weight: 500;
+      transition-duration: .05s;
+      text-decoration: none;
+    }
+    .lightmode a.ping,
+    .lightmode a.ping:link {
+      color: rgb(80, 92, 220);
+      background-color: rgba(80, 92, 220, 0.1);
+    }
+    .lightmode a.ping:hover {
+      color: #fff;
+      background-color: #505cdc;
+    }
+    .darkmode a.ping,
+    .darkmode a.ping:link {
+      color: #dee0fc;
+      background-color: rgba(88, 101, 242, 0.3);
+    }
+    .darkmode a.ping:hover {
+      color: #fff;
+      background-color: #5865f2;
+    }
+    .darkmode a,
+    .darkmode a:link,
+    .darkmode a:visited,
+    .darkmode a:hover,
+    .darkmode a:visited:hover {
+      color: #00b0f4;
+    }
+    .lightmode a,
+    .lightmode a:link,
+    .lightmode a:visited,
+    .lightmode a:hover,
+    .lightmode a:visited:hover {
+      color: #0067e0;
+    }
+    
+    /* Alignment and sizing of message timestamps */
+    .discord .timestamp {
+      padding-left: 6px;
+      font-size: .75em;
+    }
+    
+    /* The edited message notice */
+    .discord .edited {
+      font-size: 0.625em;
+      user-select: none; /* For all others */
+      -webkit-user-select: none; /* For Safari */
+      -ms-user-select: none; /* For IE */
+    }
+    .darkmode .edited { color: #72767d; }
+    .lightmode .edited { color: #747f8d; }
+    
+    /* New date divider */
+    .discord .dateline {
+      margin: 1.5em 13px 0;
+      border-top: thin solid;
+    }
+    
+    .discord .dateline p {
+      padding: 2px 4px;
+      font-size: 0.8em;
+      margin: -13px auto -.75em;
+      font-weight: 600;
+      width: fit-content;
+    }
+    .discord .dateline p { width: -webkit-fit-content; }
+    .discord .dateline p { width: -moz-fit-content; }
+    
+    .darkmode .dateline { border-top-color: #ffffff0f; }
+    .darkmode .dateline p {
+      color: #72767d;
+      background: #36393f;
+    }
+    .lightmode .dateline { border-top-color: #06060714; }
+    .lightmode .dateline p {
+      color: #747f8d;
+      background: #fff;
+    }
+    
+    /* Alignment and colors for typing bar */
+    .discord > div:last-child {
+      /* margin: 0 2.5%; */
+      padding: 11px;
+      /* border-radius: 8px; */
+    }
+    .darkmode > div:last-child { background: #40444b; }
+    .lightmode > div:last-child { background: #ebedef; }
+    
+    /* Aligning the message in the typing bar, and making it unselectable when placeholder displays */
+    .discord > div:last-child > p {
+      margin: 0;
+      padding: 0;
+    }
+    
+    .discord > div:last-child .placeholder {
+      user-select: none; /* For all others */
+      -webkit-user-select: none; /* For Safari */
+      -ms-user-select: none; /* For IE */
+    }
+    
+    /* The upload files button in the typing bar */
+    .discord > div:last-child > p.upload { display: none; } /* Supporting discord_v1.html layout */
+    
+    .discord > div:last-child > p:last-child {
+      display: grid;
+      grid-template-columns: 2em 1fr;
+      column-gap: 16px;
+    }
+    
+    .discord > div:last-child > p:last-child::before {
+      content: '+';
+      font-size: 1.35em;
+      font-weight: 600;
+      text-align: center;
+      line-height: 11px;
+      display: inline-block;
+      width: 13px;
+      height: 13px;
+      margin-left: 8px;
+      border-radius: 100%;
+      margin-top: 4px;
+    }
+    .darkmode > div:last-child > p:last-child::before {
+      background: #b9bbbe;
+      color: #40444b;
+    }
+    .lightmode > div:last-child > p:last-child::before {
+      background: #4f5660;
+      color: #ebedef;
+    }
+    
+    /* Default discord role colors, light versions (upper row) */
+    .discord .role1 { color: rgb(26, 188, 156) !important; }
+    .discord .ping.role1 { background-color: rgba(26, 188, 156, 0.1) !important; }
+    .discord .ping.role1:hover { background-color: rgba(26, 188, 156, 0.3) !important; }
+    
+    .discord .role2 { color: rgb(46, 204, 113) !important }
+    .discord .ping.role2 { background-color: rgba(46, 204, 113, 0.1) !important; }
+    .discord .ping.role2:hover { background-color: rgba(46, 204, 113, 0.3) !important; }
+    
+    .discord .role3 { color: rgb(52, 152, 219) !important }
+    .discord .ping.role3 { background-color: rgba(52, 152, 219, 0.1) !important; }
+    .discord .ping.role3:hover { background-color: rgba(52, 152, 219, 0.3) !important; }
+    
+    .discord .role4 { color: rgb(155, 89, 182) !important }
+    .discord .ping.role4 { background-color: rgba(155, 89, 182, 0.1) !important; }
+    .discord .ping.role4:hover { background-color: rgba(155, 89, 182, 0.3) !important; }
+    
+    .discord .role5 { color: rgb(233, 30, 99) !important }
+    .discord .ping.role5 { background-color: rgba(233, 30, 99, 0.1) !important; }
+    .discord .ping.role5:hover { background-color: rgba(233, 30, 99, 0.3) !important; }
+    
+    .discord .role6 { color: rgb(241, 196, 15) !important }
+    .discord .ping.role6 { background-color: rgba(241, 196, 15, 0.1) !important; }
+    .discord .ping.role6:hover { background-color: rgba(241, 196, 15, 0.3) !important; }
+    
+    .discord .role7 { color: rgb(230, 126, 34) !important }
+    .discord .ping.role7 { background-color: rgba(230, 126, 34, 0.1) !important; }
+    .discord .ping.role7:hover { background-color: rgba(230, 126, 34, 0.3) !important; }
+    
+    .discord .role8 { color: rgb(231, 76, 60) !important; }
+    .discord .ping.role8 { background-color: rgba(231, 76, 60, 0.1) !important; }
+    .discord .ping.role8:hover { background-color: rgba(231, 76, 60, 0.3) !important; }
+    
+    .discord .role9 { color: rgb(149, 165, 166) !important; }
+    .discord .ping.role9 { background-color: rgba(149, 165, 166, 0.1) !important; }
+    .discord .ping.role9:hover { background-color: rgba(149, 165, 166, 0.3) !important; }
+    
+    .discord .role10 { color: rgb(96, 125, 139) !important; }
+    .discord .ping.role10 { background-color: rgba(96, 125, 139, 0.1) !important; }
+    .discord .ping.role10:hover { background-color: rgba(96, 125, 139, 0.3) !important; }
+    
+    /* Default discord role colors, dark versions (lower row) */
+    .discord .role1a { color: rgb(17, 144, 106) !important }
+    .discord .ping.role1a { background-color: rgba(17, 144, 106, 0.1) !important; }
+    .discord .ping.role1a:hover { background-color: rgba(17, 144, 106, 0.3) !important; }
+    
+    .discord .role2a { color: rgb(31, 139, 76) !important }
+    .discord .ping.role2a { background-color: rgba(31, 139, 76, 0.1) !important; }
+    .discord .ping.role2a:hover { background-color: rgba(31, 139, 76, 0.3) !important; }
+    
+    .discord .role3a { color: rgb(32, 102, 148) !important }
+    .discord .ping.role3a { background-color: rgba(32, 102, 148, 0.1) !important; }
+    .discord .ping.role3a:hover { background-color: rgba(32, 102, 148, 0.3) !important; }
+    
+    .discord .role4a { color: rgb(113, 54, 138) !important }
+    .discord .ping.role4a { background-color: rgba(113, 54, 138, 0.1) !important; }
+    .discord .ping.role4a:hover { background-color: rgba(113, 54, 138, 0.3) !important; }
+    
+    .discord .role5a { color: rgb(173, 20, 87) !important }
+    .discord .ping.role5a { background-color: rgba(173, 20, 87, 0.1) !important; }
+    .discord .ping.role5a:hover { background-color: rgba(173, 20, 87, 0.3) !important; }
+    
+    .discord .role6a { color: rgb(194, 124, 14) !important }
+    .discord .ping.role6a { background-color: rgba(194, 124, 14, 0.1) !important; }
+    .discord .ping.role6a:hover { background-color: rgba(194, 124, 14, 0.3) !important; }
+    
+    .discord .role7a { color: rgb(168, 67, 0) !important }
+    .discord .ping.role7a { background-color: rgba(168, 67, 0, 0.1) !important; }
+    .discord .ping.role7a:hover { background-color: rgba(168, 67, 0, 0.3) !important; }
+    
+    .discord .role8a { color: rgb(153, 45, 34) !important; }
+    .discord .ping.role8a { background-color: rgba(153, 45, 34, 0.1) !important; }
+    .discord .ping.role8a:hover { background-color: rgba(153, 45, 34, 0.3) !important; }
+    
+    .discord .role9a { color: rgb(151, 156, 159) !important; }
+    .discord .ping.role9a { background-color: rgba(151, 156, 159, 0.1) !important; }
+    .discord .ping.role9a:hover { background-color: rgba(151, 156, 159, 0.3) !important; }
+    
+    .discord .role10a { color: rgb(84, 110, 122) !important; }
+    .discord .ping.role10a { background-color: rgba(84, 110, 122, 0.1) !important; }
+    .discord .ping.role10a:hover { background-color: rgba(84, 110, 122, 0.3) !important; }
+    
+    /** CUSTOM ROLE GUIDE
+        Edit the text YOUR_ROLE_HERE to another name.
+        For example, a role named "support" would read as follows:
+        - .discord .support
+        - .discord .ping.support
+        Make sure not to delete the dot before the role name, or the "!important" marker!
+        
+        To use your role in a ping, take the 3 digits within the rgb() brackets and replace
+        the first three digits within the rgba() brackets in both the .ping.YOUR_ROLE_HERE classes.
+        Make sure not to alter the 0.1/0.3 values at the end.
+        Once you're done, you can create a role ping using an <a class="ping YOUR_ROLE_HERE"> tag!
+    */
+    .discord .YOUR_ROLE_HERE {
+      color: rgb(255, 255, 255);
+    }
+    .discord .ping.YOUR_ROLE_HERE {
+      background-color: rgba(255, 255, 255, 0.1) !important;
+    }
+    .discord .ping.YOUR_ROLE_HERE:hover {
+      background-color: rgba(255, 255, 255, 0.3) !important;
+    }
+  
+    /* ----------------------------------------------------------------- */
+    /* ----------------------reddit mock ---------------------------- */
+/* made by jihn https://codepen.io/jihnari/pen/jOmMoQX */
+
+.text-color-gray {
+    color: #9F9FA1;
+  }
+  .right{
+    float:right;
+  }
+  
+  .text-size-12{
+    font-size:1.2em;
+  }
+  .text-bold{
+    font-weight:bold;
+  }
+  .padding-left-20 {
+    padding-left: 20px;
+  }
+  
+  
+  /*reddit*/
+  /*
+  i do not, i repeat do NOT remember making vr0-2. i mean, i remember thinking "i should fix that weird issue where sometimes things collapse instead of float", i remember sitting down, i remember thinking "what if tables" but i DO NOT remember what it does or how it works. idk if half of that even needs to be there and honestly at this point i dont care. i also remeber thinking "GOTTA NEST THOSE DIVS" which we... appparently did not do. so that's. that's cool. 
+  
+  the last thing we might wanna do here is use the fadeout function and place the 'view all comments' button over top of it. rn im tired tho. messing w relative/ablosute is one of my least favorite things. 
+  */
+  .rd-font{
+    font-family:verdana, arial, helvetica, sans-serif;
+    background-color: white;
+    /*make sure this didnt break everything*/
+    color:black;
+    font-size: 13px;
+    padding: 6px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .rd-view-box {
+    background: #0079D3;
+    border-radius: 3px;
+    text-align: center;
+    color: white;
+    font-weight:bold;
+    padding: 7px;
+    margin: 0 5px -5px 5px;
+  }
+  .rd-signup-box {
+    background: #0079D3;
+    border-radius: 14px;
+    text-align: center;
+    color: white;
+    padding: 7px 5px 7px 5px;
+    margin: 0px 5px -5px 5px;
+    font-size:0.8em;
+  }
+  .rd-sortby{
+    font-size:0.8em;
+    padding-left:5px;
+  }
+  .rd-photo-box {
+    background: #d3dce0;
+    border-radius: 18px;
+    color: black;
+    padding: 2px 10px 2px 10px;
+  }
+  .rd-name{
+    text-align: center;
+    font-weight:bold;
+    font-size:1.2em;
+  }
+  .rd-header{
+    font-weight:bold;
+    font-size:1.1em;
+    margin:-5px 0 -5px 0;
+  }
+  .rd-dot { /*idx if i wanna go down this path*/
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+    background-color: #bbb;
+    margin-bottom: -15px;
+  }
+  .rd-div1{
+    border-bottom: 8px solid #EEEFF1;
+    padding-bottom:18px;
+    padding-left:8px;
+    margin-bottom: 10px;
+    margin-left: -6px;
+    margin-right: -6px;
+  }
+  .rd-div2{
+    border-bottom: 1.5px solid #EEEFF1;
+  }
+  .rd-vote{
+    height:1.8em;
+    display: inline-block;
+    padding-top:5px;
+    padding-bottom:5px;
+  }
+  .rd-poster{
+    font-size: .8em;
+    margin-bottom: 15px;
+  }
+  .rd-op{
+    color:#25A0ED;
+    font-weight:bold;
+  }
+  .rd-link{
+    color:#25A0ED;
+  }
+  .rd-down-arrow {
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 2.5px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    margin: 0px 0 2px 7px;
+  }
+  .rd-small{
+    font-size: .8em;
+    display: inline-block;
+    padding-bottom:5px;
+  }
+  .rd-vr0 {
+    display: table;
+    padding: 10px 0 0px 30px;
+    border-bottom: 1px solid #EEEFF1;
+  }
+  .rd-vr1 {
+    display: table;
+    padding: 0px 0px 0px 10px;
+    margin: 0px 0 5px 5px;
+    border-left: 1px solid #EEEFF1;
+  }
+  .rd-vr2 {
+    display: table;
+    padding: 0px 0px 0px 10px;
+    margin: 0px 0px 5px 5px;
+    border-left: 1px solid #EEEFF1;
+  }
+  .rd-vr-not {
+    display: table;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0 5px 0;
+  }
+  .rd-gray-text {
+    color: #657685;
+  }
+  .rd-bubble{
+    color: #787C7F;
+    font-size: .8em;
+    padding: 12px 5px 3px 5px;
+    margin-bottom:5px;
+    border-radius: 16px;
+    border: 1px solid #EEEFF1;
+  }
+  
+  .rd-arrow-text{
+    padding-top:2px;
+    mmargin-bottom:10px;
+    vertical-align:top;
+    display: inline-block;
+  }
+  .rd-arrow-up{
+    padding-top:0px;
+    padding-bottom:0px;
+    height:1.5em;
+  }
+  .rd-arrow-down{
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+      height:1.5em;
+  }
+  .rd-elispes{
+    float:right;
+    padding-right:10px;
+    font-size:1.0em;
+  }
+
+
+/* --------------------------------------------------------------- */
+  
+/* -----------------tumblr style tweaks --------------------------- */
+  /* https://archiveofourown.org/works/11474979 */
+
+
+  .tungle {
+    max-width: 500px;
+    font-family: Gibson,Helvetica Neue,HelveticaNeue,Helvetica,Arial,sans-serif;
+    display: table;
+    margin: auto;
+    color: #444444;
+    /* margin: 10px 0; */
+  }
+  
+  .tunglebody {
+    background-color: #ffffff;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: .1em;
+    border-color: #dddddd;
+    float: left;
+    max-width: 100%;
+    position: relative;
+    padding: 15px 0 0;
+  }
+  
+  .tungleurl {
+    position: relative;
+    top: -.2em;
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: 50px;
+    margin-left: 10px;
+    line-height: 20px;
+    height: 20px;
+  }
+  
+  .tungletext {
+    display: inline-block;
+    margin-top: 15px;
+    margin-left: 10px;
+    line-height: 21px;
+    font-size: 14px;
+    width: 92%;
+    word-wrap: break-word;
+  }
+  
+  .tungletext a {
+    color: #444444;
+  }
+  
+  .tungleh {
+    display: inline-block;
+    margin-left: 20px;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 47px;
+    width: 92%;
+    word-wrap: break-word;
+  }
+  
+  .tungletags {
+    display: inline-block;
+    width: 92%;
+    font-size: 13px;
+    color: #8f8f8f;
+    margin-top: 15px;
+    line-height: 20px;
+    position: relative;
+    margin-left: 10px;
+  }
+  
+  .tungletag {
+    margin-right: 12px;
+  }
+  
+  /* .tungletag:first-of-type {
+    margin-left: 0px;
+  } */
+  
+  .tunglenotes {
+    font-size: 14px;
+    font-weight: bold;
+    color: #8f8f8f;
+    line-height: 45px;
+    position: relative;
+    margin-left: 10px;
+  }
+  
+  .tungleicons {
+    height: auto;
+    width: 120px;
+    float: right;
+    margin-right: -7px;
+    margin-top: 6px;
+  }
+
+  .tungleimg {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .tunglequote {
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 1px;
+    margin-left: 35px;
+    line-height: 42px;
+    font-size: 36px;
+    width: 89%;
+    word-wrap: break-word;
+    font-family: Georgia, serif;
+    text-indent: -15px;
+  }
+  
+  .tunglequote:before {
+    content: "\201C";
+  }
+  
+  .tunglequote:after {
+    content: "\201D";
+  }
+  
+  .quotesourcedash {
+    width: 20px;
+    margin-left: 20px;
+  }
+  
+  .quotesource {
+    display: inline-block;
+    margin-bottom: 15px;
+    line-height: 21px;
+    font-size: 14px;
+    width: 90%;
+    word-wrap: break-word;
+  }
+  .tungletwo_one {
+    width: 49.5%;
+    height: 177px;
+    margin-top: 4px;
+    display: block;
+    overflow: hidden;
+    float: left;
+  }
+  
+  .tungletwo_two {
+    width: 49.5%;
+    height: 177px;
+    margin-top: 4px;
+    display: block;
+    overflow: hidden;
+    float: right;
+  }
+  
+  .tungletwo_three {
+    width: 49.5%;
+    height: 412px;
+    margin-top: 4px;
+    display: block;
+    overflow: hidden;
+    float: left;
+  }
+  
+  .tungletwo_four {
+    width: 49.5%;
+    height: 412px;
+    margin-top: 4px;
+    display: block;
+    overflow: hidden;
+    float: right;
+  }
+
+  .tunglethree_one {
+    width: 32.8%;
+    height: 120px;
+    margin-top: 4px;
+    display: block;
+    overflow: hidden;
+    float: left;
+  }
+  
+  .tunglethree_two {
+    width: 33%;
+    height: 120px;
+    margin-top: 4px;
+    display: inline-block;
+    overflow: hidden;
+    margin-left: 4px;
+  }
+  
+  .tunglethree_three {
+    width: 32.8%;
+    height: 120px;
+    margin-top: 4px;
+    display: block;
+    overflow: hidden;
+    float: right;
+  }
+
+  .tungleask {
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    border-radius: 3px;
+    float: left;
+    position: relative;
+    padding: 15px 14px 18px;
+    display: inline-block;
+    margin-top: 4px;
+    margin-left: 10px;
+    line-height: 21px;
+    font-size: 14px;
+    width: 80%;
+    word-wrap: break-word;
+  }
+  
+  .tungleasktip {
+    display: inline;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid #f2f2f2;
+    right: -8px;
+    top: 10px;
+  }
+  
+  .tungleaskicon {
+    display: inline-block;
+    float: right;
+    height: 21px;
+    width: 20px;
+    margin-top: 12px;
+    border-radius: 2px;
+    margin-right: 7px;
+  }
+  
+  .tungleasker {
+    color: #a6a6a6;
+    font-size: 13px;
+    display: inline-block;
+    width: 100%;
+    line-height: 21px;
+    margin-bottom: 7px;
+  }
+  
+  
+.tunglechat {
+  display: inline-block;
+  font-size: 14px;
+  width: 92%;
+  line-height: 1.4;
+  font-family: Courier, monospace;
+  padding-top: 3px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 3px;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.tungleline {
+  display: block;
+  padding-top: 6px;
+  padding-right: 0px;
+  padding-bottom: 6px;
+  padding-left: 0px;
+  width: 100%;
+}
+
+.tungleline:first-of-type {
+  padding-top: 0px;
+}
+
+.tungleline:last-of-type {
+  padding-bottom: 0px;
+}
+
+.tungleline:nth-of-type(even) {
+  background: #fdfdfd;
+}
+
+.strong {
+  font-weight: 700;
+}
+
+.tungleline>strong:after {
+  content: "\A0";
+}
+
+.reblog {
+  height: 15px;
+  width: auto;
+  margin-bottom: 5px;
+}
+
+.reblogheader {
+  position: relative;
+  line-height: 25px;
+  padding-top: 15px;
+  padding-left: 10px;
+  width: 96%;
+  display: inline-block;
+  border-top: 1px solid #e7e7e7;
+  margin-top: 5px;
+}
+
+.reblogurl {
+  position: relative;
+  top: -.2em;
+  font-weight: 700;
+  font-size: 13px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  line-height: 25px;
+  height: 25px;
+  color: #8f8f8f;
+}
+
+.reblogicon {
+  border-radius: 2px;
+  width: 25px;
+  height: 25px;
+  vertical-align: baseline;
+}
+
+.sourceurl {
+  position: relative;
+  font-weight: 700;
+  font-size: 13px;
+  vertical-align: top;
+  display: inline-block;
+}
+
+.reblogorigin {
+  width: 100%;
+  word-wrap: break-word;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  padding-right: 20px;
+}
+
+.reblogtext {
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding-right: 5px;
+  margin-bottom: 10px;
+  line-height: 21px;
+  font-size: 14px;
+  width: 92%;
+  word-wrap: break-word;
+}
+
+.reblogtext a {
+  color: #444444;
+}
+
+#tumblr-view {
+  background: midnightblue;
+  /* padding: 10px 0px; */
+}
+
+/* --------------------------------------------------------------- */
+/* ---------------phone view urban dictionary--------------------------- */
+  
+
+.phone-view {
+    border: 1px solid gray;
+    /* padding: 0em 1em 1em 1em; */
+    min-width: 250px;
+    max-width: 500px;
+    /* font-family: "Segoe UI"; */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /* display: table; */
+    margin: auto;
+    /* background-color: white; */
+    background: rgb(229, 231, 235);
+    /* text-align: justify; */
+    /* padding: 10px; */
+
+    /* experimenting w gradiaent */
+    color: black;
+}
+
+.header-address-bar {
+    background-color: white;
+    color: black;
+    /* min-width: 50px; */
+    /* width: 100px; */
+    /* margin-right: 1em; */
+    /* float: right; */
+    height: 1.5em;
+    border-radius: 12px;
+    margin-top: -30px !important;
+    margin-bottom: 8px !important;
+    margin-left: 43px !important;
+    max-width: 90%;
+    /* width: 70%; */
+    padding-left: 0.7em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+  .header-browser {
+    max-width: 500px;
+    min-width: 250px;
+    height: 36px;
+    background-color: gray;
+    font-weight: bold;
+    text-align: center;
+    text-transform: capitalize;
+    display: block;
+  }
+
+  .header-browser::before {
+    content: url(https://img.icons8.com/material-outlined/24/ffffff/home--v2.png); /*'⌂';*/
+    cursor: pointer;
+    float: left;
+    margin-left: 11px;
+    margin-top: 3px;
+    transform: scale(1.3,1.0);
+    color: white;
+  }
+
+  .header-browser:after {
+    content: url(https://img.icons8.com/ios-glyphs/30/ffffff/menu-2.png);
+    display: inline-block;
+    position: relative;
+    /* font-weight: bold;
+    font-size: 14px; */
+    padding-top: 0.1em;
+    height: 90%;
+    float: right;
+    color: white;
+    /* -webkit-transform: scale(1.5, 1.0);
+    -moz-transform: scale(1.5, 1.0);
+    -ms-transform: scale(1.5, 1.0);
+    -o-transform: scale(1.5, 1.0);
+    transform: scale(1.5,1.0); */
+    cursor: pointer;
+  }
+
+  .header-white > p, .phone-view > p, .collapse {
+    margin: 0;
+  }
+
+/* --------------------------------------------------------------- */
+/* hot topic */
+.ud-header {
+  background-color: rgb(19, 23, 37);
+  margin-top: -3px !important;
+}
+
+.ud-header > img {
+  /* max-width: 40%; */
+  height: 70px;
+}
+
+.ud-hamburger {
+  height: 50px;
+  width: 50px;
+  background-image: url(https://img.icons8.com/material-outlined/48/ffffff/menu--v1.png);
+  float: right;
+  margin-top: 7px;
+  margin-right: 10px;
+}
+
+.ud-search {
+  display: inline-block;
+  width: 65%;
+  height: 51px;
+  background: white;
+  border-radius: 8px;
+  margin: 5px;
+  color: lightgray;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.ud-search-text {
+  font-size: 21px;
+  display: inline-block;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.ud-search-text:before {
+  content: url(https://img.icons8.com/material/48/000000/search--v1.png);
+    float: left;
+    transform: scale(0.9);
+    margin-top: -7px;
+    margin-left: -7px;
+    opacity: 0.5;
+}
+
+.ud-search-icons  {
+  /* max-width: 30px; */
+  position: absolute;
+  margin-top: 5px;
+  margin-left: -1px;
+  /* display: inline-block; */
+  display: inline;
+  width: 100%;
+}
+.ud-body {
+  background: rgb(229, 231, 235);
+    /* text-align: justify; */
+    padding: 10px;
+}
+.ud-box {
+  /* height: 30%; */
+  display: block;
+  background: white;
+  margin: 10px;
+  /* width: 96%; */
+  /* max-width: 500px; */
+  /* min-width: 300px; */
+  /* text-align: center; */
+  /* margin: 0 auto; */
+  border-radius: 10px;
+}
+
+.ud-term {
+  display: block;
+  padding: 12px;
+}
+
+.ud-box-footer {
+  background: rgb(59, 255, 89);
+  display: block;
+  padding: 12px;
+  /* width: 100%; */
+  /* margin-left: -10px; */
+  text-align: center;
+  color: black;
+  font-size: 20px;
+  font-weight: 600;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.ud-box-footer span {
+  padding: 5px;
+    background: black;
+    color: rgb(59, 255, 89);
+}
+
+.ud-term > a.title {
+  font-size: 25;
+  font-weight: 500;
+  color: blue;
+}
+
+.ud-term > a:not(.title) {
+  /* font-size: 25; */
+  font-weight: 500;
+  color: blue;
+  cursor: pointer;
+}
+
+.ud-term > img {
+  float: right;
+  padding-right: 10px;
+}
