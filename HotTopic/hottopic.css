@@ -1,3 +1,7 @@
+p {
+  margin: 0 auto;
+}
+
 /* ------------------ snapchat mock ------------------*/
 /* from https://archiveofourown.org/works/26777200 */
 /* might use images from / remix with https://archiveofourown.org/works/24273862/chapters/58503859 as well  */
@@ -9,9 +13,9 @@
     width: 300px;
     margin: 0 auto;
     font-family: 'Roboto', 'Helvetica Neue LT Std', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-    font-size: 13px;
-    background: white;
-    color: black;
+    /* font-size: 13px; */
+    /* background: white;
+    color: black; */
   }
   
   .snp-header {
@@ -121,7 +125,7 @@
   }
   
   .snp-bottom {
-    background-image: url(https://i.imgur.com/MivfOeH.png);
+    background-image: url(https://i.imgur.com/OjQuAMi.png);
     background-repeat: no-repeat;
     background-position: center;
     /* width: 100%; */
@@ -268,7 +272,7 @@
       position: relative;
       box-shadow: 0 0 8px #aaaa;
       /* width: 257px; */
-      font-size: 12px;
+      font-size: 13px;
       max-width: 600px;
       margin: 0 auto;
     }
@@ -778,9 +782,9 @@
   */
   .rd-font{
     font-family:verdana, arial, helvetica, sans-serif;
-    background-color: white;
+    /* background-color: white; */
     /*make sure this didnt break everything*/
-    color:black;
+    /* color:black; */
     font-size: 13px;
     padding: 6px;
     max-width: 600px;
@@ -943,16 +947,16 @@
     font-family: Gibson,Helvetica Neue,HelveticaNeue,Helvetica,Arial,sans-serif;
     display: table;
     margin: auto;
-    color: #444444;
+    /* color: #444444; */
     /* margin: 10px 0; */
   }
   
   .tunglebody {
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     border-radius: 3px;
     border-style: solid;
     border-width: .1em;
-    border-color: #dddddd;
+    border-color: #cccccc;
     float: left;
     max-width: 100%;
     position: relative;
@@ -1133,8 +1137,8 @@
   }
 
   .tungleask {
-    background-color: #f2f2f2;
-    border: 1px solid #f2f2f2;
+    /* background-color: #f2f2f2; */
+    border: 1px solid #cccccc;
     border-radius: 3px;
     float: left;
     position: relative;
@@ -1156,7 +1160,7 @@
     height: 0;
     border-top: 8px solid transparent;
     border-bottom: 8px solid transparent;
-    border-left: 8px solid #f2f2f2;
+    border-left: 8px solid #cccccc;
     right: -8px;
     top: 10px;
   }
@@ -1413,7 +1417,7 @@
 }
 
 .ud-search-text {
-  font-size: 21px;
+  font-size: 20px;
   display: inline-block;
   padding-top: 10px;
   padding-left: 10px;
@@ -1481,16 +1485,18 @@
 }
 
 .ud-term > a.title {
-  font-size: 25;
+  font-size: 25px;
   font-weight: 500;
   color: blue;
+  text-decoration: none;
+  border-bottom: none;
 }
 
 .ud-term a:not(.title) {
   /* font-size: 25; */
   font-weight: 500;
   color: blue;
-  text-decoration: underline;
+  /* text-decoration: underline; */
   cursor: pointer;
 }
 
@@ -1504,7 +1510,7 @@
 }
 
 .ud-thumbs-up {
-  display: inline-block;
+  display: inline-flex;
   padding: 10px;
   border: thin black solid;
   margin: 10px 0px 30px 10px;
@@ -1515,7 +1521,7 @@
 }
 
 .ud-thumbs-down {
-  display: inline-block;
+  display: inline-flex;
   padding: 10px;
   border: thin black solid;
   margin-left: -6px;
@@ -1526,7 +1532,7 @@
 }
 
 .ud-flag {
-  display: inline-block;
+  display: inline-flex;
     padding: 10px;
     border: thin black solid;
     float: right;
@@ -1534,6 +1540,10 @@
     margin: 10px;
     box-shadow: 0px 3px 0px black;
     cursor: pointer;
+}
+
+.ud-thumbs-up img, .ud-thumbs-down img, .ud-flag img {
+  padding-right: 7px;
 }
 
 
