@@ -1144,8 +1144,9 @@
     margin-left: 10px;
     line-height: 21px;
     font-size: 14px;
-    width: 80%;
+    /* width: 80%; */
     word-wrap: break-word;
+    margin-right: 64px;
   }
   
   .tungleasktip {
@@ -1162,12 +1163,15 @@
   
   .tungleaskicon {
     display: inline-block;
-    float: right;
-    height: 21px;
-    width: 20px;
+    /* float: right; */
+    height: 40px;
+    width: 40px;
     margin-top: 12px;
-    border-radius: 2px;
+    border-radius: 24px;
+    position: absolute;
     margin-right: 7px;
+    right: 4px;
+    top: 24px;
   }
   
   .tungleasker {
@@ -1291,11 +1295,6 @@
   color: #444444;
 }
 
-#tumblr-view {
-  background: midnightblue;
-  /* padding: 10px 0px; */
-}
-
 /* --------------------------------------------------------------- */
 /* ---------------phone view urban dictionary--------------------------- */
   
@@ -1381,8 +1380,6 @@
     margin: 0;
   }
 
-/* --------------------------------------------------------------- */
-/* hot topic */
 .ud-header {
   background-color: rgb(19, 23, 37);
   margin-top: -3px !important;
@@ -1404,7 +1401,7 @@
 
 .ud-search {
   display: inline-block;
-  width: 65%;
+  width: 97%;
   height: 51px;
   background: white;
   border-radius: 8px;
@@ -1438,7 +1435,7 @@
   margin-left: -1px;
   /* display: inline-block; */
   display: inline;
-  width: 100%;
+  /* width: 100%; */
 }
 .ud-body {
   background: rgb(229, 231, 235);
@@ -1449,7 +1446,7 @@
   /* height: 30%; */
   display: block;
   background: white;
-  margin: 10px;
+  margin: 10px !important;
   /* width: 96%; */
   /* max-width: 500px; */
   /* min-width: 300px; */
@@ -1489,14 +1486,111 @@
   color: blue;
 }
 
-.ud-term > a:not(.title) {
+.ud-term a:not(.title) {
   /* font-size: 25; */
   font-weight: 500;
   color: blue;
+  text-decoration: underline;
   cursor: pointer;
 }
 
 .ud-term > img {
   float: right;
   padding-right: 10px;
+}
+
+.ud-term > span {
+  font-style: italic;
+}
+
+.ud-thumbs-up {
+  display: inline-block;
+  padding: 10px;
+  border: thin black solid;
+  margin: 10px 0px 30px 10px;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  box-shadow: 0px 3px 0px black;
+  cursor: pointer;
+}
+
+.ud-thumbs-down {
+  display: inline-block;
+  padding: 10px;
+  border: thin black solid;
+  margin-left: -6px;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0px 3px 0px black;
+  cursor: pointer;
+}
+
+.ud-flag {
+  display: inline-block;
+    padding: 10px;
+    border: thin black solid;
+    float: right;
+    border-radius: 20px;
+    margin: 10px;
+    box-shadow: 0px 3px 0px black;
+    cursor: pointer;
+}
+
+
+
+/* ------------------ google search results ---------------------- */
+/* https://archiveofourown.org/works/8631214/chapters/53486839 */
+.browser {
+  min-width: 200px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.search_autocomplete {
+  border: 1px solid #aaa;
+  padding: 5px 5px 5px 5px;
+  margin-top: 0px;
+}
+
+.search_logo {
+  text-align: center;
+  margin: 0px 0px 0px 0px;
+}
+
+.search_bar {
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+.search_bar span {
+  position: relative;
+  display: block;
+  margin: 0 0 0 0;
+  padding: 5px;
+}
+.chrome_term {
+  border: 1px solid #aaa;
+}
+
+.chrome_logo {
+  font-weight: bold;
+  font-size: x-large;
+  font-family: "Lato", "Verdana", sans-serif;
+}
+.chromeold_logo {
+  font-weight: bold;
+  font-size: x-large;
+  font-family: "Cardo", "Garamond", serif;
+}
+.chrome_blue {
+  color: #4285F4;
+}
+.chrome_red {
+  color: #DB4437;
+}
+.chrome_yellow {
+  color: #F4B400;
+}
+.chrome_green {
+  color: #0F9D58;
 }
