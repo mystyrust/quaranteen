@@ -1,0 +1,197 @@
+/* html,
+body {
+  height: 100%;
+  margin: 0;
+} */
+
+.flashlight-container-bg {
+  height: 380px;
+  width: 380px;
+  position: relative;
+  background: pink;
+  margin: 0 auto;
+  z-index: 1;
+  overflow: hidden;
+  /* background: black;
+  color: black; */
+}
+
+.flashlight-container p:not(.flashlight-cursor) {
+ /* background:pink; */
+  transition: all 0.5s ease;
+  z-index: 3;
+  margin: 0;
+  display: inline-flex;
+  width: 20%;
+  height: 20%;
+/*  pointer-events: none; */
+ /*  border-radius: 70%; */
+}
+
+.flashlight-container p:hover {
+  background: transparent; 
+  border-radius: 100%;
+
+/*   border: green solid 1px; */
+}
+
+.flashlight-text{
+  position: absolute;
+  z-index:1;
+  display: none;
+}
+
+.above-flashlight {
+  z-index: 11 !important;
+  width: 100%;
+  /* pointer-events: none; */
+  color: pink;
+  /* position: absolute; */
+ /* font-size: 14px; */
+}
+.below-flashlight, .below-flashlight a {
+  font-size: 20px; 
+  color: red;
+  z-index: 10 !important;
+}
+
+.flashlight-container div:hover .above-flashlight {
+  /* color: transparent; 
+  z-index: 9;  */
+}
+ 
+/* kontener na pełną wysokość */
+.flashlight-container {
+  height: 100%;
+  width: 100%; 
+  /* position: absolute; */
+  z-index:2;
+  /* background: pink; */
+}
+ 
+/* elementy po 20%
+   szerokości i wysokości,
+   czyli siatka 5x5
+*/
+.flashlight-container p {
+  width: 20%;
+  height: 20%;
+  float: left;
+/* a to tylko po to,
+   aby wyświetlić
+   tekst w środku
+*/
+  display: flex;
+  /* align-items: center;
+  justify-content: center; */
+}
+
+.flashlight-container .flashlight-cursor {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+  background: transparent;
+  width: 100px;
+  height: 100px;
+  border-radius:70%;
+  border: red solid 5000px;
+  transition: all 0.5s ease;
+  z-index: 1;
+
+/*tą właściwość dodajemy,
+  aby obiekt nie odbierał
+  zdarzeń od myszy kiedy na niego
+  najedziemy (a odbierał je element
+  siatki)
+*/
+   /* pointer-events: none; */
+}
+
+
+ 
+/* ustalamy left dla obiektu
+   względem kolumn
+*/
+.flashlight-container p:nth-of-type(1):hover~.flashlight-cursor,
+.flashlight-container p:nth-of-type(6):hover~.flashlight-cursor,
+.flashlight-container p:nth-of-type(11):hover~.flashlight-cursor,
+.flashlight-container p:nth-of-type(16):hover~.flashlight-cursor,
+.flashlight-container p:nth-of-type(21):hover~.flashlight-cursor {
+  left: 10%;
+}
+ 
+.flashlight-container p:nth-of-type(2):hover~.flashlight-cursor,
+.flashlight-container p:nth-of-type(7):hover~.flashlight-cursor,
+.flashlight-container p:nth-of-type(12):hover~.flashlight-cursor,
+.flashlight-container p:nth-of-type(17):hover~.flashlight-cursor,
+.flashlight-container p:nth-of-type(22):hover~.flashlight-cursor {
+  left: 30%;
+}
+ 
+.flashlight-container p:nth-of-type(3):hover~.flashlight-cursor,
+.flashlight-container p:nth-of-type(8):hover~.flashlight-cursor,
+.flashlight-container p:nth-of-type(13):hover~.flashlight-cursor,
+.flashlight-container p:nth-of-type(18):hover~.flashlight-cursor,
+.flashlight-container p:nth-of-type(23):hover~.flashlight-cursor {
+  left: 50%;
+}
+ 
+.flashlight-container p:nth-of-type(4):hover~.flashlight-cursor,
+.flashlight-container p:nth-of-type(9):hover~.flashlight-cursor,
+.flashlight-container p:nth-of-type(14):hover~.flashlight-cursor,
+.flashlight-container p:nth-of-type(19):hover~.flashlight-cursor,
+.flashlight-container p:nth-of-type(24):hover~.flashlight-cursor {
+  left: 70%;
+}
+ 
+.flashlight-container p:nth-of-type(5):hover~.flashlight-cursor,
+.flashlight-container p:nth-of-type(10):hover~.flashlight-cursor,
+.flashlight-container p:nth-of-type(15):hover~.flashlight-cursor,
+.flashlight-container p:nth-of-type(20):hover~.flashlight-cursor,
+.flashlight-container p:nth-of-type(25):hover~.flashlight-cursor {
+  left: 90%;
+}
+ 
+/* a tu ustalamy top dla obiektu
+   względem wierszy
+*/
+.flashlight-container p:nth-of-type(1):hover~.flashlight-cursor,
+.flashlight-container p:nth-of-type(2):hover~.flashlight-cursor,
+.flashlight-container p:nth-of-type(3):hover~.flashlight-cursor,
+.flashlight-container p:nth-of-type(4):hover~.flashlight-cursor,
+.flashlight-container p:nth-of-type(5):hover~.flashlight-cursor {
+  top: 10%;
+}
+ 
+.flashlight-container p:nth-of-type(6):hover~.flashlight-cursor,
+.flashlight-container p:nth-of-type(7):hover~.flashlight-cursor,
+.flashlight-container p:nth-of-type(8):hover~.flashlight-cursor,
+.flashlight-container p:nth-of-type(9):hover~.flashlight-cursor,
+.flashlight-container p:nth-of-type(10):hover~.flashlight-cursor {
+  top: 30%;
+}
+ 
+.flashlight-container p:nth-of-type(11):hover~.flashlight-cursor,
+.flashlight-container p:nth-of-type(12):hover~.flashlight-cursor,
+.flashlight-container p:nth-of-type(13):hover~.flashlight-cursor,
+.flashlight-container p:nth-of-type(14):hover~.flashlight-cursor,
+.flashlight-container p:nth-of-type(15):hover~.flashlight-cursor {
+  top: 50%;
+}
+ 
+.flashlight-container p:nth-of-type(16):hover~.flashlight-cursor,
+.flashlight-container p:nth-of-type(17):hover~.flashlight-cursor,
+.flashlight-container p:nth-of-type(18):hover~.flashlight-cursor,
+.flashlight-container p:nth-of-type(19):hover~.flashlight-cursor,
+.flashlight-container p:nth-of-type(20):hover~.flashlight-cursor {
+  top: 70%;
+}
+ 
+.flashlight-container p:nth-of-type(21):hover~.flashlight-cursor,
+.flashlight-container p:nth-of-type(22):hover~.flashlight-cursor,
+.flashlight-container p:nth-of-type(23):hover~.flashlight-cursor,
+.flashlight-container p:nth-of-type(24):hover~.flashlight-cursor,
+.flashlight-container p:nth-of-type(25):hover~.flashlight-cursor {
+  top: 90%;
+}
