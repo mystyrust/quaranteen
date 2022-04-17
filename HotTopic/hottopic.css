@@ -2007,7 +2007,15 @@ text-align: center;
   max-width: 500px;
   margin: 0 auto;
   padding: 15px;
-  border: thin gray solid;
+  border: 3px gray solid;
+}
+
+.bottom-rip {
+  border-bottom: none;
+}
+
+.top-rip {
+  border-top: none;
 }
 
 .convo p {
@@ -2018,4 +2026,23 @@ text-align: center;
   font-weight: bold;
 }
 
+.convo-bottom-rip {
+  height: 29px;
+  width: 534px;
+  display: block;
+  margin: 0 auto;
+  margin-top: -7px;
+  padding-right: 0px;
+}
+
+.convo-top-rip {
+  height: 29px;
+  width: 534px;
+  display: block;
+  margin: 0 auto;
+  margin-top: -7px;
+  padding-right: 0px;
+
+  margin-bottom: -14px;
+}
 /* ---------------------------------------------------- */
