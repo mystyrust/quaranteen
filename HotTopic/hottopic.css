@@ -10,7 +10,7 @@ p {
     /* max-width: 500px;
     min-width: 300px;
     float: center; */
-    width: 300px;
+    max-width: 300px;
     margin: 0 auto;
     font-family: 'Roboto', 'Helvetica Neue LT Std', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
     /* font-size: 13px; */
@@ -1242,7 +1242,7 @@ p {
   line-height: 25px;
   padding-top: 15px;
   padding-left: 10px;
-  width: 96%;
+  width: 98%;
   display: inline-block;
   border-top: 1px solid #e7e7e7;
   margin-top: 5px;
@@ -1395,12 +1395,12 @@ p {
 }
 
 .ud-hamburger {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   background-image: url(https://img.icons8.com/material-outlined/48/ffffff/menu--v1.png);
   float: right;
   margin-top: 7px;
-  margin-right: 10px;
+  margin-right: -22px;
 }
 
 .ud-search {
@@ -1537,7 +1537,7 @@ p {
     border: thin black solid;
     float: right;
     border-radius: 20px;
-    margin: 10px;
+    margin: 10px 10px 10px 0px;
     box-shadow: 0px 3px 0px black;
     cursor: pointer;
 }
@@ -1604,3 +1604,418 @@ p {
 .chrome_green {
   color: #0F9D58;
 }
+
+/* ------------------ phone texts ---------------------- */
+/* https://archiveofourown.org/works/6434845/chapters/14729722 */
+.phone {
+  max-width: 300px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: table;
+  margin: auto;
+}
+
+.header {
+  min-width: 300px;
+  /* background-color: #f6f6f6; */
+  border-bottom: 1px solid #b2b2b2;
+  /* color: #000000; */
+  font-weight: bold;
+  padding-bottom: .5em;
+  padding-top: .5em;
+  margin-left: -.5em;
+  margin-right: -.5em;
+  margin-bottom: -2em;
+  text-align: center;
+  text-transform: capitalize;
+  display: table;
+}
+
+.messagebody {
+  /* background-color: #FFFFFF; */
+  display: table;
+  padding-left: .5em;
+  padding-right: .5em;
+}
+
+.text {
+  float: left;
+  color: #000000;
+  margin: 0 0 0.5em;
+  border-radius: 1em;
+  padding: 0.5em 1em;
+  background: #e5e5ea;
+  max-width: 75%;
+  clear: both;
+  position: relative;
+}
+
+.text::after {
+  content: "";
+  position: absolute;
+  left: -.5em;
+  bottom: 0;
+  width: 0.5em;
+  height: 1em;
+  border-right: 0.5em solid #e5e5ea;
+  border-bottom-right-radius: 1em 0.5em;
+}
+
+.breply {
+  float: right;
+  color: #FFFFFF;
+  margin: 0 0 0.5em;
+  border-radius: 1em;
+  padding: 0.5em 1em;
+  background: #1289fe;
+  max-width: 75%;
+  clear: both;
+  position: relative;
+}
+
+.breply::after {
+  content: "";
+  position: absolute;
+  right: -0.5em;
+  bottom: 0;
+  width: 0.5em;
+  height: 1em;
+  border-left: 0.5em solid #1289fe;
+  border-bottom-left-radius: 1em 0.5em;
+}
+.time {
+  min-width: 295px;
+  /* color: #7B7C80; */
+  font-size: .75em;
+  padding-bottom: .5em;
+  padding-top: .5em;
+  margin-left: -.5em;
+  margin-right: -.5em;
+  margin-bottom: -.5em;
+  text-align: center;
+  display: table;
+  }
+
+  .grouptext {
+    /* color: #7B7C80; */
+    font-size: .75em;
+    padding-bottom: .5em;
+    padding-top: 0;
+    margin-left: .5em;
+    margin-bottom: -2.5em;
+    text-align: left;
+    display: table;
+    clear: both;
+  }
+  
+/* ----------------- tweets ------------------------ */
+/* https://archiveofourown.org/works/22517134/chapters/53806336 */
+
+/*The general Tweet container.*/
+.tw {
+max-width: 400px;
+margin-left: auto;
+margin-right: auto;
+padding: 1em;
+}
+
+.tw p {
+margin: 0;
+padding: 0;
+}
+
+.twBody {
+border: .05em solid #ddd;
+border-radius: .3em;
+}
+
+.twEmbed {
+min-width: 90%;
+position: relative;
+padding: 0.5em;
+margin-top: 0.5em;
+margin-bottom: 0.5em;
+overflow: hidden;
+}
+
+/*Avatars are automatically formatted to be circles*/
+.twAvatar {
+width: 40px;
+height: auto;
+float: left;
+margin-right: 0.3em;
+border-radius: 20px;
+}
+
+.twAvatarEmbed {
+width: 20px;
+height: auto;
+float: left;
+margin: 0em 0.3em .3em 0em;
+border-radius: 20px;
+}
+
+/*Formatting for the Verified Icons*/
+
+.twVerified {
+position: relative;
+bottom: 2px;
+display: inline-block;
+font-weight: normal;
+text-align: center;
+font-size: 10px;
+width: 15px;
+height: 15px;
+margin-left: 0.3em;
+background-color: #1DA1F2;
+color: #fff;
+border-radius: 50%;
+}
+
+.twVerifiedEmbed {
+position: relative;
+bottom: 2px;
+display: inline-block;
+font-weight: normal;
+text-align: center;
+font-size: 9px;
+width: 12px;
+height: 12px;
+margin-left: 0.3em;
+background-color: #1DA1F2;
+color: #fff;
+border-radius: 50%;
+}
+
+/* Images */
+.twImage{
+width: 100%;
+height: auto;
+border-radius: 0.3em;
+margin: 0.5em 0em 0.5em 0em;
+}
+
+.twImageEmbed{
+border-radius: 0.3em;
+margin-top: 0.5em;
+width: 100%;
+}
+
+/* Formatting for Header and Text */
+.twUser {
+font-weight: bold;
+font-size: larger;
+margin-bottom: -0.1em;
+}
+
+.twUserEmbed {
+font-weight: bold;
+font-size: normal;
+margin-bottom: 0.5em;
+}
+
+.twHandle {
+position: relative;
+top: -0.5em;
+font-weight: normal;
+font-size: smaller;
+opacity: 0.6;
+}
+
+.twHandleEmbed {
+position: relative;
+font-weight: normal;
+opacity: 0.6;
+margin-left: 0.3em;
+}
+
+.twText span {
+color: #1DA1F2;
+}
+
+/*Formatting for the span of the like count and timestamp*/
+.twStats {
+width: 100%;
+opacity: 0.6;
+}
+
+.twTime {
+padding: 0em 0em 0em 0.6em;
+}
+
+/*Formatting for Comments*/
+.twComments {
+width: 100%;
+font-weight: 300;
+padding-top: 0.5em;
+margin-top: 0.5em;
+border-top: .05em solid #ddd;
+color: #1DA1F2;
+}
+
+/*Formatting for Reply Tag*/
+.twReply span:first-child {
+opacity: 0.6;
+}
+
+.twReply span:last-child {
+color: #1DA1F2;
+}
+
+/*Formatting for Polling Results*/
+.twPoll p{
+margin: 0;
+padding: 0;
+}
+
+.twPoll {
+padding: .3em 0em .3em 0em;
+margin: .5em 0em .5em 0em;
+border-radius: .3em;
+white-space: nowrap;
+}
+
+/*Formatting for Active Polling*/
+.twAPoll {
+padding: .3em 0em .3em 0em;
+margin: .5em 0em .5em 0em;
+border: 0.08em solid #1DA1F2;
+border-radius: 1em;
+color: #1DA1F2;
+text-align: center;
+}
+
+/*Defines the colors and formats of certain elements*/
+.twWin {background-color: rgba(0, 149, 235, 0.5)} /* Winning option color */
+.twOpt {background-color: rgba(187, 198, 206, 0.5)} /* Other options color */
+/* Night mode */
+.twNM { background-color: #14242C; color: #fff; border-color: #3B5364; }
+.twNM .twBody { border-color: #3B5364 }
+.twNM .twComments { border-top: .05em solid #3B5364}
+.twNM .twWin {background-color: #74cbfb}
+.twNM .twOpt {background-color: #3B5364} /* Other Options Color Night Mode*/
+.twBold {font-weight: bold; padding-right: 10px; padding-left: 10px;}
+
+/*Percentage Presets*/
+.p0 {width: 0%}
+.p1 {width: 1%}
+.p2 {width: 2%}
+.p3 {width: 3%}
+.p4 {width: 4%}
+.p5 {width: 5%}
+.p6 {width: 6%}
+.p7 {width: 7%}
+.p8 {width: 8%}
+.p9 {width: 9%}
+.p10 {width: 10%}
+.p11 {width: 11%}
+.p12 {width: 12%}
+.p13 {width: 13%}
+.p14 {width: 14%}
+.p15 {width: 15%}
+.p16 {width: 16%}
+.p17 {width: 17%}
+.p18 {width: 18%}
+.p19 {width: 19%}
+.p20 {width: 20%}
+.p21 {width: 21%}
+.p22 {width: 22%}
+.p23 {width: 23%}
+.p24 {width: 24%}
+.p25 {width: 25%}
+.p26 {width: 26%}
+.p27 {width: 27%}
+.p28 {width: 28%}
+.p29 {width: 29%}
+.p30 {width: 30%}
+.p31 {width: 31%}
+.p32 {width: 32%}
+.p33 {width: 33%}
+.p34 {width: 34%}
+.p35 {width: 35%}
+.p36 {width: 36%}
+.p37 {width: 37%}
+.p38 {width: 38%}
+.p39 {width: 39%}
+.p40 {width: 40%}
+.p41 {width: 41%}
+.p42 {width: 42%}
+.p43 {width: 43%}
+.p44 {width: 44%}
+.p45 {width: 45%}
+.p46 {width: 46%}
+.p47 {width: 47%}
+.p48 {width: 48%}
+.p49 {width: 49%}
+.p50 {width: 50%}
+.p51 {width: 51%}
+.p52 {width: 52%}
+.p53 {width: 53%}
+.p54 {width: 54%}
+.p55 {width: 55%}
+.p56 {width: 56%}
+.p57 {width: 57%}
+.p58 {width: 58%}
+.p59 {width: 59%}
+.p60 {width: 60%}
+.p61 {width: 61%}
+.p62 {width: 62%}
+.p63 {width: 63%}
+.p64 {width: 64%}
+.p65 {width: 65%}
+.p66 {width: 66%}
+.p67 {width: 67%}
+.p68 {width: 68%}
+.p69 {width: 69%}
+.p70 {width: 70%}
+.p71 {width: 71%}
+.p72 {width: 72%}
+.p73 {width: 73%}
+.p74 {width: 74%}
+.p75 {width: 75%}
+.p76 {width: 76%}
+.p77 {width: 77%}
+.p78 {width: 78%}
+.p79 {width: 79%}
+.p80 {width: 80%}
+.p81 {width: 81%}
+.p82 {width: 82%}
+.p83 {width: 83%}
+.p84 {width: 84%}
+.p85 {width: 85%}
+.p86 {width: 86%}
+.p87 {width: 87%}
+.p88 {width: 88%}
+.p89 {width: 89%}
+.p90 {width: 90%}
+.p91 {width: 91%}
+.p92 {width: 92%}
+.p93 {width: 93%}
+.p94 {width: 94%}
+.p95 {width: 95%}
+.p96 {width: 96%}
+.p97 {width: 97%}
+.p98 {width: 98%}
+.p99 {width: 99%}
+.p100 {width: 100%}
+
+/* ---------------------------------------------------- */
+/* screenplay esque */
+.convo {
+  font-family: "Courier New", courier, monospace;
+  /* font-size: 18px; */
+  text-transform: uppercase;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 15px;
+  border: thin gray solid;
+}
+
+.convo p {
+  padding: 5px;
+}
+
+.convo-name {
+  font-weight: bold;
+}
+
+/* ---------------------------------------------------- */
