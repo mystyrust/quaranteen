@@ -1,6 +1,42 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="./hottopic.css" rel="stylesheet" />
 
+<!-- cmdline hacker -->
+<p class="linux-box-top"> <img src="https://i.imgur.com/NnsOvdl.png" />
+    <span>hackerfoley@ubuntu3:/home/tfoley</span></p>
+<p class="linux-box-bottom">
+    <span class="linux-green">hackerfoley@ubuntu3</span>:<span class="linux-blue">~</span>$ sudo apt-get update && sudo apt-get install cctv-ping<br>
+    <span class="linux-green">hackerfoley@ubuntu3</span>:<span class="linux-blue">~</span>$ sudo ping-cctv camera-ip xxxx.xxx.xxx start="mm/dd/yyyy-HH:mm:ss" end="mm/dd/yyyy-HH:mm:ss"<br>
+    64 bytes from xxxx.xxx.xxx: between [start] and [end] icmp_seq=0 ttl=115 -- Ping Success. <br />
+    64 bytes from xxxx.xxx.xxx: between [start] and [end] icmp_seq=1 ttl=115 -- Ping Success. <br />
+    64 bytes from xxxx.xxx.xxx: between [start] and [end] icmp_seq=2 ttl=115 -- Ping Success. <br />
+    64 bytes from xxxx.xxx.xxx: between [start] and [end] icmp_seq=3 ttl=115 -- Ping Success. <br />
+    64 bytes from xxxx.xxx.xxx: between [start] and [end] icmp_seq=4 ttl=115 -- Ping Success. <br />
+    64 bytes from xxxx.xxx.xxx: between [start] and [end] icmp_seq=5 ttl=115 -- Ping Success. <br />
+    ^C <br />
+    <span class="linux-green">hackerfoley@ubuntu3</span>:<span class="linux-blue">~</span>$ sudo exec ./download-cctv-footage.sh camera-ip xxxx.xxx.xxx start="mm/dd/yyyy-HH:mm:ss" end="mm/dd/yyyy-HH:mm:ss"<br>
+    64 bytes from xxxx.xxx.xxx: between [start] and [end] icmp_seq=0 ttl=115 -- Packets downloaded. <br />
+    128 bytes from xxxx.xxx.xxx: between [start] and [end] icmp_seq=1 ttl=115 -- Packets downloaded. <br />
+    5 mb from xxxx.xxx.xxx: between [start] and [end] icmp_seq=2 ttl=115 -- Packets downloaded. <br />
+    20 mb from xxxx.xxx.xxx: between [start] and [end] icmp_seq=3 ttl=115 -- Packets downloaded. <br />
+    2 gb from xxxx.xxx.xxx: between [start] and [end] icmp_seq=4 ttl=115 -- Packets downloaded. <br />
+    5 gb from xxxx.xxx.xxx: between [start] and [end] icmp_seq=5 ttl=115 -- Packets downloaded. <br />
+    [...] <br />
+    10 gb from xxxx.xxx.xxx: between [start] and [end] icmp_seq=30 ttl=115 -- Packets downloaded. <br />
+    Total Time: 2 hours. <br />
+    Downloads succeed. Video files placed in ~/hackerfoley/cctvfootage/dannyphantom <br />
+    <span class="linux-green">hackerfoley@ubuntu3</span>:<span class="linux-blue">~</span>$ sudo ./delete-cctv-footage.sh camera-ip xxxx.xxx.xxx start="mm/dd/yyyy-HH:mm:ss" end="mm/dd/yyyy-HH:mm:ss"<br>
+    [...] <br />
+    10 gb from xxxx.xxx.xxx: deleted footage between [start] and [end] timestamps<br />
+    Data deletion successful.<br />
+    <span class="linux-green">hackerfoley@ubuntu3</span>:<span class="linux-blue">~</span>$ sudo ping-cctv camera-ip xxxx.xxx.xxx start="mm/dd/yyyy-HH:mm:ss" end="mm/dd/yyyy-HH:mm:ss"<br>
+    0 bytes from xxxx.xxx.xxx: between [start] and [end] icmp_seq=0 ttl=115 -- Ping Failed. <br />
+    No Data Available. <br />
+    <span class="linux-green">hackerfoley@ubuntu3</span>:<span class="linux-blue">~</span>$ sudo apt-get uninstall cctv-ping<br>
+    <span class="linux-green">hackerfoley@ubuntu3</span>:<span class="linux-blue">~</span>
+
+</p>
+
 <!-- snapchat -->
 <div class="snp-box"><p></p>
     <div class="snp-header"> <img class="snp-avatar" src="https://i.imgur.com/NC87hzb.png" /><span class="snp-contact">Amorpho</span> </div>
@@ -147,7 +183,7 @@
 
     <!-- CHANNEL HEADER -->
     <div class="channel">
-        <p><span class="hash">#</span><span class="channelname">dead-silent</span></p>
+        <p><span class="hash">#</span><span class="channelname">hacktivists</span></p>
     </div>
 
     <!-- THE ACTUAL MESSAGES (each new user's messages in a separate block) -->
@@ -156,7 +192,7 @@
         <p><img src="https://i.imgur.com/EVnRxtv.png" /></p>
         <!-- MESSAGE (username &https://i.imgur.com/EVnRxtv.pngr tags -->
         <p>
-            <span class="name role1">just_danny</span> <span class="timestamp">2 days ago</span><br />
+            <span class="name role1">just_danny</span> <br />
             <a class="ping">@sid_the_sciencekid</a> thanks for your help with math homework!! <br />
             <!-- <img src="https://i.gyazo.com/2055e3d6d1df280abcd8ceff77f7b59e.jpg" class="large" /> -->
         </p>
@@ -165,153 +201,175 @@
     <div class="message">
         <p><img src="https://i.imgur.com/PObA2qX.png" /></p>
         <p>
-            <span class="name role3">sid_the_sciencekid</span> <span class="timestamp">2 days ago</span><br />
-            you are welcome <a class="ping">@just_danny</a>! i just wish i could help you with science, like my discord handle. 
-            but science has changed a lot since i was last in school<br />
+            <span class="name role3">sid_the_sciencekid</span> <br />
+            So lowkey im curious who phantom is, so,,,... i have a confession<br />
+        </p>
+    </div>
+
+    <div class="message">
+        <p><img src="https://i.imgur.com/PObA2qX.png" /></p>
+        <p>
+            <span class="name role3">sid_the_sciencekid</span> <br />
+            I tried to find his bank account<br />
+        </p>
+    </div>
+
+    <div class="message">
+        <p><img src="https://i.imgur.com/PObA2qX.png" /></p>
+        <p>
+            <span class="name role3">sid_the_sciencekid</span> <br />
+            Wtf are you doxxing him???<br />
+        </p>
+    </div>
+
+    <div class="message">
+        <p><img src="https://i.imgur.com/PObA2qX.png" /></p>
+        <p>
+            <span class="name role3">sid_the_sciencekid</span> <br />
+            Wait how do you dox someone whos dead<br />
+        </p>
+    </div>
+
+    <div class="message">
+        <p><img src="https://i.imgur.com/PObA2qX.png" /></p>
+        <p>
+            <span class="name role3">sid_the_sciencekid</span> <br />
+            Thats why this is so weird<br />
+        </p>
+    </div>
+
+    <div class="message">
+        <p><img src="https://i.imgur.com/PObA2qX.png" /></p>
+        <p>
+            <span class="name role3">sid_the_sciencekid</span> <br />
+            Spoiler alert i didnt dox him <br />
+        </p>
+    </div>
+
+    <div class="message">
+        <p><img src="https://i.imgur.com/PObA2qX.png" /></p>
+        <p>
+            <span class="name role3">sid_the_sciencekid</span> <br />
+            But most jobs give you your paycheck in direct deposit, right? 
+            So i looked at all the local banks in amity for an account registered under danny phantom <br />
+        </p>
+    </div>
+
+    <div class="message">
+        <p><img src="https://i.imgur.com/PObA2qX.png" /></p>
+        <p>
+            <span class="name role3">sid_the_sciencekid</span> <br />
+            Couldnt find a single one <br />
+        </p>
+    </div>
+
+    <div class="message">
+        <p><img src="https://i.imgur.com/PObA2qX.png" /></p>
+        <p>
+            <span class="name role3">sid_the_sciencekid</span> <br />
+            Maybe he has it registered under a different name?  <br />
+        </p>
+    </div>
+
+    <div class="message">
+        <p><img src="https://i.imgur.com/PObA2qX.png" /></p>
+        <p>
+            <span class="name role3">sid_the_sciencekid</span> <br />
+            Oh so, my cousins friends neighbor works at the same hot topic  <br />
+        </p>
+    </div>
+
+    <div class="message">
+        <p><img src="https://i.imgur.com/PObA2qX.png" /></p>
+        <p>
+            <span class="name role3">sid_the_sciencekid</span> <br />
+            he s seen phantom fly to restock the higher shelves and stuff  <br />
+        </p>
+    </div>
+
+    <div class="message">
+        <p><img src="https://i.imgur.com/PObA2qX.png" /></p>
+        <p>
+            <span class="name role3">sid_the_sciencekid</span> <br />
+            Phantom is the only employee who doesnt take direct deposit <br />
+        </p>
+    </div>
+
+    <div class="message">
+        <p><img src="https://i.imgur.com/PObA2qX.png" /></p>
+        <p>
+            <span class="name role3">sid_the_sciencekid</span> <br />
+            Apparently He gets a check with his pay and the name field is blank and he fills it in later<br />
+        </p>
+    </div>
+
+    <div class="message">
+        <p><img src="https://i.imgur.com/PObA2qX.png" /></p>
+        <p>
+            <span class="name role3">sid_the_sciencekid</span> <br />
+            So the accomplice angle is super likely<br />
+        </p>
+    </div>
+
+    <div class="message">
+        <p><img src="https://i.imgur.com/PObA2qX.png" /></p>
+        <p>
+            <span class="name role3">sid_the_sciencekid</span> <br />
+            And hes keeping his accomplice anonymous<br />
+        </p>
+    </div>
+
+    <div class="message">
+        <p><img src="https://i.imgur.com/PObA2qX.png" /></p>
+        <p>
+            <span class="name role3">sid_the_sciencekid</span> <br />
+            What if the manager is in on it? <br />
+        </p>
+    </div>
+
+    <div class="message">
+        <p><img src="https://i.imgur.com/PObA2qX.png" /></p>
+        <p>
+            <span class="name role3">sid_the_sciencekid</span> <br />
+            Do you think phantom gets paid higher than min wage <br />
+        </p>
+    </div>
+
+    <div class="message">
+        <p><img src="https://i.imgur.com/PObA2qX.png" /></p>
+        <p>
+            <span class="name role3">sid_the_sciencekid</span> <br />
+            Possible but unlikely <br />
         </p>
     </div>
     <div class="message">
-        <p><img src="https://i.imgur.com/EVnRxtv.png" /></p>
+        <p><img src="https://i.imgur.com/PObA2qX.png" /></p>
         <p>
-            <span class="name role1">just_danny</span> <span class="timestamp">2 days ago</span><br />
-            Alright <a class="ping">@dora_the_explorer</a> can i interview you for a history project <br />
+            <span class="name role3">sid_the_sciencekid</span> <br />
+            You know what else is possible<br />
         </p>
     </div>
+    <div class="message">
+        <p><img src="https://i.imgur.com/PObA2qX.png" /></p>
+        <p>
+            <span class="name role3">sid_the_sciencekid</span> <br />
+            Maybe the accomplice is phantom himself<br />
+        </p>
+    </div>
+    <div class="message">
+        <p><img src="https://i.imgur.com/PObA2qX.png" /></p>
+        <p>
+            <span class="name role3">sid_the_sciencekid</span> <br />
+            Theres this thread going around that he might be a half ghost<br />
+        </p>
+    </div>
+  
     <div class="message">
         <p><img src="https://i.imgur.com/0LTZGo3.png" /></p>
         <p>
-            <span class="name role6">justin time</span> <span class="timestamp">2 days ago</span><br />
-            <a class="ping">@just_danny</a> u cud ask me for help w ur history hw too 👉👈 <br />
-        </p>
-    </div>
-    <div class="message">
-        <p><img src="https://i.imgur.com/EVnRxtv.png" /></p>
-        <p>
-            <span class="name role1">just_danny</span> <span class="timestamp">2 days ago</span><br />
-            you could also extend my due dates but you dont seem too keen on doing that <br />
-            <span class="reaction">👀 5</span> <span class="reaction">🍿 5</span>
-        </p>
-    </div>
-    <div class="message">
-        <p><img src="https://i.imgur.com/lwmWWSc.png" /></p>
-        <p>
-            <span class="name role3">dora_the_explorer</span> <span class="timestamp">2 days ago</span><br />
-            i can do tomorrow at 4 ish <br />
-            <span class="reaction">👍 1 </span> 
-        </p>
-    </div>
-    <div class="message">
-        <p><img src="https://i.imgur.com/EVnRxtv.png" /></p>
-        <p>
-            <span class="name role1">just_danny</span> <span class="timestamp">2 days ago</span><br />
-            cool thanks<br />
-        </p>
-    </div>
-    <div class="message">
-        <p><img src="https://i.imgur.com/EVnRxtv.png" /></p>
-        <p>
-            <span class="name role1">just_danny</span> <span class="timestamp">2 days ago</span><br />
-            wait <a class="ping">@dora_the_explorer</a> 4 your time or 4 my time? <br />
-            <span class="reaction">🤔 1</span>
-        </p>
-    </div>
-    <div class="message">
-        <p><img src="https://i.imgur.com/0LTZGo3.png" /></p>
-        <p>
-            <span class="name role6">justin time</span> <span class="timestamp">2 days ago</span><br />
-            <a class="ping">@just_danny</a> u cud do 4 my time 😎 <br />
-            <span class="reaction">😎 3 </span>  <span class="reaction">🙄 1 </span> 
-        </p>
-    </div>
-    <div class="message">
-        <p><img src="https://i.imgur.com/EVnRxtv.png" /></p>
-        <p>
-            <span class="name role1">just_danny</span> <span class="timestamp">2 days ago</span><br />
-            because i have to pick up a craigslist order tomorrow before i meet up with you 
-            <a class="ping">@dora_the_explorer</a> <br />
-        </p>
-    </div>
-    <div class="message">
-        <p><img src="https://i.imgur.com/0LTZGo3.png" /></p>
-        <p>
-            <span class="name role6">justin time</span> <span class="timestamp">2 days ago</span><br />
-            oh... <a class="ping">@just_danny</a> i shud... warn u about ur commute tmrw <br />
-            <span class="reaction">🧐 3</span>
-        </p>
-    </div>
-    <div class="message">
-        <p><img src="https://i.imgur.com/EVnRxtv.png" /></p>
-        <p>
-            <span class="name role1">just_danny</span> <span class="timestamp">2 days ago</span><br />
-            last time you warned me about failing an exam it was the literal end of the world...  <br />
-        </p>
-    </div>
-    <div class="message">
-        <p><img src="https://i.imgur.com/EVnRxtv.png" /></p>
-        <p>
-            <span class="name role1">just_danny</span> <span class="timestamp">2 days ago</span><br />
-            is this ALSO as bad?? <a class="ping">@justin time</a> ?? <br />
-        </p>
-    </div>
-    <div class="message">
-        <p><img src="https://i.imgur.com/0LTZGo3.png" /></p>
-        <p>
-            <span class="name role6">justin time</span> <span class="timestamp">2 days ago</span><br />
-            u mite still make ur interviews <br />
-        </p>
-    </div>
-    <div class="message">
-        <p><img src="https://i.imgur.com/0LTZGo3.png" /></p>
-        <p>
-            <span class="name role6">justin time</span> <span class="timestamp">2 days ago</span><br />
-            both of them <br />
-        </p>
-    </div>
-    <div class="message">
-        <p><img src="https://i.imgur.com/EVnRxtv.png" /></p>
-        <p>
-            <span class="name role1">just_danny</span> <span class="timestamp">2 days ago</span><br />
-            MIGHT??? <br />
-        </p>
-    </div>
-    <div class="message">
-        <p><img src="https://i.imgur.com/EVnRxtv.png" /></p>
-        <p>
-            <span class="name role1">just_danny</span> <span class="timestamp">2 days ago</span><br />
-            ....bruh..... <br />
-        </p>
-    </div>
-    <div class="message">
-        <p><img src="https://i.imgur.com/0LTZGo3.png" /></p>
-        <p>
-            <span class="name role6">justin time</span> <span class="timestamp">2 days ago</span><br />
-            listen if anyone else reads your phone just tell them you were testing 
-            your ability to hack accounts and photoshop <br />
-        </p>
-    </div>
-    <div class="message">
-        <p><img src="https://i.imgur.com/EkKW6ta.png" /></p>
-        <p>
-            <span class="name role3">young and bloody</span> <span class="timestamp">2 days ago</span><br />
-            <img src="https://i.giphy.com/media/7NoNw4pMNTvgc/giphy.webp" /> <br/>
-            <span class="reaction">✅ 1</span>
-        </p>
-    </div>
- 
-    <div class="message">
-        <p><img src="https://i.imgur.com/0LTZGo3.png" /></p>
-        <p>
-            <span class="name role6">justin time</span> <span class="timestamp">2 days ago</span><br />
+            <span class="name role6">justin time</span> <br />
             trust me<br />
             <img src="https://i.giphy.com/media/l3fZvfeEMvVtySPAfy/giphy.webp" />
-        </p>
-    </div>
-    <div class="message">
-        <p><img src="https://i.imgur.com/EVnRxtv.png" /></p>
-        <p>
-            <span class="name role1">just_danny</span> <span class="timestamp">2 days ago</span><br />
-            i never want to... and yet i must. <br />
-            <span class="reaction">🤯 1</span> <span class="reaction">🧠 2</span>
         </p>
     </div>
     
@@ -322,6 +380,57 @@
     </div>
 
 </div> 
+<br /><br /><br />
+
+<!-- discord 2  -->
+<div class="discord darkmode">
+
+    <!-- CHANNEL HEADER -->
+    <div class="channel">
+        <p><span class="hash">#</span><span class="channelname">hacktivists</span></p>
+    </div>
+
+    <!-- THE ACTUAL MESSAGES (each new user's messages in a separate block) -->
+    <div class="message">
+        <!-- USER ICON (the first p tag in every div) -->
+        <p><img src="https://i.imgur.com/EVnRxtv.png" /></p>
+        <!-- MESSAGE (username &https://i.imgur.com/EVnRxtv.pngr tags -->
+        <p>
+            <span class="name role1">just_danny</span> <br />
+            <a class="ping">@sid_the_sciencekid</a> thanks for your help with math homework!! <br />
+            <!-- <img src="https://i.gyazo.com/2055e3d6d1df280abcd8ceff77f7b59e.jpg" class="large" /> -->
+        </p>
+    </div>
+
+    <div class="message">
+        <p><img src="https://i.imgur.com/EVnRxtv.png" /></p>
+        <p>
+            <span class="name role2">just_danny</span> <br />
+            i dont think a human or a half human would be able to survive this... <br />
+        </p>
+    </div>
+
+    <div class="message">
+        <p><img src="https://i.imgur.com/PObA2qX.png" /></p>
+        <p>
+            <span class="name role2">sid_the_sciencekid</span> <br />
+            i dont think a human or a half human would be able to fake even half of this...<br />
+            <span class="discord-yt-link">youtu.be/xxxxx</span> <br />
+            <span class="discord-yt-box">
+                <span class="discord-yt-vid">The Ghost Theorist </span> <br />
+                <span class="discord-yt-link">A deep dive of all of Danny Phantom's Powers! Are there more??</span> <br />
+                <img class="discord-yt-img" src="https://i.imgur.com/pUEzyHi.png">
+            </span><br />
+        </p>
+    </div>
+    
+    <!-- FILE UPLOAD AND TYPING LINE -->
+    <div>
+        <!-- TYPING LINE: if you want this left empty, replace the text "hey, ... names" with "Message #your-channel-here", and make the p tag's class "placeholder". See lightmode for example of this -->
+        <p> &nbsp;</p>
+    </div>
+
+</div>
 <br /><br /><br />
 
 <!-- urban dictionary -->
@@ -378,7 +487,7 @@
             my list of favorite conspiracy theories in no particular order:
             <br /> <br />
             <!-- <ul> -->
-                • <a>Avril Lavigne's secret twin</a><br/>
+                • <a>Avril Lavigne was secretly replaced by a clone</a><br/>
                 • <a>Bird's aren't real</a><br/>
                 • <a>Phantom is secretly half-human</a><br/>
                 • <a>The moon landing was faked</a><br/>
@@ -388,7 +497,7 @@
         
         <span class="reblogorigin">
         <span class="reblogheader">
-        <img class="reblogicon" src="http://i.imgur.com/9z4Us0g.jpg" /> <span class="sourceurl">dp-mavrel-49</span>
+        <img class="reblogicon" src="http://i.imgur.com/9z4Us0g.jpg" /> <span class="sourceurl">deadTired</span>
         </span>
         <span class="reblogtext">
            no the moon is real i've been there before
@@ -488,6 +597,38 @@
             
             <img class="tungleicons" src="http://i.imgur.com/LWKqh4u.png" />
         </p></div>
+<br />
+
+<!-- did they hire klemper? -->
+<div class="tungle">
+    <p class="tunglebody">
+
+    <span class="tungleurl">bib_leo_phil</span>
+
+    <span class="tungleask">
+        <span class="tungleasker"><b>smurphy-skitt</b> asked:</span> 
+        so twitter has been dying to know... <br />did hot topic hire klemper
+        <span class="tungleasktip"></span>
+        <img class="tungleaskicon" src="https://i.imgur.com/yOZT1oJ.png" />
+    </span>
+
+    <span class="tungletext">
+    yeah but then he quit after a week
+    </span>
+
+    </span>
+
+    <span class="tungletags">
+    <span class="tungletag">#lunch lady</span><span class="tungletag">#ghost discourse</span>  <span class="tungletag">#ask a casper high student</span> <span class="tungletag">#ask response</span>
+    </span>
+
+    <span class="tunglenotes">
+    15 notes
+    </span>
+
+    <img class="tungleicons" src="http://i.imgur.com/LWKqh4u.png" />
+</p></div>
+    
 </div>
 <br /><br /><br />
 
@@ -516,7 +657,7 @@
 
 <!-- texts -->
 <div>
-<!-- a listers -->
+<!-- a listers 1 -->
 <div class="phone">
     <p class="messagebody">
     <span class="header">A-listers</span><br />
@@ -546,6 +687,7 @@
 
     <span class="grouptext">Star</span><br />
     <span class="text">wes... was onto something wasnt he??</span><br />
+    <span class="text">fenton is never around when phantom is</span><br />
     
     <span class="grouptext">Kwan</span><br />
     <span class="text">is this the truth behind fentons psychic bladder???</span><br />
@@ -659,6 +801,15 @@
     <span class="grouptext">Kwan</span><br />
     <span class="text">What?!</span><br />
 
+    <span class="breply">but phantoms still outside!!</span>
+    </p>
+</div>
+
+<!-- a listers 4 -->
+<div class="phone">
+    <p class="messagebody">
+    <span class="header">A-listers</span><br />
+    <br />
     <span class="grouptext">Dash</span><br />
     <span class="text">Well, that disproves all the fenton=phantom nonsense wes has been spewing</span><br />
     <span class="text">and the rest of the internet</span><br />
@@ -666,6 +817,7 @@
     <span class="text">fenton could never be as cool as phantom</span><br />
     
     <span class="breply"> but...why...?</span>
+    <span class="breply"> i was so sure that...?</span>
     </p>
 </div>
 
@@ -676,6 +828,7 @@
 
 <!-- screenplay -->
 <div>
+    <!-- screenplay 1 -->
 <div class="convo bottom-rip">
     <p> <span class="convo-name">Fenturd</span>: mr. lancer can i go use the bathroom??</p>
     <p> <span class="convo-name">lancer</span>: *sighs* </p>
@@ -687,6 +840,7 @@
 <p><img class="convo-bottom-rip" src="https://progress-tracker.mystyrust.repl.co/images/jagged-edge.svg" /></p>
 <br /><br /><br />
 
+<!-- screenplay 2 -->
 <p><img class="convo-top-rip" src="https://progress-tracker.mystyrust.repl.co/images/jagged-edge.svg" /></p>
 <div class="convo top-rip bottom-rip">
     <p>* sounds of a fight outside casper high *</p>
@@ -699,6 +853,7 @@
 
 <!-- danny comes back from the bathroom -->
 <br /><br /><br />
+<!-- screenplay 3 -->
 <p><img class="convo-top-rip" src="https://progress-tracker.mystyrust.repl.co/images/jagged-edge.svg" /></p>
 <div class="convo top-rip">
     <p> <span class="convo-name">klemper</span>: Pleeeeeeaaaase??? </p>

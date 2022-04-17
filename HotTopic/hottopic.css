@@ -230,6 +230,31 @@ p {
 /* https://archiveofourown.org/works/26534413/chapters/74599071 */
 /* with edits */
 
+.discord-yt-box {
+  width: 95%;
+  max-width: 400px;
+  display: table;
+  background-color: rgba(4, 4, 5, 0.07);
+  border: 1px solid rgba(4, 4, 5, 0);
+  border-left: 4px solid #FE0000;
+  border-radius: 6px;
+  padding: 3px 7px 3px 7px;
+  line-height: 1.4em;
+}
+
+.discord-yt-img {
+  height: 250px;
+}
+
+.discord-yt-link {
+  color: #5197ec ;
+}
+
+.discord-yt-vid {
+  font-weight: bold;
+  font-size: 15px;
+}
+
 .channel {
     /* position: sticky; */
     top: 0;
@@ -274,7 +299,7 @@ p {
       position: relative;
       box-shadow: 0 0 8px #aaaa;
       /* width: 257px; */
-      font-size: 13px;
+      font-size: 14px;
       max-width: 600px;
       margin: 0 auto;
     }
@@ -321,7 +346,7 @@ p {
     }
     
     /* Making large images in text messages display correctly */
-    .discord img { max-width: 180px; }
+    .discord img { max-width: 100%; }
     
     /* Making usernames act like links when hovered */
     .discord .name { cursor: pointer; }
@@ -395,8 +420,9 @@ p {
     }
     
     .discord .channel .channelname {
-      font-size: 1.07em;
+      /* font-size: 1.07em; */
       padding-left: 8px;
+      white-space: nowrap;
     }
     
     .discord .channel .description {
@@ -442,8 +468,8 @@ p {
     .discord .channel > p::after {
       grid-column: 4;
       content: "";
-      height: 1.4em;
-      width: 6.7em;
+      height: 19px;
+      width: 93px;
       background: transparent no-repeat center;
       background-size: 6.7em auto;
       margin-right: 10px;
@@ -1177,7 +1203,7 @@ p {
     border-radius: 24px;
     position: absolute;
     margin-right: -70px;
-    right: 4px;
+    right: 10px;
     top: 24px;
   }
   
@@ -2045,7 +2071,58 @@ text-align: center;
   margin: 0 auto;
   margin-top: -7px;
   padding-right: 0px;
-
   margin-bottom: -14px;
 }
 /* ---------------------------------------------------- */
+/* linux (from qab ch 2 by jin ) */
+.linux-box-top {
+  margin: 0;
+  border-width: 1px;
+  color: #fff;
+  background: #282b28;
+  border-radius: 5px;
+  padding: 10px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.linux-box-top > img {
+  position: absolute;
+  left: 5px;
+  height: 20px;
+}
+
+.linux-box-top > span {
+  z-index: 3;
+}
+
+.linux-box-bottom {
+  margin: 0;
+  border-width: 1px;
+  color: #fff;
+  background: #300820;
+  border-radius: 5px;
+  padding: 10px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  font-family: "Lucida Console",Monaco,monospace;
+  margin: 0 auto;
+  max-width: 700px;
+  font-size: 12px;
+}
+
+.linux-green {
+  color: #82d832;
+}
+
+.linux-blue {
+  color: #5d75b0;
+}
+
+.half-tab {
+  padding-left: 20px;
+}
