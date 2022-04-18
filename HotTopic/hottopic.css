@@ -232,7 +232,7 @@ p {
 
 .discord-yt-box {
   width: 95%;
-  max-width: 400px;
+  max-width: 300px;
   display: table;
   background-color: rgba(4, 4, 5, 0.07);
   border: 1px solid rgba(4, 4, 5, 0);
