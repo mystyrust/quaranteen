@@ -1263,7 +1263,7 @@ p {
 .reblog {
   height: 15px;
   width: auto;
-  margin-bottom: 5px;
+  /* margin-bottom: 5px; */
 }
 
 .reblogheader {
