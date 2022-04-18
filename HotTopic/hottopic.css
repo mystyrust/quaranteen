@@ -817,6 +817,7 @@ p {
     padding: 6px;
     max-width: 600px;
     margin: 0 auto;
+    margin-top: 30px;
   }
   .rd-view-box {
     background: #0079D3;
