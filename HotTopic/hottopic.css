@@ -1,0 +1,2128 @@
+p {
+  margin: 0 auto;
+}
+
+/* ------------------ snapchat mock ------------------*/
+/* from https://archiveofourown.org/works/26777200 */
+/* might use images from / remix with https://archiveofourown.org/works/24273862/chapters/58503859 as well  */
+
+.snp-box {
+    /* max-width: 500px;
+    min-width: 300px;
+    float: center; */
+    max-width: 300px;
+    margin: 0 auto;
+    font-family: 'Roboto', 'Helvetica Neue LT Std', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    /* font-size: 13px; */
+    /* background: white;
+    color: black; */
+  }
+  
+  .snp-header {
+    width: auto;
+    height: 60px;
+    padding-left: 7px;
+    /* padding-bottom: 10px; */
+    border-bottom: 1px solid #ababab;
+  }
+  
+  .snp-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    float: left;
+    margin-top: 9px;
+  }
+  
+  .snp-contact {
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 15px;
+    top: 14px;
+    position: relative;
+  }
+  
+  .snp-body {
+    padding: 10px;
+    padding-top: 0px;
+    /* overflow: auto; */
+    /* width: auto; */
+    /* max-height: 600px; */
+  }
+  .snp-body p {
+    margin-left: -5px;
+  }
+  
+  .snp-name-yellow {
+    color: #ecdd46;
+  }
+  
+  .snp-msg-yellow,
+  .snp-img-yellow {
+    border-left: 4px solid #ecdd46;
+  }
+  
+  .snp-name-green {
+    color: #66b28b;
+  }
+  
+  .snp-msg-green,
+  .snp-img-green {
+    border-left: 4px solid #66b28b;
+  }
+  
+  .snp-name-blue {
+    color: #50bfe5;
+  }
+  
+  .snp-msg-blue,
+  .snp-img-blue {
+    border-left: 4px solid #50bfe5;
+  }
+  
+  .snp-name-red {
+    color: #e0496f;
+  }
+  
+  .snp-msg-red,
+  .snp-img-red {
+    border-left: 4px solid #e0496f;
+  }
+  
+  .snp-img-blue,
+  .snp-img-green,
+  .snp-img-red,
+  .snp-img-yellow {
+    /* max-width: 300px; */
+    max-width: 200px;
+    padding-left: 5px;
+  }
+  
+  .snp-name-green,
+  .snp-name-red,
+  .snp-name-blue,
+  .snp-name-yellow {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8em;
+  }
+  
+  .snp-msg-green,
+  .snp-msg-red,
+  .snp-msg-blue,
+  .snp-msg-yellow {
+    padding-left: 5px;
+    display: inline-block;
+    margin-bottom: -6px;
+  }
+  
+  .snp-timestamp {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    color: #757575;
+    text-align: center;
+    /* margin-bottom: -20px; */
+    margin-top: 20px;
+  }
+  
+  .snp-bottom {
+    background-image: url(https://i.imgur.com/OjQuAMi.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    /* width: 100%; */
+    /* overflow: hidden; */
+    height: 40px;
+    background-size: contain;
+    /* margin-left: -10px; */
+    /* height: 0px; */
+  }
+  
+  .snap {
+      display: table;
+      box-sizing: border-box;
+      border-radius: 4px;
+      border: 1px solid rgba(0,0,0, 0.15);
+      background: rgba(255,255,255, 0.3);
+      color: black;
+    width: 226px;
+  }
+  
+  /* Image part */
+  .snap:before {
+      display: table-cell;
+      content: "";
+      width: 3rem;
+      background-repeat: no-repeat;
+      background-size: auto 1rem;
+      background-position: center;
+  }
+  
+  /* Text part */
+  .snap:after {
+      display: table-cell;
+      font-weight: bold;
+      padding: 0.5rem;
+      padding-left: 0;
+  }
+  
+  
+  /* Hidden backup */
+  .snap i {
+      display: none;
+  }
+  
+  /*
+   * Opened
+   */
+  .snap.opened:after {
+      content: "Opened";
+  }
+  /* Outgoing (arrow) */
+  .out.snap.opened:before {       background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/opened_red.png");}
+  .out.snap.opened.purple:before {background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/opened_purple.png");}
+  .out.snap.opened.blue:before {  background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/opened_blue.png");}
+  /* Incoming (arrow) */
+  .in.snap.opened:before {       background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/viewed_red.png");}
+  .in.snap.opened.purple:before {background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/viewed_purple.png");}
+  .in.snap.opened.blue:before {  background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/viewed_blue.png");}
+  
+  /*
+   * Unopened
+   */
+  .snap.unopened:after {
+      content: "Delivered";
+  }
+  /* Outgoing (arrow) */
+  .out.snap.unopened:before {       background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/sent_red.png");}
+  .out.snap.unopened.purple:before {background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/sent_purple.png");}
+  .out.snap.unopened.blue:before {  background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/sent_blue.png");}
+  /* Incoming (box) */
+  .in.snap.unopened:after {
+      content: "Tap to view";
+  }
+  .in.snap.unopened:before {       background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/received_red.png");}
+  .in.snap.unopened.purple:before {background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/received_purple.png");}
+  .in.snap.unopened.blue:before {  background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/received_blue.png");}
+  
+  /*
+   * Screenshot
+   */
+  .snap.screenshot:after {
+      content: "Screenshot!";
+  }
+  .snap.screenshot:before {       background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/screenshot_red.png");}
+  .snap.screenshot.purple:before {background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/screenshot_purple.png");}
+  .snap.screenshot.blue:before {  background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/screenshot_blue.png");}
+  
+  /*
+   * Replay
+   */
+  .snap.replay:after {
+      content: "Replay!";
+  }
+  .snap.replay:before {       background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/replay_red.png");}
+  .snap.replay.purple:before {background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/replay_purple.png");}
+
+  
+    /* ----------------------------------------------------------------- */
+/* ------------------ discord mock v1 ------------------*/
+/* https://archiveofourown.org/works/26534413/chapters/74599071 */
+/* with edits */
+
+.discord-yt-box {
+  width: 95%;
+  max-width: 300px;
+  display: table;
+  background-color: rgba(4, 4, 5, 0.07);
+  border: 1px solid rgba(4, 4, 5, 0);
+  border-left: 4px solid #FE0000;
+  border-radius: 6px;
+  padding: 3px 7px 3px 7px;
+  line-height: 1.4em;
+}
+
+.discord-yt-img {
+  height: 250px;
+}
+
+.discord-yt-link {
+  color: #5197ec ;
+}
+
+.discord-yt-vid {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.channel {
+    /* position: sticky; */
+    top: 0;
+    background: #36393f;
+  }
+  
+  .darkmode > div:last-child {
+    /* position: sticky; */
+    bottom: 0;
+  }
+  
+  .pinged-you, .pinged-you:hover {
+    background-color: #494440 !important;
+    border-left: 3px solid #f0ab42;
+    padding: 1.5px 16px 1.5px 13px!important;
+  }
+  
+  .reaction {
+    padding: 3px 8px 3px 6px;
+    margin-right: 1px;
+    border-radius: 30%;
+    background: #303136;
+    display: inline-block;
+  }
+  
+  .reaction-yours {
+    border: 1px solid #5d68ce;
+    padding: 2px 5px 1px 5px;
+    margin-right: 4px;
+    border-radius: 30%;
+    background: #3c4159;
+    display: inline-block;
+  }
+  
+  /* The overall discord module */
+  .discord {
+      /* max-width: 710px; */
+      /* margin: 2em auto; */
+      /* padding-bottom: 1.286em; */
+      font-family: "Whitney", "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, Arial, sans-serif;
+      /* border-radius: 8px; */
+      position: relative;
+      box-shadow: 0 0 8px #aaaa;
+      /* width: 257px; */
+      font-size: 14px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    /* Background colors for dark and light mode */
+    .darkmode {
+      background: #36393f;
+      color: #dcddde;
+    }
+    .lightmode {
+      background: #fff;
+      color: #2e3338;
+    }
+    
+    /* Aligning the text and system messages */
+    .discord > div.message,
+    .discord > div.system {
+        margin: 0;
+        padding: 13px 16px;
+      display: grid;
+        grid-template-columns: 2.7em 1fr;
+        column-gap: 16px;
+        
+    }
+    
+    .discord > div.message p,
+    .discord > div.system p {
+        width: 100%;
+      margin: 0;
+    }
+    
+    .darkmode > div.message:hover,
+    .darkmode > div.system:hover { background-color: rgba(4, 4, 5, 0.07); }
+    .lightmode > div.message:hover,
+    .lightmode > div.system:hover { background-color: rgba(6, 6, 7, 0.02); }
+    
+    /* Sizing the icons */
+    .discord > div p:first-child > img {
+      width: 2.7em;
+      height: 2.7em;
+      /* object-fit: cover; Property not allowed on AO3 */
+      border-radius: 100%;
+      margin-top: 2px;
+    }
+    
+    /* Making large images in text messages display correctly */
+    .discord img { max-width: 100%; }
+    
+    /* Making usernames act like links when hovered */
+    .discord .name { cursor: pointer; }
+    .discord .name:hover { text-decoration: underline; }
+    
+    /* Colors for system messages */
+    .darkmode .system { color: #8e9297; }
+    .lightmode .system { color: #6a7480; }
+    
+    /* General layouts for system message icons */
+    .discord .system::before {
+      content: "";
+      height: 16px;
+      width: 2.7em;
+      text-align: center;
+      display: block;
+      background: transparent no-repeat center;
+      background-size: 16px 16px;
+      margin-top: 4px;
+    }
+    
+    /* System message: Welcome
+    Original image URL: https://discord.com/assets/e06a573355c490f7ce6e3125ac01db81.svg */
+    .discord .system.welcome::before { background-image: url("https://i.imgur.com/4lneHce.png"); }
+    
+    /* System message: Pinned message
+    Original image URL: https://discord.com/assets/5da4cdab01d4d89c593c48c62ae0d937.svg */
+    .discord .system.pin::before { background-image: url("https://i.imgur.com/SdqqXPO.png"); }
+    
+    /* Colors for dark and light mode; channel headers, default usernames, timestamps, typing bar placeholder */
+    .darkmode .name,
+    .darkmode .channel .channelname {
+      color: #fff;
+      font-weight: 600;
+    }
+    .lightmode .name,
+    .lightmode .channel .channelname {
+      color: #060607;
+      font-weight: 600;
+    }
+    
+    .darkmode .hash,
+    .darkmode > div:last-child .placeholder,
+    .darkmode .timestamp {
+      color: #72767d;
+    }
+    .lightmode .hash,
+    .lightmode > div:last-child .placeholder,
+    .lightmode .timestamp {
+      color: #747f8d;
+    }
+    
+    /* Alignment and sizing of channel headers and their content */
+    .discord .channel > p {
+      padding: 6px 12px;
+      display: grid;
+      grid-template-columns: 24px auto 1fr auto;
+      /* align-items: center; Property not allowed on AO3 */
+      margin: -3px 0 3px;
+    }
+    
+    .discord .channel *,
+    .discord .channel *::after {
+      margin: auto 0; /* Since align-items isn't allowed on AO3 */
+    }
+    
+    .discord .hash {
+      font-size: 1.6em;
+      font-weight: normal;
+      text-align: center;
+    }
+    
+    .discord .channel .channelname {
+      /* font-size: 1.07em; */
+      padding-left: 8px;
+      white-space: nowrap;
+    }
+    
+    .discord .channel .description {
+      font-size: 0.93em;
+      font-weight: 500;
+      margin-left: 8.25px;
+      padding: 0 8px;
+      border-left: solid thin;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      position: relative;
+    }
+    
+    /* Right side's fade-out for channel description */
+    .discord .channel .description::after {
+      content: "";
+      display: inline-block;
+      width: 12px;
+      height: 2em;
+      position: absolute;
+      right: 2%;
+    }
+    .darkmode .channel .description::after {
+        background: linear-gradient(90deg,rgba(54,57,63,0) 0,#36393f);
+    }
+    .lightmode .channel .description::after {
+        background: linear-gradient(90deg,rgba(54,57,63,0) 0,#fff);
+    }
+    
+    /* Shading for the channel header */
+    .darkmode .channel { box-shadow: #2c2f33bd 0 2px 1px; }
+    .lightmode .channel { box-shadow: #2c2f332e 0 2px 1px; }
+    
+    /* Colors for the channel description and its border */
+    .darkmode .channel > p { color: #b9bbbe; }
+    .lightmode .channel > p { color: #4f5660; }
+    
+    .darkmode .channel .description { border-left-color: #ffffff0f; }
+    .lightmode .channel .description { border-left-color: #06060714; }
+    
+    /* The three icons to the right of the channel header. Normal */
+    .discord .channel > p::after {
+      grid-column: 4;
+      content: "";
+      height: 19px;
+      width: 93px;
+      background: transparent no-repeat center;
+      background-size: 6.7em auto;
+      margin-right: 10px;
+    }
+    .darkmode .channel > p:not(.newpins)::after { background-image: url(https://i.imgur.com/2Jo3bI3.png); }
+    .lightmode .channel > p:not(.newpins)::after { background-image: url(https://i.imgur.com/L8KR3n0.png); }
+    
+    /* The three icons to the right of the channel header. When there are new pins */
+    .darkmode .channel > p.newpins::after { background-image: url(https://i.imgur.com/GClC6WS.png); }
+    .lightmode .channel > p.newpins::after { background-image: url(https://i.imgur.com/xtoAXUx.png); }
+    
+    /* Top-of-channel header: alignment */
+    .discord .channeltop {
+      padding-left: 16px;
+      padding-right: 4.5%;
+    }
+    
+    /* Top-of-channel header: hash symbol */
+    .discord .channeltop h1:first-child::before {
+      content: '#';
+      display: block;
+      height: 1.413px;
+      width: 1.413px;
+      font-weight: 400;
+      font-size: 1.5em;
+      text-align: center;
+      line-height: 1.3;
+      border-radius: 100%;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    .darkmode .channeltop h1::before { background-color: #4f545c; }
+    .lightmode .channeltop h1::before { background-color: #747f8d; }
+    
+    /* Top-of-channel header: heading */
+    .discord .channeltop h1 {
+      font-family: "Whitney", "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, Arial, sans-serif;
+      font-weight: 700;
+      font-size: 2.13em;
+      text-align: left;
+      margin-bottom: 8px;
+    }
+    .darkmode .channeltop h1 { color: #ffffff; }
+    .lightmode .channeltop h1 { color: #060607; }
+    
+    /* Top-of-channel header: description */
+    .discord .channeltop p {
+      padding-bottom: 13px;
+      margin-top: 0;
+      margin-bottom: 0.5em;
+      border-bottom: thin solid;
+    }
+    .darkmode .channeltop p {
+      border-bottom-color: #ffffff0f;
+      color: #b9bbbe;
+    }
+    .lightmode .channeltop p {
+      border-bottom-color: #06060714;
+      color: #4f5660;
+    }
+    
+    /* Colors and decoration for links and pings */
+    .discord a {
+      border: none;
+      cursor: pointer;
+    }
+    
+    .discord a:not(.ping):hover { text-decoration: underline; }
+    
+    .discord a.ping,
+    .discord a.ping:link,
+    .discord a.ping:hover {
+      border-radius: 3px;
+      padding: 0 2px;
+      font-weight: 500;
+      transition-duration: .05s;
+      text-decoration: none;
+    }
+    .lightmode a.ping,
+    .lightmode a.ping:link {
+      color: rgb(80, 92, 220);
+      background-color: rgba(80, 92, 220, 0.1);
+    }
+    .lightmode a.ping:hover {
+      color: #fff;
+      background-color: #505cdc;
+    }
+    .darkmode a.ping,
+    .darkmode a.ping:link {
+      color: #dee0fc;
+      background-color: rgba(88, 101, 242, 0.3);
+    }
+    .darkmode a.ping:hover {
+      color: #fff;
+      background-color: #5865f2;
+    }
+    .darkmode a,
+    .darkmode a:link,
+    .darkmode a:visited,
+    .darkmode a:hover,
+    .darkmode a:visited:hover {
+      color: #00b0f4;
+    }
+    .lightmode a,
+    .lightmode a:link,
+    .lightmode a:visited,
+    .lightmode a:hover,
+    .lightmode a:visited:hover {
+      color: #0067e0;
+    }
+    
+    /* Alignment and sizing of message timestamps */
+    .discord .timestamp {
+      padding-left: 6px;
+      font-size: .75em;
+    }
+    
+    /* The edited message notice */
+    .discord .edited {
+      font-size: 0.625em;
+      user-select: none; /* For all others */
+      -webkit-user-select: none; /* For Safari */
+      -ms-user-select: none; /* For IE */
+    }
+    .darkmode .edited { color: #72767d; }
+    .lightmode .edited { color: #747f8d; }
+    
+    /* New date divider */
+    .discord .dateline {
+      margin: 1.5em 13px 0;
+      border-top: thin solid;
+    }
+    
+    .discord .dateline p {
+      padding: 2px 4px;
+      font-size: 0.8em;
+      margin: -13px auto -.75em;
+      font-weight: 600;
+      width: fit-content;
+    }
+    .discord .dateline p { width: -webkit-fit-content; }
+    .discord .dateline p { width: -moz-fit-content; }
+    
+    .darkmode .dateline { border-top-color: #ffffff0f; }
+    .darkmode .dateline p {
+      color: #72767d;
+      background: #36393f;
+    }
+    .lightmode .dateline { border-top-color: #06060714; }
+    .lightmode .dateline p {
+      color: #747f8d;
+      background: #fff;
+    }
+    
+    /* Alignment and colors for typing bar */
+    .discord > div:last-child {
+      /* margin: 0 2.5%; */
+      padding: 11px;
+      /* border-radius: 8px; */
+    }
+    .darkmode > div:last-child { background: #40444b; }
+    .lightmode > div:last-child { background: #ebedef; }
+    
+    /* Aligning the message in the typing bar, and making it unselectable when placeholder displays */
+    .discord > div:last-child > p {
+      margin: 0;
+      padding: 0;
+    }
+    
+    .discord > div:last-child .placeholder {
+      user-select: none; /* For all others */
+      -webkit-user-select: none; /* For Safari */
+      -ms-user-select: none; /* For IE */
+    }
+    
+    /* The upload files button in the typing bar */
+    .discord > div:last-child > p.upload { display: none; } /* Supporting discord_v1.html layout */
+    
+    .discord > div:last-child > p:last-child {
+      display: grid;
+      grid-template-columns: 2em 1fr;
+      column-gap: 16px;
+    }
+    
+    .discord > div:last-child > p:last-child::before {
+      content: '+';
+      font-size: 1.35em;
+      font-weight: 600;
+      text-align: center;
+      line-height: 11px;
+      display: inline-block;
+      width: 13px;
+      height: 13px;
+      margin-left: 8px;
+      border-radius: 100%;
+      margin-top: 4px;
+    }
+    .darkmode > div:last-child > p:last-child::before {
+      background: #b9bbbe;
+      color: #40444b;
+    }
+    .lightmode > div:last-child > p:last-child::before {
+      background: #4f5660;
+      color: #ebedef;
+    }
+    
+    /* Default discord role colors, light versions (upper row) */
+    .discord .role1 { color: rgb(26, 188, 156) !important; }
+    .discord .ping.role1 { background-color: rgba(26, 188, 156, 0.1) !important; }
+    .discord .ping.role1:hover { background-color: rgba(26, 188, 156, 0.3) !important; }
+    
+    .discord .role2 { color: rgb(46, 204, 113) !important }
+    .discord .ping.role2 { background-color: rgba(46, 204, 113, 0.1) !important; }
+    .discord .ping.role2:hover { background-color: rgba(46, 204, 113, 0.3) !important; }
+    
+    .discord .role3 { color: rgb(52, 152, 219) !important }
+    .discord .ping.role3 { background-color: rgba(52, 152, 219, 0.1) !important; }
+    .discord .ping.role3:hover { background-color: rgba(52, 152, 219, 0.3) !important; }
+    
+    .discord .role4 { color: rgb(155, 89, 182) !important }
+    .discord .ping.role4 { background-color: rgba(155, 89, 182, 0.1) !important; }
+    .discord .ping.role4:hover { background-color: rgba(155, 89, 182, 0.3) !important; }
+    
+    .discord .role5 { color: rgb(233, 30, 99) !important }
+    .discord .ping.role5 { background-color: rgba(233, 30, 99, 0.1) !important; }
+    .discord .ping.role5:hover { background-color: rgba(233, 30, 99, 0.3) !important; }
+    
+    .discord .role6 { color: rgb(241, 196, 15) !important }
+    .discord .ping.role6 { background-color: rgba(241, 196, 15, 0.1) !important; }
+    .discord .ping.role6:hover { background-color: rgba(241, 196, 15, 0.3) !important; }
+    
+    .discord .role7 { color: rgb(230, 126, 34) !important }
+    .discord .ping.role7 { background-color: rgba(230, 126, 34, 0.1) !important; }
+    .discord .ping.role7:hover { background-color: rgba(230, 126, 34, 0.3) !important; }
+    
+    .discord .role8 { color: rgb(231, 76, 60) !important; }
+    .discord .ping.role8 { background-color: rgba(231, 76, 60, 0.1) !important; }
+    .discord .ping.role8:hover { background-color: rgba(231, 76, 60, 0.3) !important; }
+    
+    .discord .role9 { color: rgb(149, 165, 166) !important; }
+    .discord .ping.role9 { background-color: rgba(149, 165, 166, 0.1) !important; }
+    .discord .ping.role9:hover { background-color: rgba(149, 165, 166, 0.3) !important; }
+    
+    .discord .role10 { color: rgb(96, 125, 139) !important; }
+    .discord .ping.role10 { background-color: rgba(96, 125, 139, 0.1) !important; }
+    .discord .ping.role10:hover { background-color: rgba(96, 125, 139, 0.3) !important; }
+    
+    /* Default discord role colors, dark versions (lower row) */
+    .discord .role1a { color: rgb(17, 144, 106) !important }
+    .discord .ping.role1a { background-color: rgba(17, 144, 106, 0.1) !important; }
+    .discord .ping.role1a:hover { background-color: rgba(17, 144, 106, 0.3) !important; }
+    
+    .discord .role2a { color: rgb(31, 139, 76) !important }
+    .discord .ping.role2a { background-color: rgba(31, 139, 76, 0.1) !important; }
+    .discord .ping.role2a:hover { background-color: rgba(31, 139, 76, 0.3) !important; }
+    
+    .discord .role3a { color: rgb(32, 102, 148) !important }
+    .discord .ping.role3a { background-color: rgba(32, 102, 148, 0.1) !important; }
+    .discord .ping.role3a:hover { background-color: rgba(32, 102, 148, 0.3) !important; }
+    
+    .discord .role4a { color: rgb(113, 54, 138) !important }
+    .discord .ping.role4a { background-color: rgba(113, 54, 138, 0.1) !important; }
+    .discord .ping.role4a:hover { background-color: rgba(113, 54, 138, 0.3) !important; }
+    
+    .discord .role5a { color: rgb(173, 20, 87) !important }
+    .discord .ping.role5a { background-color: rgba(173, 20, 87, 0.1) !important; }
+    .discord .ping.role5a:hover { background-color: rgba(173, 20, 87, 0.3) !important; }
+    
+    .discord .role6a { color: rgb(194, 124, 14) !important }
+    .discord .ping.role6a { background-color: rgba(194, 124, 14, 0.1) !important; }
+    .discord .ping.role6a:hover { background-color: rgba(194, 124, 14, 0.3) !important; }
+    
+    .discord .role7a { color: rgb(168, 67, 0) !important }
+    .discord .ping.role7a { background-color: rgba(168, 67, 0, 0.1) !important; }
+    .discord .ping.role7a:hover { background-color: rgba(168, 67, 0, 0.3) !important; }
+    
+    .discord .role8a { color: rgb(153, 45, 34) !important; }
+    .discord .ping.role8a { background-color: rgba(153, 45, 34, 0.1) !important; }
+    .discord .ping.role8a:hover { background-color: rgba(153, 45, 34, 0.3) !important; }
+    
+    .discord .role9a { color: rgb(151, 156, 159) !important; }
+    .discord .ping.role9a { background-color: rgba(151, 156, 159, 0.1) !important; }
+    .discord .ping.role9a:hover { background-color: rgba(151, 156, 159, 0.3) !important; }
+    
+    .discord .role10a { color: rgb(84, 110, 122) !important; }
+    .discord .ping.role10a { background-color: rgba(84, 110, 122, 0.1) !important; }
+    .discord .ping.role10a:hover { background-color: rgba(84, 110, 122, 0.3) !important; }
+    
+    /** CUSTOM ROLE GUIDE
+        Edit the text YOUR_ROLE_HERE to another name.
+        For example, a role named "support" would read as follows:
+        - .discord .support
+        - .discord .ping.support
+        Make sure not to delete the dot before the role name, or the "!important" marker!
+        
+        To use your role in a ping, take the 3 digits within the rgb() brackets and replace
+        the first three digits within the rgba() brackets in both the .ping.YOUR_ROLE_HERE classes.
+        Make sure not to alter the 0.1/0.3 values at the end.
+        Once you're done, you can create a role ping using an <a class="ping YOUR_ROLE_HERE"> tag!
+    */
+    .discord .YOUR_ROLE_HERE {
+      color: rgb(255, 255, 255);
+    }
+    .discord .ping.YOUR_ROLE_HERE {
+      background-color: rgba(255, 255, 255, 0.1) !important;
+    }
+    .discord .ping.YOUR_ROLE_HERE:hover {
+      background-color: rgba(255, 255, 255, 0.3) !important;
+    }
+  
+    /* ----------------------------------------------------------------- */
+    /* ----------------------reddit mock ---------------------------- */
+/* made by jihn https://codepen.io/jihnari/pen/jOmMoQX */
+
+.text-color-gray {
+    color: #9F9FA1;
+  }
+  .right{
+    float:right;
+  }
+  
+  .text-size-12{
+    font-size:1.2em;
+  }
+  .text-bold{
+    font-weight:bold;
+  }
+  .padding-left-20 {
+    padding-left: 20px;
+  }
+  
+  
+  /*reddit*/
+  /*
+  i do not, i repeat do NOT remember making vr0-2. i mean, i remember thinking "i should fix that weird issue where sometimes things collapse instead of float", i remember sitting down, i remember thinking "what if tables" but i DO NOT remember what it does or how it works. idk if half of that even needs to be there and honestly at this point i dont care. i also remeber thinking "GOTTA NEST THOSE DIVS" which we... appparently did not do. so that's. that's cool. 
+  
+  the last thing we might wanna do here is use the fadeout function and place the 'view all comments' button over top of it. rn im tired tho. messing w relative/ablosute is one of my least favorite things. 
+  */
+  .rd-font{
+    font-family:verdana, arial, helvetica, sans-serif;
+    /* background-color: white; */
+    /*make sure this didnt break everything*/
+    /* color:black; */
+    font-size: 13px;
+    padding: 6px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .rd-view-box {
+    background: #0079D3;
+    border-radius: 3px;
+    text-align: center;
+    color: white;
+    font-weight:bold;
+    padding: 7px;
+    margin: 0 5px -5px 5px;
+  }
+  .rd-signup-box {
+    background: #0079D3;
+    border-radius: 14px;
+    text-align: center;
+    color: white;
+    padding: 7px 5px 7px 5px;
+    margin: 0px 5px -5px 5px;
+    font-size:0.8em;
+  }
+  .rd-sortby{
+    font-size:0.8em;
+    padding-left:5px;
+  }
+  .rd-photo-box {
+    background: #d3dce0;
+    border-radius: 18px;
+    color: black;
+    padding: 2px 10px 2px 10px;
+  }
+  .rd-name{
+    text-align: center;
+    font-weight:bold;
+    font-size:1.2em;
+  }
+  .rd-header{
+    font-weight:bold;
+    font-size:1.1em;
+    margin:-5px 0 -5px 0;
+  }
+  .rd-dot { /*idx if i wanna go down this path*/
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+    background-color: #bbb;
+    margin-bottom: -15px;
+  }
+  .rd-div1{
+    border-bottom: 8px solid #EEEFF1;
+    padding-bottom:18px;
+    padding-left:8px;
+    margin-bottom: 10px;
+    margin-left: -6px;
+    margin-right: -6px;
+  }
+  .rd-div2{
+    border-bottom: 1.5px solid #EEEFF1;
+  }
+  .rd-vote{
+    height:1.8em;
+    display: inline-block;
+    padding-top:5px;
+    padding-bottom:5px;
+  }
+  .rd-poster{
+    font-size: .8em;
+    margin-bottom: 15px;
+  }
+  .rd-op{
+    color:#25A0ED;
+    font-weight:bold;
+  }
+  .rd-link{
+    color:#25A0ED;
+  }
+  .rd-down-arrow {
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 2.5px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    margin: 0px 0 2px 7px;
+  }
+  .rd-small{
+    font-size: .8em;
+    display: inline-block;
+    padding-bottom:5px;
+  }
+  .rd-vr0 {
+    display: table;
+    padding: 10px 0 0px 30px;
+    border-bottom: 1px solid #EEEFF1;
+  }
+  .rd-vr1 {
+    display: table;
+    padding: 0px 0px 0px 10px;
+    margin: 0px 0 5px 5px;
+    border-left: 1px solid #EEEFF1;
+  }
+  .rd-vr2 {
+    display: table;
+    padding: 0px 0px 0px 10px;
+    margin: 0px 0px 5px 5px;
+    border-left: 1px solid #EEEFF1;
+  }
+  .rd-vr-not {
+    display: table;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0 5px 0;
+  }
+  .rd-gray-text {
+    color: #657685;
+  }
+  .rd-bubble{
+    color: #787C7F;
+    font-size: .8em;
+    padding: 12px 5px 3px 5px;
+    margin-bottom:5px;
+    border-radius: 16px;
+    border: 1px solid #EEEFF1;
+  }
+  
+  .rd-arrow-text{
+    padding-top:2px;
+    mmargin-bottom:10px;
+    vertical-align:top;
+    display: inline-block;
+  }
+  .rd-arrow-up{
+    padding-top:0px;
+    padding-bottom:0px;
+    height:1.5em;
+  }
+  .rd-arrow-down{
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+      height:1.5em;
+  }
+  .rd-elispes{
+    float:right;
+    padding-right:10px;
+    font-size:1.0em;
+  }
+
+
+/* --------------------------------------------------------------- */
+  
+/* -----------------tumblr style tweaks --------------------------- */
+  /* https://archiveofourown.org/works/11474979 */
+
+
+  .tungle {
+    max-width: 500px;
+    font-family: Gibson,Helvetica Neue,HelveticaNeue,Helvetica,Arial,sans-serif;
+    display: table;
+    margin: auto;
+    /* color: #444444; */
+    /* margin: 10px 0; */
+  }
+  
+  .tunglebody {
+    /* background-color: #ffffff; */
+    border-radius: 3px;
+    border-style: solid;
+    border-width: .1em;
+    border-color: #cccccc;
+    float: left;
+    max-width: 100%;
+    position: relative;
+    padding: 15px 0 0;
+  }
+  
+  .tungleurl {
+    position: relative;
+    top: -.2em;
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: 50px;
+    margin-left: 10px;
+    line-height: 20px;
+    height: 20px;
+  }
+  
+  .tungletext {
+    display: inline-block;
+    margin-top: 15px;
+    margin-left: 10px;
+    line-height: 21px;
+    font-size: 14px;
+    width: 92%;
+    word-wrap: break-word;
+  }
+  
+  .tungletext a {
+    color: #444444;
+  }
+  
+  .tungleh {
+    display: inline-block;
+    margin-left: 20px;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 47px;
+    width: 92%;
+    word-wrap: break-word;
+  }
+  
+  .tungletags {
+    display: inline-block;
+    width: 92%;
+    font-size: 13px;
+    color: #8f8f8f;
+    margin-top: 15px;
+    line-height: 20px;
+    position: relative;
+    margin-left: 10px;
+  }
+  
+  .tungletag {
+    margin-right: 12px;
+  }
+  
+  /* .tungletag:first-of-type {
+    margin-left: 0px;
+  } */
+  
+  .tunglenotes {
+    font-size: 14px;
+    font-weight: bold;
+    color: #8f8f8f;
+    line-height: 45px;
+    position: relative;
+    margin-left: 10px;
+  }
+  
+  .tungleicons {
+    height: auto;
+    width: 120px;
+    float: right;
+    margin-right: -7px;
+    margin-top: 6px;
+  }
+
+  .tungleimg {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .tunglequote {
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 1px;
+    margin-left: 35px;
+    line-height: 42px;
+    font-size: 36px;
+    width: 89%;
+    word-wrap: break-word;
+    font-family: Georgia, serif;
+    text-indent: -15px;
+  }
+  
+  .tunglequote:before {
+    content: "\201C";
+  }
+  
+  .tunglequote:after {
+    content: "\201D";
+  }
+  
+  .quotesourcedash {
+    width: 20px;
+    margin-left: 20px;
+  }
+  
+  .quotesource {
+    display: inline-block;
+    margin-bottom: 15px;
+    line-height: 21px;
+    font-size: 14px;
+    width: 90%;
+    word-wrap: break-word;
+  }
+  .tungletwo_one {
+    width: 49.5%;
+    height: 177px;
+    margin-top: 4px;
+    display: block;
+    overflow: hidden;
+    float: left;
+  }
+  
+  .tungletwo_two {
+    width: 49.5%;
+    height: 177px;
+    margin-top: 4px;
+    display: block;
+    overflow: hidden;
+    float: right;
+  }
+  
+  .tungletwo_three {
+    width: 49.5%;
+    height: 412px;
+    margin-top: 4px;
+    display: block;
+    overflow: hidden;
+    float: left;
+  }
+  
+  .tungletwo_four {
+    width: 49.5%;
+    height: 412px;
+    margin-top: 4px;
+    display: block;
+    overflow: hidden;
+    float: right;
+  }
+
+  .tunglethree_one {
+    width: 32.8%;
+    height: 120px;
+    margin-top: 4px;
+    display: block;
+    overflow: hidden;
+    float: left;
+  }
+  
+  .tunglethree_two {
+    width: 33%;
+    height: 120px;
+    margin-top: 4px;
+    display: inline-block;
+    overflow: hidden;
+    margin-left: 4px;
+  }
+  
+  .tunglethree_three {
+    width: 32.8%;
+    height: 120px;
+    margin-top: 4px;
+    display: block;
+    overflow: hidden;
+    float: right;
+  }
+
+  .tungleask {
+    /* background-color: #f2f2f2; */
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    float: left;
+    position: relative;
+    padding: 15px 14px 18px;
+    display: inline-block;
+    margin-top: 4px;
+    margin-left: 10px;
+    line-height: 21px;
+    font-size: 14px;
+    /* width: 80%; */
+    word-wrap: break-word;
+    margin-right: 64px;
+    margin-bottom: 10px;
+  }
+  
+  .tungleasktip {
+    display: inline;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid #cccccc;
+    right: -8px;
+    top: 10px;
+  }
+  
+  .tungleaskicon {
+    display: inline-block;
+    /* float: right; */
+    height: 45px;
+    width: 45px;
+    margin-top: -23px;
+    border-radius: 24px;
+    position: absolute;
+    margin-right: -70px;
+    right: 10px;
+    top: 24px;
+  }
+  
+  .tungleasker {
+    color: #a6a6a6;
+    font-size: 13px;
+    display: inline-block;
+    width: 100%;
+    line-height: 21px;
+    margin-bottom: 7px;
+  }
+  
+  
+.tunglechat {
+  display: inline-block;
+  font-size: 14px;
+  width: 92%;
+  line-height: 1.4;
+  font-family: Courier, monospace;
+  padding-top: 3px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 3px;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.tungleline {
+  display: block;
+  padding-top: 6px;
+  padding-right: 0px;
+  padding-bottom: 6px;
+  padding-left: 0px;
+  width: 100%;
+}
+
+.tungleline:first-of-type {
+  padding-top: 0px;
+}
+
+.tungleline:last-of-type {
+  padding-bottom: 0px;
+}
+
+.tungleline:nth-of-type(even) {
+  background: #fdfdfd;
+}
+
+.strong {
+  font-weight: 700;
+}
+
+.tungleline>strong:after {
+  content: "\A0";
+}
+
+.reblog {
+  height: 15px;
+  width: auto;
+  /* margin-bottom: 5px; */
+}
+
+.reblogheader {
+  position: relative;
+  line-height: 25px;
+  padding-top: 15px;
+  padding-left: 10px;
+  width: 98%;
+  display: inline-block;
+  border-top: 1px solid #e7e7e7;
+  margin-top: 5px;
+}
+
+.reblogurl {
+  position: relative;
+  top: -.2em;
+  font-weight: 700;
+  font-size: 13px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  line-height: 25px;
+  height: 25px;
+  color: #8f8f8f;
+}
+
+.reblogicon {
+  border-radius: 2px;
+  width: 25px;
+  height: 25px;
+  vertical-align: baseline;
+}
+
+.sourceurl {
+  position: relative;
+  font-weight: 700;
+  font-size: 13px;
+  vertical-align: top;
+  display: inline-block;
+}
+
+.reblogorigin {
+  width: 100%;
+  word-wrap: break-word;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  padding-right: 20px;
+}
+
+.reblogtext {
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding-right: 5px;
+  margin-bottom: 10px;
+  line-height: 21px;
+  font-size: 14px;
+  width: 92%;
+  word-wrap: break-word;
+}
+
+.reblogtext a {
+  color: #444444;
+}
+
+/* --------------------------------------------------------------- */
+/* ---------------phone view urban dictionary--------------------------- */
+  
+
+.phone-view {
+    border: 1px solid gray;
+    /* padding: 0em 1em 1em 1em; */
+    min-width: 250px;
+    max-width: 500px;
+    /* font-family: "Segoe UI"; */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /* display: table; */
+    margin: auto;
+    /* background-color: white; */
+    background: rgb(229, 231, 235);
+    /* text-align: justify; */
+    /* padding: 10px; */
+
+    /* experimenting w gradiaent */
+    color: black;
+}
+
+.header-address-bar {
+    background-color: white;
+    color: black;
+    /* min-width: 50px; */
+    /* width: 100px; */
+    /* margin-right: 1em; */
+    /* float: right; */
+    height: 1.5em;
+    border-radius: 12px;
+    margin-top: -30px !important;
+    margin-bottom: 8px !important;
+    margin-left: 43px !important;
+    max-width: 90%;
+    /* width: 70%; */
+    padding-left: 0.7em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+  .header-browser {
+    max-width: 500px;
+    min-width: 250px;
+    height: 36px;
+    background-color: gray;
+    font-weight: bold;
+    text-align: center;
+    text-transform: capitalize;
+    display: block;
+  }
+
+  .header-browser::before {
+    content: url(https://img.icons8.com/material-outlined/24/ffffff/home--v2.png); /*'⌂';*/
+    cursor: pointer;
+    float: left;
+    margin-left: 11px;
+    margin-top: 3px;
+    transform: scale(1.3,1.0);
+    color: white;
+  }
+
+  .header-browser:after {
+    content: url(https://img.icons8.com/ios-glyphs/30/ffffff/menu-2.png);
+    display: inline-block;
+    position: relative;
+    /* font-weight: bold;
+    font-size: 14px; */
+    padding-top: 0.1em;
+    height: 90%;
+    float: right;
+    color: white;
+    /* -webkit-transform: scale(1.5, 1.0);
+    -moz-transform: scale(1.5, 1.0);
+    -ms-transform: scale(1.5, 1.0);
+    -o-transform: scale(1.5, 1.0);
+    transform: scale(1.5,1.0); */
+    cursor: pointer;
+  }
+
+  .header-white > p, .phone-view > p, .collapse {
+    margin: 0;
+  }
+
+.ud-header {
+  background-color: rgb(19, 23, 37);
+  margin-top: -3px !important;
+}
+
+.ud-header > img {
+  /* max-width: 40%; */
+  height: 70px;
+}
+
+.ud-hamburger {
+  height: 40px;
+  width: 40px;
+  background-image: url(https://img.icons8.com/material-outlined/48/ffffff/menu--v1.png);
+  float: right;
+  margin-top: 7px;
+  margin-right: -22px;
+}
+
+.ud-search {
+  display: inline-block;
+  width: 97%;
+  height: 51px;
+  background: white;
+  border-radius: 8px;
+  margin: 5px;
+  color: lightgray;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.ud-search-text {
+  font-size: 20px;
+  display: inline-block;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.ud-search-text:before {
+  content: url(https://img.icons8.com/material/48/000000/search--v1.png);
+    float: left;
+    transform: scale(0.9);
+    margin-top: -7px;
+    margin-left: -7px;
+    opacity: 0.5;
+}
+
+.ud-search-icons  {
+  /* max-width: 30px; */
+  position: absolute;
+  margin-top: 5px;
+  margin-left: -1px;
+  /* display: inline-block; */
+  display: inline;
+  /* width: 100%; */
+}
+.ud-body {
+  background: rgb(229, 231, 235);
+    /* text-align: justify; */
+    padding: 10px;
+}
+.ud-box {
+  /* height: 30%; */
+  display: block;
+  background: white;
+  margin: 10px !important;
+  /* width: 96%; */
+  /* max-width: 500px; */
+  /* min-width: 300px; */
+  /* text-align: center; */
+  /* margin: 0 auto; */
+  border-radius: 10px;
+}
+
+.ud-term {
+  display: block;
+  padding: 12px;
+}
+
+.ud-box-footer {
+  background: rgb(59, 255, 89);
+  display: block;
+  padding: 12px;
+  /* width: 100%; */
+  /* margin-left: -10px; */
+  text-align: center;
+  color: black;
+  font-size: 20px;
+  font-weight: 600;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.ud-box-footer span {
+  padding: 5px;
+    background: black;
+    color: rgb(59, 255, 89);
+}
+
+.ud-term > a.title {
+  font-size: 25px;
+  font-weight: 500;
+  color: blue;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.ud-term a:not(.title) {
+  /* font-size: 25; */
+  font-weight: 500;
+  color: blue;
+  /* text-decoration: underline; */
+  cursor: pointer;
+}
+
+.ud-term > img {
+  float: right;
+  padding-right: 10px;
+}
+
+.ud-term > span {
+  font-style: italic;
+}
+
+.ud-thumbs-up {
+  display: inline-flex;
+  padding: 10px;
+  border: thin black solid;
+  margin: 10px 0px 30px 10px;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  box-shadow: 0px 3px 0px black;
+  cursor: pointer;
+}
+
+.ud-thumbs-down {
+  display: inline-flex;
+  padding: 10px;
+  border: thin black solid;
+  margin-left: -6px;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0px 3px 0px black;
+  cursor: pointer;
+}
+
+.ud-flag {
+  display: inline-flex;
+    padding: 10px;
+    border: thin black solid;
+    float: right;
+    border-radius: 20px;
+    margin: 10px 10px 10px 0px;
+    box-shadow: 0px 3px 0px black;
+    cursor: pointer;
+}
+
+.ud-thumbs-up img, .ud-thumbs-down img, .ud-flag img {
+  padding-right: 7px;
+}
+
+
+
+/* ------------------ google search results ---------------------- */
+/* https://archiveofourown.org/works/8631214/chapters/53486839 */
+.browser {
+  min-width: 200px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.search_autocomplete {
+  border: 1px solid #aaa;
+  padding: 5px 5px 5px 5px;
+  margin-top: 0px;
+}
+
+.search_logo {
+  text-align: center;
+  margin: 0px 0px 0px 0px;
+}
+
+.search_bar {
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+.search_bar span {
+  position: relative;
+  display: block;
+  margin: 0 0 0 0;
+  padding: 5px;
+}
+.chrome_term {
+  border: 1px solid #aaa;
+}
+
+.chrome_logo {
+  font-weight: bold;
+  font-size: x-large;
+  font-family: "Lato", "Verdana", sans-serif;
+}
+.chromeold_logo {
+  font-weight: bold;
+  font-size: x-large;
+  font-family: "Cardo", "Garamond", serif;
+}
+.chrome_blue {
+  color: #4285F4;
+}
+.chrome_red {
+  color: #DB4437;
+}
+.chrome_yellow {
+  color: #F4B400;
+}
+.chrome_green {
+  color: #0F9D58;
+}
+
+/* ------------------ phone texts ---------------------- */
+/* https://archiveofourown.org/works/6434845/chapters/14729722 */
+.phone {
+  max-width: 300px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: table;
+  margin: auto;
+}
+
+.header {
+  min-width: 300px;
+  /* background-color: #f6f6f6; */
+  border-bottom: 1px solid #b2b2b2;
+  /* color: #000000; */
+  font-weight: bold;
+  padding-bottom: .5em;
+  padding-top: .5em;
+  margin-left: -.5em;
+  margin-right: -.5em;
+  margin-bottom: -2em;
+  text-align: center;
+  text-transform: capitalize;
+  display: table;
+}
+
+.messagebody {
+  /* background-color: #FFFFFF; */
+  display: table;
+  padding-left: .5em;
+  padding-right: .5em;
+}
+
+.text {
+  float: left;
+  color: #000000;
+  margin: 0 0 0.5em;
+  border-radius: 1em;
+  padding: 0.5em 1em;
+  background: #e5e5ea;
+  max-width: 75%;
+  clear: both;
+  position: relative;
+}
+
+.text::after {
+  content: "";
+  position: absolute;
+  left: -.5em;
+  bottom: 0;
+  width: 0.5em;
+  height: 1em;
+  border-right: 0.5em solid #e5e5ea;
+  border-bottom-right-radius: 1em 0.5em;
+}
+
+.breply {
+  float: right;
+  color: #FFFFFF;
+  margin: 0 0 0.5em;
+  border-radius: 1em;
+  padding: 0.5em 1em;
+  background: #1289fe;
+  max-width: 75%;
+  clear: both;
+  position: relative;
+}
+
+.breply::after {
+  content: "";
+  position: absolute;
+  right: -0.5em;
+  bottom: 0;
+  width: 0.5em;
+  height: 1em;
+  border-left: 0.5em solid #1289fe;
+  border-bottom-left-radius: 1em 0.5em;
+}
+.time {
+  min-width: 295px;
+  /* color: #7B7C80; */
+  font-size: .75em;
+  padding-bottom: .5em;
+  padding-top: .5em;
+  margin-left: -.5em;
+  margin-right: -.5em;
+  margin-bottom: -.5em;
+  text-align: center;
+  display: table;
+  }
+
+  .grouptext {
+    /* color: #7B7C80; */
+    font-size: .75em;
+    padding-bottom: .5em;
+    padding-top: 0;
+    margin-left: .5em;
+    margin-bottom: -2.5em;
+    text-align: left;
+    display: table;
+    clear: both;
+  }
+  
+/* ----------------- tweets ------------------------ */
+/* https://archiveofourown.org/works/22517134/chapters/53806336 */
+
+/*The general Tweet container.*/
+.tw {
+max-width: 400px;
+margin-left: auto;
+margin-right: auto;
+padding: 1em;
+}
+
+.tw p {
+margin: 0;
+padding: 0;
+}
+
+.twBody {
+border: .05em solid #ddd;
+border-radius: .3em;
+}
+
+.twEmbed {
+min-width: 90%;
+position: relative;
+padding: 0.5em;
+margin-top: 0.5em;
+margin-bottom: 0.5em;
+overflow: hidden;
+}
+
+/*Avatars are automatically formatted to be circles*/
+.twAvatar {
+width: 40px;
+height: auto;
+float: left;
+margin-right: 0.3em;
+border-radius: 20px;
+}
+
+.twAvatarEmbed {
+width: 20px;
+height: auto;
+float: left;
+margin: 0em 0.3em .3em 0em;
+border-radius: 20px;
+}
+
+/*Formatting for the Verified Icons*/
+
+.twVerified {
+position: relative;
+bottom: 2px;
+display: inline-block;
+font-weight: normal;
+text-align: center;
+font-size: 10px;
+width: 15px;
+height: 15px;
+margin-left: 0.3em;
+background-color: #1DA1F2;
+color: #fff;
+border-radius: 50%;
+}
+
+.twVerifiedEmbed {
+position: relative;
+bottom: 2px;
+display: inline-block;
+font-weight: normal;
+text-align: center;
+font-size: 9px;
+width: 12px;
+height: 12px;
+margin-left: 0.3em;
+background-color: #1DA1F2;
+color: #fff;
+border-radius: 50%;
+}
+
+/* Images */
+.twImage{
+width: 100%;
+height: auto;
+border-radius: 0.3em;
+margin: 0.5em 0em 0.5em 0em;
+}
+
+.twImageEmbed{
+border-radius: 0.3em;
+margin-top: 0.5em;
+width: 100%;
+}
+
+/* Formatting for Header and Text */
+.twUser {
+font-weight: bold;
+font-size: larger;
+margin-bottom: -0.1em;
+}
+
+.twUserEmbed {
+font-weight: bold;
+font-size: normal;
+margin-bottom: 0.5em;
+}
+
+.twHandle {
+position: relative;
+top: -0.5em;
+font-weight: normal;
+font-size: smaller;
+opacity: 0.6;
+}
+
+.twHandleEmbed {
+position: relative;
+font-weight: normal;
+opacity: 0.6;
+margin-left: 0.3em;
+}
+
+.twText span {
+color: #1DA1F2;
+}
+
+/*Formatting for the span of the like count and timestamp*/
+.twStats {
+width: 100%;
+opacity: 0.6;
+}
+
+.twTime {
+padding: 0em 0em 0em 0.6em;
+}
+
+/*Formatting for Comments*/
+.twComments {
+width: 100%;
+font-weight: 300;
+padding-top: 0.5em;
+margin-top: 0.5em;
+border-top: .05em solid #ddd;
+color: #1DA1F2;
+}
+
+/*Formatting for Reply Tag*/
+.twReply span:first-child {
+opacity: 0.6;
+}
+
+.twReply span:last-child {
+color: #1DA1F2;
+}
+
+/*Formatting for Polling Results*/
+.twPoll p{
+margin: 0;
+padding: 0;
+}
+
+.twPoll {
+padding: .3em 0em .3em 0em;
+margin: .5em 0em .5em 0em;
+border-radius: .3em;
+white-space: nowrap;
+}
+
+/*Formatting for Active Polling*/
+.twAPoll {
+padding: .3em 0em .3em 0em;
+margin: .5em 0em .5em 0em;
+border: 0.08em solid #1DA1F2;
+border-radius: 1em;
+color: #1DA1F2;
+text-align: center;
+}
+
+/*Defines the colors and formats of certain elements*/
+.twWin {background-color: rgba(0, 149, 235, 0.5)} /* Winning option color */
+.twOpt {background-color: rgba(187, 198, 206, 0.5)} /* Other options color */
+/* Night mode */
+.twNM { background-color: #14242C; color: #fff; border-color: #3B5364; }
+.twNM .twBody { border-color: #3B5364 }
+.twNM .twComments { border-top: .05em solid #3B5364}
+.twNM .twWin {background-color: #74cbfb}
+.twNM .twOpt {background-color: #3B5364} /* Other Options Color Night Mode*/
+.twBold {font-weight: bold; padding-right: 10px; padding-left: 10px;}
+
+/*Percentage Presets*/
+.p0 {width: 0%}
+.p1 {width: 1%}
+.p2 {width: 2%}
+.p3 {width: 3%}
+.p4 {width: 4%}
+.p5 {width: 5%}
+.p6 {width: 6%}
+.p7 {width: 7%}
+.p8 {width: 8%}
+.p9 {width: 9%}
+.p10 {width: 10%}
+.p11 {width: 11%}
+.p12 {width: 12%}
+.p13 {width: 13%}
+.p14 {width: 14%}
+.p15 {width: 15%}
+.p16 {width: 16%}
+.p17 {width: 17%}
+.p18 {width: 18%}
+.p19 {width: 19%}
+.p20 {width: 20%}
+.p21 {width: 21%}
+.p22 {width: 22%}
+.p23 {width: 23%}
+.p24 {width: 24%}
+.p25 {width: 25%}
+.p26 {width: 26%}
+.p27 {width: 27%}
+.p28 {width: 28%}
+.p29 {width: 29%}
+.p30 {width: 30%}
+.p31 {width: 31%}
+.p32 {width: 32%}
+.p33 {width: 33%}
+.p34 {width: 34%}
+.p35 {width: 35%}
+.p36 {width: 36%}
+.p37 {width: 37%}
+.p38 {width: 38%}
+.p39 {width: 39%}
+.p40 {width: 40%}
+.p41 {width: 41%}
+.p42 {width: 42%}
+.p43 {width: 43%}
+.p44 {width: 44%}
+.p45 {width: 45%}
+.p46 {width: 46%}
+.p47 {width: 47%}
+.p48 {width: 48%}
+.p49 {width: 49%}
+.p50 {width: 50%}
+.p51 {width: 51%}
+.p52 {width: 52%}
+.p53 {width: 53%}
+.p54 {width: 54%}
+.p55 {width: 55%}
+.p56 {width: 56%}
+.p57 {width: 57%}
+.p58 {width: 58%}
+.p59 {width: 59%}
+.p60 {width: 60%}
+.p61 {width: 61%}
+.p62 {width: 62%}
+.p63 {width: 63%}
+.p64 {width: 64%}
+.p65 {width: 65%}
+.p66 {width: 66%}
+.p67 {width: 67%}
+.p68 {width: 68%}
+.p69 {width: 69%}
+.p70 {width: 70%}
+.p71 {width: 71%}
+.p72 {width: 72%}
+.p73 {width: 73%}
+.p74 {width: 74%}
+.p75 {width: 75%}
+.p76 {width: 76%}
+.p77 {width: 77%}
+.p78 {width: 78%}
+.p79 {width: 79%}
+.p80 {width: 80%}
+.p81 {width: 81%}
+.p82 {width: 82%}
+.p83 {width: 83%}
+.p84 {width: 84%}
+.p85 {width: 85%}
+.p86 {width: 86%}
+.p87 {width: 87%}
+.p88 {width: 88%}
+.p89 {width: 89%}
+.p90 {width: 90%}
+.p91 {width: 91%}
+.p92 {width: 92%}
+.p93 {width: 93%}
+.p94 {width: 94%}
+.p95 {width: 95%}
+.p96 {width: 96%}
+.p97 {width: 97%}
+.p98 {width: 98%}
+.p99 {width: 99%}
+.p100 {width: 100%}
+
+/* ---------------------------------------------------- */
+/* screenplay esque */
+.convo {
+  font-family: "Courier New", courier, monospace;
+  /* font-size: 18px; */
+  text-transform: uppercase;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 15px;
+  border: 3px gray solid;
+}
+
+.bottom-rip {
+  border-bottom: none;
+}
+
+.top-rip {
+  border-top: none;
+}
+
+.convo p {
+  padding: 5px;
+}
+
+.convo-name {
+  font-weight: bold;
+}
+
+.convo-bottom-rip {
+  height: 29px;
+  width: 534px;
+  display: block;
+  margin: 0 auto;
+  margin-top: -7px;
+  padding-right: 0px;
+}
+
+.convo-top-rip {
+  height: 29px;
+  width: 534px;
+  display: block;
+  margin: 0 auto;
+  margin-top: -7px;
+  padding-right: 0px;
+  margin-bottom: -14px;
+}
+/* ---------------------------------------------------- */
+/* linux (from qab ch 2 by jin ) */
+.linux-box-top {
+  margin: 0;
+  border-width: 1px;
+  color: #fff;
+  background: #282b28;
+  border-radius: 5px;
+  padding: 10px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.linux-box-top > img {
+  position: absolute;
+  left: 5px;
+  height: 20px;
+}
+
+.linux-box-top > span {
+  z-index: 3;
+}
+
+.linux-box-bottom {
+  margin: 0;
+  border-width: 1px;
+  color: #fff;
+  background: #300820;
+  border-radius: 5px;
+  padding: 10px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  font-family: "Lucida Console",Monaco,monospace;
+  margin: 0 auto;
+  max-width: 700px;
+  font-size: 12px;
+}
+
+.linux-green {
+  color: #82d832;
+}
+
+.linux-blue {
+  color: #5d75b0;
+}
+
+.half-tab {
+  padding-left: 20px;
+}
