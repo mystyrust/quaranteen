@@ -2,6 +2,10 @@ p {
   margin: 0 auto;
 }
 
+#workskin {
+  overflow: hidden;
+}
+
 /* ------------------ snapchat mock ------------------*/
 /* from https://archiveofourown.org/works/26777200 */
 /* might use images from / remix with https://archiveofourown.org/works/24273862/chapters/58503859 as well  */
@@ -301,7 +305,7 @@ p {
       /* width: 257px; */
       font-size: 14px;
       max-width: 600px;
-      margin: 0 auto;
+      margin: 15px auto;
     }
     
     /* Background colors for dark and light mode */
@@ -816,8 +820,7 @@ p {
     font-size: 13px;
     padding: 6px;
     max-width: 600px;
-    margin: 0 auto;
-    margin-top: 30px;
+    margin: 30px auto;
   }
   .rd-view-box {
     background: #0079D3;
@@ -1341,7 +1344,7 @@ p {
     /* font-family: "Segoe UI"; */
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     /* display: table; */
-    margin: auto;
+    margin: 10px auto;
     /* background-color: white; */
     background: rgb(229, 231, 235);
     /* text-align: justify; */
@@ -1641,7 +1644,7 @@ p {
   max-width: 300px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   display: table;
-  margin: auto;
+  margin: 15px auto;
 }
 
 .header {
