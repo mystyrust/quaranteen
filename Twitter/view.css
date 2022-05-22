@@ -1,0 +1,284 @@
+
+blockquote {
+    border-inline-start: none;
+    margin-inline-start: 0em;
+    padding: 0em;
+}
+
+/* ----------------- tweets ------------------------ */
+/* https://archiveofourown.org/works/22517134/chapters/53806336 */
+
+
+/*The general Tweet container.*/
+.tw {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1em;
+    }
+    
+    .tw p {
+    margin: 0;
+    padding: 0;
+    }
+    
+    .twBody {
+    border: .05em solid #ddd;
+    border-radius: .3em;
+    }
+    
+    .twEmbed {
+    min-width: 90%;
+    position: relative;
+    padding: 0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    overflow: hidden;
+    }
+
+    .hide {
+        display: none;
+    }
+    
+    .tw-erb-thumbnail {
+        background-image: url("https://i.imgur.com/ky11ZJ5.png");
+        display: block;
+        height: 270px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    /*Avatars are automatically formatted to be circles*/
+    .twAvatar {
+    width: 40px;
+    height: auto;
+    float: left;
+    margin-right: 0.3em;
+    border-radius: 20px;
+    }
+
+    .twAvatar::before {
+     /* content: url("https://i.imgur.com/5z0FmGg.png");    */
+     /* background-image: url("https://i.imgur.com/5z0FmGg.png");    */
+     width: 40px;
+     height: 40px;
+     float: left;
+     margin-right: 0.3em;
+     border-radius: 20px;
+     content: '';
+     background-repeat: no-repeat;
+     background-size: cover;
+    }
+
+    .twPhantom:before {
+     background-image: url("https://i.imgur.com/JREf7Ru.png");   
+    }
+
+    .twProcras:before {
+        background-image: url("https://i.imgur.com/C2dq91C.png");
+    }
+
+    .twRamen:before {
+        background-image: url("https://i.imgur.com/TZRLEHD.png");
+    }
+
+    .twFlash:before {
+        background-image: url("https://i.imgur.com/JY0XN2F.png");
+    }
+
+    .twCantSleep:before {
+        background-image: url("https://i.imgur.com/RvjZZi1.png");
+    }
+
+    .twCroissant:before {
+        background-image: url("https://i.imgur.com/EVnRxtv.png");
+    }
+
+    .twKeepcounting:before {
+        background-image: url("https://i.imgur.com/jFIWmG4.jpg");
+    }
+    
+    .twAvatarEmbed {
+    width: 20px;
+    height: auto;
+    float: left;
+    margin: 0em 0.3em .3em 0em;
+    border-radius: 20px;
+    }
+    
+    /*Formatting for the Verified Icons*/
+    
+    .twVerified {
+    position: relative;
+    bottom: 2px;
+    display: inline-block;
+    font-weight: normal;
+    text-align: center;
+    font-size: 10px;
+    width: 15px;
+    height: 15px;
+    margin-left: 0.3em;
+    background-color: #1DA1F2;
+    color: #fff;
+    border-radius: 50%;
+    }
+    
+    .twVerifiedEmbed {
+    position: relative;
+    bottom: 2px;
+    display: inline-block;
+    font-weight: normal;
+    text-align: center;
+    font-size: 9px;
+    width: 12px;
+    height: 12px;
+    margin-left: 0.3em;
+    background-color: #1DA1F2;
+    color: #fff;
+    border-radius: 50%;
+    }
+    
+    /* Images */
+    .twImage{
+    width: 100%;
+    height: auto;
+    border-radius: 0.3em;
+    margin: 0.5em 0em 0.5em 0em;
+    }
+    
+    .twImageEmbed{
+    border-radius: 0.3em;
+    margin-top: 0.5em;
+    width: 100%;
+    }
+    
+    /* Formatting for Header and Text */
+    .twUser {
+    font-weight: bold;
+    font-size: larger;
+    margin-bottom: -0.1em;
+    }
+    
+    .twUserEmbed {
+    font-weight: bold;
+    font-size: normal;
+    margin-bottom: 0.5em;
+    }
+    
+    .twHandle {
+    position: relative;
+    top: -0.5em;
+    font-weight: normal;
+    font-size: smaller;
+    opacity: 0.6;
+    }
+
+    .twHandleTag {
+        display: block;
+    }
+    
+    .twHandleEmbed {
+    position: relative;
+    font-weight: normal;
+    opacity: 0.6;
+    margin-left: 0.3em;
+    }
+    
+    .twText b, .twReply b {
+    color: #1DA1F2;
+    font-weight: normal;
+    cursor: pointer;
+    }
+    
+    /*Formatting for the span of the like count and timestamp*/
+    .twStats {
+    width: 100%;
+    opacity: 0.6;
+    /* display: inline-flex;
+    justify-content: space-around; */
+    }
+
+    .tw-stat-item::before {
+        background-repeat: no-repeat;
+        background-size: cover;
+        content: '';
+        width: 15px;
+        height: 15px;
+        float: left;
+        margin-right: 0.3em;
+    }
+
+    .tw-qt::before {
+        background-image: url("https://img.icons8.com/ios/15/000000/speech-bubble--v1.png");
+    }
+
+    .tw-rt::before {
+        background-image: url("https://img.icons8.com/ios-filled/15/000000/retweet.png");
+    }
+
+    .tw-like::before {
+        background-image: url("https://img.icons8.com/ios/15/000000/like--v1.png");
+    }
+
+    .tw-share::before {
+        background-image: url("https://img.icons8.com/fluency-systems-regular/15/000000/share.png");
+    }
+    
+    .twTime {
+    padding: 0em 0em 0em 0.6em;
+    }
+    
+    /*Formatting for Comments*/
+    .twComments {
+    width: 100%;
+    font-weight: 300;
+    padding-top: 0.5em;
+    margin-top: 0.5em;
+    border-top: .05em solid #ddd;
+    color: #1DA1F2;
+    display: inline-block;
+    }
+    
+    /*Formatting for Reply Tag*/
+    .twReply span:first-child {
+    opacity: 0.6;
+    }
+    
+    .twReply span:last-child {
+    color: #1DA1F2;
+    }
+    
+    /*Formatting for Polling Results*/
+    .twPoll p{
+    margin: 0;
+    padding: 0;
+    }
+    
+    .twPoll {
+    padding: .3em 0em .3em 0em;
+    margin: .5em 0em .5em 0em;
+    border-radius: .3em;
+    white-space: nowrap;
+    }
+    
+    /*Formatting for Active Polling*/
+    .twAPoll {
+    padding: .3em 0em .3em 0em;
+    margin: .5em 0em .5em 0em;
+    border: 0.08em solid #1DA1F2;
+    border-radius: 1em;
+    color: #1DA1F2;
+    text-align: center;
+    }
+    
+    /*Defines the colors and formats of certain elements*/
+    .twWin {background-color: rgba(0, 149, 235, 0.5)} /* Winning option color */
+    .twOpt {background-color: rgba(187, 198, 206, 0.5)} /* Other options color */
+    /* Night mode */
+    .twNM { background-color: #14242C; color: #fff; border-color: #3B5364; }
+    .twNM .twBody { border-color: #3B5364 }
+    .twNM .twComments { border-top: .05em solid #3B5364}
+    .twNM .twWin {background-color: #74cbfb}
+    .twNM .twOpt {background-color: #3B5364} /* Other Options Color Night Mode*/
+    .twBold {font-weight: bold; padding-right: 10px; padding-left: 10px;}
+    
