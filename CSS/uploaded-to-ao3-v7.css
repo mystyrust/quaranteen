@@ -3359,3 +3359,7 @@ iframe { margin: 0 auto; display:block; }
   left: 50%;
   transform: translate(-50%);
 }
+
+#chapter-6 > div:nth-child(5) {
+  border-top: none;
+}

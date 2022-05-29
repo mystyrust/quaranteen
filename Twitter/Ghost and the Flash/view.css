@@ -285,7 +285,7 @@ blockquote {
 /* ________________________________________ */
 /* twitter dms */
 .dm-container {
-    color: #2a2a2a;
+    /* color: #2a2a2a; */
     /* background-color: #fff; */
     font-family: 'Lucida Grande','Lucida Sans Unicode','GNU Unifont',Verdana,Helvetica,sans-serif;
     word-wrap: break-word;
