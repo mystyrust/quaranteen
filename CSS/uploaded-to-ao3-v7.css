@@ -1577,6 +1577,11 @@ text-align: center;
 
 .fic-chapter {
   text-decoration: underline;
+  cursor: pointer;
+}
+
+.fic-inpso u {
+  cursor: pointer;
 }
 
 .fic-ratings {
