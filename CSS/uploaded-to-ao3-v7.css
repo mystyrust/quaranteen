@@ -1577,6 +1577,11 @@ text-align: center;
 
 .fic-chapter {
   text-decoration: underline;
+  cursor: pointer;
+}
+
+.fic-inpso u {
+  cursor: pointer;
 }
 
 .fic-ratings {
@@ -3358,4 +3363,8 @@ iframe { margin: 0 auto; display:block; }
   position: absolute;
   left: 50%;
   transform: translate(-50%);
+}
+
+#chapter-6 > div:nth-child(5) {
+  border-top: none;
 }
