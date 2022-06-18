@@ -292,6 +292,10 @@ p {
     background: #3c4159;
     display: inline-block;
   }
+
+  .reaction:hover, .reaction-yours:hover {
+    cursor: pointer;
+  }
   
   /* The overall discord module */
   .discord {
