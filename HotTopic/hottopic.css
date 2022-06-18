@@ -251,7 +251,8 @@ p {
 }
 
 .discord-yt-link {
-  color: #5197ec ;
+  color: #5197ec;
+  cursor: pointer;
 }
 
 .discord-yt-vid {
