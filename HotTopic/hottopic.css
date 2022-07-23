@@ -256,6 +256,10 @@ p {
   cursor: pointer;
 }
 
+.discord-yt-link:hover {
+  text-decoration: underline;
+}
+
 .discord-yt-vid {
   font-weight: bold;
   font-size: 15px;
