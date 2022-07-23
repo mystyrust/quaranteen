@@ -283,6 +283,62 @@ p {
     border-radius: 30%;
     background: #303136;
     display: inline-block;
+    cursor: pointer;
+    color: white;
+  }
+
+  .reaction:hover {
+    background: #3c4159;
+    border: 1px solid #5d68ce;
+    padding: 2px 7px 2px 5px;
+  }
+
+  .reaction-1:before {
+    content: "🤔 4";
+  }
+  
+  .reaction-1:hover:before {
+    content: "🤔 5";
+  }
+
+  .reaction-2:before {
+    content: "🧠 3";
+  }
+  
+  .reaction-2:hover:before {
+    content: "🧠 4";
+  }
+
+  .reaction-3:before {
+    content: "🤪 3";
+  }
+  
+  .reaction-3:hover:before {
+    content: "🤪 4";
+  }
+
+  .reaction-4:before {
+    content: "🤪 3";
+  }
+  
+  .reaction-4:hover:before {
+    content: "🤪 4";
+  }
+
+  .reaction-5:before {
+    content: "😰 5";
+  }
+  
+  .reaction-5:hover:before {
+    content: "😰 6";
+  }
+
+  .reaction-6:before {
+    content: "😅 2";
+  }
+  
+  .reaction-6:hover:before {
+    content: "😅 3";
   }
   
   .reaction-yours {
@@ -332,6 +388,10 @@ p {
         grid-template-columns: 2.7em 1fr;
         column-gap: 16px;
         
+    }
+
+    .discord > .message > img {
+      cursor: pointer;
     }
     
     .discord > div.message p,
@@ -483,8 +543,8 @@ p {
       background-size: 6.7em auto;
       margin-right: 10px;
     }
-    .darkmode .channel > p:not(.newpins)::after { background-image: url(https://i.imgur.com/2Jo3bI3.png); }
-    .lightmode .channel > p:not(.newpins)::after { background-image: url(https://i.imgur.com/L8KR3n0.png); }
+    .darkmode .channel > p:not(.newpins)::after { background-image: url(https://i.imgur.com/2Jo3bI3.png); cursor: pointer; }
+    .lightmode .channel > p:not(.newpins)::after { background-image: url(https://i.imgur.com/L8KR3n0.png); cursor: pointer; }
     
     /* The three icons to the right of the channel header. When there are new pins */
     .darkmode .channel > p.newpins::after { background-image: url(https://i.imgur.com/GClC6WS.png); }
@@ -675,6 +735,7 @@ p {
       margin-left: 8px;
       border-radius: 100%;
       margin-top: 4px;
+      cursor: text;
     }
     .darkmode > div:last-child > p:last-child::before {
       background: #b9bbbe;
@@ -835,6 +896,7 @@ p {
     font-weight:bold;
     padding: 7px;
     margin: 0 5px -5px 5px;
+    cursor: pointer;
   }
   .rd-signup-box {
     background: #0079D3;
@@ -898,6 +960,7 @@ p {
   .rd-op{
     color:#25A0ED;
     font-weight:bold;
+    cursor: pointer;
   }
   .rd-link{
     color:#25A0ED;
@@ -916,6 +979,11 @@ p {
     display: inline-block;
     padding-bottom:5px;
   }
+
+  .rd-small > strong {
+    cursor: pointer;
+  }
+
   .rd-vr0 {
     display: table;
     padding: 10px 0 0px 30px;
@@ -1009,6 +1077,7 @@ p {
     margin-left: 10px;
     line-height: 20px;
     height: 20px;
+    cursor: pointer;
   }
   
   .tungletext {
@@ -1069,6 +1138,7 @@ p {
     float: right;
     margin-right: -7px;
     margin-top: 6px;
+    cursor: pointer;
   }
 
   .tungleimg {
@@ -1214,6 +1284,7 @@ p {
     margin-right: -70px;
     right: 10px;
     top: 24px;
+    cursor: pointer;
   }
   
   .tungleasker {
@@ -1296,6 +1367,7 @@ p {
   line-height: 25px;
   height: 25px;
   color: #8f8f8f;
+  cursor: pointer;
 }
 
 .reblogicon {
@@ -1425,6 +1497,7 @@ p {
 .ud-header {
   background-color: rgb(19, 23, 37);
   margin-top: -3px !important;
+  cursor: pointer;
 }
 
 .ud-header > img {
@@ -1439,6 +1512,7 @@ p {
   float: right;
   margin-top: 7px;
   margin-right: -22px;
+  cursor: pointer;
 }
 
 .ud-search {
@@ -1506,6 +1580,7 @@ p {
   background: rgb(59, 255, 89);
   display: block;
   padding: 12px;
+  cursor: default;
   /* width: 100%; */
   /* margin-left: -10px; */
   text-align: center;
@@ -1528,6 +1603,7 @@ p {
   color: blue;
   text-decoration: none;
   border-bottom: none;
+  cursor: pointer;
 }
 
 .ud-term a:not(.title) {
@@ -1541,6 +1617,7 @@ p {
 .ud-term > img {
   float: right;
   padding-right: 10px;
+  cursor: pointer;
 }
 
 .ud-term > span {
@@ -1598,6 +1675,23 @@ p {
   border: 1px solid #aaa;
   padding: 5px 5px 5px 5px;
   margin-top: 0px;
+}
+
+.search_autocomplete span {
+  display: block;
+  padding: 0px 5px;
+}
+
+.search_autocomplete span:first-of-type {
+  padding: 5px 5px 0px 5px !important;
+}
+
+.search_autocomplete span:last-of-type {
+  padding: 0px 5px 5px 5px !important;
+}
+
+.search_autocomplete span:hover {
+  background: lightblue;
 }
 
 .search_logo {
@@ -1782,6 +1876,7 @@ height: auto;
 float: left;
 margin-right: 0.3em;
 border-radius: 20px;
+cursor: pointer;
 }
 
 .twAvatarEmbed {
@@ -1849,6 +1944,7 @@ margin-bottom: -0.1em;
 font-weight: bold;
 font-size: normal;
 margin-bottom: 0.5em;
+cursor: pointer;
 }
 
 .twHandle {
@@ -1868,12 +1964,17 @@ margin-left: 0.3em;
 
 .twText span {
 color: #1DA1F2;
+cursor: pointer;
 }
 
 /*Formatting for the span of the like count and timestamp*/
 .twStats {
 width: 100%;
 opacity: 0.6;
+}
+
+.twStats p, .twComments p {
+  cursor: pointer;
 }
 
 .twTime {
@@ -1897,6 +1998,7 @@ opacity: 0.6;
 
 .twReply span:last-child {
 color: #1DA1F2;
+cursor: pointer;
 }
 
 /*Formatting for Polling Results*/
