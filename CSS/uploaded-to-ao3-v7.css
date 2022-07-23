@@ -21,6 +21,7 @@ p.zoom-msg {
 .amongus-room {
   text-align: center;
   font-weight: bold;
+  color: black;
   font-family: "Arial Black", Gadget, sans-serif;
 }
 
@@ -204,7 +205,7 @@ div.amongus-player > p > img.amongus-icon {
 }
 
 .messagebody {
-  background-color: #FFFFFF;
+  /* background-color: #FFFFFF; */
   display: table;
   padding-left: .5em;
   padding-right: .5em;
@@ -345,7 +346,7 @@ div.amongus-player > p > img.amongus-icon {
 
 .time {
   min-width: 295px;
-  color: #999999;
+  /* color: #999999; */
   font-size: .75em;
   padding-bottom: .5em;
   padding-top: .5em;
@@ -357,7 +358,7 @@ div.amongus-player > p > img.amongus-icon {
 }
 
 .grouptext {
-  color: #999999;
+  /* color: #999999; */
   font-size: .75em;
   padding-bottom: .6em;
   padding-top: 0;
@@ -549,7 +550,8 @@ div.amongus-player > p > img.amongus-icon {
   width: 65%;
   margin: 0 auto 25px;
   display: block;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  box-shadow: 0 1px 3px grey, 0 1px 2px grey;
+  /* box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); */
 }
 
 .letter-header {
@@ -648,7 +650,7 @@ div.amongus-player > p > img.amongus-icon {
   top: -.3em;
   font-size: 16px;
   font-weight: 300;
-  color: #697882;
+  color: darkgray;
 }
 
 .twText {
@@ -662,19 +664,19 @@ div.amongus-player > p > img.amongus-icon {
   font-size: 14px;
   width: 100%;
   font-weight: 300;
-  color: #697882;
+  color: darkgray;
   padding: .5em 0em .5em 0em;
 }
 
 .twRetweet {
   font-size: 14px;
-  color: #697882;
+  color: darkgray;
   margin: 1em 1em 1em 1em;
 }
 
 .twLike {
   font-size: 14px;
-  color: #697882;
+  color: darkgray;
 }
 
 .twVerified {
