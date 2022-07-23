@@ -1747,6 +1747,7 @@ p {
 
 .search_autocomplete span:hover {
   background: lightblue;
+  cursor: pointer;
   color: black;
 }
 
