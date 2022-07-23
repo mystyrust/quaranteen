@@ -245,6 +245,7 @@ p {
   border-radius: 6px;
   padding: 3px 7px 3px 7px;
   line-height: 1.4em;
+  cursor: pointer;
 }
 
 .discord-yt-img {
