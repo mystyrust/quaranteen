@@ -412,6 +412,7 @@ p {
       /* object-fit: cover; Property not allowed on AO3 */
       border-radius: 100%;
       margin-top: 2px;
+      cursor: pointer;
     }
     
     /* Making large images in text messages display correctly */
@@ -721,6 +722,7 @@ p {
       display: grid;
       grid-template-columns: 2em 1fr;
       column-gap: 16px;
+      cursor: text;
     }
     
     .discord > div:last-child > p:last-child::before {
@@ -735,7 +737,6 @@ p {
       margin-left: 8px;
       border-radius: 100%;
       margin-top: 4px;
-      cursor: text;
     }
     .darkmode > div:last-child > p:last-child::before {
       background: #b9bbbe;
@@ -1117,6 +1118,7 @@ p {
   
   .tungletag {
     margin-right: 12px;
+    cursor: pointer;
   }
   
   /* .tungletag:first-of-type {
@@ -1130,6 +1132,7 @@ p {
     line-height: 45px;
     position: relative;
     margin-left: 10px;
+    cursor: pointer;
   }
   
   .tungleicons {
@@ -1294,6 +1297,7 @@ p {
     width: 100%;
     line-height: 21px;
     margin-bottom: 7px;
+    cursor: pointer;
   }
   
   
@@ -1375,6 +1379,7 @@ p {
   width: 25px;
   height: 25px;
   vertical-align: baseline;
+  cursor: pointer;
 }
 
 .sourceurl {
@@ -1383,6 +1388,7 @@ p {
   font-size: 13px;
   vertical-align: top;
   display: inline-block;
+  cursor: pointer;
 }
 
 .reblogorigin {
@@ -1497,12 +1503,12 @@ p {
 .ud-header {
   background-color: rgb(19, 23, 37);
   margin-top: -3px !important;
-  cursor: pointer;
 }
 
 .ud-header > img {
   /* max-width: 40%; */
   height: 70px;
+  cursor: pointer;
 }
 
 .ud-hamburger {
@@ -1526,6 +1532,7 @@ p {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  cursor: text;
 }
 
 .ud-search-text {
@@ -1673,7 +1680,7 @@ p {
 
 .search_autocomplete {
   border: 1px solid #aaa;
-  padding: 5px 5px 5px 5px;
+  /* padding: 5px 5px 5px 5px; */
   margin-top: 0px;
 }
 
@@ -1692,6 +1699,7 @@ p {
 
 .search_autocomplete span:hover {
   background: lightblue;
+  color: black;
 }
 
 .search_logo {
@@ -1953,6 +1961,7 @@ top: -0.5em;
 font-weight: normal;
 font-size: smaller;
 opacity: 0.6;
+cursor: pointer;
 }
 
 .twHandleEmbed {
