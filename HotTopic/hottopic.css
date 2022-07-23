@@ -1783,15 +1783,19 @@ p {
 }
 .chrome_blue {
   color: #4285F4;
+  cursor: pointer;
 }
 .chrome_red {
   color: #DB4437;
+  cursor: pointer;
 }
 .chrome_yellow {
   color: #F4B400;
+  cursor: pointer;
 }
 .chrome_green {
   color: #0F9D58;
+  cursor: pointer;
 }
 
 /* ------------------ phone texts ---------------------- */
