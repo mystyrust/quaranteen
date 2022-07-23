@@ -297,6 +297,25 @@ p {
     background: #3c4159;
     border: 1px solid #5d68ce;
     padding: 2px 7px 2px 5px;
+    cursor: pointer;
+  }
+
+  .reaction-yours {
+    border: 1px solid #5d68ce;
+    padding: 2px 7px 2px 5px;
+    margin-right: 4px;
+    border-radius: 30%;
+    background: #3c4159;
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+  }
+
+  .reaction-yours:hover {
+    border: none;
+    padding: 3px 8px 3px 6px;
+    background: #303136;
+    cursor: pointer;
   }
 
   .reaction-1:before {
@@ -346,18 +365,29 @@ p {
   .reaction-6:hover:before {
     content: "😅 3";
   }
+
+  .reaction-7:before {
+    content: "👻 2";
+  }
   
-  .reaction-yours {
-    border: 1px solid #5d68ce;
-    padding: 2px 5px 1px 5px;
-    margin-right: 4px;
-    border-radius: 30%;
-    background: #3c4159;
-    display: inline-block;
+  .reaction-7:hover:before {
+    content: "👻 1";
   }
 
-  .reaction:hover, .reaction-yours:hover {
-    cursor: pointer;
+  .reaction-8:before {
+    content: "🤔 4";
+  }
+  
+  .reaction-8:hover:before {
+    content: "🤔 3";
+  }
+
+  .reaction-9:before {
+    content: "😬 2";
+  }
+  
+  .reaction-9:hover:before {
+    content: "😬 1";
   }
   
   /* The overall discord module */
