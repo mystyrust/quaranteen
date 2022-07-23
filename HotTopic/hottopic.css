@@ -965,11 +965,16 @@ p {
     font-size: .8em;
     margin-bottom: 15px;
   }
-  .rd-op{
+  .rd-op {
     color:#25A0ED;
     font-weight:bold;
     cursor: pointer;
   }
+
+  .rd-op:hover {
+    text-decoration: underline;
+  }
+
   .rd-link{
     color:#25A0ED;
   }
@@ -988,8 +993,9 @@ p {
     padding-bottom:5px;
   }
 
-  .rd-small > strong {
+  .rd-small > strong:hover {
     cursor: pointer;
+    text-decoration: underline;
   }
 
   .rd-vr0 {
