@@ -138,6 +138,7 @@ p {
     /* overflow: hidden; */
     height: 40px;
     background-size: contain;
+    cursor: pointer;
     /* margin-left: -10px; */
     /* height: 0px; */
   }
@@ -953,6 +954,7 @@ p {
     display: inline-block;
     padding-top:5px;
     padding-bottom:5px;
+    cursor: pointer;
   }
   .rd-poster{
     font-size: .8em;
@@ -1017,6 +1019,7 @@ p {
     margin-bottom:5px;
     border-radius: 16px;
     border: 1px solid #EEEFF1;
+    cursor: pointer;
   }
   
   .rd-arrow-text{
@@ -1039,6 +1042,7 @@ p {
     float:right;
     padding-right:10px;
     font-size:1.0em;
+    cursor: pointer;
   }
 
 
@@ -1297,6 +1301,9 @@ p {
     width: 100%;
     line-height: 21px;
     margin-bottom: 7px;
+  }
+
+  .tungleasker b {
     cursor: pointer;
   }
   
