@@ -1,0 +1,95 @@
+/* tabs */
+
+#workskin {
+/* z-index: 1000; */
+width: initial;
+overflow: inherit;
+max-width: 100%;
+/* position: relative; */
+position: initial;
+}
+
+.tab, 
+.tab0,
+:target ~ .default-tab { display: none }
+
+.default-tab { display: block; }
+.root { margin-top: -1em !important; }
+
+#day1:target ~ .day1, /* also default-tab */
+#day2:target ~ .day2, 
+#day2:target ~ .day3 {
+    display: block;
+    /* margin-top: -1em; */
+}
+
+.white-overflow {
+    border: none;
+    right: 0;
+    /* left: 0; */
+    box-shadow: none;
+    padding: 0 1.2em;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 10;
+    width: 100vw;
+    margin-left: -50vw;
+    left: 50%;
+}
+
+.white-overflow-full {
+    border: none;
+    right: 0;
+    /* left: 0; */
+    box-shadow: none;
+    padding: 0 1.2em;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 10;
+    width: 100vw;
+    margin-left: -50vw;
+    left: 50%;   
+
+/* ---- new stuff ---- */
+    /* margin-top: -97%; */
+    /* top: -46em; */
+    /* position: fixed; */
+    top: 0;
+    z-index: 30;
+}
+
+
+
+/* ao3 overrides */
+.wrapper {
+    width: 98%;
+    margin-left: 1%;
+    font-size: 95%;
+}
+.userstuff dt {
+    font-weight: normal;
+}
+.warning, .warning.tags, .warning li.last {
+    font-weight: bold;
+}
+
+.secondary {
+    color: unset;
+}
+
+.userstuff ul {
+    margin: unset;
+    padding: unset;
+}
+
+.userstuff dt:not(.published, #workskin .status, #workskin .words, #workskin .chapters, #workskin .comments, #workskin .kudos, #workskin .bookmarks, #workskin .hits)
+{
+    width: 23%;
+}
+.userstuff dd:not(.published, .status, .words, .chapters, .comments, .kudos, .bookmarks, .hits) {
+    /* margin-block-start: unset;
+    margin-block-end: unset;
+    margin-inline-start: unset;
+        line-height: unset; */
+    margin: 0 0 0.643em 1em;
+}
