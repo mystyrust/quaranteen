@@ -24,9 +24,9 @@ p.convo-break {
 
 #day1:target ~ .day1, /* also default-tab */
 #day2:target ~ .day2, 
+#day3:target ~ .day3,
 #day4:target ~ .day4, 
-#day5:target ~ .day5, 
-#day3:target ~ .day3 {
+#day5:target ~ .day5 {
     display: block;
     /* margin-top: -1em; */
 }
@@ -156,10 +156,6 @@ p.convo-break {
     margin-right: 15px;
   }
 
-  .button-broken {
-      display: none;
-  }
-  
    a.button-end {
     margin: 4px 2px;
     padding: 2px;
@@ -220,12 +216,16 @@ p.convo-break {
 
 /* ------------------------------------------ */
 /* thought bubbles */
+.beemovie {
+    height: 15px;
+}
+
 .thought {
     display:inline-block;
     background-color:#fff;
     border: thin black solid;
     color: black;
-    padding:5px;
+    padding:15px;
     border-radius:30px;
     min-width:40px;
     max-width:220px;
@@ -233,6 +233,10 @@ p.convo-break {
     margin:20px;
     position:relative;
     text-align:center;
+  }
+
+  .white {
+      color: white !important;
   }
 
   .thought:before,
@@ -315,7 +319,7 @@ p.convo-break {
     max-width: 400px;
     min-width: 200px;
     /* height: 100%; */
-    min-height: 530px;
+    min-height: 450px;
     box-shadow: 1px 1px 5px #aaa;
     padding: 45px 50px;
     font-size: 16px;
@@ -372,9 +376,10 @@ p.convo-break {
       display: inline-block;
   }
   */
+  
   /* ------------------------------------------ */
 /* lined notebook paper */
-
+/* https://archiveofourown.org/works/4414436 */
 
 .paper {
     /* width: 97%; */
