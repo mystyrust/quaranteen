@@ -216,7 +216,7 @@ p.convo-break {
 
 /* ------------------------------------------ */
 /* thought bubbles */
-.beemovie {
+.beemovie, .summary.module .userstuff img {
     height: 15px;
 }
 
