@@ -345,6 +345,7 @@ p.convo-break {
     background: #f8f9fa;
     color: black;
     font-family: "times new roman";
+    overflow: scroll;
   }
   
   .gdocs-paper {
@@ -472,6 +473,12 @@ p.convo-break {
     text-decoration: underline;
     font-family: helvetica neue, helvetica, arial, sans-serif;
   }
+
+  /* span.para {
+    display: block;
+    margin-bottom: 15px;
+  } */
+
   
   .textwmar {
     margin-left: 11%;
@@ -483,8 +490,36 @@ p.convo-break {
   }
   
   .textwmar p {
-      line-height: unset;
+      /* line-height: unset; */
+      font-size: 15px;
+      line-height: 25px;
+      margin: 25px 15px 0px 0px;
   }
+
+.eraser1 {
+  width: 100px;
+  position: absolute;
+  top: 70px;
+  right: 6px;
+  transform: rotate(303deg);
+}
+
+.doodle1 {
+  position: absolute;
+  height: 95px;
+  right: 40px;
+  top: 20px;
+  opacity: .5;
+  transform: rotate(358deg);
+}
+
+.stain1 {
+  position: absolute;
+  width: 100px;
+  top: 0;
+  right: 10px;
+  opacity: .2;
+}
   
   .bullet-outside {
     display: list-item;
