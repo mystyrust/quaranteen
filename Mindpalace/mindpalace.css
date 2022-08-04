@@ -9,6 +9,10 @@ max-width: 100%;
 position: initial;
 }
 
+.margin0, .gdocs-container > p {
+    margin: 0;
+}
+
 p.convo-break {
     display: flex;
     width: 100%;
@@ -94,7 +98,11 @@ p.convo-break {
     border-bottom: 1px solid;
 }
 
-.preface.fake-prenotes, .end.notes.module {
+.byline.heading a, a.tag, .bookarks a {
+    cursor: pointer;
+}
+
+.preface.fake-prenotes, .preface.group, .end.notes.module {
     max-width: 65em;
     margin: 1.5em auto
 }
@@ -115,6 +123,12 @@ p.convo-break {
     padding: 0 0.5em;
     max-width: 72em;
     margin: 0 auto;
+}
+
+.fade-text {
+    background: linear-gradient(to bottom, currentColor, transparent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .summary.module blockquote {
@@ -217,7 +231,7 @@ p.convo-break {
 /* ------------------------------------------ */
 /* thought bubbles */
 .beemovie, .summary.module .userstuff img {
-    height: 15px;
+    height: 16px;
 }
 
 .thought {
@@ -269,6 +283,10 @@ p.convo-break {
     margin-left: -5px;
   }
 
+  .comment.group .actions a {
+    cursor: pointer;
+  }
+
   h4.heading.byline {
     font-weight: normal;
   }
@@ -290,6 +308,10 @@ p.convo-break {
   .thread ol.thread {
     padding: 0;
     margin-left: 0;
+  }
+
+  .comments-container {
+      margin-top: 100px;
   }
 
   .comments-container .thread{
