@@ -29,7 +29,14 @@ p.convo-break {
 #day1:target ~ .day1, /* also default-tab */
 #day2:target ~ .day2, 
 #day3:target ~ .day3,
-#day4:target ~ .day4, 
+#fakefic1:target ~ .fakefic1,
+#fakefic2:target ~ .fakefic2,
+#exp:target ~ .exp,
+#stuck:target ~ .stuck,
+#escape:target ~ .escape,
+#end:target ~ .end,
+#cssoff:target ~ .cssoff, 
+#day4:target ~ .day4,
 #day5:target ~ .day5 {
     display: block;
     /* margin-top: -1em; */
@@ -98,13 +105,18 @@ p.convo-break {
     border-bottom: 1px solid;
 }
 
-.byline.heading a, a.tag, .bookarks a {
+.byline.heading a, a.tag, .bookmarks a {
     cursor: pointer;
 }
 
-.preface.fake-prenotes, .preface.group, .end.notes.module {
+ .preface.group, .end.notes.module {
     max-width: 65em;
     margin: 1.5em auto
+}
+
+.preface.fake-prenotes {
+  max-width: 65em;
+  margin: 0 auto 1.5em;
 }
 
 /* .end.notes.module .fakenotes {
