@@ -111,7 +111,8 @@ p.convo-break {
 
  .preface.group, .end.notes.module {
     max-width: 65em;
-    margin: 1.5em auto
+    /* margin: 1.5em auto */
+    margin: 5em auto;
 }
 
 .preface.fake-prenotes {
@@ -256,13 +257,17 @@ p.convo-break {
     min-width:40px;
     max-width:220px;
     min-height:40px;
-    margin:20px;
+    margin: 30px 20px;
     position:relative;
     text-align:center;
   }
 
   .white {
       color: white !important;
+  }
+
+  .block {
+    display: block !important;
   }
 
   .thought:before,
@@ -337,10 +342,10 @@ p.convo-break {
   /* ------------------------------------------ */
 
   .gdocs-container {
-    max-width: 700px;
+    max-width: 650px;
     min-width: 300px;
     border: thin black solid;
-    height: 700px;
+    height: 800px;
     margin: 0 auto;
     background: #f8f9fa;
     color: black;
@@ -350,20 +355,20 @@ p.convo-break {
   
   .gdocs-paper {
     background: white;
-    margin: 0 auto;
+    margin: 10px auto;
     max-width: 400px;
     min-width: 200px;
     /* height: 100%; */
-    min-height: 450px;
+    min-height: 530px;
     box-shadow: 1px 1px 5px #aaa;
     padding: 45px 50px;
-    font-size: 16px;
+    font-size: 14.5px;
   }
   
   .gdocs-header {
     background: white;
     border-bottom: thin #dadcdf solid;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
   }
   
   .gdocs-header p {
