@@ -109,11 +109,20 @@ p.convo-break {
     cursor: pointer;
 }
 
- .preface.group, .end.notes.module {
+.end.notes.module {
     max-width: 65em;
     /* margin: 1.5em auto */
-    margin: 5em auto;
+    margin: 5em auto 0em;
 }
+
+.preface.group {
+  max-width: 65em;
+  margin: 1.5em auto 0em;
+}
+
+.end.notes.module.fake-endnotes {
+  margin-bottom: 5em !important;
+} 
 
 .preface.fake-prenotes {
   max-width: 65em;
