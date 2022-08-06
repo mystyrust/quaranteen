@@ -50,7 +50,7 @@ p.convo-break {
     padding: 0 1.2em;
     box-sizing: border-box;
     position: absolute;
-    z-index: 10;
+    z-index: 32;
     width: 100vw;
     margin-left: -50vw;
     left: 50%;
@@ -58,8 +58,9 @@ p.convo-break {
 
 .white-overflow-top {
 /* ---- new stuff ---- */
-    top: 0;
-    z-index: 30;
+    top: -130px;
+    height: 200em;
+    z-index: 31;
 }
 
 .white-overflow-full {
@@ -130,6 +131,7 @@ p.convo-break {
 /* show the "fake" / html jazzed summary once the fic starts */
 .preface.fake-prenotes.summary.module {
   margin-top: -2em;
+  margin-bottom: 0;
 }
 
 /* hide the real summary once the fic starts */
@@ -144,7 +146,7 @@ p.convo-break {
 
 .preface.fake-prenotes {
   max-width: 65em;
-  margin: 0 auto 1.5em;
+  margin: 0 auto 3.5em;
 }
 
 /* .end.notes.module .fakenotes {
