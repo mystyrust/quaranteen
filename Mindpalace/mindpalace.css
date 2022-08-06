@@ -492,6 +492,10 @@ p.convo-break {
     right: 0;
     border-radius: 5px;
   }
+
+  tr:hover,  td:hover {
+    background: none;
+  }
   
   .titletext {
     font-size: 15px;
