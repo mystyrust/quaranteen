@@ -58,11 +58,14 @@ p.convo-break {
 
 .white-overflow-top {
 /* ---- new stuff ---- */
-    /* margin-top: -97%; */
-    /* top: -46em; */
-    /* position: fixed; */
     top: 0;
     z-index: 30;
+}
+
+.white-overflow-full {
+  /* covers the header on desktop mode */
+  padding-top: 7em;
+  margin-top: -7em;
 }
 
 
@@ -118,6 +121,17 @@ p.convo-break {
 .preface.group {
   max-width: 65em;
   margin: 1.5em auto 0em;
+}
+
+/* show the "fake" / html jazzed summary once the fic starts */
+.preface.fake-prenotes.summary.module {
+  margin-top: -2em;
+}
+
+/* hide the real summary once the fic starts */
+.summary.module:not(.fake-prenotes)
+{
+  display: none;
 }
 
 .end.notes.module.fake-endnotes {
@@ -338,6 +352,7 @@ p.convo-break {
 
   .comments-container {
       margin-top: 100px;
+      margin-bottom: 100px;
   }
 
   .comments-container .thread{
