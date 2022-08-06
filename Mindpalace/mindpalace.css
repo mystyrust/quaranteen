@@ -68,6 +68,10 @@ p.convo-break {
   margin-top: -7em;
 }
 
+.pos-relative {
+  position: relative !important;
+}
+
 
 /* ------------------------------------------ */
 /* ao3 overrides */
