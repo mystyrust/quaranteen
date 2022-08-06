@@ -272,8 +272,15 @@ p.convo-break {
 
 /* ------------------------------------------ */
 /* thought bubbles */
-.beemovie, .summary.module .userstuff img {
+.beemovie, .summary-svg, .summary.module .userstuff img {
     height: 16px;
+}
+
+.typer-svg {
+  vertical-align: sub;
+  height: 18px;
+  display: inline;
+  /* margin-bottom: -1px; */
 }
 
 .thought {
@@ -393,6 +400,10 @@ p.convo-break {
     box-shadow: 1px 1px 5px #aaa;
     padding: 45px 50px;
     font-size: 14.5px;
+  }
+
+  .gdocs-paper p {
+    line-height: 1.5;
   }
   
   .gdocs-header {
