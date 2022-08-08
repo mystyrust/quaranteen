@@ -212,6 +212,11 @@ p.convo-break {
     margin-right: 15px;
   }
 
+  .thought .bline.actions
+  {
+    margin-right: 0px;
+  }
+
    a.button-end {
     margin: 4px 2px;
     padding: 2px;
@@ -570,16 +575,3 @@ p.convo-break {
   right: 10px;
   opacity: .2;
 }
-  
-  .bullet-outside {
-    display: list-item;
-    list-style-type: disc;
-    list-style-position: outside;
-  }
-  
-  .bullet-inside {
-    display: list-item;
-    list-style-type: disc;
-    list-style-position: inside;
-  }
-  
