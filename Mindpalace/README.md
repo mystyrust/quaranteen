@@ -1,5 +1,5 @@
 # About
-* raw html and css for [suspend disbelief]()
+* raw html and css for [suspend disbelief](https://archiveofourown.org/works/40939650)
 * should be compatible with most ao3 site skins
 * some 4th wall breaking nonsense
 
