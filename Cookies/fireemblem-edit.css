@@ -48,7 +48,7 @@ p.convo-break {
 
 
 .convo-container {
-    display: table;
+    display: block;
     /* flex-direction: column; */
     background-color: green;
     padding: 10px;
@@ -62,6 +62,12 @@ p.convo-break {
 
 .cookie-kingdom-1 {
   background: url("https://i.imgur.com/SxyUvPO.png") repeat center center scroll;
+  background-size: contain;
+  background-attachment: fixed;
+}
+
+.cookie-kingdom-2 {
+  background: url("https://i.imgur.com/VUYu9yo.png") repeat center center scroll;
   background-size: contain;
   background-attachment: fixed;
 }
@@ -107,3 +113,24 @@ p.convo-break {
   height: auto;
 }
 
+.tab, 
+.tab0,
+:target ~ .convo-container .convo { display: none }
+
+.default-tab ~ .convo-container,
+.default-tab ~ .convo-container .convo { display: block; }
+.root { margin-top: -1em !important; }
+
+#convo-1:target ~ .convo-container .convo-1,
+#convo-2:target ~ .convo-container .convo-2,
+#convo-3:target ~ .convo-container .convo-3,
+#convo-4:target ~ .convo-container .convo-4,
+#vent:target ~ .vent {
+  display: block;
+/* margin-top: -1em; */
+}
+
+#convo-all:target ~ .convo-container, 
+#convo-all:target ~ .convo-container .convo {
+  display: block;
+}
