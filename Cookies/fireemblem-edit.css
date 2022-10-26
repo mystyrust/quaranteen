@@ -115,19 +115,30 @@ p.convo-break {
 
 .tab, 
 .tab0,
+:target ~ .convo-container ,
 :target ~ .convo-container .convo { display: none }
 
-.default-tab ~ .convo-container,
+/* .default-tab ~ .convo-container,
 .default-tab ~ .convo-container .convo { display: block; }
-.root { margin-top: -1em !important; }
+.root { margin-top: -1em !important; } */
 
+/* #convo-1:target ~ .cookie-kingdom-2,
+#convo-2:target ~ .cookie-kingdom-2,
+#convo-3:target ~ .cookie-kingdom-1,
+#convo-4:target ~ .cookie-kingdom-1 {
+  display: none;
+} */
+
+#convo-1:target ~ .cookie-kingdom-1,
 #convo-1:target ~ .convo-container .convo-1,
+#convo-2:target ~ .cookie-kingdom-1,
 #convo-2:target ~ .convo-container .convo-2,
+#convo-3:target ~ .cookie-kingdom-2,
 #convo-3:target ~ .convo-container .convo-3,
+#convo-4:target ~ .cookie-kingdom-2,
 #convo-4:target ~ .convo-container .convo-4,
 #vent:target ~ .vent {
   display: block;
-/* margin-top: -1em; */
 }
 
 #convo-all:target ~ .convo-container, 
