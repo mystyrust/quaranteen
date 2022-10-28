@@ -93,45 +93,22 @@ p.convo-break {
   background-attachment: fixed;
 }
 
-.dia {
-  /* vertical-align: middle; */
+.crk-dia {
   position: relative;
   display: inline-block;
   text-align: left;
   border: 2px solid #8f8e8f;
-  /* border-radius: 20px; */
   max-width: 470px;
-  /* padding: 10px; */
   margin-top: 3%;
   margin-bottom: 3%;
-  /* height: auto; */
-
   width: 90%;
   height: 50px;
   padding: 16px;
   z-index: 5;
   border-radius: 47px;
   font-family: sans-serif;
-
   background-color: white !important;
   color: black !important;
-}
-
-.dia-desc {
-  /* min-height: 80px; */
-  float: left;
-  display: flex;
-  /* vertical-align: middle; */
-  position: relative;
-  text-align: center;
-  border: 2px solid #8f8e8f;
-  border-radius: 10px;
-  /* max-width: 470px; */
-  margin-left: 9em;
-  padding: 10px;
-  margin-top: 3%;
-  margin-bottom: 3%;
-  height: auto;
 }
 
 .tab, 
@@ -139,17 +116,8 @@ p.convo-break {
 :target ~ .convo-container ,
 :target ~ .convo-container .convo { display: none }
 
-/* .default-tab ~ .convo-container,
-.default-tab ~ .convo-container .convo { display: block; }
-.root { margin-top: -1em !important; } */
 
-/* #convo-1:target ~ .cookie-kingdom-2,
-#convo-2:target ~ .cookie-kingdom-2,
-#convo-3:target ~ .cookie-kingdom-1,
-#convo-4:target ~ .cookie-kingdom-1 {
-  display: none;
-} */
-
+/* display convo-container (parent div + p) of target  */
 :target ~ .convo-container .arrow,
 #convo-1:target ~ .cookie-kingdom-1,
 #convo-1:target ~ .convo-container .convo-1,
