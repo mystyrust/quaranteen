@@ -9,6 +9,10 @@ p.convo-break {
   padding-top: 94px;
 }
 
+.convo-spacer {
+  height: 30px;
+}
+
 .convo-icon {
   position: absolute;
   /* left: 0px; */
@@ -23,10 +27,11 @@ p.convo-break {
   background: purple;
   padding: 5px 9px;
   border-radius: 30px;
-  border: white solid 1px;
+  border: white solid 2px;
   position: absolute;
   color: white;
   z-index: 6;
+  font-family: sans-serif;
   /* left: 30px */
 }
 
@@ -58,6 +63,22 @@ p.convo-break {
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
+}
+
+.arrow {
+  position: absolute;
+  z-index: 10;
+  bottom: 20px;
+  display: none;
+  text-decoration: none;
+}
+
+.arrow-left {
+  left: -4px;
+}
+
+.arrow-right {
+  right: 4px;
 }
 
 .cookie-kingdom-1 {
@@ -129,6 +150,7 @@ p.convo-break {
   display: none;
 } */
 
+:target ~ .convo-container .arrow,
 #convo-1:target ~ .cookie-kingdom-1,
 #convo-1:target ~ .convo-container .convo-1,
 #convo-2:target ~ .cookie-kingdom-1,
@@ -137,11 +159,16 @@ p.convo-break {
 #convo-3:target ~ .convo-container .convo-3,
 #convo-4:target ~ .cookie-kingdom-2,
 #convo-4:target ~ .convo-container .convo-4,
-#vent:target ~ .vent {
-  display: block;
-}
-
 #convo-all:target ~ .convo-container, 
 #convo-all:target ~ .convo-container .convo {
   display: block;
+}
+
+#convo-all:target ~ .convo-container .arrow ,
+:target ~ .convo-spacer {
+  display: none !important;
+}
+
+#convo-all:target ~ .convo-spacer {
+  display: block !important;
 }
