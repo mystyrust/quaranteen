@@ -7,6 +7,7 @@ p.convo-break {
 .convo {
   position: relative;
   padding-top: 94px;
+  margin: unset; /* for ao3 */
 }
 
 .convo-spacer {
@@ -56,6 +57,7 @@ p.convo-break {
     display: block;
     /* flex-direction: column; */
     background-color: green;
+    /* margin-top: 30px; */
     padding: 10px;
     min-width: 300px;
     max-width: 416px;
@@ -71,6 +73,11 @@ p.convo-break {
   bottom: 20px;
   display: none;
   text-decoration: none;
+  color: transparent;
+}
+
+.arrow:visited , .arrow:hover {
+  color: transparent;
 }
 
 .arrow-left {
