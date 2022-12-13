@@ -2305,7 +2305,18 @@ text-align: left;
 #ask-jazz:target ~ .ask-jazz,
 #ask-tucker:target ~ .ask-tucker,
 #ask-none:target ~ .ask-none,
-#vent:target ~ .vent{
+#vent:target ~ .vent,
+
+:target[name='start'] ~ .start,
+:target[name='start2'] ~ .start2,
+:target[name='root'] ~ .root,
+:target[name='ask-elle'] ~ .ask-elle,
+:target[name='ask-sam'] ~ .ask-sam,
+:target[name='ask-jazz'] ~ .ask-jazz,
+:target[name='ask-tucker'] ~ .ask-tucker,
+:target[name='ask-none'] ~ .ask-none,
+:target[name='vent'] ~ .vent
+{
 display: block;
 margin-top: -1em;
 }
@@ -3317,11 +3328,17 @@ table.report-card {
 /* tabbing for ch 7 */
 #start-hack:target ~ .start-hack,
 #rest:target ~ .rest,
-#init:target ~ .init {
+#init:target ~ .init,
+
+:target[name='start-hack'] ~ .start-hack,
+:target[name='rest'] ~ .rest,
+:target[name='init'] ~ .init
+{
 display: block;
 margin-top: -1em;
 }
 
+:target[name='rest'] ~ .rest,
 #rest:target ~ .rest {
   overflow-x: hidden;
 }
