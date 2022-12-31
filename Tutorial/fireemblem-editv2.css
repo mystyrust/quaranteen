@@ -1,0 +1,425 @@
+p {
+  margin: 1.286em auto;
+  padding: 0;
+  line-height: 1.5;
+}
+
+.convo-container {
+  display: table;
+  padding: 10px;
+  min-width: 300px;
+  max-width: 416px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  font-family: sans-serif;
+  font-size: 13px;
+  background-color: green;
+}
+
+p.convo-break {
+  display: flex;
+  width: 100%;
+  margin: 0;
+}
+
+p.convo-pad {
+  display: flex;
+  width: 100%;
+  margin: 24em auto;
+}
+
+.gz {
+  background: url("https://i.imgur.com/ig6AvJU.png") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.gz2 {
+  background: url("https://i.imgur.com/Ys1XcUY.png") repeat center center scroll;
+  background-size: contain;
+  background-attachment: fixed;
+}
+
+.center {
+  text-align: center;
+  font-size: 20px;
+}
+
+.padding-up {
+  padding-top: 3.5em;
+}
+
+/* left aligned icon and dia */
+.convo-left {
+    min-height: 80px;
+    float: left;
+    display: flex;
+}
+
+.convo-left > p > .dia::after {
+content: '';
+border: 10px solid transparent;
+border-right-color: #8f8e8f;
+border-left: 0;
+position: absolute;
+left: -10px;
+top: 50%;
+margin-top: -10px;
+}
+
+/* .convo-left > p:nth-child(1) {
+  margin-top: 50%;
+} */
+
+.convo-left > p > .convo-icon {
+  max-width: 80px;
+  max-height: 80px;
+  min-width: 80px;
+  margin-right: 10px;
+  /* top: 50%; */
+}
+
+/* right aligned icon and dia */
+.convo-right {
+    float: right;
+    min-height: 80px;
+    display: flex;
+    margin-left: auto;
+}
+
+/* .convo-right > p > .dia {
+  text-align: right;
+} */
+
+/* .convo-right > p:nth-child(2) {
+  margin-top: 50%;
+} */
+
+.convo-right > p > .dia::after {
+  content: '';
+  border: 10px solid transparent;
+  border-left-color: #8f8e8f;
+  border-right: 0;
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  margin-top: -10px;
+}
+
+.convo-right > p > .convo-icon {
+  max-width: 80px;
+  max-height: 80px;
+  min-width: 80px;
+  margin-left: 10px;
+}
+
+.convo-icon {
+  max-width: 80px;
+  min-width: 80px;
+  margin: auto;
+  height: auto;
+}
+
+/* center the dialogue box */
+.convo-left > p:nth-child(1), .convo-right > p:nth-child(2) {
+  margin: auto;
+}
+
+.dia {
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  border: 2px solid #8f8e8f;
+  border-radius: 10px;
+  max-width: 470px;
+  padding: 10px;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  height: auto;
+  z-index: 5;
+}
+
+.dia-desc {
+  position: relative;
+  text-align: center;
+  border: 2px solid #8f8e8f;
+  border-radius: 10px;
+  max-width: 100px;
+  padding: 10px;
+  margin: 3% auto;
+}
+
+.dia-desc > p {
+  margin: 0;
+}
+
+.white {
+  background-color: white !important;
+  color: black !important;
+}
+
+.black {
+  background-color: black !important;
+  color: white !important;
+}
+
+/* ------------------------------------ thought bubbles ------------------------------------*/
+
+/* thought bubbles */
+.dia-thinking:before, 
+.dia-thinking:after {
+content: "";
+position: absolute;
+border-radius: 100%;
+background: white;
+border: none;
+
+}
+
+.convo-left > p > .dia-thinking:before {
+bottom: 0.5em;
+left: -1.5em;
+width: 1em;
+top: 40%;
+height: 1em;
+border: #8f8e8f;
+border-bottom-style: solid;
+border-left-style: solid;
+border-top-style: solid;
+border-width: thin;
+border-style: single;
+}
+
+.convo-left > p > .dia-thinking:after {
+bottom: 0.4em;
+left: -1em;
+top: 35%;
+width: 1.5em;
+height: 1.5em;
+border: #8f8e8f;
+border-bottom-style: solid;
+border-top-style: solid;
+border-width: thin;
+}
+
+.convo-right > p > .dia-thinking:before {
+bottom: 0.5em;
+right: -1.5em;
+width: 1em;
+top: 40%;
+height: 1em;
+border: #8f8e8f;
+border-bottom-style: solid;
+border-left-style: solid;
+border-top-style: solid;
+border-width: thin;
+border-style: single;
+}
+
+.convo-right > p > .dia-thinking:after {
+bottom: 0.4em;
+right: -1em;
+top: 35%;
+width: 1.5em;
+height: 1.5em;
+border: #8f8e8f;
+border-bottom-style: solid;
+border-top-style: solid;
+border-width: thin;
+}
+
+.dia-thinking {
+position: relative;
+display: inline-block;
+text-align: left;
+border: 2px solid #8f8e8f;
+border-radius: 10px;
+max-width: 470px;
+padding: 10px;
+margin-top: 3%;
+margin-bottom: 3%;
+height: auto;
+}
+
+.thinking-small:after, .thinking-small:before {
+  content: ''
+} 
+
+.convo-left .thinking-small:after {
+  left: -.5em !important;
+  /* top: 31% !important; */
+  width: 1em !important;
+  height: 1em !important;
+  }
+  .convo-left .thinking-small:before {
+  left: -1em !important;
+  width: 0.5em !important;
+  top: 40% !important;
+  height: 0.5em !important;
+  }
+  
+  .convo-right .thinking-small:after {
+  right: -0.75em !important;
+  /* left: -.5em !important; */
+  /* top: 31% !important; */
+  width: 1em !important;
+  height: 1em !important;
+  }
+  .convo-right .thinking-small:before {
+  /* left: -1em !important; */
+  
+  right: -1.1em !important;
+  width: 0.5em !important;
+  top: 40% !important;
+  height: 0.5em !important;
+  }
+
+/* ------------------------------------end thought bubbles------------------------------------*/
+/* ------------------------------------crk sneak peak ------------------------------------*/
+
+.crk-convo {
+  position: relative;
+  padding-top: 94px;
+  margin: unset; /* for ao3 */
+}
+
+.crk-convo-spacer {
+  height: 30px;
+}
+
+.crk-convo-icon {
+  position: absolute;
+  /* left: 0px; */
+  top: 0px;
+  width: auto;
+  height: 120px;
+  z-index: 4;
+}
+
+.nametag {
+  display: block;
+  background: purple;
+  padding: 5px 9px;
+  border-radius: 30px;
+  border: white solid 2px;
+  position: absolute;
+  color: white;
+  z-index: 6;
+  /* font-family: sans-serif; */
+  /* left: 30px */
+}
+
+.crk-convo-left .nametag {
+  left: 30px
+}
+
+.crk-convo-left .crk-convo-icon {
+  left: 0px;
+}
+
+.crk-convo-right .nametag {
+  right: 30px
+}
+
+.crk-convo-right .crk-convo-icon {
+  right: 0px;
+}
+
+
+.crk-convo-container {
+    display: block;
+    /* flex-direction: column; */
+    background-color: green;
+    /* margin-top: 30px; */
+    padding: 10px;
+    min-width: 300px;
+    max-width: 416px;
+    /* width: 300px;  600px */
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    font-size: 14px;
+  font-family: sans-serif;
+
+}
+
+.arrow {
+  position: absolute;
+  z-index: 10;
+  bottom: 20px;
+  /* display: none; */
+  text-decoration: none;
+  color: transparent;
+}
+
+.arrow:visited , .arrow:hover {
+  color: transparent;
+}
+
+.arrow-left {
+  left: -4px;
+}
+
+.arrow-right {
+  right: 4px;
+}
+
+.cookie-kingdom-1 {
+  background: url("https://i.imgur.com/SxyUvPO.png") repeat center center scroll;
+  background-size: contain;
+  background-attachment: fixed;
+}
+
+.cookie-kingdom-2 {
+  background: url("https://i.imgur.com/VUYu9yo.png") repeat center center scroll;
+  background-size: contain;
+  background-attachment: fixed;
+}
+
+.crk-dia {
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  border: 2px solid #8f8e8f;
+  max-width: 470px;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  width: 90%;
+  height: 50px;
+  padding: 19px 16px 10px 16px;
+  z-index: 5;
+  border-radius: 47px;
+  /* font-family: sans-serif; */
+  background-color: white !important;
+  color: black !important;
+}
+
+.crk-convo-2 .crk-convo-icon {
+  transform: scaleX(-1);
+}
+
+/* ------------------------------------ end crk sneak peak ------------------------------------*/
+
+/* ------------------------------------ offline look ------------------------------------*/
+.hide {
+  display: none;
+}
+
+.bg-convo-icon {
+  width: 80px;
+    height: 80px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-right: 10px;
+}
+
+.bg-flex-p {
+  display: flex;
+}
+.bg-dia-span {
+  display: block;
+  margin: auto;
+}
+.danny-1 {
+  background-image: url(https://i.imgur.com/3EsrGVC.png);
+}
