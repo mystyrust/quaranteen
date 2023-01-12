@@ -23,6 +23,11 @@ p.zoom-msg {
   font-weight: bold;
   color: black;
   font-family: "Arial Black", Gadget, sans-serif;
+  display: block;
+}
+
+span.amongus-room {
+  padding: 2em;
 }
 
 .amongus-chatbox {
@@ -35,6 +40,8 @@ p.zoom-msg {
   padding-right: 1em;
   padding-left: 1em;
   background-color: rgb(171,177,187);
+  display: block;
+  line-height: 1.5;
 }
 
 .amongus-msg {
@@ -51,10 +58,12 @@ p.zoom-msg {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-div.amongus-msg > p {
+div.amongus-msg > p,
+ span.amongus-msg > span {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   line-height: 1em;
+  display: block;
 }
 
 .amongus-vote {
@@ -63,12 +72,21 @@ div.amongus-msg > p {
   width: 93%;
 }
 
+span.amongus-vote span {
+  margin: 0;
+}
+
 .amongus-vote-msg {
   padding-top: 0.4em;
   margin-left: 60px;
   font-size: small;
   font-weight: bold;
   color: green;
+}
+
+span.amongus-vote-msg {
+  margin: 8px 0 auto 60px !important;
+  /* display: block; */
 }
 
 div.amongus-vote > p {
@@ -932,6 +950,7 @@ padding: 0;
 }
 
 .new-twBody {
+display: block;
 border: .05em solid #ddd;
 border-radius: .3em;
 }
@@ -1013,6 +1032,8 @@ margin: 0.5em 0em -1em -1em;
 font-weight: bold;
 font-size: larger;
 margin-bottom: -0.1em;
+display: block;
+line-height: 1.5em;
 }
 
 .new-twUserEmbed {
@@ -1044,6 +1065,8 @@ color: #1DA1F2;
 .new-twStats {
 width: 100%;
 opacity: 0.6;
+display: block;
+line-height: 1.5em;
 }
 
 .new-twTime {
@@ -1058,6 +1081,7 @@ padding-top: 0.5em;
 margin-top: 0.5em;
 border-top: .05em solid #ddd;
 color: #1DA1F2;
+display: block;
 }
 
 /*Formatting for Reply Tag*/
@@ -2204,7 +2228,9 @@ padding-left: 3em;
   color: #777777;
 }
 
-.tw-profile-container div.new-twText {
+.tw-profile-container div.new-twText ,
+.tw-profile-container span.new-twText 
+ {
   padding: 7px 3px;
 }
 
@@ -2821,7 +2847,9 @@ display: block !important;
 .physical-center {
     display: block;
     text-align: center;
+    line-height: 1.5;
 }
+
 
 .handwriting {
   width: 60%;
@@ -2862,6 +2890,10 @@ tr:hover,td:hover { background: none; }
   box-shadow: 3px 3px 3px rgba(0,0,0,.2),0px 0px 6px rgba(0,0,0,.2);
 }
 
+span.paper {
+  display: table;
+}
+
 .paper::before {
   content: '';
   display: block;
@@ -2895,6 +2927,7 @@ tr:hover,td:hover { background: none; }
   margin-top: 84px;
   margin-bottom: 10px;
   color: #000000;
+  display: block;
   font-weight: bold;
   text-decoration: underline;
   font-family: helvetica neue, helvetica, arial, sans-serif;
@@ -2906,7 +2939,12 @@ tr:hover,td:hover { background: none; }
   font-size: 15px;
   line-height: 25px;
   color: #000000;
+  display: block;
   font-family: helvetica neue, helvetica, arial, sans-serif;
+}
+
+span.textwmar {
+  margin-left: 10% !important;
 }
 
 .textwmar p {
@@ -3005,6 +3043,11 @@ tr:hover,td:hover { background: none; }
   position: relative;
 }
 
+span.letter-doc {
+  line-height: 1.5;
+  margin-top: 2em;
+}
+
 .letter-doc.dna:before, .letter-doc.dna:after {
   content: "";
   height: 98%;
@@ -3034,6 +3077,13 @@ tr:hover,td:hover { background: none; }
     display: inline-block;
 }
 
+.donut-beginnotes {
+  margin: 1.286em auto;
+  padding: 0;
+  line-height: 1.5;
+  display: block;
+}
+
 .donut-chart-block {
   background: #fafafa;
   display: inline-block;
@@ -3044,20 +3094,27 @@ tr:hover,td:hover { background: none; }
 .donut-caption {
   text-align: center;
   margin-top: -2em;
+  display: block;
 }
 
 .donut-desc {
   text-align: center;
   margin-bottom: -1em;
+  display: block;
 }
 
 .donut-row {
   display: table;
-  margin: 0 auto;
+  margin: 0.5em auto;
 }
 
 .donut-endnotes {
   margin-top: -0.5em;
+}
+
+span.donut-endnotes {
+  margin-top: 1em;
+  display: block;
 }
 
 .donut-chart {
@@ -3065,7 +3122,8 @@ tr:hover,td:hover { background: none; }
   width: 200px;
   height: 200px;
   transform: scale(0.6) translate(-50px, 0px);
-  border-radius: 100%
+  border-radius: 100%;
+  display: block;
 }
 
 .donut-chart .center {
@@ -3212,7 +3270,8 @@ tr:hover,td:hover { background: none; }
   padding-top: 47px; */
   font-size: 40px;
   text-align: center;
-  margin-top: 1.1em;
+  margin-top: 1em;
+  display: block;
 }
 
 
@@ -3261,12 +3320,13 @@ tr:hover,td:hover { background: none; }
 
 
 /* report card */
-table.report-card {
+table.report-card, span.report-card {
   border-collapse: collapse;
-  margin: auto;
+  margin: 1.5em auto;
   width: 60%;
   text-align: left;
   border: 1px solid #ddd;
+  display: table;
 }
 
 .report-card thead tr {
@@ -3280,8 +3340,24 @@ table.report-card {
     color: black;
 }
 
+.table-tr {
+  display: table-row;
+}
+
+.table-th {
+  background-color: #ddd;
+}
+
+.table-td , .table-th {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+    color: #000;
+    display: table-cell;
+}
+
 /* adoption certificate */
 .cert-cont{
+  display: block;
   border-style: dotted dashed;
   border-color: firebrick;
   background-color: #fafafa;
@@ -3397,6 +3473,7 @@ table.report-card {
 
 .maxw300 {
   max-width: 300px;
+  padding-bottom: 10px;
 }
 
 /* tabbing for ch 7 */
