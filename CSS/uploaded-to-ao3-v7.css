@@ -134,11 +134,11 @@ div.amongus-player > p.amongus-content > span.amongus-text {
   float: right;
 }
 
-div.amongus-player > p > img.amongus-avi {
+div.amongus-player  img.amongus-avi {
   transform: translate(465%) scaleX(-1);
 }
 
-div.amongus-player > p > img.amongus-icon {
+div.amongus-player  img.amongus-icon {
   transform: translate(870%);
 }
 
@@ -202,6 +202,11 @@ div.amongus-player > p > img.amongus-icon {
   font-size: 13px;
   display: table;
   margin: auto;
+}
+
+span.messagebody  {
+  line-height: 19.5px;
+  /* line-height: 1.5; */
 }
 
 .messagebody {
@@ -717,13 +722,20 @@ div.amongus-player > p > img.amongus-icon {
   font-size: 13px;
 }
 
-p.convo-break {
+.convo-break {
   display: flex;
   width: 100%;
   margin: 0;
+  height: 0;
 }
 
-p.convo-pad {
+/* span ~ br {
+  height: 0;
+  line-height: 0;
+  display: none;
+} */
+
+.convo-pad {
   display: flex;
   width: 100%;
   margin: 24em auto;
@@ -789,12 +801,19 @@ p.convo-pad {
   display: flex;
 }
 
-.convo-left > p:nth-child(1), .convo-right > p:nth-child(2) {
+span.convo-left, span.convo-right {
+  line-height: 19.5px;
+}
+
+.convo-left > p:nth-child(1), 
+.convo-right > p:nth-child(2) ,
+.convo-left > span,
+.convo-right > span  {
   margin-top: auto;
   margin-bottom: auto;
 }
 
-.convo-left > p > .dia::after {
+.convo-left  .dia::after {
   content: '';
   border: 10px solid transparent;
   border-right-color: #8f8e8f;
@@ -809,7 +828,7 @@ p.convo-pad {
   filter: grayscale(0.4);
 }
 
-.convo-left > p > .convo-icon {
+.convo-left  .convo-icon {
   max-width: 80px;
   max-height: 80px;
   min-width: 80px;
@@ -823,7 +842,7 @@ p.convo-pad {
   margin-left: auto;
 }
 
-.convo-right > p > .dia::after {
+.convo-right  .dia::after {
   content: '';
   border: 10px solid transparent;
   border-left-color: #8f8e8f;
@@ -834,7 +853,7 @@ p.convo-pad {
   margin-top: -10px;
 }
 
-.convo-right > p > .convo-icon {
+.convo-right  .convo-icon {
   max-width: 80px;
   max-height: 80px;
   min-width: 80px;
@@ -1222,7 +1241,7 @@ box-shadow: 0 1px 7px rgba(0,0,0,0.12), 0 1px 5px rgba(0,0,0,0.24);
 /* box-shadow: 0 1px 7px rgb(0 0 0 / 12%), 0 1px 5px rgb(0 0 0 / 24%); */
 }
 
-/* .fic.fic-shadow > p > span.tags, .fic.fic-shadow > p:nth-child(2) > b:nth-child(3) > span {
+/* .fic.fic-shadow  span.tags, .fic.fic-shadow > p:nth-child(2) > b:nth-child(3) > span {
 margin-left: 0.5em;
 } */
 
@@ -1634,7 +1653,7 @@ background: linear-gradient(to bottom, rgba(255,255,255, 0), white);
 width: 103% !important;
 margin-left: -16px;
 }
-.fic.fadeout, .fic.fadeout > p > span.rtag , .fic.fadeout > p > span.tags {
+.fic.fadeout, .fic.fadeout  span.rtag , .fic.fadeout  span.tags {
 color: #777777 !important;
 }
 
@@ -1689,6 +1708,7 @@ padding: 10px 0;
 max-width: 300px;
 margin-left: auto;
 margin-right: auto;
+display: block;
 }
 
 p {
@@ -1880,8 +1900,11 @@ border-bottom: 1px solid #b1b1b3;
 
 .dm-contact {
 /* padding-top: 1em; */
-padding-bottom: 1em;
-border-bottom: 1px solid #b1b1b3;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #b1b1b3;
+  display: block;
+  margin: 1.286em auto;
+  line-height: 1.5;
 }
 
 /* .dm-contact > span {
@@ -1990,6 +2013,7 @@ padding-left: 3em;
 
 .dm-typebox {
     position: relative;
+    display: block;
     background-color: white;
     border: solid thin #1da1f3;
     height: 1.5em;
@@ -2017,6 +2041,10 @@ padding-left: 3em;
     margin-top: .3em;
     cursor: pointer;
 }
+
+/* span.dm-type::before {
+  margin-right: 1.2em;
+} */
 
 .tw-mention {
     color: #007aff;
@@ -2293,6 +2321,7 @@ text-align: left;
 .tab, 
 .tab0,
 :target ~ .default-tab { display: none }
+p:has(:target) ~ .default-tab { display: none }
 
 .default-tab { display: block; }
 .root { margin-top: -1em !important; }
@@ -2315,7 +2344,18 @@ text-align: left;
 :target[name='ask-jazz'] ~ .ask-jazz,
 :target[name='ask-tucker'] ~ .ask-tucker,
 :target[name='ask-none'] ~ .ask-none,
-:target[name='vent'] ~ .vent
+:target[name='vent'] ~ .vent,
+
+p:has(:target[name='start']) ~ .start,
+p:has(:target[name='start2']) ~ .start2,
+p:has(:target[name='root']) ~ .root,
+p:has(:target[name='ask-elle']) ~ .ask-elle,
+p:has(:target[name='ask-sam']) ~ .ask-sam,
+p:has(:target[name='ask-jazz']) ~ .ask-jazz,
+p:has(:target[name='ask-tucker']) ~ .ask-tucker,
+p:has(:target[name='ask-none']) ~ .ask-none,
+p:has(:target[name='vent']) ~ .vent
+
 {
 display: block;
 margin-top: -1em;
@@ -2333,8 +2373,30 @@ position: relative;
 width: initial;
 } */
 
+p.span-cont {
+  line-height: 19.5px;
+}
+
+.h3 {
+  font-size: 1.286em;
+  line-height: 1;
+  outline: 0;
+  margin: 0.5375em 0;
+  font-weight: 500;
+  font-family: Georgia,serif;
+  font-style: inherit;
+  word-wrap: break-word;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  vertical-align: baseline;
+}
+
 .anh {
 border: none;
+display: block;
 /* color: #2a2a2a; */
 /* color: inherit; */
 /* padding: 0em 3em; */
@@ -2356,11 +2418,15 @@ border-bottom: none;
 /* padding: 0em 4.5em; */
 padding: 0px 3.5em;
 margin-top: 0px;
+margin-bottom: 19px;
+display: block;
 }
 
 .bline {
 text-align: right;
 float: right;
+display: block;
+margin: 19px 0;
 }
 
 a.button-end {
@@ -2468,6 +2534,7 @@ float: left;
 margin-top: 60px;
 width: 50%;
 border-bottom: none;
+line-height: 19.5px;
 }
 
 .cyoa-choice-5 span {
@@ -2525,7 +2592,7 @@ border: none;
 
 }
 
-.convo-left > p > .dia-thinking:before {
+.convo-left  .dia-thinking:before {
 bottom: 0.5em;
 left: -1.5em;
 width: 1em;
@@ -2539,7 +2606,7 @@ border-width: thin;
 border-style: single;
 }
 
-.convo-left > p > .dia-thinking:after {
+.convo-left  .dia-thinking:after {
 bottom: 0.4em;
 left: -1em;
 top: 35%;
@@ -2551,7 +2618,7 @@ border-top-style: solid;
 border-width: thin;
 }
 
-.convo-right > p > .dia-thinking:before {
+.convo-right  .dia-thinking:before {
 bottom: 0.5em;
 right: -1.5em;
 width: 1em;
@@ -2565,7 +2632,7 @@ border-width: thin;
 border-style: single;
 }
 
-.convo-right > p > .dia-thinking:after {
+.convo-right  .dia-thinking:after {
 bottom: 0.4em;
 right: -1em;
 top: 35%;
@@ -2636,7 +2703,7 @@ position: absolute;
 }
 
 .tall {
-height: 35em;
+height: 30em;
 }
 
 .tall-fadeout:before {
@@ -2735,6 +2802,13 @@ background-attachment: fixed;
 #chapter-6 #notes p {
 display: none;
 }
+
+/* #chapter-6 span, #chapter-7 span
+{
+  margin: 1.286em auto;
+  padding: 0;
+  line-height: 1.5;
+} */
 
 blockquote.userstuff p {
 display: block !important;
@@ -3332,13 +3406,18 @@ table.report-card {
 
 :target[name='start-hack'] ~ .start-hack,
 :target[name='rest'] ~ .rest,
-:target[name='init'] ~ .init
+:target[name='init'] ~ .init,
+
+p:has(:target[name='start-hack'])~ .start-hack,
+p:has(:target[name='rest']) ~ .rest,
+p:has(:target[name='init']) ~ .init
 {
 display: block;
 margin-top: -1em;
 }
 
 :target[name='rest'] ~ .rest,
+p:has(:target[name='rest']) ~ .rest,
 #rest:target ~ .rest {
   overflow-x: hidden;
 }
