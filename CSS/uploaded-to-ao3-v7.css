@@ -2347,7 +2347,6 @@ text-align: left;
 .tab, 
 .tab0,
 :target ~ .default-tab { display: none }
-p:has(:target) ~ .default-tab { display: none }
 
 .default-tab { display: block; }
 .root { margin-top: -1em !important; }
@@ -2370,17 +2369,7 @@ p:has(:target) ~ .default-tab { display: none }
 :target[name='ask-jazz'] ~ .ask-jazz,
 :target[name='ask-tucker'] ~ .ask-tucker,
 :target[name='ask-none'] ~ .ask-none,
-:target[name='vent'] ~ .vent,
-
-p:has(:target[name='start']) ~ .start,
-p:has(:target[name='start2']) ~ .start2,
-p:has(:target[name='root']) ~ .root,
-p:has(:target[name='ask-elle']) ~ .ask-elle,
-p:has(:target[name='ask-sam']) ~ .ask-sam,
-p:has(:target[name='ask-jazz']) ~ .ask-jazz,
-p:has(:target[name='ask-tucker']) ~ .ask-tucker,
-p:has(:target[name='ask-none']) ~ .ask-none,
-p:has(:target[name='vent']) ~ .vent
+:target[name='vent'] ~ .vent
 
 {
 display: block;
@@ -2606,7 +2595,8 @@ max-width: 470px;
 padding: 10px;
 height: auto;
 width: auto;
-line-height: 1.5;
+/* line-height: 1.5; */
+line-height: 19.5px;
 }
 
 .dia-thinking:before, 
@@ -2942,10 +2932,6 @@ span.paper {
   color: #000000;
   display: block;
   font-family: helvetica neue, helvetica, arial, sans-serif;
-}
-
-span.textwmar {
-  margin-left: 10% !important;
 }
 
 .textwmar p {
@@ -3484,18 +3470,13 @@ table.report-card, span.report-card {
 
 :target[name='start-hack'] ~ .start-hack,
 :target[name='rest'] ~ .rest,
-:target[name='init'] ~ .init,
-
-p:has(:target[name='start-hack'])~ .start-hack,
-p:has(:target[name='rest']) ~ .rest,
-p:has(:target[name='init']) ~ .init
+:target[name='init'] ~ .init
 {
 display: block;
 margin-top: -1em;
 }
 
 :target[name='rest'] ~ .rest,
-p:has(:target[name='rest']) ~ .rest,
 #rest:target ~ .rest {
   overflow-x: hidden;
 }
