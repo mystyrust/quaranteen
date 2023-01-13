@@ -738,6 +738,8 @@ span.messagebody  {
   border-radius: 10px;
   font-family: sans-serif;
   font-size: 13px;
+  /* width: -webkit-fill-available;
+  width: -moz-available; */
 }
 
 .convo-break {
@@ -1718,6 +1720,10 @@ margin-bottom: -10em; */
 position: relative;
 /* transform: rotate(45deg); */
 }
+
+/* .img-holder.vacc {
+  filter: drop-shadow(5px 5px 1px #fff);
+} */
 
 .img-text {
 margin: 0;
