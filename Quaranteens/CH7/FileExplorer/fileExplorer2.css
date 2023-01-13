@@ -74,6 +74,7 @@
     padding: 4px;
     /* display: inline-block; */
     width: -webkit-fill-available;
+    width: -moz-available;
     text-decoration: none;
     display: inline-flex;
     border-bottom: none;
@@ -114,7 +115,7 @@
     display: table-cell;
     position: relative;
     width: 400px;
-    height: 200px;
+    /* height: 200px; */
     /* border: blue solid thin; */
 }
 
@@ -169,6 +170,7 @@
     margin-top: -20px;
     max-width: 400px;
     width: -webkit-fill-available;
+    width: -moz-available;
     top: 20px;
     height: 200px;
     overflow: auto;
@@ -257,6 +259,7 @@
     max-width: 400px;
     margin-top: -20px;
     width: -webkit-fill-available;
+    width: -moz-available;
     height: 200px;
     overflow: auto;
     /* margin-top: 244px; */
