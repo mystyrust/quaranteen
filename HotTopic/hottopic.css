@@ -1821,6 +1821,8 @@ p {
   text-align: center;
   text-transform: capitalize;
   display: table;
+  background: #e5e5ea;
+  color: black;
 }
 
 .messagebody {
