@@ -749,6 +749,11 @@ span.messagebody  {
   height: 0;
 }
 
+.span-block
+{
+  display: block;
+}
+
 /* span ~ br {
   height: 0;
   line-height: 0;
