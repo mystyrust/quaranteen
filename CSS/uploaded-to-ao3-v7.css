@@ -100,6 +100,7 @@ div.amongus-vote > p {
   z-index: 1;
   margin-right: 0.5em;
   margin-left: 0.4em;
+  margin-top: -2px;
 }
 
 .amongus-icon {
@@ -120,6 +121,7 @@ div.amongus-vote > p {
   font-size: small;
   margin-top: 0.3em;
   margin-right: 0.3em;
+  display: block;
 }
 
 .amongus-content {
@@ -2574,6 +2576,9 @@ text-align: left;
 border: 2px solid #8f8e8f;
 border-radius: 10px;
 max-width: 470px;
+/* min-width: 0px;
+width: fit-content;
+font-size: 14px !important; */
 padding: 10px;
 margin-top: 3%;
 margin-bottom: 3%;
@@ -2833,9 +2838,7 @@ display: none;
 
 /* #chapter-6 span, #chapter-7 span
 {
-  margin: 1.286em auto;
-  padding: 0;
-  line-height: 1.5;
+  box-sizing: content-box;
 } */
 
 blockquote.userstuff p {
@@ -2945,8 +2948,16 @@ span.paper {
   font-family: helvetica neue, helvetica, arial, sans-serif;
 }
 
-.textwmar p {
+.textwmar p , .textwmar span {
     line-height: unset;
+}
+
+span.p-block {
+  display: block;
+}
+
+span.bottom-margin {
+  margin-bottom: 25px;
 }
 
 .bullet-outside {
