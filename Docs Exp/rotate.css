@@ -39,6 +39,14 @@
         /* transform: rotate(-36000000deg); */
 } 
 
+.cursor-test , .circle:hover{
+    cursor: url(https://img.icons8.com/emoji/128/null/green-circle-emoji.png) 64 64, auto;
+}
+
+.circle:hover {
+    background-color: blue;
+}
+
 .circle {
     /* display: block;
     margin: 0 auto;
@@ -66,7 +74,243 @@
     /* transition: transform 100s linear; */
     transition: 1000s transform 0.3s linear;
     visibility: visible;
+    z-index: 10;
 
     /* box-shadow: 2px 4px 10px -1px #bbb; */
 }
+
+/* ---------------------------- flashlight gimmick ----------------------------*/
+  
+
+/* html,
+body {
+  height: 100%;
+  margin: 0;
+} */
+
+.flashlight-container span:not(.above-flashlight, .below-flashlight)
+{
+    display: block;
+}
+
+.flashlight-container-bg {
+    height: 380px;
+    width: 380px;
+    display: block;
+    position: relative;
+    background: orange;
+    /* background: url(https://interactive-examples.mdn.mozilla.net/media/examples/border-diamonds.png); */
+    margin: 0 auto;
+    z-index: 1;
+    overflow: hidden;
+    /* background: black;
+    color: black; */
+  }
+  
+  .flashlight-container span:not(.flashlight-cursor),
+  .flashlight-container span:not(.flashlight-cursor)
+   {
+   /* background:pink; */
+    transition: all 0.5s ease;
+    z-index: 3;
+    margin: 0;
+    display: inline-flex;
+    width: 20%;
+    height: 20%;
+  /*  pointer-events: none; */
+   /*  border-radius: 70%; */
+  }
+  
+  .flashlight-container span:hover, .flashlight-container span:hover {
+    background: transparent; 
+    border-radius: 100%;
+  
+  /*   border: green solid 1px; */
+  }
+  
+  /*
+  .flashlight-container-bg:hover {
+    background: green!important;
+  }
+  */
+  
+  .flashlight-text{
+    position: absolute;
+    z-index:1;
+    display: none;
+  }
+  
+  .above-flashlight {
+    z-index: 11;
+    /* pointer-events: none; */
+    color: pink;
+    position: absolute; 
+    height: 100%;
+    width: 100%;
+   /* font-size: 14px; */
+  }
+  .below-flashlight, .below-flashlight a {
+    font-size: 20px; 
+    color: red;
+    /* z-index: 10 !important; */
+  }
+  
+  /* kontener na pełną wysokość */
+  .flashlight-container {
+    height: 100%;
+    width: 100%; 
+    /* position: absolute; */
+    z-index:2;
+    /* background: pink; */
+  }
+   
+  /* elementy po 20%
+     szerokości i wysokości,
+     czyli siatka 5x5
+  */
+  .flashlight-container p ,
+    .flashlight-container span {
+    width: 20%;
+    height: 20%;
+    float: left;
+  /* a to tylko po to,
+     aby wyświetlić
+     tekst w środku
+  */
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+  }
+  
+  .flashlight-container .flashlight-cursor {
+    position: absolute;
+    left: -20%;
+    top: -20%;
+    transform: translate(-50%, -50%);
+  /*  background: transparent; */
+    width: 100px;
+    height: 100px;
+    border-radius:70%;
+    border: rgb(255, 0, 0, 0.9) solid 5px; 
+    /* border-image: ; */
+    transition: all 0.5s ease;
+    z-index: 1;
+  
+   /* background: radial-gradient(circle, transparent 0%, red 100%); */
+    
+  /*  border-image-source: linear-gradient(to bottom, transparent, red);
+    border-image-slice: 1; */
+    
+     /* pointer-events: none; */
+  }
+  
+  .clipped-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(https://assets.digitalocean.com/labs/images/community_bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+  }
+  
+  .clipped-img.test{
+      width: 100%!important;
+      height: 100%!important;
+     z-index: 0;
+  }
+
+
+  .flashlight-container .span:hover ~ .test {
+    
+  }
+   
+  /* ustalamy left dla obiektu
+     względem kolumn
+  */
+  .flashlight-container span:nth-of-type(1):hover~.flashlight-cursor,
+  .flashlight-container span:nth-of-type(6):hover~.flashlight-cursor,
+  .flashlight-container span:nth-of-type(11):hover~.flashlight-cursor,
+  .flashlight-container span:nth-of-type(16):hover~.flashlight-cursor,
+  .flashlight-container span:nth-of-type(21):hover~.flashlight-cursor {
+    left: 10%;
+  }
+   
+  .flashlight-container span:nth-of-type(2):hover~.flashlight-cursor,
+  .flashlight-container span:nth-of-type(7):hover~.flashlight-cursor,
+  .flashlight-container span:nth-of-type(12):hover~.flashlight-cursor,
+  .flashlight-container span:nth-of-type(17):hover~.flashlight-cursor,
+  .flashlight-container span:nth-of-type(22):hover~.flashlight-cursor {
+    left: 30%;
+  }
+   
+  .flashlight-container span:nth-of-type(3):hover~.flashlight-cursor,
+  .flashlight-container span:nth-of-type(8):hover~.flashlight-cursor,
+  .flashlight-container span:nth-of-type(13):hover~.flashlight-cursor,
+  .flashlight-container span:nth-of-type(18):hover~.flashlight-cursor,
+  .flashlight-container span:nth-of-type(23):hover~.flashlight-cursor {
+    left: 50%;
+  }
+   
+  .flashlight-container span:nth-of-type(4):hover~.flashlight-cursor,
+  .flashlight-container span:nth-of-type(9):hover~.flashlight-cursor,
+  .flashlight-container span:nth-of-type(14):hover~.flashlight-cursor,
+  .flashlight-container span:nth-of-type(19):hover~.flashlight-cursor,
+  .flashlight-container span:nth-of-type(24):hover~.flashlight-cursor {
+    left: 70%;
+  }
+   
+  .flashlight-container span:nth-of-type(5):hover~.flashlight-cursor,
+  .flashlight-container span:nth-of-type(10):hover~.flashlight-cursor,
+  .flashlight-container span:nth-of-type(15):hover~.flashlight-cursor,
+  .flashlight-container span:nth-of-type(20):hover~.flashlight-cursor,
+  .flashlight-container span:nth-of-type(25):hover~.flashlight-cursor {
+    left: 90%;
+  }
+   
+  /* a tu ustalamy top dla obiektu
+     względem wierszy
+  */
+  .flashlight-container span:nth-of-type(1):hover~.flashlight-cursor,
+  .flashlight-container span:nth-of-type(2):hover~.flashlight-cursor,
+  .flashlight-container span:nth-of-type(3):hover~.flashlight-cursor,
+  .flashlight-container span:nth-of-type(4):hover~.flashlight-cursor,
+  .flashlight-container span:nth-of-type(5):hover~.flashlight-cursor {
+    top: 10%;
+  }
+   
+  .flashlight-container span:nth-of-type(6):hover~.flashlight-cursor,
+  .flashlight-container span:nth-of-type(7):hover~.flashlight-cursor,
+  .flashlight-container span:nth-of-type(8):hover~.flashlight-cursor,
+  .flashlight-container span:nth-of-type(9):hover~.flashlight-cursor,
+  .flashlight-container span:nth-of-type(10):hover~.flashlight-cursor {
+    top: 30%;
+  }
+   
+  .flashlight-container span:nth-of-type(11):hover~.flashlight-cursor,
+  .flashlight-container span:nth-of-type(12):hover~.flashlight-cursor,
+  .flashlight-container span:nth-of-type(13):hover~.flashlight-cursor,
+  .flashlight-container span:nth-of-type(14):hover~.flashlight-cursor,
+  .flashlight-container span:nth-of-type(15):hover~.flashlight-cursor {
+    top: 50%;
+  }
+   
+  .flashlight-container span:nth-of-type(16):hover~.flashlight-cursor,
+  .flashlight-container span:nth-of-type(17):hover~.flashlight-cursor,
+  .flashlight-container span:nth-of-type(18):hover~.flashlight-cursor,
+  .flashlight-container span:nth-of-type(19):hover~.flashlight-cursor,
+  .flashlight-container span:nth-of-type(20):hover~.flashlight-cursor {
+    top: 70%;
+  }
+   
+  .flashlight-container span:nth-of-type(21):hover~.flashlight-cursor,
+  .flashlight-container span:nth-of-type(22):hover~.flashlight-cursor,
+  .flashlight-container span:nth-of-type(23):hover~.flashlight-cursor,
+  .flashlight-container span:nth-of-type(24):hover~.flashlight-cursor,
+  .flashlight-container span:nth-of-type(25):hover~.flashlight-cursor {
+    top: 90%;
+  }
 

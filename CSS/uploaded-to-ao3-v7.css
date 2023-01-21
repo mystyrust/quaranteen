@@ -840,6 +840,17 @@ span.convo-left, span.convo-right {
   margin-bottom: auto;
 }
 
+/* .convo-left > span,
+.convo-right > span,
+.cyoa-choice-5,
+.cyoa-choice-5 span,
+.button-end,
+.button-end span,
+.bline.actions
+ {
+  font-size: 13px;
+} */
+
 .convo-left  .dia::after {
   content: '';
   border: 10px solid transparent;
