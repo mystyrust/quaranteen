@@ -579,3 +579,8 @@ h3.heading {
   right: 10px;
   opacity: .2;
 }
+
+
+figure {
+  margin: 0px;
+}
