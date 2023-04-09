@@ -18,10 +18,14 @@
     width: 20%;
 } */
 
-.anh.region , .fakenotes , .bline.actions {
+.expanded::after,#workskin .collapsed::after{
+    display:none
+}
+
+/* .anh.region , .fakenotes , .bline.actions {
     font-family: initial;
     font-size: initial;
-}
+} */
 
 a.expanded, 
 .expandable.hidden, 
