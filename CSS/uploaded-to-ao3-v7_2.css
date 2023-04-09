@@ -1,7 +1,27 @@
-.cyoa-choice-5 {
-    display: inline;
+/* .cyoa-choice-5 {
+    display: inline-block;
+} */
+
+/* .convo-container.choices {
+    max-width: unset;
+    min-width: unset;
+    display: block;
 }
 
+.cyoa-choice-5.right {
+    margin-right: 25%;
+    width: 20%;
+}
+
+.cyoa-choice-5.left {
+    margin-left: 30%;
+    width: 20%;
+} */
+
+.anh.region , .fakenotes , .bline.actions {
+    font-family: initial;
+    font-size: initial;
+}
 
 a.expanded, 
 .expandable.hidden, 
@@ -50,33 +70,43 @@ a.expanded,
 }
 
 .expanded ~ .expanded ~ .expanded ~ .expanded ~ .expanded ~ .rootTabStuff,
+.expanded ~ .expanded ~ .expanded ~ .expanded ~ .expanded ~ .startTabStuff,
 #start:target ~ .root .rootTabStuff,
 #start2:target ~ .root .rootTabStuff
 {
-    display: none;
+    display: none !important;
 }
 
 /* customizations within .root */
 #start:target ~ .root .startTabStuff,
 #start2:target ~ .root .start2TabStuff
 {
-    display: block !important;
+    display: block;
 }
 
 #start:target ~ .root .startTabStuff.convo-container,
 #start2:target ~ .root .start2TabStuff.convo-container
 {
-    display: table;
+    display: block;
 }
 
 .expanded ~ .expanded ~ .expanded ~ .expanded ~ .expanded ~ .start2TabStuff {
     display: block;
 }
 
-.convo-container.choices {
-    max-width: unset;
-    min-width: unset;
-    display: block;
+.cyoa-start-over.start2
+{
+    display: none;
+}
+
+.root:has(.expanded ~ .expanded ~ .expanded ~ .expanded ~ .expanded) ~ .tab .cyoa-start-over.start2
+{
+    display: inline-block;
+}
+
+.root:has(.expanded ~ .expanded ~ .expanded ~ .expanded ~ .expanded) ~ .tab .cyoa-start-over.start1
+{
+    display: none;
 }
 
 /* to dos:
@@ -86,4 +116,5 @@ update x images in start and start2
 -combine root and start (and start2?) but flip the endnotes / dialogues
 -make start2 separate tab?? make it show, its not showing
 update css for ao3 friendly (collapsed/ expanded)
+fix 4 + 1 + 1 choices view on mobile 
 */
