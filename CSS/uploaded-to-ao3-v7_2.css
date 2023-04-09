@@ -1,0 +1,89 @@
+.cyoa-choice-5 {
+    display: inline;
+}
+
+
+a.expanded, 
+.expandable.hidden, 
+.expandable.askNoneBtn {
+    display: none !important;
+}
+
+.ventBtn, .askNoneBtn {
+    display: none;
+}
+
+.expanded ~ .askNoneBtn {
+    display: inline-block;
+}
+
+.expanded ~ .expanded ~ .expanded ~ .expanded ~ .expanded ~ .ventBtn {
+    display: inline-block;
+}
+
+/* .expandable.placeholder {
+    display: none;
+} */
+
+/* .expanded:nth-of-type(3) ~ .ventBtn {
+    display: inline-block;
+} */
+
+#ask-sam:target ~ .default-tab,
+#ask-tucker:target ~ .default-tab,
+#ask-jazz:target ~ .default-tab,
+#ask-elle:target ~ .default-tab,
+#ask-none:target ~ .default-tab,
+#vent:target ~ .default-tab
+{
+    display: none;
+}
+
+.startTabStuff, .start2TabStuff {
+    display: none;
+}
+
+#start:target ~ .root, /* after making 1 choice */
+#start2:target ~ .root /* after making all 5 choices */
+{
+    display: block !important;
+}
+
+.expanded ~ .expanded ~ .expanded ~ .expanded ~ .expanded ~ .rootTabStuff,
+#start:target ~ .root .rootTabStuff,
+#start2:target ~ .root .rootTabStuff
+{
+    display: none;
+}
+
+/* customizations within .root */
+#start:target ~ .root .startTabStuff,
+#start2:target ~ .root .start2TabStuff
+{
+    display: block !important;
+}
+
+#start:target ~ .root .startTabStuff.convo-container,
+#start2:target ~ .root .start2TabStuff.convo-container
+{
+    display: table;
+}
+
+.expanded ~ .expanded ~ .expanded ~ .expanded ~ .expanded ~ .start2TabStuff {
+    display: block;
+}
+
+.convo-container.choices {
+    max-width: unset;
+    min-width: unset;
+    display: block;
+}
+
+/* to dos:
+-make "expanded" untoggleable 
+-test w <detail> <summary><a href="">asdf </a></summary></detail>
+update x images in start and start2
+-combine root and start (and start2?) but flip the endnotes / dialogues
+-make start2 separate tab?? make it show, its not showing
+update css for ao3 friendly (collapsed/ expanded)
+*/
