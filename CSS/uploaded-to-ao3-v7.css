@@ -137,28 +137,28 @@ div.amongus-vote > p {
   background-color: rgb(204,211,219) !important;
 }
 
-div.amongus-player > p.amongus-content {
+.amongus-player > .amongus-content {
   margin-left: auto;
   margin-right: 64px;
   float: right;
   display: inline-block;
 }
 
-span.amongus-player > p.amongus-images > img.amongus-icon {
+span.amongus-player > .amongus-images > img.amongus-icon {
   margin-left: 32%;
   padding-top: 20px;
 }
 
-div.amongus-player > p.amongus-content > span.amongus-name,
-div.amongus-player > p.amongus-content > span.amongus-text {
+.amongus-player > .amongus-content > span.amongus-name,
+.amongus-player > .amongus-content > span.amongus-text {
   float: right;
 }
 
-div.amongus-player  img.amongus-avi {
+.amongus-player  img.amongus-avi {
   transform: translate(465%) scaleX(-1);
 }
 
-div.amongus-player  img.amongus-icon {
+.amongus-player  img.amongus-icon {
   transform: translate(870%);
 }
 
