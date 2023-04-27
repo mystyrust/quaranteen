@@ -17,6 +17,10 @@
     position: relative;
     }
 
+    .twBorder {
+        border: .05em solid darkgray; 
+    }
+
     .twBody .border-container {
         height: 0px;
     }

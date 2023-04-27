@@ -1,21 +1,20 @@
 /* https://archiveofourown.org/works/15842043/chapters/36893073 */
 
-
-.phone {
+.whatsapp-phone {
     max-width: 300px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     display: table;
     margin: auto;
   }
 
- .messagebody {
+ .whatsapp-messagebody {
     background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
     background-repeat: repeat-y;
     background-size: 100%;
     display: table;
   }
 
- .header {
+ .whatsapp-header {
     min-width: 300px;
     background-color: #075E54;
     background-attachment: fixed;
@@ -33,7 +32,7 @@
     display: table;
   }
 
- .status {
+ .whatsapp-status {
     min-width: 300px;
     background-color: #075E54;
     background-attachment: fixed;
@@ -49,7 +48,7 @@
     display: table;
   }  
 
- .avatar {
+ .whatsapp-avatar {
     content: "";
     width: 40px;
     height: 40px;
@@ -61,7 +60,7 @@
     z-index: 1;
   }
 
- .reply {
+ .whatsapp-reply {
     float: right;
     color: #000000;
     margin: 0.4em 1em;
@@ -73,7 +72,7 @@
     position: relative;
   }
 
- .reply::before {
+ .whatsapp-reply::before {
     content: "";
     position: absolute;
     right: -0.5em;
@@ -84,7 +83,7 @@
     border-bottom-right-radius: 0.5em 1em;
   }
 
- .text {
+ .whatsapp-text {
     float: left;
     color: #000000;
     margin: 0.4em 1em;
@@ -96,7 +95,7 @@
     position: relative;
   }
   
- .text::before {
+ .whatsapp-text::before {
     content: "";
     position: absolute;
     left: -.5em;
@@ -107,7 +106,7 @@
     border-bottom-left-radius: 0.5em 1em;
   }
 
- .text1 {
+ .whatsapp-text1 {
     float: left;
     color: #000000;
     margin: 0.4em 1em;
@@ -119,7 +118,7 @@
     position: relative;
   }
   
- .reply1 {
+ .whatsapp-reply1 {
     float: right;
     color: #000000;
     margin: 0.4em 1em;
@@ -131,7 +130,7 @@
     position: relative;
   }
 
- .time {
+ .whatsapp-time {
     max-width: 100px;
     background: #D4EAF4;
     background-size: 100px;
@@ -149,14 +148,14 @@
     display: table;
   }
   
- .textclock {
+ .whatsapp-textclock {
     font-size: 0.75em;
     color: #B7B7B7;
     margin-left: 1em;
     text-align: right;
   }
   
- .read {
+ .whatsapp-read {
     font-size: 0.75em;
     color: #B7B7B7;
     margin-left: 1em;
@@ -167,7 +166,7 @@
     background-position: right top;
   }
   
- .delivered {
+ .whatsapp-delivered {
     font-size: 0.75em;
     color: #B7B7B7;
     margin-left: 1em;
@@ -178,7 +177,7 @@
     background-position: right top;
   }
   
- .pending {
+ .whatsapp-pending {
     font-size: 0.75em;
     color: #B7B7B7;
     margin-left: 1em;
@@ -188,3 +187,156 @@
     background-size: 1.3em;
     background-position: right top;
   }
+
+  /* ------------------------------------------------------------------------------------- */
+/* ios messages by la temperanza https://archiveofourown.org/works/6434845/chapters/14729722  */
+p {
+  margin: 0 auto;
+}
+
+.phone {
+  max-width: 300px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: table;
+  margin: auto;
+  position: relative;
+}
+
+.header {
+  min-width: 300px;
+  background-color: #f6f6f6;
+  border-bottom: 1px solid #b2b2b2;
+  color: #000000;
+  font-weight: bold;
+  padding-bottom: .5em;
+  padding-top: .5em;
+  margin-left: -.5em;
+  margin-right: -.5em;
+  margin-bottom: -2em;
+  text-align: center;
+  text-transform: capitalize;
+  display: table;
+}
+
+.messagebody {
+  background-color: #FFFFFF;
+  display: table;
+  padding-left: .5em;
+  padding-right: .5em;
+}
+
+.text {
+  float: left;
+  color: #000000;
+  margin: 0 0 0.5em;
+  border-radius: 1em;
+  padding: 0.5em 1em;
+  background: #e5e5ea;
+  max-width: 75%;
+  clear: both;
+  position: relative;
+}
+
+.text::after {
+  content: "";
+  position: absolute;
+  left: -.5em;
+  bottom: 0;
+  width: 0.5em;
+  height: 1em;
+  border-right: 0.5em solid #e5e5ea;
+  border-bottom-right-radius: 1em 0.5em;
+}
+
+.breply {
+  float: right;
+  color: #FFFFFF;
+  margin: 0 0 0.5em;
+  border-radius: 1em;
+  padding: 0.5em 1em;
+  background: #1289fe;
+  max-width: 75%;
+  clear: both;
+  position: relative;
+}
+
+.breply::after {
+  content: "";
+  position: absolute;
+  right: -0.5em;
+  bottom: 0;
+  width: 0.5em;
+  height: 1em;
+  border-left: 0.5em solid #1289fe;
+  border-bottom-left-radius: 1em 0.5em;
+}
+
+.greply {
+  float: right;
+  color: #FFFFFF;
+  margin: 0 0 0.5em;
+  border-radius: 1em;
+  padding: 0.5em 1em;
+  background: #35cb24;
+  max-width: 75%;
+  clear: both;
+  position: relative;
+}
+
+.greply::after {
+  content: "";
+  position: absolute;
+  right: -0.5em;
+  bottom: 0;
+  width: 0.5em;
+  height: 1em;
+  border-left: 0.5em solid #35cb24;
+  border-bottom-left-radius: 1em 0.5em;
+}
+
+.grouptext {
+  /* color: #7B7C80; */
+  font-size: .75em;
+  padding-bottom: .5em;
+  padding-top: 0;
+  margin-left: .5em;
+  margin-bottom: -2.5em;
+  text-align: left;
+  display: table;
+  clear: both;
+}
+
+.grouptext-info
+{
+  /* color: #7B7C80; */
+  color: red;
+  font-size: 12px;
+  float: right;
+  clear: both;
+  margin-top: -9px;
+}
+
+.time {
+  min-width: 295px;
+  font-size: .75em;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+  margin-left: -0.5em;
+  margin-right: -0.5em;
+  margin-bottom: -0.5em;
+  text-align: center;
+  display: table;
+}
+
+.img-not-sent {
+  content: url(https://img.icons8.com/material-outlined/24/null/info--v1.png);
+  position: absolute;
+  right: 5px;
+  padding-top: 10px;
+}
+
+.not-sent {
+  left: -25px;
+}
+
+  /* ------------------------------------------------------------------------------------- */

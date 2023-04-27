@@ -1,0 +1,576 @@
+/* ----------------------reddit mock ---------------------------- */
+/* made by jihn https://codepen.io/jihnari/pen/jOmMoQX */
+
+.text-color-gray {
+    color: #9F9FA1;
+  }
+  .right{
+    float:right;
+  }
+  
+  .text-size-12{
+    font-size:1.2em;
+  }
+  .text-bold{
+    font-weight:bold;
+  }
+  .padding-left-20 {
+    padding-left: 20px;
+  }
+  
+  
+  /*reddit*/
+  /*
+  i do not, i repeat do NOT remember making vr0-2. i mean, i remember thinking "i should fix that weird issue where sometimes things collapse instead of float", i remember sitting down, i remember thinking "what if tables" but i DO NOT remember what it does or how it works. idk if half of that even needs to be there and honestly at this point i dont care. i also remeber thinking "GOTTA NEST THOSE DIVS" which we... appparently did not do. so that's. that's cool. 
+  
+  the last thing we might wanna do here is use the fadeout function and place the 'view all comments' button over top of it. rn im tired tho. messing w relative/ablosute is one of my least favorite things. 
+  */
+  .rd-font{
+    font-family:verdana, arial, helvetica, sans-serif;
+    /* background-color: white; */
+    /*make sure this didnt break everything*/
+    /* color:black; */
+    font-size: 13px;
+    padding: 6px;
+    max-width: 600px;
+    margin: 30px auto;
+  }
+  .rd-view-box {
+    background: #0079D3;
+    border-radius: 3px;
+    text-align: center;
+    color: white;
+    font-weight:bold;
+    padding: 7px;
+    margin: 0 5px -5px 5px;
+    cursor: pointer;
+  }
+  .rd-signup-box {
+    background: #0079D3;
+    border-radius: 14px;
+    text-align: center;
+    color: white;
+    padding: 7px 5px 7px 5px;
+    margin: 0px 5px -5px 5px;
+    font-size:0.8em;
+  }
+  .rd-sortby{
+    font-size:0.8em;
+    padding-left:5px;
+  }
+  .rd-photo-box {
+    background: #d3dce0;
+    border-radius: 18px;
+    color: black;
+    padding: 2px 10px 2px 10px;
+  }
+  .rd-name{
+    text-align: center;
+    font-weight:bold;
+    font-size:1.2em;
+  }
+  .rd-header{
+    font-weight:bold;
+    font-size:1.1em;
+    margin:-5px 0 -5px 0;
+  }
+  .rd-dot { /*idx if i wanna go down this path*/
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+    background-color: #bbb;
+    margin-bottom: -15px;
+  }
+  .rd-div1{
+    border-bottom: 8px solid #EEEFF1;
+    padding-bottom:18px;
+    padding-left:8px;
+    margin-bottom: 10px;
+    margin-left: -6px;
+    margin-right: -6px;
+  }
+  .rd-div2{
+    border-bottom: 1.5px solid #EEEFF1;
+  }
+  .rd-vote{
+    height:1.8em;
+    display: inline-block;
+    padding-top:5px;
+    padding-bottom:5px;
+    cursor: pointer;
+  }
+  .rd-poster{
+    font-size: .8em;
+    margin-bottom: 15px;
+  }
+  .rd-op {
+    color:#25A0ED;
+    font-weight:bold;
+    cursor: pointer;
+  }
+
+  .rd-op:hover {
+    text-decoration: underline;
+  }
+
+  .rd-link{
+    color:#25A0ED;
+  }
+  .rd-down-arrow {
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 2.5px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    margin: 0px 0 2px 7px;
+  }
+  .rd-small{
+    font-size: .8em;
+    display: inline-block;
+    padding-bottom:5px;
+  }
+
+  .rd-small > strong:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .rd-vr0 {
+    display: table;
+    padding: 10px 0 0px 30px;
+    border-bottom: 1px solid #EEEFF1;
+  }
+  .rd-vr1 {
+    display: table;
+    padding: 0px 0px 0px 10px;
+    margin: 0px 0 5px 5px;
+    border-left: 1px solid #EEEFF1;
+  }
+  .rd-vr2 {
+    display: table;
+    padding: 0px 0px 0px 10px;
+    margin: 0px 0px 5px 5px;
+    border-left: 1px solid #EEEFF1;
+  }
+  .rd-vr-not {
+    display: table;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0 5px 0;
+  }
+  .rd-gray-text {
+    color: #657685;
+  }
+  .rd-bubble{
+    color: #787C7F;
+    font-size: .8em;
+    padding: 12px 5px 3px 5px;
+    margin-bottom:5px;
+    border-radius: 16px;
+    border: 1px solid #EEEFF1;
+    cursor: pointer;
+  }
+  
+  .rd-arrow-text{
+    padding-top:2px;
+    mmargin-bottom:10px;
+    vertical-align:top;
+    display: inline-block;
+  }
+  .rd-arrow-up{
+    padding-top:0px;
+    padding-bottom:0px;
+    height:1.5em;
+  }
+  .rd-arrow-down{
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+      height:1.5em;
+  }
+  .rd-elispes{
+    float:right;
+    padding-right:10px;
+    font-size:1.0em;
+    cursor: pointer;
+  }
+
+/* --------------------------------------------------------------- */
+  
+
+/* -----------------tumblr style tweaks --------------------------- */
+  /* https://archiveofourown.org/works/11474979 */
+
+
+  .tungle {
+    max-width: 500px;
+    font-family: Gibson,Helvetica Neue,HelveticaNeue,Helvetica,Arial,sans-serif;
+    display: table;
+    margin: auto;
+    /* color: #444444; */
+    /* margin: 10px 0; */
+  }
+  
+  .tunglebody {
+    /* background-color: #ffffff; */
+    border-radius: 3px;
+    border-style: solid;
+    border-width: .1em;
+    border-color: #cccccc;
+    float: left;
+    max-width: 100%;
+    position: relative;
+    padding: 15px 0 0;
+  }
+  
+  .tungleurl {
+    position: relative;
+    top: -.2em;
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: 50px;
+    margin-left: 10px;
+    line-height: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  .tungletext {
+    display: inline-block;
+    margin-top: 15px;
+    margin-left: 10px;
+    line-height: 21px;
+    font-size: 14px;
+    width: 92%;
+    word-wrap: break-word;
+  }
+  
+  .tungletext a {
+    color: #444444;
+  }
+  
+  .tungleh {
+    display: inline-block;
+    margin-left: 20px;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 47px;
+    width: 92%;
+    word-wrap: break-word;
+  }
+  
+  .tungletags {
+    display: inline-block;
+    width: 92%;
+    font-size: 13px;
+    color: #8f8f8f;
+    margin-top: 15px;
+    line-height: 20px;
+    position: relative;
+    margin-left: 10px;
+  }
+  
+  .tungletag {
+    margin-right: 12px;
+    cursor: pointer;
+  }
+  
+  /* .tungletag:first-of-type {
+    margin-left: 0px;
+  } */
+  
+  .tunglenotes {
+    font-size: 14px;
+    font-weight: bold;
+    color: #8f8f8f;
+    line-height: 45px;
+    position: relative;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .tungleicons {
+    height: auto;
+    width: 120px;
+    float: right;
+    margin-right: -7px;
+    margin-top: 6px;
+    cursor: pointer;
+  }
+
+  .tungleimg {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .tunglequote {
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 1px;
+    margin-left: 35px;
+    line-height: 42px;
+    font-size: 36px;
+    width: 89%;
+    word-wrap: break-word;
+    font-family: Georgia, serif;
+    text-indent: -15px;
+  }
+  
+  .tunglequote:before {
+    content: "\201C";
+  }
+  
+  .tunglequote:after {
+    content: "\201D";
+  }
+  
+  .quotesourcedash {
+    width: 20px;
+    margin-left: 20px;
+  }
+  
+  .quotesource {
+    display: inline-block;
+    margin-bottom: 15px;
+    line-height: 21px;
+    font-size: 14px;
+    width: 90%;
+    word-wrap: break-word;
+  }
+  .tungletwo_one {
+    width: 49.5%;
+    height: 177px;
+    margin-top: 4px;
+    display: block;
+    overflow: hidden;
+    float: left;
+  }
+  
+  .tungletwo_two {
+    width: 49.5%;
+    height: 177px;
+    margin-top: 4px;
+    display: block;
+    overflow: hidden;
+    float: right;
+  }
+  
+  .tungletwo_three {
+    width: 49.5%;
+    height: 412px;
+    margin-top: 4px;
+    display: block;
+    overflow: hidden;
+    float: left;
+  }
+  
+  .tungletwo_four {
+    width: 49.5%;
+    height: 412px;
+    margin-top: 4px;
+    display: block;
+    overflow: hidden;
+    float: right;
+  }
+
+  .tunglethree_one {
+    width: 32.8%;
+    height: 120px;
+    margin-top: 4px;
+    display: block;
+    overflow: hidden;
+    float: left;
+  }
+  
+  .tunglethree_two {
+    width: 33%;
+    height: 120px;
+    margin-top: 4px;
+    display: inline-block;
+    overflow: hidden;
+    margin-left: 4px;
+  }
+  
+  .tunglethree_three {
+    width: 32.8%;
+    height: 120px;
+    margin-top: 4px;
+    display: block;
+    overflow: hidden;
+    float: right;
+  }
+
+  .tungleask {
+    /* background-color: #f2f2f2; */
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    float: left;
+    position: relative;
+    padding: 15px 14px 18px;
+    display: inline-block;
+    margin-top: 4px;
+    margin-left: 10px;
+    line-height: 21px;
+    font-size: 14px;
+    /* width: 80%; */
+    word-wrap: break-word;
+    margin-right: 64px;
+    margin-bottom: 10px;
+  }
+  
+  .tungleasktip {
+    display: inline;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid #cccccc;
+    right: -8px;
+    top: 10px;
+  }
+  
+  .tungleaskicon {
+    display: inline-block;
+    /* float: right; */
+    height: 45px;
+    width: 45px;
+    margin-top: -23px;
+    border-radius: 24px;
+    position: absolute;
+    margin-right: -70px;
+    right: 10px;
+    top: 24px;
+    cursor: pointer;
+  }
+  
+  .tungleasker {
+    color: #a6a6a6;
+    font-size: 13px;
+    display: inline-block;
+    width: 100%;
+    line-height: 21px;
+    margin-bottom: 7px;
+  }
+
+  .tungleasker b {
+    cursor: pointer;
+  }
+  
+  
+.tunglechat {
+  display: inline-block;
+  font-size: 14px;
+  width: 92%;
+  line-height: 1.4;
+  font-family: Courier, monospace;
+  padding-top: 3px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 3px;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.tungleline {
+  display: block;
+  padding-top: 6px;
+  padding-right: 0px;
+  padding-bottom: 6px;
+  padding-left: 0px;
+  width: 100%;
+}
+
+.tungleline:first-of-type {
+  padding-top: 0px;
+}
+
+.tungleline:last-of-type {
+  padding-bottom: 0px;
+}
+
+.tungleline:nth-of-type(even) {
+  background: #fdfdfd;
+}
+
+.strong {
+  font-weight: 700;
+}
+
+.tungleline>strong:after {
+  content: "\A0";
+}
+
+.reblog {
+  height: 15px;
+  width: auto;
+  /* margin-bottom: 5px; */
+}
+
+.reblogheader {
+  position: relative;
+  line-height: 25px;
+  padding-top: 15px;
+  padding-left: 10px;
+  width: 98%;
+  display: inline-block;
+  border-top: 1px solid #e7e7e7;
+  margin-top: 5px;
+}
+
+.reblogurl {
+  position: relative;
+  top: -.2em;
+  font-weight: 700;
+  font-size: 13px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  line-height: 25px;
+  height: 25px;
+  color: #8f8f8f;
+  cursor: pointer;
+}
+
+.reblogicon {
+  border-radius: 2px;
+  width: 25px;
+  height: 25px;
+  vertical-align: baseline;
+  cursor: pointer;
+}
+
+.sourceurl {
+  position: relative;
+  font-weight: 700;
+  font-size: 13px;
+  vertical-align: top;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.reblogorigin {
+  width: 100%;
+  word-wrap: break-word;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  padding-right: 20px;
+}
+
+.reblogtext {
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding-right: 5px;
+  margin-bottom: 10px;
+  line-height: 21px;
+  font-size: 14px;
+  width: 92%;
+  word-wrap: break-word;
+}
+
+.reblogtext a {
+  color: #444444;
+}
+
+/* --------------------------------------------------------------- */
