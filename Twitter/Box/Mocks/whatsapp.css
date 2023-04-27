@@ -1,199 +1,182 @@
-/* https://archiveofourown.org/works/15842043/chapters/36893073 */
+  /* ------------------------------------------------------------------------------------- */
+/* whatsapp etc e tal (wanningzinho) https://archiveofourown.org/works/46531021#3.3 */
+/* use group chat header, background, and audio from this one */
+/* and maybe emoji reactions */
 
-.whatsapp-phone {
-    max-width: 300px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    display: table;
-    margin: auto;
-  }
-
- .whatsapp-messagebody {
-    background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
-    background-repeat: repeat-y;
-    background-size: 100%;
-    display: table;
-  }
-
- .whatsapp-header {
-    min-width: 300px;
-    background-color: #075E54;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: 100%;
-    color: #FFFFFF;
-    font-weight: bold;
-    font-size: 1.15em;
-    padding-top: .5em;
-    padding-bottom: 0.5em;
-    margin-bottom: -2em;
-    text-align: left;
-    text-indent: 55px;
-    text-transform: capitalize;
-    display: table;
-  }
-
- .whatsapp-status {
-    min-width: 300px;
-    background-color: #075E54;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: 100%;
-    color: #FFFFFF;
-    font-size: 0.75em;
-    padding-top: 0.25em;
-    padding-bottom: 0.75em;
-    margin-bottom: -2em;
-    text-align: left;
-    text-indent: 55px;
-    display: table;
-  }  
-
- .whatsapp-avatar {
-    content: "";
-    width: 40px;
-    height: 40px;
-    margin: 0.5em;
-    background-image: url("https://t3.ftcdn.net/jpg/00/64/67/80/240_F_64678017_zUpiZFjj04cnLri7oADnyMH0XBYyQghG.jpg");
-    background-size: 100%;
-    border-radius: 100%;
-    position: absolute;
-    z-index: 1;
-  }
-
- .whatsapp-reply {
-    float: right;
-    color: #000000;
-    margin: 0.4em 1em;
-    border-radius: 0.5em 0 0.5em 0.5em;
-    padding: 0.25em 15px 0.25em 1em;
-    background: #E1FFC7;
-    max-width: 75%;
-    clear: both;
-    position: relative;
-  }
-
- .whatsapp-reply::before {
-    content: "";
-    position: absolute;
-    right: -0.5em;
-    top: 0;
-    width: 0.5em;
-    height: 1em;
-    border-right: 0.5em solid #E1FFC7;
-    border-bottom-right-radius: 0.5em 1em;
-  }
-
- .whatsapp-text {
-    float: left;
-    color: #000000;
-    margin: 0.4em 1em;
-    border-radius: 0 0.5em 0.5em 0.5em;
-    padding: 0.25em 15px 0.25em 1em;
-    background: #FFFFFF;
-    max-width: 75%;
-    clear: both;
-    position: relative;
-  }
-  
- .whatsapp-text::before {
-    content: "";
-    position: absolute;
-    left: -.5em;
-    top: 0;
-    width: 0.5em;
-    height: 1em;
-    border-left: 0.5em solid #FFFFFF;
-    border-bottom-left-radius: 0.5em 1em;
-  }
-
- .whatsapp-text1 {
-    float: left;
-    color: #000000;
-    margin: 0.4em 1em;
-    border-radius: 0.5em;
-    padding: 0.25em 15px 0.25em 1em;
-    background: #FFFFFF;
-    max-width: 75%;
-    clear: both;
-    position: relative;
-  }
-  
- .whatsapp-reply1 {
-    float: right;
-    color: #000000;
-    margin: 0.4em 1em;
-    border-radius: 0.5em;
-    padding: 0.25em 15px 0.25em 1em;
-    background: #E1FFC7;
-    max-width: 75%;
-    clear: both;
-    position: relative;
-  }
-
- .whatsapp-time {
-    max-width: 100px;
-    background: #D4EAF4;
-    background-size: 100px;
-    color: #8B9295;
-    font-size: .6em;
-    font-weight: bold;
-    padding: .5em .5em;
-    margin-top: .5em;
-    margin-bottom: .5em;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 0.5em;
-    text-align: center;
-    text-transform: uppercase;
-    display: table;
-  }
-  
- .whatsapp-textclock {
-    font-size: 0.75em;
-    color: #B7B7B7;
-    margin-left: 1em;
-    text-align: right;
-  }
-  
- .whatsapp-read {
-    font-size: 0.75em;
-    color: #B7B7B7;
-    margin-left: 1em;
-    text-align: right;
-    background-image: url("https://s19.postimg.cc/ynt9jgn43/whatsapp_read_check_mark.png");
-    background-repeat: no-repeat;
-    background-size: 1.5em;
-    background-position: right top;
-  }
-  
- .whatsapp-delivered {
-    font-size: 0.75em;
-    color: #B7B7B7;
-    margin-left: 1em;
-    text-align: right;
-    background-image: url("https://s19.postimg.cc/f5ym3ixw3/whatsapp_delivered_message_check_mark.png");
-    background-repeat: no-repeat;
-    background-size: 1.5em;
-    background-position: right top;
-  }
-  
- .whatsapp-pending {
-    font-size: 0.75em;
-    color: #B7B7B7;
-    margin-left: 1em;
-    text-align: right;
-    background-image: url("https://s19.postimg.cc/5y6dmpo83/pending_whatsapp_check_mark.png");
-    background-repeat: no-repeat;
-    background-size: 1.3em;
-    background-position: right top;
-  }
 
   /* ------------------------------------------------------------------------------------- */
-/* ios messages by la temperanza https://archiveofourown.org/works/6434845/chapters/14729722  */
-p {
-  margin: 0 auto;
+  /* whatsapp by lordvoldemortsskin (lordvoldemortsnipple) https://archiveofourown.org/works/24838792/chapters/60135160*/
+  
+.window {
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-bottom: 20px;
+    background: pink repeat;
+  }
+  
+.inside {
+    white-space: nowrap;
+    margin-right: 5px;
+    color: #000;
+    font-size: 13px;
+  }
+  
+.time,
+.timeSend,
+.timeGet {
+    white-space: nowrap;
+    font-size: 10px;
+  }
+  
+.timeSend {
+    color: #6a7d4f;
+  }
+  
+.timeGet {
+    color: #808080;
+  }
+  
+.seen:after {
+    content: url("https://i.ibb.co/zVTTd25/seen.png");
+  }
+  
+.recieved:after {
+    content: url("https://i.ibb.co/V9Gd7R3/recieved.png");
+  }
+  
+.sent:after {
+    content: url("https://i.ibb.co/kxFkGbT/sent.png");
+  }
+
+.whatsSend,
+.whatsSend2 {
+  white-space: nowrap;
+  position: relative;
+  float: right;
+  clear: both;
+  border-radius: 5px;
+  width: min-content;
+  background: #dcf4bd;
+  box-shadow: 1px 1px 0 #b3b3b3;
+  padding: 4px 5px 5px 8px;
+  margin-bottom: -8px;
+  margin-left: 100px;
 }
 
+.whatsSend2 {
+  margin-top: 11px;
+}
+
+.whatsSend:before {
+  border-right: 11px solid transparent;
+  border-top: 11px solid #b3b3b3;
+  content: "";
+  position: absolute;
+  right: -11px;
+  top: 0px;
+}
+
+.whatsSend:after {
+  border-right: 12px solid transparent;
+  border-top: 11px solid #dcf4bd;
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: 0px;
+}
+
+.whatsGet,
+.whatsGet2 {
+  display: inline-block;
+  white-space: nowrap;
+  position: relative;
+  margin-left: 0;
+  border-radius: 5px;
+  width: min-content;
+  background: #fdfdfd;
+  border-top: 0.5px solid #f2f2f2;
+  border-left: 0.5px solid #f2f2f2;
+  box-shadow: 1px 1px 0 #b3b3b3;
+  padding: 4px 5px 5px 8px;
+  margin-bottom: -8px;
+  margin-right: 100px;
+}
+
+.whatsGet2 {
+  margin-top: 11px;
+}
+
+.whatsGet:before {
+  border-left: 11px solid transparent;
+  border-top: 11px solid #b3b3b3;
+  content: "";
+  position: absolute;
+  left: -11px;
+  top: 0px;
+}
+
+.whatsGet:after {
+  border-left: 12px solid transparent;
+  border-top: 11px solid #fdfdfd;
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 0px;
+}
+.name,
+.newcontact,
+.name1,
+.name2,
+.name3,
+.name4 {
+  font-size: 12px;
+  margin-bottom: -18px;
+}
+
+.name1 {
+  color: #ffa366;
+}
+
+.name2 {
+  color: #4162d8;
+}
+
+.name3 {
+  color: #69b3a9;
+}
+
+.name4 {
+  color: #f195b4;
+}
+
+.newcontact {
+  color: #b3b3b3;
+}
+
+.subject {
+  text-align: center;
+  font-size: 12px;
+  display: block;
+  white-space: nowrap;
+  border-radius: 5px;
+  width: min-content;
+  background: #e1f5fe;
+  border-top: 0.5px solid #f2f2f2;
+  border-left: 0.5px solid #f2f2f2;
+  box-shadow: 1px 1px 0 #b3b3b3;
+  padding: 4px 5px 5px 8px;
+  /* margin-bottom: -8px;
+  margin-top: -8px; */
+  margin: 10px auto;
+  clear: both;
+}
+
+.hide { display: none;}
+  
+  /* ------------------------------------------------------------------------------------- */
+/* ios messages by la temperanza https://archiveofourown.org/works/6434845/chapters/14729722  */
 .phone {
   max-width: 300px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;

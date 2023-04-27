@@ -1,4 +1,7 @@
-   .tw {
+/* ----------------- tweets ------------------------ */
+/* gadaursan https://archiveofourown.org/works/22517134/chapters/53806336 */
+
+.tw {
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
@@ -355,3 +358,5 @@
     .p98 {width: 98%}
     .p99 {width: 99%}
     .p100 {width: 100%}
+
+/* ---------------------------------------------------------------------- */
