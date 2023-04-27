@@ -1,0 +1,1187 @@
+  /* ------------------------------------------------------------------------------------- */
+/* https://archiveofourown.org/works/15842043/chapters/36893073 */
+
+.whatsapp-phone {
+    max-width: 300px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    display: table;
+    margin: auto;
+  }
+
+ .whatsapp-messagebody {
+    background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
+    background-repeat: repeat-y;
+    background-size: 100%;
+    display: table;
+  }
+
+ .whatsapp-header {
+    min-width: 300px;
+    background-color: #075E54;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100%;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 1.15em;
+    padding-top: .5em;
+    padding-bottom: 0.5em;
+    margin-bottom: -2em;
+    text-align: left;
+    text-indent: 55px;
+    text-transform: capitalize;
+    display: table;
+  }
+
+ .whatsapp-status {
+    min-width: 300px;
+    background-color: #075E54;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100%;
+    color: #FFFFFF;
+    font-size: 0.75em;
+    padding-top: 0.25em;
+    padding-bottom: 0.75em;
+    margin-bottom: -2em;
+    text-align: left;
+    text-indent: 55px;
+    display: table;
+  }  
+
+ .whatsapp-avatar {
+    content: "";
+    width: 40px;
+    height: 40px;
+    margin: 0.5em;
+    background-image: url("https://t3.ftcdn.net/jpg/00/64/67/80/240_F_64678017_zUpiZFjj04cnLri7oADnyMH0XBYyQghG.jpg");
+    background-size: 100%;
+    border-radius: 100%;
+    position: absolute;
+    z-index: 1;
+  }
+
+ .whatsapp-reply {
+    float: right;
+    color: #000000;
+    margin: 0.4em 1em;
+    border-radius: 0.5em 0 0.5em 0.5em;
+    padding: 0.25em 15px 0.25em 1em;
+    background: #E1FFC7;
+    max-width: 75%;
+    clear: both;
+    position: relative;
+  }
+
+ .whatsapp-reply::before {
+    content: "";
+    position: absolute;
+    right: -0.5em;
+    top: 0;
+    width: 0.5em;
+    height: 1em;
+    border-right: 0.5em solid #E1FFC7;
+    border-bottom-right-radius: 0.5em 1em;
+  }
+
+ .whatsapp-text {
+    float: left;
+    color: #000000;
+    margin: 0.4em 1em;
+    border-radius: 0 0.5em 0.5em 0.5em;
+    padding: 0.25em 15px 0.25em 1em;
+    background: #FFFFFF;
+    max-width: 75%;
+    clear: both;
+    position: relative;
+  }
+  
+ .whatsapp-text::before {
+    content: "";
+    position: absolute;
+    left: -.5em;
+    top: 0;
+    width: 0.5em;
+    height: 1em;
+    border-left: 0.5em solid #FFFFFF;
+    border-bottom-left-radius: 0.5em 1em;
+  }
+
+ .whatsapp-text1 {
+    float: left;
+    color: #000000;
+    margin: 0.4em 1em;
+    border-radius: 0.5em;
+    padding: 0.25em 15px 0.25em 1em;
+    background: #FFFFFF;
+    max-width: 75%;
+    clear: both;
+    position: relative;
+  }
+  
+ .whatsapp-reply1 {
+    float: right;
+    color: #000000;
+    margin: 0.4em 1em;
+    border-radius: 0.5em;
+    padding: 0.25em 15px 0.25em 1em;
+    background: #E1FFC7;
+    max-width: 75%;
+    clear: both;
+    position: relative;
+  }
+
+ .whatsapp-time {
+    max-width: 100px;
+    background: #D4EAF4;
+    background-size: 100px;
+    color: #8B9295;
+    font-size: .6em;
+    font-weight: bold;
+    padding: .5em .5em;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0.5em;
+    text-align: center;
+    text-transform: uppercase;
+    display: table;
+  }
+  
+ .whatsapp-textclock {
+    font-size: 0.75em;
+    color: #B7B7B7;
+    margin-left: 1em;
+    text-align: right;
+  }
+  
+ .whatsapp-read {
+    font-size: 0.75em;
+    color: #B7B7B7;
+    margin-left: 1em;
+    text-align: right;
+    background-image: url("https://s19.postimg.cc/ynt9jgn43/whatsapp_read_check_mark.png");
+    background-repeat: no-repeat;
+    background-size: 1.5em;
+    background-position: right top;
+  }
+  
+ .whatsapp-delivered {
+    font-size: 0.75em;
+    color: #B7B7B7;
+    margin-left: 1em;
+    text-align: right;
+    background-image: url("https://s19.postimg.cc/f5ym3ixw3/whatsapp_delivered_message_check_mark.png");
+    background-repeat: no-repeat;
+    background-size: 1.5em;
+    background-position: right top;
+  }
+  
+ .whatsapp-pending {
+    font-size: 0.75em;
+    color: #B7B7B7;
+    margin-left: 1em;
+    text-align: right;
+    background-image: url("https://s19.postimg.cc/5y6dmpo83/pending_whatsapp_check_mark.png");
+    background-repeat: no-repeat;
+    background-size: 1.3em;
+    background-position: right top;
+  }
+
+  /* ------------------------------------------------------------------------------------- */
+  /* whatsapp by lordvoldemortsskin (lordvoldemortsnipple) https://archiveofourown.org/works/24838792/chapters/60135160*/
+  
+.window {
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-bottom: 20px;
+  }
+  
+.inside {
+    white-space: nowrap;
+    margin-right: 5px;
+    color: #000;
+    font-size: 13px;
+  }
+  
+.time,
+.timeSend,
+.timeGet {
+    white-space: nowrap;
+    font-size: 10px;
+  }
+  
+.timeSend {
+    color: #6a7d4f;
+  }
+  
+.timeGet {
+    color: #808080;
+  }
+  
+.seen:after {
+    content: url("https://i.ibb.co/zVTTd25/seen.png");
+  }
+  
+.recieved:after {
+    content: url("https://i.ibb.co/V9Gd7R3/recieved.png");
+  }
+  
+.sent:after {
+    content: url("https://i.ibb.co/kxFkGbT/sent.png");
+  }
+
+.whatsSend,
+.whatsSend2 {
+  white-space: nowrap;
+  position: relative;
+  float: right;
+  border-radius: 5px;
+  width: min-content;
+  background: #dcf4bd;
+  box-shadow: 1px 1px 0 #b3b3b3;
+  padding: 4px 5px 5px 8px;
+  margin-bottom: -8px;
+  margin-left: 100px;
+}
+
+.whatsSend2 {
+  margin-top: 11px;
+}
+
+.whatsSend:before {
+  border-right: 11px solid transparent;
+  border-top: 11px solid #b3b3b3;
+  content: "";
+  position: absolute;
+  right: -11px;
+  top: 0px;
+}
+
+.whatsSend:after {
+  border-right: 12px solid transparent;
+  border-top: 11px solid #dcf4bd;
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: 0px;
+}
+
+.whatsGet,
+.whatsGet2 {
+  display: inline-block;
+  white-space: nowrap;
+  position: relative;
+  margin-left: 0;
+  border-radius: 5px;
+  width: min-content;
+  background: #fdfdfd;
+  border-top: 0.5px solid #f2f2f2;
+  border-left: 0.5px solid #f2f2f2;
+  box-shadow: 1px 1px 0 #b3b3b3;
+  padding: 4px 5px 5px 8px;
+  margin-bottom: -8px;
+  margin-right: 100px;
+}
+
+.whatsGet2 {
+  margin-top: 11px;
+}
+
+.whatsGet:before {
+  border-left: 11px solid transparent;
+  border-top: 11px solid #b3b3b3;
+  content: "";
+  position: absolute;
+  left: -11px;
+  top: 0px;
+}
+
+.whatsGet:after {
+  border-left: 12px solid transparent;
+  border-top: 11px solid #fdfdfd;
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 0px;
+}
+.name,
+.newcontact,
+.name1,
+.name2,
+.name3,
+.name4 {
+  font-size: 12px;
+  margin-bottom: -18px;
+}
+
+.name1 {
+  color: #ffa366;
+}
+
+.name2 {
+  color: #4162d8;
+}
+
+.name3 {
+  color: #69b3a9;
+}
+
+.name4 {
+  color: #f195b4;
+}
+
+.newcontact {
+  color: #b3b3b3;
+}
+
+.subject {
+  text-align: center;
+  font-size: 12px;
+  display: inline-block;
+  white-space: nowrap;
+  border-radius: 5px;
+  width: min-content;
+  background: #e1f5fe;
+  border-top: 0.5px solid #f2f2f2;
+  border-left: 0.5px solid #f2f2f2;
+  box-shadow: 1px 1px 0 #b3b3b3;
+  padding: 4px 5px 5px 8px;
+  margin-bottom: -8px;
+  margin-top: -8px;
+}
+
+.hide { display: none;}
+  
+  /* ------------------------------------------------------------------------------------- */
+/* ios messages by la temperanza https://archiveofourown.org/works/6434845/chapters/14729722  */
+p {
+  margin: 0 auto;
+}
+
+.phone {
+  max-width: 300px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: table;
+  margin: auto;
+  position: relative;
+}
+
+.header {
+  min-width: 300px;
+  background-color: #f6f6f6;
+  border-bottom: 1px solid #b2b2b2;
+  color: #000000;
+  font-weight: bold;
+  padding-bottom: .5em;
+  padding-top: .5em;
+  margin-left: -.5em;
+  margin-right: -.5em;
+  margin-bottom: -2em;
+  text-align: center;
+  text-transform: capitalize;
+  display: table;
+}
+
+.messagebody {
+  background-color: #FFFFFF;
+  display: table;
+  padding-left: .5em;
+  padding-right: .5em;
+}
+
+.text {
+  float: left;
+  color: #000000;
+  margin: 0 0 0.5em;
+  border-radius: 1em;
+  padding: 0.5em 1em;
+  background: #e5e5ea;
+  max-width: 75%;
+  clear: both;
+  position: relative;
+}
+
+.text::after {
+  content: "";
+  position: absolute;
+  left: -.5em;
+  bottom: 0;
+  width: 0.5em;
+  height: 1em;
+  border-right: 0.5em solid #e5e5ea;
+  border-bottom-right-radius: 1em 0.5em;
+}
+
+.breply {
+  float: right;
+  color: #FFFFFF;
+  margin: 0 0 0.5em;
+  border-radius: 1em;
+  padding: 0.5em 1em;
+  background: #1289fe;
+  max-width: 75%;
+  clear: both;
+  position: relative;
+}
+
+.breply::after {
+  content: "";
+  position: absolute;
+  right: -0.5em;
+  bottom: 0;
+  width: 0.5em;
+  height: 1em;
+  border-left: 0.5em solid #1289fe;
+  border-bottom-left-radius: 1em 0.5em;
+}
+
+.greply {
+  float: right;
+  color: #FFFFFF;
+  margin: 0 0 0.5em;
+  border-radius: 1em;
+  padding: 0.5em 1em;
+  background: #35cb24;
+  max-width: 75%;
+  clear: both;
+  position: relative;
+}
+
+.greply::after {
+  content: "";
+  position: absolute;
+  right: -0.5em;
+  bottom: 0;
+  width: 0.5em;
+  height: 1em;
+  border-left: 0.5em solid #35cb24;
+  border-bottom-left-radius: 1em 0.5em;
+}
+
+.grouptext {
+  /* color: #7B7C80; */
+  font-size: .75em;
+  padding-bottom: .5em;
+  padding-top: 0;
+  margin-left: .5em;
+  margin-bottom: -2.5em;
+  text-align: left;
+  display: table;
+  clear: both;
+}
+
+.grouptext-info
+{
+  /* color: #7B7C80; */
+  color: red;
+  font-size: 12px;
+  float: right;
+  clear: both;
+  margin-top: -9px;
+}
+
+.time {
+  min-width: 295px;
+  font-size: .75em;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+  margin-left: -0.5em;
+  margin-right: -0.5em;
+  margin-bottom: -0.5em;
+  text-align: center;
+  display: table;
+}
+
+.img-not-sent {
+  content: url(https://img.icons8.com/material-outlined/24/null/info--v1.png);
+  position: absolute;
+  right: 5px;
+  padding-top: 10px;
+}
+
+.not-sent {
+  left: -25px;
+}
+
+  /* ------------------------------------------------------------------------------------- */
+  /* ------------------------------------------------------------------------------------- */
+/* phone view by me */
+.img-box-ghost
+{
+ width: 100%;
+}
+
+.phone-view {
+    border: 1px solid gray;
+    /* padding: 0em 1em 1em 1em; */
+    min-width: 250px;
+    max-width: 500px;
+    /* font-family: "Segoe UI"; */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /* display: table; */
+    margin: auto;
+    background-color: white;
+    
+    /* experimenting w gradiaent */
+    color: black;
+    }
+    
+    .header-address-bar {
+    background-color: white;
+    color: black;
+    /* min-width: 50px; */
+    /* width: 100px; */
+    /* margin-right: 1em; */
+    /* float: right; */
+    height: 1.5em;
+    border-radius: 12px;
+    margin-top: -30px !important;
+    margin-bottom: 8px !important;
+    margin-left: 43px !important;
+    max-width: 90%;
+    /* width: 70%; */
+    padding-left: 0.7em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    }
+    
+    .header-browser {
+    max-width: 500px;
+    min-width: 250px;
+    height: 36px;
+    background-color: gray;
+    font-weight: bold;
+    text-align: center;
+    text-transform: capitalize;
+    display: block;
+    }
+    
+    .header-browser::before {
+    content: url(https://img.icons8.com/material-outlined/24/ffffff/home--v2.png); /*'⌂';*/
+    cursor: pointer;
+    float: left;
+    margin-left: 11px;
+    margin-top: 3px;
+    transform: scale(1.3,1.0);
+    color: white;
+    }
+    
+    .header-browser:after {
+    content: url(https://img.icons8.com/ios-glyphs/30/ffffff/menu-2.png);
+    display: inline-block;
+    position: relative;
+    /* font-weight: bold;
+    font-size: 14px; */
+    padding-top: 0.1em;
+    height: 90%;
+    float: right;
+    color: white;
+    /* -webkit-transform: scale(1.5, 1.0);
+    -moz-transform: scale(1.5, 1.0);
+    -ms-transform: scale(1.5, 1.0);
+    -o-transform: scale(1.5, 1.0);
+    transform: scale(1.5,1.0); */
+    cursor: pointer;
+    }
+    
+    .header-white {
+    /* min-width: 500px; */
+    background-color: white;
+    /* float: left; */
+    /* font-family: "Segoe UI" !important; */
+    /* color: #900; */
+    /* font-weight: bold; */
+    padding: 0.5em 0em 1em 0.5em;
+    /* text-align: center; */
+    /* text-transform: capitalize; */
+    display: flex;
+    /* font-size: 1.7em; */
+    /* line-height: 1.7em; */
+    }
+    
+    
+    
+    .header-white > p, .phone-view > p, .collapse {
+      margin: 0;
+    }
+
+  /* ------------------------------------------------------------------------------------- */
+/* ----------------------reddit mock ---------------------------- */
+/* made by jihn https://codepen.io/jihnari/pen/jOmMoQX */
+
+.text-color-gray {
+    color: #9F9FA1;
+  }
+  .right{
+    float:right;
+  }
+  
+  .text-size-12{
+    font-size:1.2em;
+  }
+  .text-bold{
+    font-weight:bold;
+  }
+  .padding-left-20 {
+    padding-left: 20px;
+  }
+  
+  
+  /*reddit*/
+  /*
+  i do not, i repeat do NOT remember making vr0-2. i mean, i remember thinking "i should fix that weird issue where sometimes things collapse instead of float", i remember sitting down, i remember thinking "what if tables" but i DO NOT remember what it does or how it works. idk if half of that even needs to be there and honestly at this point i dont care. i also remeber thinking "GOTTA NEST THOSE DIVS" which we... appparently did not do. so that's. that's cool. 
+  
+  the last thing we might wanna do here is use the fadeout function and place the 'view all comments' button over top of it. rn im tired tho. messing w relative/ablosute is one of my least favorite things. 
+  */
+  .rd-font{
+    font-family:verdana, arial, helvetica, sans-serif;
+    /* background-color: white; */
+    /*make sure this didnt break everything*/
+    /* color:black; */
+    font-size: 13px;
+    padding: 6px;
+    max-width: 600px;
+    margin: 30px auto;
+  }
+  .rd-view-box {
+    background: #0079D3;
+    border-radius: 3px;
+    text-align: center;
+    color: white;
+    font-weight:bold;
+    padding: 7px;
+    margin: 0 5px -5px 5px;
+    cursor: pointer;
+  }
+  .rd-signup-box {
+    background: #0079D3;
+    border-radius: 14px;
+    text-align: center;
+    color: white;
+    padding: 7px 5px 7px 5px;
+    margin: 0px 5px -5px 5px;
+    font-size:0.8em;
+  }
+  .rd-sortby{
+    font-size:0.8em;
+    padding-left:5px;
+  }
+  .rd-photo-box {
+    background: #d3dce0;
+    border-radius: 18px;
+    color: black;
+    padding: 2px 10px 2px 10px;
+  }
+  .rd-name{
+    text-align: center;
+    font-weight:bold;
+    font-size:1.2em;
+  }
+  .rd-header{
+    font-weight:bold;
+    font-size:1.1em;
+    margin:-5px 0 -5px 0;
+  }
+  .rd-dot { /*idx if i wanna go down this path*/
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+    background-color: #bbb;
+    margin-bottom: -15px;
+  }
+  .rd-div1{
+    border-bottom: 8px solid #EEEFF1;
+    padding-bottom:18px;
+    padding-left:8px;
+    margin-bottom: 10px;
+    margin-left: -6px;
+    margin-right: -6px;
+  }
+  .rd-div2{
+    border-bottom: 1.5px solid #EEEFF1;
+  }
+  .rd-vote{
+    height:1.8em;
+    display: inline-block;
+    padding-top:5px;
+    padding-bottom:5px;
+    cursor: pointer;
+  }
+  .rd-poster{
+    font-size: .8em;
+    margin-bottom: 15px;
+  }
+  .rd-op {
+    color:#25A0ED;
+    font-weight:bold;
+    cursor: pointer;
+  }
+
+  .rd-op:hover {
+    text-decoration: underline;
+  }
+
+  .rd-link{
+    color:#25A0ED;
+  }
+  .rd-down-arrow {
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 2.5px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    margin: 0px 0 2px 7px;
+  }
+  .rd-small{
+    font-size: .8em;
+    display: inline-block;
+    padding-bottom:5px;
+  }
+
+  .rd-small > strong:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .rd-vr0 {
+    display: table;
+    padding: 10px 0 0px 30px;
+    border-bottom: 1px solid #EEEFF1;
+  }
+  .rd-vr1 {
+    display: table;
+    padding: 0px 0px 0px 10px;
+    margin: 0px 0 5px 5px;
+    border-left: 1px solid #EEEFF1;
+  }
+  .rd-vr2 {
+    display: table;
+    padding: 0px 0px 0px 10px;
+    margin: 0px 0px 5px 5px;
+    border-left: 1px solid #EEEFF1;
+  }
+  .rd-vr-not {
+    display: table;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0 5px 0;
+  }
+  .rd-gray-text {
+    color: #657685;
+  }
+  .rd-bubble{
+    color: #787C7F;
+    font-size: .8em;
+    padding: 12px 5px 3px 5px;
+    margin-bottom:5px;
+    border-radius: 16px;
+    border: 1px solid #EEEFF1;
+    cursor: pointer;
+  }
+  
+  .rd-arrow-text{
+    padding-top:2px;
+    mmargin-bottom:10px;
+    vertical-align:top;
+    display: inline-block;
+  }
+  .rd-arrow-up{
+    padding-top:0px;
+    padding-bottom:0px;
+    height:1.5em;
+  }
+  .rd-arrow-down{
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+      height:1.5em;
+  }
+  .rd-elispes{
+    float:right;
+    padding-right:10px;
+    font-size:1.0em;
+    cursor: pointer;
+  }
+
+/* --------------------------------------------------------------- */
+/* -----------------tumblr style tweaks --------------------------- */
+  /* https://archiveofourown.org/works/11474979 */
+
+
+  .tungle {
+    max-width: 500px;
+    font-family: Gibson,Helvetica Neue,HelveticaNeue,Helvetica,Arial,sans-serif;
+    display: table;
+    margin: auto;
+    /* color: #444444; */
+    /* margin: 10px 0; */
+  }
+  
+  .tunglebody {
+    /* background-color: #ffffff; */
+    border-radius: 3px;
+    border-style: solid;
+    border-width: .1em;
+    border-color: #cccccc;
+    float: left;
+    max-width: 100%;
+    position: relative;
+    padding: 15px 0 0;
+  }
+  
+  .tungleurl {
+    position: relative;
+    top: -.2em;
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: 50px;
+    margin-left: 10px;
+    line-height: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  .tungletext {
+    display: inline-block;
+    margin-top: 15px;
+    margin-left: 10px;
+    line-height: 21px;
+    font-size: 14px;
+    width: 92%;
+    word-wrap: break-word;
+  }
+  
+  .tungletext a {
+    color: #444444;
+  }
+  
+  .tungleh {
+    display: inline-block;
+    margin-left: 20px;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 47px;
+    width: 92%;
+    word-wrap: break-word;
+  }
+  
+  .tungletags {
+    display: inline-block;
+    width: 92%;
+    font-size: 13px;
+    color: #8f8f8f;
+    margin-top: 15px;
+    line-height: 20px;
+    position: relative;
+    margin-left: 10px;
+  }
+  
+  .tungletag {
+    margin-right: 12px;
+    cursor: pointer;
+  }
+  
+  /* .tungletag:first-of-type {
+    margin-left: 0px;
+  } */
+  
+  .tunglenotes {
+    font-size: 14px;
+    font-weight: bold;
+    color: #8f8f8f;
+    line-height: 45px;
+    position: relative;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .tungleicons {
+    height: auto;
+    width: 120px;
+    float: right;
+    margin-right: -7px;
+    margin-top: 6px;
+    cursor: pointer;
+  }
+
+  .tungleimg {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .tunglequote {
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 1px;
+    margin-left: 35px;
+    line-height: 42px;
+    font-size: 36px;
+    width: 89%;
+    word-wrap: break-word;
+    font-family: Georgia, serif;
+    text-indent: -15px;
+  }
+  
+  .tunglequote:before {
+    content: "\201C";
+  }
+  
+  .tunglequote:after {
+    content: "\201D";
+  }
+  
+  .quotesourcedash {
+    width: 20px;
+    margin-left: 20px;
+  }
+  
+  .quotesource {
+    display: inline-block;
+    margin-bottom: 15px;
+    line-height: 21px;
+    font-size: 14px;
+    width: 90%;
+    word-wrap: break-word;
+  }
+  .tungletwo_one {
+    width: 49.5%;
+    height: 177px;
+    margin-top: 4px;
+    display: block;
+    overflow: hidden;
+    float: left;
+  }
+  
+  .tungletwo_two {
+    width: 49.5%;
+    height: 177px;
+    margin-top: 4px;
+    display: block;
+    overflow: hidden;
+    float: right;
+  }
+  
+  .tungletwo_three {
+    width: 49.5%;
+    height: 412px;
+    margin-top: 4px;
+    display: block;
+    overflow: hidden;
+    float: left;
+  }
+  
+  .tungletwo_four {
+    width: 49.5%;
+    height: 412px;
+    margin-top: 4px;
+    display: block;
+    overflow: hidden;
+    float: right;
+  }
+
+  .tunglethree_one {
+    width: 32.8%;
+    height: 120px;
+    margin-top: 4px;
+    display: block;
+    overflow: hidden;
+    float: left;
+  }
+  
+  .tunglethree_two {
+    width: 33%;
+    height: 120px;
+    margin-top: 4px;
+    display: inline-block;
+    overflow: hidden;
+    margin-left: 4px;
+  }
+  
+  .tunglethree_three {
+    width: 32.8%;
+    height: 120px;
+    margin-top: 4px;
+    display: block;
+    overflow: hidden;
+    float: right;
+  }
+
+  .tungleask {
+    /* background-color: #f2f2f2; */
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    float: left;
+    position: relative;
+    padding: 15px 14px 18px;
+    display: inline-block;
+    margin-top: 4px;
+    margin-left: 10px;
+    line-height: 21px;
+    font-size: 14px;
+    /* width: 80%; */
+    word-wrap: break-word;
+    margin-right: 64px;
+    margin-bottom: 10px;
+  }
+  
+  .tungleasktip {
+    display: inline;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid #cccccc;
+    right: -8px;
+    top: 10px;
+  }
+  
+  .tungleaskicon {
+    display: inline-block;
+    /* float: right; */
+    height: 45px;
+    width: 45px;
+    margin-top: -23px;
+    border-radius: 24px;
+    position: absolute;
+    margin-right: -70px;
+    right: 10px;
+    top: 24px;
+    cursor: pointer;
+  }
+  
+  .tungleasker {
+    color: #a6a6a6;
+    font-size: 13px;
+    display: inline-block;
+    width: 100%;
+    line-height: 21px;
+    margin-bottom: 7px;
+  }
+
+  .tungleasker b {
+    cursor: pointer;
+  }
+  
+  
+.tunglechat {
+  display: inline-block;
+  font-size: 14px;
+  width: 92%;
+  line-height: 1.4;
+  font-family: Courier, monospace;
+  padding-top: 3px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 3px;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.tungleline {
+  display: block;
+  padding-top: 6px;
+  padding-right: 0px;
+  padding-bottom: 6px;
+  padding-left: 0px;
+  width: 100%;
+}
+
+.tungleline:first-of-type {
+  padding-top: 0px;
+}
+
+.tungleline:last-of-type {
+  padding-bottom: 0px;
+}
+
+.tungleline:nth-of-type(even) {
+  background: #fdfdfd;
+}
+
+.strong {
+  font-weight: 700;
+}
+
+.tungleline>strong:after {
+  content: "\A0";
+}
+
+.reblog {
+  height: 15px;
+  width: auto;
+  /* margin-bottom: 5px; */
+}
+
+.reblogheader {
+  position: relative;
+  line-height: 25px;
+  padding-top: 15px;
+  padding-left: 10px;
+  width: 98%;
+  display: inline-block;
+  border-top: 1px solid #e7e7e7;
+  margin-top: 5px;
+}
+
+.reblogurl {
+  position: relative;
+  top: -.2em;
+  font-weight: 700;
+  font-size: 13px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  line-height: 25px;
+  height: 25px;
+  color: #8f8f8f;
+  cursor: pointer;
+}
+
+.reblogicon {
+  border-radius: 2px;
+  width: 25px;
+  height: 25px;
+  vertical-align: baseline;
+  cursor: pointer;
+}
+
+.sourceurl {
+  position: relative;
+  font-weight: 700;
+  font-size: 13px;
+  vertical-align: top;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.reblogorigin {
+  width: 100%;
+  word-wrap: break-word;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  padding-right: 20px;
+}
+
+.reblogtext {
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding-right: 5px;
+  margin-bottom: 10px;
+  line-height: 21px;
+  font-size: 14px;
+  width: 92%;
+  word-wrap: break-word;
+}
+
+.reblogtext a {
+  color: #444444;
+}
+
+/* --------------------------------------------------------------- */
