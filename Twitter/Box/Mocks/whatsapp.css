@@ -3,177 +3,2332 @@
 /* use group chat header, background, and audio from this one */
 /* and maybe emoji reactions */
 
+.wpp p {
+  line-height: 1.2em;
+}
 
-  /* ------------------------------------------------------------------------------------- */
-  /* whatsapp by lordvoldemortsskin (lordvoldemortsnipple) https://archiveofourown.org/works/24838792/chapters/60135160*/
-  
-.window {
-    max-width: 320px;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    margin-bottom: 20px;
-    background: pink repeat;
-  }
-  
-.inside {
-    white-space: nowrap;
-    margin-right: 5px;
-    color: #000;
-    font-size: 13px;
-  }
-  
-.time,
-.timeSend,
-.timeGet {
-    white-space: nowrap;
-    font-size: 10px;
-  }
-  
-.timeSend {
-    color: #6a7d4f;
-  }
-  
-.timeGet {
-    color: #808080;
-  }
-  
-.seen:after {
-    content: url("https://i.ibb.co/zVTTd25/seen.png");
-  }
-  
-.recieved:after {
-    content: url("https://i.ibb.co/V9Gd7R3/recieved.png");
-  }
-  
-.sent:after {
-    content: url("https://i.ibb.co/kxFkGbT/sent.png");
-  }
+/* div.wpp, .wpp div {
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+} */
 
-.whatsSend,
-.whatsSend2 {
+.wpp img {
+  max-width: 100%;
+    height: auto;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.screenreader {
+  position: absolute;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
   white-space: nowrap;
+  border: 0;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.5);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0,0,0,0.7);
+  border-radius: 10px;
+}
+
+audio::-webkit-media-controls-play-button {
+  height: 80px;
+}
+
+.wpp {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 330px;
+  margin: 0 auto;
   position: relative;
-  float: right;
-  clear: both;
-  border-radius: 5px;
-  width: min-content;
-  background: #dcf4bd;
-  box-shadow: 1px 1px 0 #b3b3b3;
-  padding: 4px 5px 5px 8px;
-  margin-bottom: -8px;
-  margin-left: 100px;
+  float: center;
+  overflow: hidden;
 }
 
-.whatsSend2 {
-  margin-top: 11px;
-}
-
-.whatsSend:before {
-  border-right: 11px solid transparent;
-  border-top: 11px solid #b3b3b3;
-  content: "";
-  position: absolute;
-  right: -11px;
-  top: 0px;
-}
-
-.whatsSend:after {
-  border-right: 12px solid transparent;
-  border-top: 11px solid #dcf4bd;
-  content: "";
-  position: absolute;
-  right: -10px;
-  top: 0px;
-}
-
-.whatsGet,
-.whatsGet2 {
+.wpp .emoji1 {
+  font-size: 60px;
+  line-height: 58px;
   display: inline-block;
-  white-space: nowrap;
+  margin-left: -8px;
+  margin-right: -15px;
+}
+
+.wpp .emoji2 {
+  font-size: 20px;
+  line-height: 19px;
+}
+
+.wpp .light .time {
+  font-size: 0.75em;
+  color: #999;
+  display: inline-block;
+  float: right;
+  line-height: 1.3em;
+  padding-top: 0.5em;
+  padding-left: 1.5em;
+  margin: 0;
+}
+
+.wpp .dark .time {
+  font-size: 0.75em;
+  color: #8595A0;
+  display: inline-block;
+  float: right;
+  line-height: 1.3em;
+  padding-top: 0.5em;
+  padding-left: 1.5em;
+  margin: 0;
+}
+
+.wpp .light .timeemoji {
+  font-size: 0.75em;
+  color: #999;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.wpp .dark .timeemoji {
+  font-size: 0.75em;
+  color: #8595A0;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.wpp .timemedia {
+  font-size: 0.75em;
+  color: #ffffff;
+  display: inline-block;
+  float: right;
+  line-height: 1.3em;
+  padding-top: 0.5em;
+  padding-left: 1.1em;
+  margin: 0;
+  margin-top: -24px;
+  z-index: 3;
+  right: 10px;
   position: relative;
-  margin-left: 0;
+}
+
+.wpp .media {
   border-radius: 5px;
-  width: min-content;
-  background: #fdfdfd;
-  border-top: 0.5px solid #f2f2f2;
-  border-left: 0.5px solid #f2f2f2;
-  box-shadow: 1px 1px 0 #b3b3b3;
-  padding: 4px 5px 5px 8px;
-  margin-bottom: -8px;
-  margin-right: 100px;
-}
-
-.whatsGet2 {
-  margin-top: 11px;
-}
-
-.whatsGet:before {
-  border-left: 11px solid transparent;
-  border-top: 11px solid #b3b3b3;
-  content: "";
-  position: absolute;
-  left: -11px;
-  top: 0px;
-}
-
-.whatsGet:after {
-  border-left: 12px solid transparent;
-  border-top: 11px solid #fdfdfd;
-  content: "";
-  position: absolute;
-  left: -10px;
-  top: 0px;
-}
-.name,
-.newcontact,
-.name1,
-.name2,
-.name3,
-.name4 {
-  font-size: 12px;
-  margin-bottom: -18px;
-}
-
-.name1 {
-  color: #ffa366;
-}
-
-.name2 {
-  color: #4162d8;
-}
-
-.name3 {
-  color: #69b3a9;
-}
-
-.name4 {
-  color: #f195b4;
-}
-
-.newcontact {
-  color: #b3b3b3;
-}
-
-.subject {
-  text-align: center;
-  font-size: 12px;
+  width: 100%;
   display: block;
-  white-space: nowrap;
-  border-radius: 5px;
-  width: min-content;
-  background: #e1f5fe;
-  border-top: 0.5px solid #f2f2f2;
-  border-left: 0.5px solid #f2f2f2;
-  box-shadow: 1px 1px 0 #b3b3b3;
-  padding: 4px 5px 5px 8px;
-  /* margin-bottom: -8px;
-  margin-top: -8px; */
-  margin: 10px auto;
-  clear: both;
+  z-index: 1;
+  margin-top: -2px;
 }
 
-.hide { display: none;}
+.wpp .info {
+  font-size: 0.75rem;
+  width: 100%;
+  margin: 10px auto;
+  margin-bottom: -13px;
+  text-align: center;
+  display: inline-block;
+  line-height: 1.3;
+}
+
+.wpp .sent audio {
+  opacity: 0;
+  border-radius: 7px;
+  width: 100px;
+  z-index: 6;
+  position: absolute;
+  margin-left: -68px;
+  margin-top: -29px;
+}
+
+.wpp .received audio {
+  opacity: 0;
+  border-radius: 7px;
+  width: 100px;
+  z-index: 6;
+  position: absolute;
+  margin-left: -188px;
+  margin-top: -29px;
+}
+
+.wpp .voicemessagesent {
+  width: 95%;
+  display: block;
+  z-index: 5;
+  margin-top: 7px;
+  margin-left: 13px;
+  position: relative;
+  margin-bottom: -15px;
+}
+
+.wpp .voicemessagereceived {
+  width: 95%;
+  display: block;
+  z-index: 5;
+  margin-top: 7px;
+  margin-left: -5px;
+  position: relative;
+  margin-bottom: -15px;
+}
+
+.wpp .sent .icon {
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+  top: 8px;
+  margin-left: -5px;
+  display: block;
+}
+
+.wpp .received .icon {
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+  top: 8px;
+  margin-left: 197px;
+  display: block;
+}
+
+.wpp .light .voicetimersent {
+  font-size: 0.75em;
+  color: #999;
+  display: inline-block;
+  margin-left: 86px;
+}
+
+.wpp .light .voicetimerreceived {
+  font-size: 0.75em;
+  color: #999;
+  display: inline-block;
+  margin-left: 37px;
+}
+
+.wpp .dark .voicetimersent {
+  font-size: 0.75em;
+  color: #8595A0;
+  display: inline-block;
+  margin-left: 86px;
+}
+
+.wpp .dark .voicetimerreceived {
+  font-size: 0.75em;
+  color: #8595A0;
+  display: inline-block;
+  margin-left: 37px;
+}
+
+.wpp .dark .time2 {
+  font-size: 0.75em;
+  color: #8595A0;
+  display: inline-block;
+  margin-left: 92px;
+}
+
+.wpp .light .time2 {
+  font-size: 0.75em;
+  color: #999;
+  display: inline-block;
+  margin-left: 92px;
+}
+
+.wpp .fromgreen1 {
+  color: #06CF9C;
+  font-weight: bold;
+  font-size: 0.85rem;
+  line-height: 24px;
+}
+
+.wpp .fromgreen2 {
+  color: #02A698;
+  font-weight: bold;
+  font-size: 0.85rem;
+  line-height: 24px;
+}
+
+.wpp .fromgreen3 {
+  color: #3DB46C;
+  font-weight: bold;
+  font-size: 0.85rem;
+  line-height: 24px;
+}
+
+.wpp .fromgreen4 {
+  color: #25D366;
+  font-weight: bold;
+  font-size: 0.85rem;
+  line-height: 24px;
+}
+
+.wpp .fromgreen5 {
+  color: #A5B337;
+  font-weight: bold;
+  font-size: 0.85rem;
+  line-height: 24px;
+}
+
+.wpp .fromyellow {
+  color: #FFBC38;
+  font-weight: bold;
+  font-size: 0.85rem;
+  line-height: 24px;
+}
+
+.wpp .frombrown1 {
+  color: #B4876E;
+  font-weight: bold;
+  font-size: 0.85rem;
+  line-height: 24px;
+}
+
+.wpp .frombrown2 {
+  color: #C4532D;
+  font-weight: bold;
+  font-size: 0.85rem;
+  line-height: 24px;
+}
+
+.wpp .fromred {
+  color: #EB2837;
+  font-weight: bold;
+  font-size: 0.85rem;
+  line-height: 24px;
+}
+
+.wpp .frompink1 {
+  color: #FF2E74;
+  font-weight: bold;
+  font-size: 0.85rem;
+  line-height: 24px;
+}
+
+.wpp .frompink2 {
+  color: #E542A3;
+  font-weight: bold;
+  font-size: 0.85rem;
+  line-height: 24px;
+}
+
+.wpp .frompurple1 {
+  color: #5E47DE;
+  font-weight: bold;
+  font-size: 0.85rem;
+  line-height: 24px;
+}
+
+.wpp .frompurple2 {
+  color: #7F66FF;
+  font-weight: bold;
+  font-size: 0.85rem;
+  line-height: 24px;
+}
+
+.wpp .fromblue1 {
+  color: #7D9EF1;
+  font-weight: bold;
+  font-size: 0.85rem;
+  line-height: 24px;
+}
+
+.wpp .fromblue2 {
+  color: #007BFC;
+  font-weight: bold;
+  font-size: 0.85rem;
+  line-height: 24px;
+}
+
+.wpp .fromblue3 {
+  color: #53BDEB;
+  font-weight: bold;
+  font-size: 0.85rem;
+  line-height: 24px;
+}
+
+.wpp .previewsent img,
+.wpp .previewreceived img {
+  margin-left: -5px;
+  margin-right: 10px;
+  float: left;
+  margin-top: -7px;
+  height: 80px;
+  max-width: 80px;
+  position: relative;
+}
+
+.wpp .titleimg {
+  color: black;
+  font-weight: bold;
+  top: -2px;
+  margin-bottom: -2px;
+  display: block;
+  position: relative;
+}
+
+.wpp .previewtitle {
+  color: black;
+  font-weight: bold;
+  margin-top: -2px;
+  margin-bottom: -2px;
+  display: inline-block;
+  position: relative;
+}
+
+.wpp .links {
+  color: #027EB5;
+}
+
+.wpp .reaction {
+  margin-top: -1.2em;
+  position: relative;
+  display: inline-block;
+  margin-left: .2em;
+  margin-right: .2em;
+  float: right;
+  font-size: 0.95em;
+}
+
+.wpp .contact {
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 1.15em;
+  top: 20px;
+  position: absolute;
+  text-align: left;
+  margin-left: 100px;
+  overflow: hidden;
+  max-width: 140px;
+  height: 20px;
+}
+
+.wpp .header .button1 {
+  width: 28px;
+  vertical-align: top;
+  top: 17px;
+  margin-left: 10px;
+  position: absolute;
+}
+
+.wpp .header .button2 {
+  width: 20px;
+  margin-top: 0px;
+  margin-left: 270px;
+  position: absolute;
+}
+
+.wpp .header .button3 {
+  width: 20px;
+  margin-top: 0px;
+  margin-left: 301px;
+  position: absolute;
+}
+
+.wpp .group {
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 1.15em;
+  top: 15px;
+  position: absolute;
+  text-align: left;
+  margin-left: 100px;
+  overflow: hidden;
+  max-width: 153px;
+  height: 20px;
+}
+
+.wpp .groupmembers {
+  color: #FFFFFF;
+  font-size: .8em;
+  top: 33px;
+  height: 15px;
+  position: absolute;
+  text-align: left;
+  margin-left: 100px;
+  overflow: hidden;
+  max-width: 153px;
+}
+
+.wpp .typingbar .button1 {
+  width: 26px;
+  vertical-align: top;
+  margin-top: -12px;
+  margin-left: 10px;
+  position: absolute;
+}
+
+.wpp .typingbar .button2 {
+  width: 26px;
+  vertical-align: top;
+  margin-top: -12px;
+  margin-left: 200px;
+  position: absolute;
+}
+
+.wpp .typingbar .button3 {
+  width: 26px;
+  vertical-align: top;
+  margin-top: -12px;
+  margin-left: 235px;
+  position: absolute;
+}
+
+.wpp .light .mic {
+  height: 38px;
+  width: 38px;
+  top: 5px;
+  left: 285px;
+  background: #008069;
+  border-radius: 50%;
+  text-align: left;
+  overflow: hidden;
+  position: absolute;
+  box-shadow: 1.1px 1.1px 3px rgba(202, 203, 204, 1);
+}
+
+.wpp .dark .mic {
+  height: 38px;
+  width: 38px;
+  top: 5px;
+  left: 285px;
+  background: #008069;
+  border-radius: 50%;
+  text-align: left;
+  overflow: hidden;
+  position: absolute;
+  box-shadow: 1.1px 1.1px 3px rgba(16, 27, 34, 1);
+}
+
+.wpp .mic .button1 {
+  width: 26px;
+  vertical-align: top;
+  margin-top: -12px;
+  margin-left: 6px;
+  position: absolute;
+}
+
+.wpp .light .typingbar .text {
+  display: inline-block;
+  color: #999;
+  position: absolute;
+  margin-top: -9px;
+  margin-left: 44px;
+  font-size: .95em;
+}
+
+.wpp .dark .typingbar .text {
+  display: inline-block;
+  color: #8595A0;
+  position: absolute;
+  margin-top: -9px;
+  margin-left: 44px;
+  font-size: .95em;
+}
+
+.wpp .light .sent1 {
+  float: right;
+  color: #000000;
+  margin: 0.1em 1em;
+  margin-top: 0.7em;
+  border-radius: 0.8em 0 0.8em 0.8em;
+  padding: .5em .8em .4em .8em;
+  background: #D9FDD3;
+  max-width: 70%;
+  min-height: 20px;
+  clear: both;
+  position: relative;
+  box-shadow: 1.1px 1.1px 3px rgba(202, 203, 204, 1);
+}
+
+.wpp .light .sent1::after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 0em 1em 1em .5em;
+  border-color: transparent transparent transparent #D9FDD3;
+  position: absolute;
+  top: 0px;
+  right: -1.4em;
+}
+
+.wpp .light .sent1::before {
+  content: "";
+  width: .6em;
+  height: 2em;
+  border: 0px;
+  background-image: linear-gradient(112deg, rgba(202, 203, 204, 1), rgba(255,0,0,0), rgba(255,0,0,0));
+  position: absolute;
+  top: .6px;
+  right: -.6em;
+}
+
+.wpp .light .sent2 {
+  float: right;
+  color: #000000;
+  margin: 0.1em 1em;
+  margin-top: 0.25em;
+  border-radius: 0.8em;
+  padding: .5em .8em .4em .8em;
+  background: #D9FDD3;
+  max-width: 70%;
+  min-height: 20px;
+  clear: both;
+  position: relative;
+  box-shadow: 1.1px 1.1px 3px rgba(202, 203, 204, 1);
+}
+
+.wpp .light .received1 {
+  float: left;
+  color: #000000;
+  margin: 0.1em 1em;
+  margin-top: 0.7em;
+  border-radius: 0 0.8em 0.8em 0.8em;
+  padding: .5em .8em .4em .8em;
+  background: #FAFAFA;
+  max-width: 70%;
+  min-height: 20px;
+  clear: both;
+  position: relative;
+  box-shadow: 1.1px 1.1px 3px rgba(202, 203, 204, 1);
+}
+
+.wpp .light .received1::after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 0px .5em 1em 0px;
+  border-color: transparent #FAFAFA transparent transparent;
+  position: absolute;
+  top: 0px;
+  left: -0.4em;
+}
+
+.wpp .light .received1::before {
+  content: "";
+  width: .6em;
+  height: 2em;
+  border: 0px;
+  background-image: linear-gradient(255deg, rgba(202, 203, 204, 1), rgba(255,0,0,0), rgba(255,0,0,0));
+  position: absolute;
+  top: 1px;
+  left: -.6em;
+}
+
+.wpp .light .received2 {
+  float: left;
+  color: #000000;
+  margin: 0.1em 1em;
+  margin-top: 0.25em;
+  border-radius: 0.8em;
+  padding: .5em .8em .4em .8em;
+  background: #FAFAFA;
+  max-width: 70%;
+  min-height: 20px;
+  clear: both;
+  position: relative;
+  box-shadow: 1.1px 1.1px 3px rgba(202, 203, 204, 1);
+}
+
+.wpp .light .info p {
+  max-width: 75%;
+  border-radius: 9px;
+  padding: 9px;
+  display: inline-block;
+  background: #F8F7F5;
+  box-shadow: 1.1px 1.1px 3px rgba(202, 203, 204, 1);
+  color: #55646D;
+  opacity: .9;
+}
+
+.wpp .light .quotesentgreen1 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #D1F4CC;
+  color: #757575;
+  border-left: 4px solid #06CF9C;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .light .quotereceivedgreen1 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #F1F2F2;
+  color: #757575;
+  border-left: 4px solid #06CF9C;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .light .quotesentgreen2 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #D1F4CC;
+  color: #757575;
+  border-left: 4px solid #02A698;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .light .quotereceivedgreen2 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #F1F2F2;
+  color: #757575;
+  border-left: 4px solid #02A698;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .light .quotesentgreen3 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #D1F4CC;
+  color: #757575;
+  border-left: 4px solid #3DB46C;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .light .quotereceivedgreen3 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #F1F2F2;
+  color: #757575;
+  border-left: 4px solid #3DB46C;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .light .quotesentgreen4 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #D1F4CC;
+  color: #757575;
+  border-left: 4px solid #25D366;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .light .quotereceivedgreen4 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #F1F2F2;
+  color: #757575;
+  border-left: 4px solid #25D366;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .light .quotesentgreen5 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #D1F4CC;
+  color: #757575;
+  border-left: 4px solid #A5B337;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .light .quotereceivedgreen5 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #F1F2F2;
+  color: #757575;
+  border-left: 4px solid #A5B337;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .light .quotesentyellow {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #D1F4CC;
+  color: #757575;
+  border-left: 4px solid #FFBC38;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .light .quotereceivedyelow {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #F1F2F2;
+  color: #757575;
+  border-left: 4px solid #FFBC38;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .light .quotesentbrown1 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #D1F4CC;
+  color: #757575;
+  border-left: 4px solid #B4876E;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .light .quotereceivedbrown1 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #F1F2F2;
+  color: #757575;
+  border-left: 4px solid #B4876E;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .light .quotesentbrown2 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #D1F4CC;
+  color: #757575;
+  border-left: 4px solid #C4532D;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .light .quotereceivedbrown2 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #F1F2F2;
+  color: #757575;
+  border-left: 4px solid #C4532D;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .light .quotesentred {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #D1F4CC;
+  color: #757575;
+  border-left: 4px solid #EB2837;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .light .quotereceivedred {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #F1F2F2;
+  color: #757575;
+  border-left: 4px solid #EB2837;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .light .quotesentpink1 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #D1F4CC;
+  color: #757575;
+  border-left: 4px solid #FF2E74;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .light .quotereceivedpink1 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #F1F2F2;
+  color: #757575;
+  border-left: 4px solid #FF2E74;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .light .quotesentpink2 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #D1F4CC;
+  color: #757575;
+  border-left: 4px solid #E542A3;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .light .quotereceivedpink2 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #F1F2F2;
+  color: #757575;
+  border-left: 4px solid #E542A3;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .light .quotesentpurple1 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #D1F4CC;
+  color: #757575;
+  border-left: 4px solid #5E47DE;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .light .quotereceivedpurple1 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #F1F2F2;
+  color: #757575;
+  border-left: 4px solid #5E47DE;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .light .quotesentpurple2 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #D1F4CC;
+  color: #757575;
+  border-left: 4px solid #7F66FF;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .light .quotereceivedpurple2 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #F1F2F2;
+  color: #757575;
+  border-left: 4px solid #7F66FF;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .light .quotesentblue1 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #D1F4CC;
+  color: #757575;
+  border-left: 4px solid #7D9EF1;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .light .quotereceivedblue1 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #F1F2F2;
+  color: #757575;
+  border-left: 4px solid #7D9EF1;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .light .quotesentblue2 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #D1F4CC;
+  color: #757575;
+  border-left: 4px solid #007BFC;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .light .quotereceivedblue2 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #F1F2F2;
+  color: #757575;
+  border-left: 4px solid #007BFC;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .light .quotesentblue3 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #D1F4CC;
+  color: #757575;
+  border-left: 4px solid #53BDEB;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .light .quotereceivedblue3 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #F1F2F2;
+  color: #757575;
+  border-left: 4px solid #53BDEB;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .light .previewsent {
+  font-size: 0.85rem;
+  overflow: hidden;
+  height: 73px;
+  background-color: #D1F4CC;
+  color: #757575;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -5px;
+  margin-left: -8px;
+  width: 244px;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .light .previewreceived {
+  font-size: 0.85rem;
+  overflow: hidden;
+  height: 73px;
+  background-color: #F1F2F2;
+  color: #757575;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -5px;
+  margin-left: -8px;
+  width: 244px;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .light .previewlinksent {
+  font-size: 0.7rem;
+  color: #97B298;
+}
+
+.wpp .light .previewlinkreceived {
+  font-size: 0.7rem;
+  color: #B0B4B6;
+}
+
+.wpp .light .reactionsent {
+  float: right;
+  padding-left: .2em;
+  padding-right: .2em;
+  padding-bottom: 0.8em;
+  padding-top: .2em;
+  right: 20px;
+  min-width: 10px;
+  height: 10px;
+  display: block;
+  background: #FAFAFA;
+  box-shadow: 1.1px 1.1px 3px rgba(202, 203, 204, 1);
+  color: #999;
+  border-radius: 15px;
+  position: relative;
+  clear: both;
+  margin: 0.1em .5em;
+  margin-top: -.4em;
+  margin-bottom: .1em;
+  margin-left: 1.4em;
+  text-align: right;
+}
+
+.wpp .light .reactionreceived {
+  float: left;
+  padding-left: .2em;
+  padding-right: .2em;
+  padding-bottom: 0.8em;
+  padding-top: .2em;
+  left: 5px;
+  min-width: 10px;
+  height: 10px;
+  display: block;
+  background: #FAFAFA;
+  box-shadow: 1.1px 1.1px 3px rgba(202, 203, 204, 1);
+  color: #999;
+  border-radius: 15px;
+  position: relative;
+  clear: both;
+  margin: 0.1em .5em;
+  margin-top: -.4em;
+  margin-bottom: .1em;
+  margin-left: 1.4em;
+  text-align: left;
+}
+
+.wpp .light .header {
+  background: #008069;
+  width: 355;
+  height: 60px;
+  vertical-align: top;
+  top: 0px;
+  margin-bottom: -3px;
+  overflow: hidden;
+  position: sticky;
+  z-index: 8;
+}
+
+.wpp .header .icon {
+  width: 40px;
+  border-radius: 50%;
+  float: left;
+  margin-top: -8px;
+  margin-left: 45px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.wpp .light .bg1 {
+  background-image: url("https://res.cloudinary.com/detm9f0oh/image/upload/v1682115649/Whatsapp/background_hpw8te.png");
+  background-position: center top;
+  background-repeat: repeat-y;
+  overflow-y: auto;
+  overflow-x: hidden;
+  /* height: 470px;
+  width: 330px; */
+}
+
+.wpp .light .footer1 {
+  min-width: 330;
+  height: 50px;
+  position: relative;
+  vertical-align: bottom;
+  overflow: hidden;
+  margin-top: -1px;
+  background-image: url("https://res.cloudinary.com/detm9f0oh/image/upload/v1682115649/Whatsapp/background_hpw8te.png");
+  background-position: center bottom;
+  background-repeat: repeat-y;
+}
+
+.wpp .light .typingbar {
+  height: 38px;
+  width: 270px;
+  top: 5px;
+  left: 10px;
+  background: #FAFAFA;
+  border-radius: 20px;
+  text-align: left;
+  overflow: hidden;
+  position: absolute;
+  box-shadow: 1.1px 1.1px 3px rgba(202, 203, 204, 1);
+}
+
+.wpp .dark .sent1 {
+  float: right;
+  color: #E9ECEF;
+  margin: 0.1em 1em;
+  margin-top: 0.7em;
+  border-radius: 0.8em 0 0.8em 0.8em;
+  padding: .5em .8em .4em .8em;
+  background: #005C4B;
+  max-width: 70%;
+  min-height: 20px;
+  clear: both;
+  position: relative;
+  box-shadow: 1.1px 1.1px 3px rgba(16, 27, 34, 1);
+}
+
+.wpp .dark .sent1::after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 0em 1em 1em .5em;
+  border-color: transparent transparent transparent #005C4B;
+  position: absolute;
+  top: 0px;
+  right: -1.4em;
+}
+
+.wpp .dark .sent1::before {
+  content: "";
+  width: .6em;
+  height: 2em;
+  border: 0px;
+  background-image: linear-gradient(112deg, rgba(16, 27, 34, 1), rgba(255,0,0,0), rgba(255,0,0,0));
+  position: absolute;
+  top: .6px;
+  right: -.6em;
+}
+
+.wpp .dark .sent2 {
+  float: right;
+  color: #E9ECEF;
+  margin: 0.1em 1em;
+  margin-top: 0.25em;
+  border-radius: 0.8em;
+  padding: .5em .8em .4em .8em;
+  background: #005C4B;
+  max-width: 70%;
+  min-height: 20px;
+  clear: both;
+  position: relative;
+  box-shadow: 1.1px 1.1px 3px rgba(16, 27, 34, 1);
+}
+
+.wpp .dark .received1 {
+  float: left;
+  color: #E9ECEF;
+  margin: 0.1em 1em;
+  margin-top: 0.7em;
+  border-radius: 0 0.8em 0.8em 0.8em;
+  padding: .5em .8em .4em .8em;
+  background: #202C33;
+  max-width: 70%;
+  min-height: 20px;
+  clear: both;
+  position: relative;
+  box-shadow: 1.1px 1.1px 3px rgba(16, 27, 34, 1);
+}
+
+.wpp .dark .received1::after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 0px .5em 1em 0px;
+  border-color: transparent #202C33 transparent transparent;
+  position: absolute;
+  top: 0px;
+  left: -0.4em;
+}
+
+.wpp .dark .received1::before {
+  content: "";
+  width: .6em;
+  height: 2em;
+  border: 0px;
+  background-image: linear-gradient(255deg, rgba(16, 27, 34, 1), rgba(255,0,0,0), rgba(255,0,0,0));
+  position: absolute;
+  top: 1px;
+  left: -.6em;
+}
+
+.wpp .dark .received2 {
+  float: left;
+  color: #E9ECEF;
+  margin: 0.1em 1em;
+  margin-top: 0.25em;
+  border-radius: 0.8em;
+  padding: .5em .8em .4em .8em;
+  background: #202C33;
+  max-width: 70%;
+  min-height: 20px;
+  clear: both;
+  position: relative;
+  box-shadow: 1.1px 1.1px 3px rgba(16, 27, 34, 1);
+}
+
+.wpp .dark .info p {
+  max-width: 75%;
+  border-radius: 9px;
+  padding: 9px;
+  display: inline-block;
+  background: #202C33;
+  box-shadow: 1.1px 1.1px 3px rgba(16, 27, 34, 1);
+  color: #8595A0;
+  opacity: .9;
+}
+
+.wpp .dark .quotesentgreen1 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #025043;
+  color: #9BB9B4;
+  border-left: 4px solid #06CF9C;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .dark .quotereceivedgreen1 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #1E292F;
+  color: #8596A0;
+  border-left: 4px solid #06CF9C;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .dark .quotesentgreen2 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #025043;
+  color: #9BB9B4;
+  border-left: 4px solid #02A698;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .dark .quotereceivedgreen2 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #1E292F;
+  color: #8596A0;
+  border-left: 4px solid #02A698;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .dark .quotesentgreen3 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #025043;
+  color: #9BB9B4;
+  border-left: 4px solid #3DB46C;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .dark .quotereceivedgreen3 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #1E292F;
+  color: #8596A0;
+  border-left: 4px solid #3DB46C;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .dark .quotesentgreen4 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #025043;
+  color: #9BB9B4;
+  border-left: 4px solid #25D366;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .dark .quotereceivedgreen4 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #1E292F;
+  color: #8596A0;
+  border-left: 4px solid #25D366;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .dark .quotesentgreen5 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #025043;
+  color: #9BB9B4;
+  border-left: 4px solid #A5B337;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .dark .quotereceivedgreen5 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #1E292F;
+  color: #8596A0;
+  border-left: 4px solid #A5B337;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .dark .quotesentyellow {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #025043;
+  color: #9BB9B4;
+  border-left: 4px solid #FFBC38;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .dark .quotereceivedyelow {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #1E292F;
+  color: #8596A0;
+  border-left: 4px solid #FFBC38;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .dark .quotesentbrown1 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #025043;
+  color: #9BB9B4;
+  border-left: 4px solid #B4876E;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .dark .quotereceivedbrown1 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #1E292F;
+  color: #8596A0;
+  border-left: 4px solid #B4876E;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .dark .quotesentbrown2 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #025043;
+  color: #9BB9B4;
+  border-left: 4px solid #C4532D;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .dark .quotereceivedbrown2 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #1E292F;
+  color: #8596A0;
+  border-left: 4px solid #C4532D;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .dark .quotesentred {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #025043;
+  color: #9BB9B4;
+  border-left: 4px solid #EB2837;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .dark .quotereceivedred {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #1E292F;
+  color: #8596A0;
+  border-left: 4px solid #EB2837;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .dark .quotesentpink1 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #025043;
+  color: #9BB9B4;
+  border-left: 4px solid #FF2E74;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .dark .quotereceivedpink1 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #1E292F;
+  color: #8596A0;
+  border-left: 4px solid #FF2E74;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .dark .quotesentpink2 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #025043;
+  color: #9BB9B4;
+  border-left: 4px solid #E542A3;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .dark .quotereceivedpink2 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #1E292F;
+  color: #8596A0;
+  border-left: 4px solid #E542A3;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .dark .quotesentpurple1 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #025043;
+  color: #9BB9B4;
+  border-left: 4px solid #5E47DE;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .dark .quotereceivedpurple1 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #1E292F;
+  color: #8596A0;
+  border-left: 4px solid #5E47DE;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .dark .quotesentpurple2 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #025043;
+  color: #9BB9B4;
+  border-left: 4px solid #7F66FF;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .dark .quotereceivedpurple2 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #1E292F;
+  color: #8596A0;
+  border-left: 4px solid #7F66FF;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .dark .quotesentblue1 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #025043;
+  color: #9BB9B4;
+  border-left: 4px solid #7D9EF1;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .dark .quotereceivedblue1 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #1E292F;
+  color: #8596A0;
+  border-left: 4px solid #7D9EF1;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .dark .quotesentblue2 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #025043;
+  color: #9BB9B4;
+  border-left: 4px solid #007BFC;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .dark .quotereceivedblue2 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #1E292F;
+  color: #8596A0;
+  border-left: 4px solid #007BFC;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .dark .quotesentblue3 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #025043;
+  color: #9BB9B4;
+  border-left: 4px solid #53BDEB;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .dark .quotereceivedblue3 {
+  font-size: 0.85rem;
+  overflow: hidden;
+  max-height: 5em;
+  background-color: #1E292F;
+  color: #8596A0;
+  border-left: 4px solid #53BDEB;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -3px;
+  margin-left: -8px;
+  width: 103%;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .dark .previewsent .titleimg {
+  color: #9BB9B4;
+  font-weight: bold;
+  top: -2px;
+  margin-bottom: -2px;
+  display: block;
+  position: relative;
+}
+
+.wpp .dark .previewsent .previewtitle {
+  font-weight: bold;
+  margin-top: -2px;
+  margin-bottom: -2px;
+  display: inline-block;
+  position: relative;
+  color: #9BB9B4;
+}
+
+.wpp .dark .previewreceived .titleimg {
+  color: #8596A0;
+  font-weight: bold;
+  top: -2px;
+  margin-bottom: -2px;
+  display: block;
+  position: relative;
+}
+
+.wpp .dark .previewreceived .previewtitle {
+  font-weight: bold;
+  margin-top: -2px;
+  margin-bottom: -2px;
+  display: inline-block;
+  position: relative;
+  color: #8596A0;
+}
+
+.wpp .dark .previewsent {
+  font-size: 0.85rem;
+  overflow: hidden;
+  height: 73px;
+  background-color: #025043;
+  color: #9BB9B4;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -5px;
+  margin-left: -8px;
+  width: 244px;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .dark .previewreceived {
+  font-size: 0.85rem;
+  overflow: hidden;
+  height: 73px;
+  background-color: #1E292F;
+  color: #8596A0;
+  display: block;
+  border-radius: 0.4em;
+  margin-top: -5px;
+  margin-left: -8px;
+  width: 244px;
+  padding-left: .4em;
+  padding-top: .5em;
+  padding-botton: .4em;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.wpp .dark .previewlinksent {
+  font-size: 0.7rem;
+  color: #66968D;
+}
+
+.wpp .dark .previewlinkreceived {
+  font-size: 0.7rem;
+  color: #71767C;
+}
+
+.wpp .dark .reactionsent {
+  float: right;
+  padding-left: .2em;
+  padding-right: .2em;
+  padding-bottom: 0.8em;
+  padding-top: .2em;
+  right: 20px;
+  min-width: 10px;
+  height: 10px;
+  display: block;
+  background: #202C33;
+  box-shadow: 1.1px 1.1px 3px rgba(16, 27, 34, 1);
+  color: #8595A0;
+  border-radius: 15px;
+  position: relative;
+  clear: both;
+  margin: 0.1em .5em;
+  margin-top: -.4em;
+  margin-bottom: .1em;
+  margin-left: 1.4em;
+  text-align: right;
+}
+
+.wpp .dark .reactionreceived {
+  float: left;
+  padding-left: .2em;
+  padding-right: .2em;
+  padding-bottom: 0.8em;
+  padding-top: .2em;
+  left: 5px;
+  min-width: 10px;
+  height: 10px;
+  display: block;
+  background: #202C33;
+  box-shadow: 1.1px 1.1px 3px rgba(16, 27, 34, 1);
+  color: #8595A0;
+  border-radius: 15px;
+  position: relative;
+  clear: both;
+  margin: 0.1em .5em;
+  margin-top: -.4em;
+  margin-bottom: .1em;
+  margin-left: 1.4em;
+  text-align: left;
+}
+
+.wpp .dark .header {
+  background: #1F2C34;
+  width: 355;
+  height: 60px;
+  vertical-align: top;
+  top: 0px;
+  margin-bottom: -3px;
+  overflow: hidden;
+  position: sticky;
+  z-index: 8;
+}
+
+.wpp .dark .bg1 {
+  background-image: url("https://res.cloudinary.com/detm9f0oh/image/upload/v1682122773/Whatsapp/background_yryubr.png");
+  background-position: center top;
+  background-repeat: repeat-y;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 470px;
+  width: 330px;
+}
+
+.wpp .dark .footer1 {
+  min-width: 330;
+  height: 50px;
+  position: relative;
+  vertical-align: bottom;
+  overflow: hidden;
+  margin-top: -1px;
+  background-image: url("https://res.cloudinary.com/detm9f0oh/image/upload/v1682122773/Whatsapp/background_yryubr.png");
+  background-position: center bottom;
+  background-repeat: repeat-y;
+}
+
+.wpp .dark .typingbar {
+  height: 38px;
+  width: 270px;
+  top: 5px;
+  left: 10px;
+  background: #1F2C34;
+  border-radius: 20px;
+  text-align: left;
+  overflow: hidden;
+  position: absolute;
+  box-shadow: 1.1px 1.1px 3px rgba(16, 27, 34, 1);
+}
   
   /* ------------------------------------------------------------------------------------- */
 /* ios messages by la temperanza https://archiveofourown.org/works/6434845/chapters/14729722  */
@@ -185,7 +2340,7 @@
   position: relative;
 }
 
-.header {
+.ios-header {
   min-width: 300px;
   background-color: #f6f6f6;
   border-bottom: 1px solid #b2b2b2;
@@ -208,7 +2363,7 @@
   padding-right: .5em;
 }
 
-.text {
+.ios-text {
   float: left;
   color: #000000;
   margin: 0 0 0.5em;
@@ -220,7 +2375,7 @@
   position: relative;
 }
 
-.text::after {
+.ios-text::after {
   content: "";
   position: absolute;
   left: -.5em;
@@ -299,7 +2454,7 @@
   margin-top: -9px;
 }
 
-.time {
+.ios-time {
   min-width: 295px;
   font-size: .75em;
   padding-bottom: 0.5em;
