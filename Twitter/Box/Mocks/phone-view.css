@@ -177,6 +177,11 @@
     position: relative;
   }
 
+  .bottom-rip.reverse {
+    margin-top: -44px;
+    transform: rotateY(180deg);
+  }
+
   .paper-name {
     text-transform: uppercase;
     font-size: 1.7em;
