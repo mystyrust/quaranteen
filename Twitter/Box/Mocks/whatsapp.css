@@ -159,6 +159,11 @@ audio::-webkit-media-controls-play-button {
   line-height: 1.3;
 }
 
+.wpp-yellow p {
+  background: #ffedc9 !important;
+  cursor: pointer;
+}
+
 .wpp .sent audio {
   opacity: 0;
   border-radius: 7px;
@@ -477,7 +482,7 @@ audio::-webkit-media-controls-play-button {
   text-align: left;
   margin-left: 100px;
   overflow: hidden;
-  max-width: 153px;
+  /* max-width: 153px; */
 }
 
 .wpp .typingbar .button1 {
