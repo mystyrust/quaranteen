@@ -1292,6 +1292,7 @@ audio::-webkit-media-controls-play-button {
   margin-bottom: .1em;
   margin-left: 1.4em;
   text-align: right;
+  cursor: pointer;
 }
 
 .wpp .light .reactionreceived {
@@ -1315,6 +1316,7 @@ audio::-webkit-media-controls-play-button {
   margin-bottom: .1em;
   margin-left: 1.4em;
   text-align: left;
+  cursor: pointer;
 }
 
 .wpp .light .header {
@@ -1402,7 +1404,7 @@ audio::-webkit-media-controls-play-button {
 }
 
 .messagebody {
-  background-color: #FFFFFF;
+  /* background-color: #FFFFFF; */
   display: table;
   padding-left: .5em;
   padding-right: .5em;
@@ -1511,15 +1513,21 @@ audio::-webkit-media-controls-play-button {
   display: table;
 }
 
-.img-not-sent {
+/* .img-not-sent {
   content: url(https://img.icons8.com/material-outlined/24/null/info--v1.png);
   position: absolute;
   right: 5px;
   padding-top: 10px;
-}
+} */
 
 .not-sent {
   left: -25px;
+}
+
+.not-sent::before {
+  content: url(https://img.icons8.com/material-outlined/24/null/info--v1.png);
+  position: absolute;
+  right: -27px;
 }
 
   /* ------------------------------------------------------------------------------------- */

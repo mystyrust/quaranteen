@@ -1,5 +1,10 @@
   /* ------------------------------------------------------------------------------------- */
 /* phone view by me */
+.img-tt-center {
+  margin: 0 auto;
+  display: block;
+}
+
 .img-box-ghost
 {
      width: 100%;
