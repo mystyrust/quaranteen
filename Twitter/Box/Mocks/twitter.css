@@ -1,7 +1,7 @@
 /* ----------------- tweets ------------------------ */
 /* gadaursan https://archiveofourown.org/works/22517134/chapters/53806336 */
 
-.twVerified.right {
+.twVerified.right, .twVerifiedEmbed.right {
     float: right;
 }
 
