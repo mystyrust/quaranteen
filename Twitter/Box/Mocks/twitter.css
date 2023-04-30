@@ -7,7 +7,55 @@
 
 .twFollow.left {
     top: unset;
-    float: unset;
+    float: unset ;
+}
+
+.twBird1 {
+    transform: scaleX(-1);
+    float: unset !important;
+}
+
+.twBird2{
+    float: unset !important;
+    top: 3px !important;
+    transform: rotate(90deg);
+}
+
+.twShiftLeft
+{
+    margin-left: 120px !important;
+}
+
+.tungle .twVerified {
+    line-height: normal;
+}
+
+/* .transform1 .twMove{
+    transform: rotate(-5deg);
+    transform-origin: right;
+} */
+
+.transform1 .bottom-border, .transform1 .twMove {
+    transform: rotate(-5deg);
+    transform-origin: right;
+}
+
+.transform1 .twFollow {
+    top: 2em;
+    transform: scaleX(-1);
+}
+
+.transform2 {
+    transform: rotate(-10deg);
+}
+
+.transform4 {
+    transform: rotate(10deg);
+}
+
+.transform3 .top-border, .transform3 .twUser {
+    transform: rotate(-15deg);
+    transform-origin: left;
 }
 
 .tw {
@@ -189,8 +237,47 @@
     margin-left: 0.3em;
     }
     
-    .twText span {
+    .twText span:not(.oops) {
     color: #1DA1F2;
+    cursor: pointer;
+    }
+
+    .oops {
+        position: absolute;
+    }
+
+    .o1 {
+        transform: translate(-9px, 15px);
+    }
+    .o2 {
+        transform: translate(13px, -5px);
+    }
+    .o3 {
+        transform: translate(30px, 10px);
+    }
+    .o4 {
+        transform: translate(50px, 21px);
+    }
+    .o5 {
+        transform: translate(78px, 9px);
+    }
+    .o6 {
+        transform: translate(98px, 13px);
+    }
+    .o7 {
+        transform: translate(120px, -10px);
+    }
+    .o8 {
+        transform: translate(150px, 10px);
+    }
+    .o9 {
+        transform: translate(175px, -10px);
+    }
+    .o10 {
+        transform: translate(185px, -40px);
+    }
+    .o11 {
+        transform: translate(175px, -60px);
     }
     
     /*Formatting for the span of the like count and timestamp*/
