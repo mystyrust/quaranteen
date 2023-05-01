@@ -10,6 +10,11 @@
     float: unset ;
 }
 
+.twAvatar, .twHandle, .twStats, 
+.twHandleEmbed, .twComments {
+    cursor: pointer;
+}
+
 .twBird1 {
     transform: scaleX(-1);
     float: unset !important;
