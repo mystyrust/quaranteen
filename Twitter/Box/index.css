@@ -8,6 +8,10 @@
     margin: 0px;
 }
 
+#workskin {
+    overflow: hidden;
+  }
+
 /* ------------------------------------------------------------------------ */
 /* La_Temperanza https://archiveofourown.org/works/7953412 */
 .ewindow {
@@ -18,7 +22,7 @@
   }
 
   .attach {
-    background-color: #fff;
+    /* background-color: #fff; */
     border-color: #cfcfcf;
     border-style: solid;
     border-width: 1px;
@@ -39,7 +43,7 @@
    .topbar {
     background-color: #404040;
     color: #FFFFFF;
-    border-color: #404040;
+    /* border-color: #404040; */
     border-style: solid;
     border-width: 1px;
     cursor: pointer;
@@ -86,8 +90,8 @@
     margin-bottom: 0; */
     /* width: 66%; */
     padding: 2px 2px 2px 10px;
-    color: #000000;
-    background-color: #FFFFFF;
+    /* color: #000000;
+    background-color: #FFFFFF; */
     /* text-overflow: clip; */
     margin: 0 auto;
 
@@ -98,8 +102,8 @@
     /* width: 66%; */
     padding: 10px;
     text-align: justify;
-    color: #000000;
-    background-color: #FFFFFF;
+    /* color: #000000;
+    background-color: #FFFFFF; */
     /* margin-left: auto;
     margin-right: auto; */
     /* overflow: auto; */
@@ -1925,6 +1929,7 @@
     overflow: hidden;
     max-width: 153px;
     height: 20px;
+    background: unset;
   }
   
   .wpp .groupmembers {
