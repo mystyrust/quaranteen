@@ -1,8 +1,18 @@
 /* ------------------------------------------------------------------------ */
+/* extra edits , ao3 specific*/
+.convo-container, .tw.twBody {
+    margin-bottom: 40px;
+}
+
+.rip-container {
+    margin: 0px;
+}
+
+/* ------------------------------------------------------------------------ */
 /* La_Temperanza https://archiveofourown.org/works/7953412 */
 .ewindow {
     text-align: justify;
-    margin: 0 auto;
+    margin: 0 auto 40px auto;
     max-width: 600px;
     min-width: 300px;
   }
@@ -169,7 +179,8 @@
     p.convo-break {
     display: flex;
     width: 100%;
-    margin: 0;
+    margin: 0px;
+    height: 0px;
     }
     p.convo-pad {
     display: flex;
@@ -314,7 +325,7 @@
   /* ------------------------------------------------------------------------------------- */
 /* phone view by me */
 .img-tt-center {
-    margin: 0 auto;
+    margin: 0 auto 50px auto;
     display: block;
   }
   
@@ -436,7 +447,7 @@
       }
   
       .buzz-logo {
-        height: 50px;
+        width: 50px;
       padding-right: 10px;
       padding-top: 10px;
       cursor: pointer;
@@ -2865,7 +2876,7 @@
     max-width: 300px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     display: table;
-    margin: auto;
+    margin: 40px auto;
     position: relative;
   }
   
