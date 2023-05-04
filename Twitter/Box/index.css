@@ -32,6 +32,10 @@
     display: inline-table;
   }
 
+  .attach:hover {
+    background: lightblue;
+  }
+
   .attach::before {
     content: '\1F4CE';
   }
