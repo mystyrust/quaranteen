@@ -1,0 +1,124 @@
+summary {
+    list-style-type: none;
+  }
+  
+  details > summary::-webkit-details-marker,
+  details > summary::marker {
+    display: none;
+  }
+
+  .all-digits {
+    position: relative;
+  }
+
+  .digit-ones {
+    margin-left: 40px;
+  }
+  
+  .digit-container {
+    position: absolute;
+    width: 30px;
+    height: 110px;
+  }
+  
+  .digit-container details {
+     position: absolute;
+    display: block;
+    /* user-select: none; */
+    cursor: pointer;
+    z-index: 10;
+    top: 0px;
+  }
+
+
+  .digit-container details > summary, .digit-container details > div {
+    display: block;
+    position: absolute;
+    /* width: 1.5em;
+    height: 1.5em; */
+    width: 30px;
+    height: 30px;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  .dummy > div {
+    /* width: 1.5em;
+    height: 1.5em; */
+    opacity: 0.4;
+    user-select: none;
+    cursor: default;
+  }
+/* details[open]
+{
+  top: 50px;
+} */
+
+details[open] > summary {
+  opacity: 0;
+  z-index: 10;
+  /* display: none; */
+}
+
+details[open] {
+    top: 110px;
+  }
+
+details > .chevron-down {
+    /* top: 50px; */
+}
+  .chevron-up {
+    background-image: url("https://img.icons8.com/ios-glyphs/30/chevron-up.png");
+     background-repeat: no-repeat;
+    background-size: 30px 30px;
+    height: 30px;
+    width: 30px;
+    background-color: pink;;
+  }
+  
+  .chevron-down {
+    /* margin-top: 50px; */
+    background-image: url("https://img.icons8.com/ios-glyphs/30/chevron-down.png");
+    background-size: 30px 30px;
+     background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    background-color: orange;;
+  }
+
+ol {
+  list-style: none;
+  font-size: 50px;
+  position: absolute;
+  top: -25px;
+  left: -35px;
+}
+
+ol > li {
+    display: none;
+  }
+
+
+ol > li:nth-child(1),
+details[open] ~ ol > li:nth-child(2),
+details[open] ~ details[open] ~ ol > li:nth-child(3),
+details[open] ~ details[open] ~ details[open] ~ ol > li:nth-child(4),
+details[open] ~ details[open] ~ details[open] ~ details[open] ~ ol > li:nth-child(5),
+details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ ol > li:nth-child(6),
+details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ ol > li:nth-child(7),
+details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ ol > li:nth-child(8),
+details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ ol > li:nth-child(9),
+details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ ol > li:nth-child(10) {
+  display: block;
+}
+details[open] ~ ol > li:nth-child(1),
+details[open] ~ details[open] ~ ol > li:nth-child(2),
+details[open] ~ details[open] ~ details[open] ~ ol > li:nth-child(3),
+details[open] ~ details[open] ~ details[open] ~ details[open] ~ ol > li:nth-child(4),
+details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ ol > li:nth-child(5),
+details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ ol > li:nth-child(6),
+details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ ol > li:nth-child(7),
+details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ ol > li:nth-child(8),
+details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ ol > li:nth-child(9) {
+  display: none;
+}
