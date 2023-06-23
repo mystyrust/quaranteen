@@ -1,9 +1,9 @@
-summary {
+.digit-container summary {
     list-style-type: none;
   }
   
-  details > summary::-webkit-details-marker,
-  details > summary::marker {
+  .digit-container details > summary::-webkit-details-marker,
+  .digit-container details > summary::marker {
     display: none;
   }
 
@@ -54,13 +54,13 @@ summary {
   top: 50px;
 } */
 
-details[open] > summary {
+.digit-container details[open] > summary {
   opacity: 0;
   z-index: 10;
   /* display: none; */
 }
 
-details[open] {
+.digit-container details[open] {
     top: 110px;
   }
 
@@ -98,27 +98,83 @@ ol > li {
     display: none;
   }
 
+p[class="digit-*"] {
+    list-style: none;
+  font-size: 50px;
+  position: absolute;
+  top: -25px;
+  left: -35px;
+    display: none;
+}
 
-ol > li:nth-child(1),
-details[open] ~ ol > li:nth-child(2),
-details[open] ~ details[open] ~ ol > li:nth-child(3),
-details[open] ~ details[open] ~ details[open] ~ ol > li:nth-child(4),
-details[open] ~ details[open] ~ details[open] ~ details[open] ~ ol > li:nth-child(5),
-details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ ol > li:nth-child(6),
-details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ ol > li:nth-child(7),
-details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ ol > li:nth-child(8),
-details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ ol > li:nth-child(9),
-details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ ol > li:nth-child(10) {
+
+ol[class="digit-ones"] > li:nth-child(1),
+details[open][class="digit-ones"] ~ ol[class="digit-ones"] > li:nth-child(2),
+details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ ol[class="digit-ones"] > li:nth-child(3),
+details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ ol[class="digit-ones"] > li:nth-child(4),
+details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ ol[class="digit-ones"] > li:nth-child(5),
+details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ ol[class="digit-ones"] > li:nth-child(6),
+details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ ol[class="digit-ones"] > li:nth-child(7),
+details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ ol[class="digit-ones"] > li:nth-child(8),
+details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ ol[class="digit-ones"] > li:nth-child(9),
+details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ ol[class="digit-ones"] > li:nth-child(10) {
   display: block;
 }
-details[open] ~ ol > li:nth-child(1),
-details[open] ~ details[open] ~ ol > li:nth-child(2),
-details[open] ~ details[open] ~ details[open] ~ ol > li:nth-child(3),
-details[open] ~ details[open] ~ details[open] ~ details[open] ~ ol > li:nth-child(4),
-details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ ol > li:nth-child(5),
-details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ ol > li:nth-child(6),
-details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ ol > li:nth-child(7),
-details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ ol > li:nth-child(8),
-details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ ol > li:nth-child(9) {
+details[open][class="digit-ones"] ~ ol[class="digit-ones"] > li:nth-child(1),
+details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ ol[class="digit-ones"] > li:nth-child(2),
+details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ ol[class="digit-ones"] > li:nth-child(3),
+details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ ol[class="digit-ones"] > li:nth-child(4),
+details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ ol[class="digit-ones"] > li:nth-child(5),
+details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ ol[class="digit-ones"] > li:nth-child(6),
+details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ ol[class="digit-ones"] > li:nth-child(7),
+details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ ol[class="digit-ones"] > li:nth-child(8),
+details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ ol[class="digit-ones"] > li:nth-child(9) {
   display: none;
+}
+
+
+ol[class="digit-tens"] > li:nth-child(1),
+details[open][class="digit-tens"] ~ ol[class="digit-tens"] > li:nth-child(2),
+details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ ol[class="digit-tens"] > li:nth-child(3),
+details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ ol[class="digit-tens"] > li:nth-child(4),
+details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ ol[class="digit-tens"] > li:nth-child(5),
+details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ ol[class="digit-tens"] > li:nth-child(6),
+details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ ol[class="digit-tens"] > li:nth-child(7),
+details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ ol[class="digit-tens"] > li:nth-child(8),
+details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ ol[class="digit-tens"] > li:nth-child(9),
+details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ ol[class="digit-tens"] > li:nth-child(10) {
+  display: block;
+}
+details[open][class="digit-tens"] ~ ol[class="digit-tens"] > li:nth-child(1),
+details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ ol[class="digit-tens"] > li:nth-child(2),
+details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ ol[class="digit-tens"] > li:nth-child(3),
+details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ ol[class="digit-tens"] > li:nth-child(4),
+details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ ol[class="digit-tens"] > li:nth-child(5),
+details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ ol[class="digit-tens"] > li:nth-child(6),
+details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ ol[class="digit-tens"] > li:nth-child(7),
+details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ ol[class="digit-tens"] > li:nth-child(8),
+details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ ol[class="digit-tens"] > li:nth-child(9) {
+  display: none;
+}
+
+.answer {
+    margin-top: 170px;
+}
+
+.answer.correct {
+    display: none;
+}
+
+details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] /* 50 */
+~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ ol[class="digit-ones"]/* 52 */
+~ .answer.wrong 
+{
+    display: none;
+}
+
+details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] /* 50 */
+~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ ol[class="digit-ones"]/* 52 */
+~ .answer.correct 
+{
+    display: block;
 }
