@@ -35,7 +35,6 @@
     top: 0px;
   }
 
-
   .digit-container details > summary, .digit-container details > div {
     display: block;
     position: absolute;
@@ -190,9 +189,6 @@ ol > li {
 }
 
 /* -----------answer is 39----------- */
-
-
-
 
 .answer {
     margin-top: 170px;
