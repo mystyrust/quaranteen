@@ -25,7 +25,7 @@
   .digit-container details {
      position: absolute;
     display: block;
-    /* user-select: none; */
+    user-select: none;
     cursor: pointer;
     z-index: 10;
     top: 0px;
@@ -49,6 +49,7 @@
     opacity: 0.4;
     user-select: none;
     cursor: default;
+    position: absolute;
   }
 /* details[open]
 {
@@ -61,13 +62,10 @@
   /* display: none; */
 }
 
-.digit-container details[open] {
+.digit-container details[open], .dummy .chevron-down {
     top: 110px;
   }
 
-details > .chevron-down {
-    /* top: 50px; */
-}
   .chevron-up {
     background-image: url("https://img.icons8.com/ios-glyphs/30/chevron-up.png");
      background-repeat: no-repeat;
@@ -103,8 +101,8 @@ ol > li {
     list-style: none;
     font-size: 50px;
     /* position: absolute; */
-    top: -25px;
-    left: -35px;
+    /* top: -25px;
+    left: -35px; */
     display: none;
 }
 
@@ -162,7 +160,7 @@ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[
 
 /* -----------answer is 52----------- */
 
-.digit-container:has(
+.all-digits:has(
     details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"]
 ):has(
     details:not([open])[class="digit-tens"] ~ details:not([open])[class="digit-tens"] ~ details:not([open])[class="digit-tens"] ~ details:not([open])[class="digit-tens"]
@@ -175,7 +173,7 @@ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[
     display: none;
 }
 
-.digit-container:has(
+.all-digits:has(
     details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"]
 ):has(
     details:not([open])[class="digit-tens"] ~ details:not([open])[class="digit-tens"] ~ details:not([open])[class="digit-tens"] ~ details:not([open])[class="digit-tens"]
@@ -191,7 +189,7 @@ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[
 /* -----------answer is 52----------- */
 /* -----------answer is 39 ----------- */
 
-.digit-container:has(
+.all-digits:has(
     details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"]
 ):has(
      details:not([open])[class="digit-tens"] ~ details:not([open])[class="digit-tens"] ~ details:not([open])[class="digit-tens"] ~ details:not([open])[class="digit-tens"] ~ details:not([open])[class="digit-tens"] ~ details:not([open])[class="digit-tens"]
@@ -202,7 +200,7 @@ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[
     display: none;
 }
 
-.digit-container:has(
+.all-digits:has(
     details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"]
 ):has(
     details:not([open])[class="digit-tens"] ~ details:not([open])[class="digit-tens"] ~ details:not([open])[class="digit-tens"] ~ details:not([open])[class="digit-tens"] ~ details:not([open])[class="digit-tens"] ~ details:not([open])[class="digit-tens"]

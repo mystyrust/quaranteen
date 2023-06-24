@@ -1,0 +1,220 @@
+.digit-container summary {
+    list-style-type: none;
+  }
+  
+  .digit-container details > summary::-webkit-details-marker,
+  .digit-container details > summary::marker {
+    display: none;
+  }
+
+  .all-digits {
+    position: relative;
+  }
+
+  .digit-tens {
+    margin-left: 40px;
+  }
+
+  .digit-ones {
+    margin-left: 80px;
+  }
+  
+  .digit-container {
+    position: absolute;
+    width: 100px;
+    height: 110px;
+    /* display: flex; */
+  }
+  
+  .digit-container details {
+     position: absolute;
+    display: block;
+    user-select: none;
+    cursor: pointer;
+    z-index: 10;
+    top: 0px;
+  }
+
+
+  .digit-container details > summary, .digit-container details > div {
+    display: block;
+    position: absolute;
+    /* width: 1.5em;
+    height: 1.5em; */
+    width: 30px;
+    height: 30px;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  .dummy > div {
+    /* width: 1.5em;
+    height: 1.5em; */
+    opacity: 0.4;
+    user-select: none;
+    cursor: default;
+    position: absolute;
+  }
+/* details[open]
+{
+  top: 50px;
+} */
+
+.digit-container details[open] > summary {
+  opacity: 0;
+  z-index: 10;
+  /* display: none; */
+}
+
+.digit-container details[open], .dummy .chevron-down {
+    top: 110px;
+  }
+
+  .chevron-up {
+    background-image: url("https://img.icons8.com/ios-glyphs/30/chevron-up.png");
+     background-repeat: no-repeat;
+    background-size: 30px 30px;
+    height: 30px;
+    width: 30px;
+    background-color: pink;;
+  }
+  
+  .chevron-down {
+    /* margin-top: 50px; */
+    background-image: url("https://img.icons8.com/ios-glyphs/30/chevron-down.png");
+    background-size: 30px 30px;
+     background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    background-color: orange;;
+  }
+
+ol {
+  list-style: none;
+  font-size: 50px;
+  position: absolute;
+  top: -25px;
+  left: -35px;
+}
+
+ol > li {
+    display: none;
+  }
+
+  .digit {
+    list-style: none;
+    font-size: 50px;
+    /* position: absolute; */
+    /* top: -25px;
+    left: -35px; */
+    display: none;
+}
+
+/* digit display */
+.digit-0,
+.digit-container details[open] ~ .digit-1,
+.digit-container details[open] ~ details[open] ~ .digit-2,
+.digit-container details[open] ~ details[open] ~ details[open] ~ .digit-3,
+.digit-container details[open] ~ details[open] ~ details[open] ~ details[open] ~ .digit-4,
+.digit-container details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ .digit-5,
+.digit-container details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ .digit-6,
+.digit-container details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ .digit-7,
+.digit-container details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ .digit-8,
+.digit-container details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ .digit-9 {
+  display: block;
+}
+.digit-container details[open] ~ .digit-0,
+.digit-container details[open] ~ details[open] ~ .digit-1,
+.digit-container details[open] ~ details[open] ~ details[open] ~ .digit-2,
+.digit-container details[open] ~ details[open] ~ details[open] ~ details[open] ~ .digit-3,
+.digit-container details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ .digit-4,
+.digit-container details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ .digit-5,
+.digit-container details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ .digit-6,
+.digit-container details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ .digit-7,
+.digit-container details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ .digit-8
+{ 
+  display: none;
+}
+
+/* -----------answer is 52 ----------- */
+
+.all-digits:has(
+    .digit-tens details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open]
+):has(
+    .digit-tens details:not([open]) ~ details:not([open]) ~ details:not([open]) ~ details:not([open])
+):has(
+    .digit-ones details[open] ~ details[open] 
+):has( 
+    .digit-ones details:not([open]) ~ details:not([open]) ~ details:not([open]) ~ details:not([open]) ~ details:not([open])  ~ details:not([open]) ~ details:not([open])
+) .answer.wrong
+{
+    display: none;
+}
+
+.all-digits:has(
+  .digit-tens details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open]
+):has(
+  .digit-tens details:not([open]) ~ details:not([open]) ~ details:not([open]) ~ details:not([open])
+):has(
+ .digit-ones details[open] ~ details[open] 
+):has( 
+  .digit-ones details:not([open]) ~ details:not([open]) ~ details:not([open]) ~ details:not([open]) ~ details:not([open])  ~ details:not([open]) ~ details:not([open])
+) .answer.correct
+{
+    display: block;
+}
+
+/* -----------answer is 52 ----------- */
+/* -----------answer is 39 ----------- */
+
+.all-digits:has(
+  .digit-tens details[open] ~ details[open] ~ details[open]
+):has(
+  .digit-tens details:not([open]) ~ details:not([open]) ~ details:not([open]) ~ details:not([open]) ~ details:not([open]) ~ details:not([open])
+):has(
+  .digit-ones details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~  details[open] 
+) .answer.wrong
+{
+    display: none;
+}
+
+.all-digits:has(
+  .digit-tens details[open] ~ details[open] ~ details[open]
+):has(
+  .digit-tens details:not([open]) ~ details:not([open]) ~ details:not([open]) ~ details:not([open]) ~ details:not([open]) ~ details:not([open])
+):has(
+  .digit-ones details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~  details[open] 
+) .answer.secret
+{
+    display: block;
+}
+
+/* -----------answer is 39----------- */
+
+
+
+
+.answer {
+    margin-top: 170px;
+    /* position: absolute; */
+    padding: 5px;
+    height: 50px;
+    /* width: 100%; */
+}
+
+.answer.correct, .answer.secret {
+    display: none;
+}
+
+.answer.wrong {
+    background-color: red;
+}
+
+.answer.correct {
+    background-color: green;
+}
+
+.answer.secret {
+    background-color: yellow;
+}
+
