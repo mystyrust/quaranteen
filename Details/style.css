@@ -17,8 +17,9 @@
   
   .digit-container {
     position: absolute;
-    width: 30px;
+    width: 100px;
     height: 110px;
+    display: flex;
   }
   
   .digit-container details {
@@ -98,83 +99,143 @@ ol > li {
     display: none;
   }
 
-p[class="digit-*"] {
+  .digit {
     list-style: none;
-  font-size: 50px;
-  position: absolute;
-  top: -25px;
-  left: -35px;
+    font-size: 50px;
+    /* position: absolute; */
+    top: -25px;
+    left: -35px;
     display: none;
 }
 
-
-ol[class="digit-ones"] > li:nth-child(1),
-details[open][class="digit-ones"] ~ ol[class="digit-ones"] > li:nth-child(2),
-details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ ol[class="digit-ones"] > li:nth-child(3),
-details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ ol[class="digit-ones"] > li:nth-child(4),
-details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ ol[class="digit-ones"] > li:nth-child(5),
-details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ ol[class="digit-ones"] > li:nth-child(6),
-details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ ol[class="digit-ones"] > li:nth-child(7),
-details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ ol[class="digit-ones"] > li:nth-child(8),
-details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ ol[class="digit-ones"] > li:nth-child(9),
-details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ ol[class="digit-ones"] > li:nth-child(10) {
+/* ones */
+.digit-ones-0,
+details[open][class="digit-ones"] ~ .digit-ones-1,
+details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ .digit-ones-2,
+details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ .digit-ones-3,
+details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ .digit-ones-4,
+details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ .digit-ones-5,
+details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ .digit-ones-6,
+details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ .digit-ones-7,
+details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ .digit-ones-8,
+details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ .digit-ones-9 {
   display: block;
 }
-details[open][class="digit-ones"] ~ ol[class="digit-ones"] > li:nth-child(1),
-details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ ol[class="digit-ones"] > li:nth-child(2),
-details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ ol[class="digit-ones"] > li:nth-child(3),
-details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ ol[class="digit-ones"] > li:nth-child(4),
-details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ ol[class="digit-ones"] > li:nth-child(5),
-details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ ol[class="digit-ones"] > li:nth-child(6),
-details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ ol[class="digit-ones"] > li:nth-child(7),
-details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ ol[class="digit-ones"] > li:nth-child(8),
-details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ ol[class="digit-ones"] > li:nth-child(9) {
+details[open][class="digit-ones"] ~ .digit-ones-0,
+details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ .digit-ones-1,
+details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ .digit-ones-2,
+details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ .digit-ones-3,
+details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ .digit-ones-4,
+details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ .digit-ones-5,
+details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ .digit-ones-6,
+details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ .digit-ones-7,
+details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ .digit-ones-8 {
   display: none;
 }
 
 
-ol[class="digit-tens"] > li:nth-child(1),
-details[open][class="digit-tens"] ~ ol[class="digit-tens"] > li:nth-child(2),
-details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ ol[class="digit-tens"] > li:nth-child(3),
-details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ ol[class="digit-tens"] > li:nth-child(4),
-details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ ol[class="digit-tens"] > li:nth-child(5),
-details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ ol[class="digit-tens"] > li:nth-child(6),
-details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ ol[class="digit-tens"] > li:nth-child(7),
-details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ ol[class="digit-tens"] > li:nth-child(8),
-details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ ol[class="digit-tens"] > li:nth-child(9),
-details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ ol[class="digit-tens"] > li:nth-child(10) {
+/* tens */
+.digit-tens-0,
+details[open][class="digit-tens"] ~ .digit-tens-1,
+details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ .digit-tens-2,
+details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ .digit-tens-3,
+details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ .digit-tens-4,
+details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ .digit-tens-5,
+details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ .digit-tens-6,
+details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ .digit-tens-7,
+details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ .digit-tens-8,
+details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ .digit-tens-9 {
   display: block;
 }
-details[open][class="digit-tens"] ~ ol[class="digit-tens"] > li:nth-child(1),
-details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ ol[class="digit-tens"] > li:nth-child(2),
-details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ ol[class="digit-tens"] > li:nth-child(3),
-details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ ol[class="digit-tens"] > li:nth-child(4),
-details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ ol[class="digit-tens"] > li:nth-child(5),
-details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ ol[class="digit-tens"] > li:nth-child(6),
-details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ ol[class="digit-tens"] > li:nth-child(7),
-details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ ol[class="digit-tens"] > li:nth-child(8),
-details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ ol[class="digit-tens"] > li:nth-child(9) {
+details[open][class="digit-tens"] ~ .digit-tens-0,
+details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ .digit-tens-1,
+details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ .digit-tens-2,
+details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ .digit-tens-3,
+details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ .digit-tens-4,
+details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ .digit-tens-5,
+details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ .digit-tens-6,
+details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ .digit-tens-7,
+details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ .digit-tens-8
+{ 
   display: none;
 }
+
+/* tens test to display correct answer */
+
+/* show wrong */
+/* .digit-tens-0 ~ .answer.wrong,
+details[open][class="digit-tens"] ~ .digit-tens-1 ~ .answer.wrong,
+details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ .digit-tens-2 ~ .answer.wrong,
+details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ .digit-tens-3 ~ .answer.wrong,
+details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ .digit-tens-4 ~ .answer.wrong,
+details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ .digit-tens-5 ~ .answer.wrong,
+details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ .digit-tens-6 ~ .answer.wrong,
+details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ .digit-tens-7 ~ .answer.wrong,
+details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ .digit-tens-8 ~ .answer.wrong,
+details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ .digit-tens-9  ~ .answer.wrong
+{
+  display: block ;
+} */
+
+
+/* ones test to display correct answer */
+
+/* show wrong */
+/* .digit-ones-0 ~ .answer.wrong,
+details[open][class="digit-ones"] ~ .digit-ones-1 ~ .answer.wrong,
+details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ .digit-ones-2 ~ .answer.wrong,
+details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ .digit-ones-3 ~ .answer.wrong,
+details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ .digit-ones-4 ~ .answer.wrong,
+details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ .digit-ones-5 ~ .answer.wrong,
+details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ .digit-ones-6 ~ .answer.wrong,
+details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ .digit-ones-7 ~ .answer.wrong,
+details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ .digit-ones-8 ~ .answer.wrong,
+details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ .digit-ones-9  ~ .answer.wrong
+{
+  display: block ;
+} */
+
+/* details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ .answer.correct
+{
+    display: block;
+} */
+
+/* ------the code is 52------ */
+
+.digit-container:has(
+    details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"]
+):has(
+    details:not([open])[class="digit-tens"] ~ details:not([open])[class="digit-tens"] ~ details:not([open])[class="digit-tens"] ~ details:not([open])[class="digit-tens"] ~ details:not([open])[class="digit-tens"]
+):has(
+    details[open][class="digit-ones"] ~ details[open][class="digit-ones"] 
+):has( 
+    details:not([open])[class="digit-ones"] ~ details:not([open])[class="digit-ones"] ~ details:not([open])[class="digit-ones"] ~ details:not([open])[class="digit-ones"] ~ details:not([open])[class="digit-ones"] ~ details:not([open])[class="digit-ones"]  ~ details:not([open])[class="digit-ones"] ~ details:not([open])[class="digit-ones"]
+) .answer.wrong
+{
+    display: none;
+}
+
+/* ------the code is 52------ */
+
+
 
 .answer {
     margin-top: 170px;
+    position: absolute;
+    padding: 5px;
+    height: 50px;
+    width: 100%;
+}
+
+/* .answer.correct {
+    display: none;
+} */
+
+.answer.wrong {
+    background-color: red;
 }
 
 .answer.correct {
-    display: none;
+    background-color: green;
 }
 
-details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] /* 50 */
-~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ ol[class="digit-ones"]/* 52 */
-~ .answer.wrong 
-{
-    display: none;
-}
-
-details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] /* 50 */
-~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ ol[class="digit-ones"]/* 52 */
-~ .answer.correct 
-{
-    display: block;
-}
