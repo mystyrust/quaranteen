@@ -160,76 +160,75 @@ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[
   display: none;
 }
 
-/* tens test to display correct answer */
-
-/* show wrong */
-/* .digit-tens-0 ~ .answer.wrong,
-details[open][class="digit-tens"] ~ .digit-tens-1 ~ .answer.wrong,
-details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ .digit-tens-2 ~ .answer.wrong,
-details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ .digit-tens-3 ~ .answer.wrong,
-details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ .digit-tens-4 ~ .answer.wrong,
-details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ .digit-tens-5 ~ .answer.wrong,
-details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ .digit-tens-6 ~ .answer.wrong,
-details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ .digit-tens-7 ~ .answer.wrong,
-details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ .digit-tens-8 ~ .answer.wrong,
-details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ .digit-tens-9  ~ .answer.wrong
-{
-  display: block ;
-} */
-
-
-/* ones test to display correct answer */
-
-/* show wrong */
-/* .digit-ones-0 ~ .answer.wrong,
-details[open][class="digit-ones"] ~ .digit-ones-1 ~ .answer.wrong,
-details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ .digit-ones-2 ~ .answer.wrong,
-details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ .digit-ones-3 ~ .answer.wrong,
-details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ .digit-ones-4 ~ .answer.wrong,
-details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ .digit-ones-5 ~ .answer.wrong,
-details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ .digit-ones-6 ~ .answer.wrong,
-details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ .digit-ones-7 ~ .answer.wrong,
-details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ .digit-ones-8 ~ .answer.wrong,
-details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ .digit-ones-9  ~ .answer.wrong
-{
-  display: block ;
-} */
-
-/* details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ .answer.correct
-{
-    display: block;
-} */
-
-/* ------the code is 52------ */
+/* -----------answer is 52----------- */
 
 .digit-container:has(
     details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"]
 ):has(
-    details:not([open])[class="digit-tens"] ~ details:not([open])[class="digit-tens"] ~ details:not([open])[class="digit-tens"] ~ details:not([open])[class="digit-tens"] ~ details:not([open])[class="digit-tens"]
+    details:not([open])[class="digit-tens"] ~ details:not([open])[class="digit-tens"] ~ details:not([open])[class="digit-tens"] ~ details:not([open])[class="digit-tens"]
 ):has(
     details[open][class="digit-ones"] ~ details[open][class="digit-ones"] 
 ):has( 
-    details:not([open])[class="digit-ones"] ~ details:not([open])[class="digit-ones"] ~ details:not([open])[class="digit-ones"] ~ details:not([open])[class="digit-ones"] ~ details:not([open])[class="digit-ones"] ~ details:not([open])[class="digit-ones"]  ~ details:not([open])[class="digit-ones"] ~ details:not([open])[class="digit-ones"]
+    details:not([open])[class="digit-ones"] ~ details:not([open])[class="digit-ones"] ~ details:not([open])[class="digit-ones"] ~ details:not([open])[class="digit-ones"] ~ details:not([open])[class="digit-ones"]  ~ details:not([open])[class="digit-ones"] ~ details:not([open])[class="digit-ones"]
 ) .answer.wrong
 {
     display: none;
 }
 
-/* ------the code is 52------ */
+.digit-container:has(
+    details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"]
+):has(
+    details:not([open])[class="digit-tens"] ~ details:not([open])[class="digit-tens"] ~ details:not([open])[class="digit-tens"] ~ details:not([open])[class="digit-tens"]
+):has(
+    details[open][class="digit-ones"] ~ details[open][class="digit-ones"] 
+):has( 
+    details:not([open])[class="digit-ones"] ~ details:not([open])[class="digit-ones"] ~ details:not([open])[class="digit-ones"] ~ details:not([open])[class="digit-ones"] ~ details:not([open])[class="digit-ones"]  ~ details:not([open])[class="digit-ones"] ~ details:not([open])[class="digit-ones"]
+) .answer.correct
+{
+    display: block;
+}
+
+/* -----------answer is 52----------- */
+/* -----------answer is 39 ----------- */
+
+.digit-container:has(
+    details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"]
+):has(
+     details:not([open])[class="digit-tens"] ~ details:not([open])[class="digit-tens"] ~ details:not([open])[class="digit-tens"] ~ details:not([open])[class="digit-tens"] ~ details:not([open])[class="digit-tens"] ~ details:not([open])[class="digit-tens"]
+):has(
+    details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~  details[open][class="digit-ones"] 
+) .answer.wrong
+{
+    display: none;
+}
+
+.digit-container:has(
+    details[open][class="digit-tens"] ~ details[open][class="digit-tens"] ~ details[open][class="digit-tens"]
+):has(
+    details:not([open])[class="digit-tens"] ~ details:not([open])[class="digit-tens"] ~ details:not([open])[class="digit-tens"] ~ details:not([open])[class="digit-tens"] ~ details:not([open])[class="digit-tens"] ~ details:not([open])[class="digit-tens"]
+):has(
+    details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~  details[open][class="digit-ones"] 
+) .answer.secret
+{
+    display: block;
+}
+
+/* -----------answer is 39----------- */
+
 
 
 
 .answer {
     margin-top: 170px;
-    position: absolute;
+    /* position: absolute; */
     padding: 5px;
     height: 50px;
     width: 100%;
 }
 
-/* .answer.correct {
+.answer.correct, .answer.secret {
     display: none;
-} */
+}
 
 .answer.wrong {
     background-color: red;
@@ -237,5 +236,9 @@ details[open][class="digit-ones"] ~ details[open][class="digit-ones"] ~ details[
 
 .answer.correct {
     background-color: green;
+}
+
+.answer.secret {
+    background-color: yellow;
 }
 
