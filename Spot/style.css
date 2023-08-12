@@ -1,0 +1,1132 @@
+.fadeout {
+    position: relative;
+    /* color: #777777 !important; */
+  }
+  .fadeout::before {
+    content: '';
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(to bottom, rgba(255,255,255, 0), white);
+  }
+
+/* ---messenger by rainsong https://archiveofourown.org/works/29809578/chapters/73338768 */
+.fbmessenger {
+  max-width: 300px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: table;
+  margin: auto;
+}
+
+.fbheader {
+  min-width: 300px;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #E7E7E7;
+  color: #000000;
+  font-weight: bold;
+  padding-left: 1em;
+  padding-bottom: 1em;
+  padding-top: 1em;
+  margin-left: -.5em;
+  margin-right: -.5em;
+  margin-bottom: -2em;
+  text-align: left;
+  display: table;
+}
+
+.fbmessagebody {
+  background-color: #FFFFFF;
+  display: table;
+  padding-left: .5em;
+  padding-right: .5em;
+}
+
+.fbtextsingle {
+  float: left;
+  color: #000000;
+  margin: 0 0 0.5em;
+  border-radius: 1em 1em 1em 1em;
+  padding: 0.5em 1em;
+  background: #F1F1F1;
+  max-width: 75%;
+  clear: both;
+  position: relative;
+}
+
+.fbtextfirst {
+  float: left;
+  color: #000000;
+  margin: 0 0 0.1em;
+  border-radius: 1em 1em 1em 0.2em;
+  padding: 0.5em 1em;
+  background: #F1F1F1;
+  max-width: 75%;
+  clear: both;
+  position: relative;
+}
+
+.fbtextmiddle {
+  float: left;
+  color: #000000;
+  margin: 0 0 0.1em;
+  border-radius: 0.2em 1em 1em 0.2em;
+  padding: 0.5em 1em;
+  background: #F1F1F1;
+  max-width: 75%;
+  clear: both;
+  position: relative;
+}
+
+.fbtextlast {
+  float: left;
+  color: #000000;
+  margin: 0 0 0.5em;
+  border-radius: 0.2em 1em 1em 1em;
+  padding: 0.5em 1em;
+  background: #F1F1F1;
+  max-width: 75%;
+  clear: both;
+  position: relative;
+}
+
+.fbtextsingle span {
+  color: #5540FF;
+}
+
+.fbtextfirst span {
+  color: #5540FF;
+}
+
+.fbtextmiddle span {
+  color: #5540FF;
+}
+
+.fbtextlast span {
+  color: #5540FF;
+}
+
+.fbreplysingle {
+  float: right;
+  color: #FFFFFF;
+  margin: 0 0 0.5em;
+  border-radius: 1em;
+  padding: 0.5em 1em;
+  background: #5540FF;
+  max-width: 75%;
+  clear: both;
+  position: relative;
+}
+
+.fbreplyfirst {
+  float: right;
+  color: #FFFFFF;
+  margin: 0 0 0.1em;
+  border-radius: 1em 1em 0.2em 1em;
+  padding: 0.5em 1em;
+  background: #5540FF;
+  max-width: 75%;
+  clear: both;
+  position: relative;
+}
+
+.fbreplymiddle {
+  float: right;
+  color: #FFFFFF;
+  margin: 0 0 0.1em;
+  border-radius: 1em 0.2em 0.2em 1em;
+  padding: 0.5em 1em;
+  background: #5540FF;
+  max-width: 75%;
+  clear: both;
+  position: relative;
+}
+
+.fbreplylast {
+  float: right;
+  color: #FFFFFF;
+  margin: 0 0 0.5em;
+  border-radius: 1em 0.2em 1em 1em;
+  padding: 0.5em 1em;
+  background: #5540FF;
+  max-width: 75%;
+  clear: both;
+  position: relative;
+}
+
+.fbreplysingle mark {
+  background-color: #776FE9;
+  color: #FFFFFF;
+}
+
+.fbreplyfirst mark {
+  background-color: #776FE9;
+  color: #FFFFFF;
+}
+
+.fbreplymiddle mark {
+  background-color: #776FE9;
+  color: #FFFFFF;
+}
+
+.fbreplylast mark {
+  background-color: #776FE9;
+  color: #FFFFFF;
+}
+
+.fbhide {
+  display: none;
+}
+
+.fbtime {
+  min-width: 295px;
+  color: #7B7C80;
+  font-size: .75em;
+  padding-bottom: .5em;
+  padding-top: .5em;
+  margin-left: -.5em;
+  margin-right: -.5em;
+  margin-bottom: -.5em;
+  text-align: center;
+  text-transform: uppercase;
+  display: table;
+}
+
+.fbgrouptext {
+  color: #AEAEAE;
+  font-size: .75em;
+  padding-bottom: 0.5em;
+  padding-top: 0;
+  margin-left: 1em;
+  margin-bottom: -2.5em;
+  text-align: left;
+  display: table;
+  clear: both;
+}
+
+/* ---------------------------------------------------- */
+/* linux (from qab ch 2 by jin ) */
+.linux-box-top {
+    margin: 0;
+    border-width: 1px;
+    color: #fff;
+    background: #282b28;
+    border-radius: 5px;
+    padding: 10px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .linux-box-top > img {
+    position: absolute;
+    left: 5px;
+    height: 20px;
+  }
+  
+  .linux-box-top > span {
+    z-index: 3;
+  }
+  
+  .linux-box-bottom {
+    margin: 0;
+    border-width: 1px;
+    color: #fff;
+    background: #300820;
+    border-radius: 5px;
+    padding: 10px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    font-family: "Lucida Console",Monaco,monospace;
+    margin: 0 auto;
+    max-width: 700px;
+    font-size: 12px;
+  }
+  
+  .linux-green {
+    color: #82d832;
+  }
+  
+  .linux-blue {
+    color: #5d75b0;
+  }
+  
+  .half-tab {
+    padding-left: 20px;
+  }
+  /* ------------------------------------------------------------------------ */
+/* La_Temperanza https://archiveofourown.org/works/7953412 */
+.ewindow {
+    text-align: justify;
+    margin: 0 auto 40px auto;
+    max-width: 600px;
+    min-width: 300px;
+    border-color: #dcdcdc;
+    /* border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px; */
+    /* border-top-left-radius: 5px;
+    border-top-right-radius: 5px; */
+  }
+
+  .attach {
+    /* background-color: #fff; */
+    border-color: #cfcfcf;
+    border-style: solid;
+    border-width: 1px;
+    margin: 0.25em;
+    padding: 0.25em;
+    cursor: pointer;
+    display: inline-table;
+  }
+
+  .attach:hover {
+    background: lightblue;
+  }
+
+  .attach::before {
+    content: '\1F4CE';
+  }
+
+  .attach u {
+    padding-left: 5px;
+  }
+  
+   .topbar {
+    background-color: #dcdcdc;
+    color: #FFFFFF;
+    border-color: #dcdcdc;
+    border-style: solid;
+    cursor: pointer;
+    /* width: 66%; */
+    /* padding: 2px; */
+    padding: 4px 1px 1px;
+    font-size: 13px;
+  height: 1.5em;
+  /* overflow: hidden; */
+    /* text-overflow: clip; */
+    margin: 0 auto;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  
+   .topbar:before {
+    /* content: 'Email'; */
+    /* content: '🔴 🟡 🟢 '; */
+    /* content: "\U+1F534"; */
+    display: inline-block;
+    position: relative;
+    float: left;
+    font-weight: bold;
+    /* padding: 0 3px; */
+    /* padding: 4px 1px 1px; */
+    width: 85%;
+  }
+  
+   .topbar:after {
+    /* content: ' _ X'; */
+    display: inline-block;
+    position: relative;
+    font-weight: bold;
+    padding-right: 5px;
+    float: right;
+    color: #cfcfcf;
+    -webkit-transform: scale(1.5, 1.0);
+    -moz-transform: scale(1.5, 1.0);
+    -ms-transform: scale(1.5, 1.0);
+    -o-transform: scale(1.5, 1.0);
+    transform: scale(1.5,1.0);
+    cursor: pointer;
+  }
+  
+   .textfield {
+    border-color: #cfcfcf;
+    border-style: solid;
+    border-width: 1px;
+    border-bottom: none;
+    /* margin-top: 0;
+    margin-bottom: 0; */
+    /* width: 66%; */
+    padding: 2px 2px 2px 10px;
+    /* color: #000000;
+    background-color: #FFFFFF; */
+    /* text-overflow: clip; */
+    margin: 0 auto;
+
+
+  }
+  
+   .ebody {
+    /* width: 66%; */
+    padding: 10px;
+    text-align: justify;
+    /* color: #000000;
+    background-color: #FFFFFF; */
+    /* margin-left: auto;
+    margin-right: auto; */
+    /* overflow: auto; */
+    display: block;
+    /* min-height: 250px; */
+    border-color: #cfcfcf;
+    border-style: solid;
+    border-width: 1px;
+    margin: 0 auto;
+    /* border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px; */
+  }
+  
+   .ebody::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+  
+   /* .ebody::-webkit-scrollbar:vertical {
+    width: 12px;
+  }
+  
+   .ebody::-webkit-scrollbar:horizontal {
+    height: 12px;
+  } */
+  
+   /* .ebody::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+  }
+  
+   .ebody::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #ffffff;
+  } */
+  
+   .buttonbar {
+    border-color: #cfcfcf;
+    background-color: #f5f5f5;
+    color: #000000;
+    border-style: solid;
+    border-width: 1px;
+    border-top: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    /* width: 66%; */
+    padding: 2px;
+  height: 1.5em;
+  /* overflow: hidden; */
+    text-overflow: clip;
+    margin: 0 auto;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+  }
+  
+   .buttonbar:after {
+    content: 'Reply | Forward | Delete';
+    display: inline-block;
+    position: relative;
+    float: left;
+    padding: 0 3px;
+    cursor: pointer;
+  }
+  /* ------------------------------------------------------------------------ */
+/* ---------------phone view ladyblog --------------------------- */
+  
+.wiki-logo {
+    margin: 0 auto;
+    display: table;
+    min-width: 200px;
+}
+
+.phone-view {
+    border: 1px solid gray;
+    background: white;
+    /* padding: 0em 1em 1em 1em; */
+    min-width: 250px;
+    max-width: 500px;
+    /* font-family: "Segoe UI"; */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /* display: table; */
+    margin: 10px auto;
+    position: relative;
+    /* background-color: white; */
+    /* background: rgb(229, 231, 235); */
+    /* text-align: justify; */
+    /* padding: 10px; */
+
+    /* experimenting w gradiaent */
+    color: black;
+}
+
+.header-address-bar {
+    background-color: white;
+    color: black;
+    /* min-width: 50px; */
+    /* width: 100px; */
+    /* margin-right: 1em; */
+    /* float: right; */
+    height: 1.5em;
+    border-radius: 12px;
+    margin-top: -30px !important;
+    margin-bottom: 8px !important;
+    margin-left: 43px !important;
+    max-width: 90%;
+    /* width: 70%; */
+    padding-left: 0.7em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+  .header-browser {
+    max-width: 500px;
+    min-width: 250px;
+    height: 36px;
+    background-color: gray;
+    font-weight: bold;
+    text-align: center;
+    text-transform: capitalize;
+    display: block;
+  }
+
+  .header-browser::before {
+    content: url(https://img.icons8.com/material-outlined/20/ffffff/home--v2.png);
+    cursor: pointer;
+    float: left;
+    margin-left: 11px;
+    margin-top: 4px;
+    transform: scale(1.3,1.0);
+    color: #fff;
+  }
+
+  .header-browser:after {
+    content: url(https://img.icons8.com/ios-glyphs/25/ffffff/menu-2.png);
+    display: inline-block;
+    position: relative;
+    /* font-weight: bold;
+    font-size: 14px; */
+    padding-top: 0.1em;
+    height: 90%;
+    float: right;
+    color: white;
+    /* -webkit-transform: scale(1.5, 1.0);
+    -moz-transform: scale(1.5, 1.0);
+    -ms-transform: scale(1.5, 1.0);
+    -o-transform: scale(1.5, 1.0);
+    transform: scale(1.5,1.0); */
+    cursor: pointer;
+  }
+
+  .header-white > p, .phone-view > p, .collapse {
+    margin: 0;
+  }
+/* --------------------------------------------------------------- */
+
+/* jihnari gmail */
+
+p.gmail-up-arrow-gimmick:hover ~ div.gmail-info-box {
+    display: none;
+    }
+    p.gmail-up-arrow-gimmick:hover .gmail-up-arrow{
+      border: solid #5F6266;
+      border-width: 0 1.5px 1.5px 0;
+      display: inline-block;
+      padding: 2px;
+      margin-left:2px;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+    }
+    
+    p.gmail-down-arrow-gimmick:hover ~ div.hidden-gmail-info-box {
+      display:block;
+      margin-bottom: 20px;
+    }
+    p.gmail-down-arrow-gimmick:hover .gmail-down-arrow {
+      border: solid #5F6266;
+      border-width: 0 1.5px 1.5px 0;
+      display: inline-block;
+      padding: 2px;
+      margin-left:2px;
+      transform: rotate(-135deg);
+      -webkit-transform: rotate(-135deg);
+    }
+    
+    span.gmail-arrow-box:hover ~ div > div.gmail-info-box {
+    display: none;
+    }
+    
+    div.gmail-font > a
+    {
+      color: #2372DB;
+      text-decoration: none !important;
+    }
+    
+    .gmail-down-arrow-gimmick{
+      margin-bottom: 20px;
+      white-space: nowrap;
+    }
+    
+    .gmail-up-arrow-gimmick{
+      white-space: nowrap;
+    }
+    
+    /* lmao idk */
+    .gmail-reply-button{
+      height: 30px;
+      display: inline-block;
+      margin-right: -5px;
+      float: right;
+      overflow: hidden;
+    }
+    
+    .gmail-font{
+      font-family: 'Roboto', sans-serif;
+      padding: 10px;
+      max-width: 600px;
+      min-width: 280px;
+      margin: 0 auto;
+    }
+    .gmail-weak-text{
+    color:#5F6266;
+    }
+    .gmail-tail{
+    color:#878787;
+    }
+    .gmail-info-left{
+    color:#5F6266;
+    padding-right: 10px;
+    }
+    .gmail-sender{
+    font-weight:bold;
+    font-size:1.1em;
+    }
+    .gmail-reciever{
+    font-size:.8em;
+    color:#5F6266;
+    }
+    .gmail-send-time{
+    color:#5F6266;
+    font-size:.7em;
+    padding-left:7px;
+    
+    }
+    .gmail-indent{
+    padding-left:50px;
+    }
+    .gmail-tag{
+      border-radius: 4px;
+      background: #EEEEEE;
+      color: #363636;
+      padding: 4px;
+      font-size:.8em;
+      cursor: pointer;
+    }
+    .gmail-info-box{
+      border-color: #DBDCDF;
+      border-style: solid;
+      border-width: 1px;
+      border-radius: 10px;
+      padding: 10px;
+      font-size: .8em;
+      margin-bottom: 10px;
+      /* line-height: 1.5em; */
+    }
+    .hidden-gmail-info-box{
+      border-color: #DBDCDF;
+      border-style: solid;
+      border-width: 1px;
+      border-radius: 10px;
+      padding: 10px;
+      font-size: .8em;
+      margin-bottom: 10px;
+      display:none;
+    }
+    
+    .gmail-subject-buffer {
+      margin-bottom: 20px;
+      margin-top: -10px;
+    }
+    .gmail-subject {
+      font-size: 1.5em;
+    
+    }
+    
+    .gmail-hr{
+      border-bottom: 1px solid #EDEEEF;
+    }
+    .gmail-body{
+    
+    }
+    .gmail-up-arrow{
+      border: solid #5F6266;
+      border-width: 0 1.5px 1.5px 0;
+      display: inline-block;
+      padding: 2px;
+      margin-left:2px;
+      transform: rotate(-135deg);
+      -webkit-transform: rotate(-135deg);
+    }
+    .gmail-down-arrow{
+      border: solid #5F6266;
+      border-width: 0 1.5px 1.5px 0;
+      display: inline-block;
+      padding: 2px;
+      margin-left:2px;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+    }
+    .gmail-link{
+      color: #2372DB;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .gmail-quoted-text{
+      color: #2372DB;
+      text-decoration: none;
+      font-size:.8em;
+    }
+    .gmail-dot{
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 15px;
+      background-color: #EDEEEF;
+      margin-bottom: -15px;
+      float: left;
+    }
+    
+    .gmail-red{
+      color:red;
+      font-size:1.4em;
+    }
+    .gmail-secret{
+      font-family: Tahoma,Verdana,Segoe,sans-serif;
+    }
+    
+    
+    .red-top{
+      border-top: 2.5px solid #CF3F3D;
+      /* the offset is off, its fine, i give up */
+      /* margin-right: -1px; */
+    }
+    .blue-top{
+      border-top: 2.5px solid #5281D8;
+      /* margin-left: -3px; */
+    }
+    .yellow-top{
+      border-top: 2.5px solid #EDC151;
+    }
+    
+    .gmail-sig{
+      display:inline-block;
+      max-width: 100%;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    /* ------------------------------------------------------------------------------------------ */
+    /* wikipedia skin https://archiveofourown.org/works/44585884/chapters/112154773 */
+
+    .phone-view.ladyblog {
+        background-image: url(https://i.imgur.com/9XnOnbv.png);
+        background-repeat: repeat;
+        background-position: top;
+    }
+
+    .ladyblog-bar {
+        margin: 0px 0px 0px -4px !important;
+        padding: 8px 4px 8px 4px;
+        display: inline-flex;
+        /* width: 100%; */
+        background: #ff3881;
+        width: 100%;
+        border-radius: 25px;
+    }
+    .ladyblog-bar a {
+        width: 25%;
+        text-align: center;
+        cursor: pointer;
+        color: white;
+    }
+    .ladyblog-bar a:hover {
+        background: #f571a2;
+        margin: -8px;
+        padding: 8px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    /* .ladyblog-bar a.first:hover {
+        margin-left: -4px !important;
+    } */
+    .ladyblog .article {
+        /* height: 100%; */
+        min-height: 75%;
+        background: none;
+        background-image: url(https://i.imgur.com/JM3pRI7.png);
+        background-repeat: no-repeat;
+        background-position: right;
+        background-position-y: bottom;
+        /* background-size: contain; */
+    }
+
+    .ladyblog .article-content {
+        padding: 10px;
+        margin: 10px auto;
+        background-color: pink;
+        opacity: 0.7;
+        border-radius: 20px;
+    }
+
+    /* ------- wikipedia stuff -------*/
+    .article {
+        padding: 1em;
+        /* border-left: 1px solid #a7d7f9;
+        border-right: 1px solid #a7d7f9;
+        
+        border-top: 1px solid #a7d7f9;
+        border-bottom: 1px solid #a7d7f9; */
+        background: #FFF;
+        line-height: 1.6;
+        font-size: 1em;
+        /* height: 100%; */
+        position: relative;
+        /* width: 95%;
+        max-width: 95%; */
+        }
+        
+        .article p {
+        line-height: inherit;
+        margin: 0.5em 0;
+        }
+        
+        span.user {
+        background-position: left top;
+        background-repeat: no-repeat;
+        padding-left: 15px !important;
+        }
+        
+        div.articleRightside {
+        border: 1px solid #c8ccd1;
+        padding: 3px;
+        float: right;
+        background-color: #f8f9fa;
+        font-size: 94%;
+        text-align: left;
+        overflow: hidden;
+        line-height: 1.4em;
+        margin: 0 0 5px 15px;
+        width: 35%;
+        min-width: 200px;
+        }
+        
+        div.articleRightside1 {
+        border: 1px solid #c8ccd1;
+        padding: 3px;
+        background-color: #f8f9fa;
+        font-size: 89%;
+        text-align: left;
+        overflow: hidden;
+        width: 97%;
+        }
+        
+        div.articleRightside2 {
+        border: 1px solid #c8ccd1;
+        padding: 3px 0px 3px 3px;
+        background-color: #dae0e6;
+        font-size: 100%;
+        text-align: center;
+        overflow: hidden;
+        width: 97%;
+        }
+        
+        .contentsPanel {
+        border: 1px solid #a2a9b1;
+        background-color: #f8f9fa;
+        padding: 5px;
+        font-size: 95%;
+        position: relative;
+        line-height: 1.1em;
+        width: 35%;
+        }
+        
+        .contentsHeader {
+        font-family: sans-serif;
+        font-weight: bold;
+        text-align: center;
+        }
+        
+        .contentsPanel ul li span {
+        display: inline-block;
+        margin-right: 8px;
+        }
+        
+        .contentsPanel ul {
+        padding: 0 0 5px 5px;
+        }
+        
+        .contentsPanel ul li ul li {
+        padding: 0 0 0 25px;
+        }
+        
+        .h1 {
+        line-height: 1.3;
+        margin: 0em 0.25em 0em 0em;
+        padding: 0;
+        letter-spacing: 0;
+        font-size: 2.3em;
+        text-align: left;
+        }
+        
+        a,
+        a:visited {
+        color: #0645ad;
+        text-decoration: none !important;
+        border: none;
+        }
+        
+        a:hover {
+        text-decoration: underline;
+        }
+        
+        .fake_a {
+        color: #0645ad;
+        text-decoration: none;
+        }
+        
+        .fake_a:hover {
+        text-decoration: underline;
+        }
+        
+        hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid #ccc;
+        margin: 1em 0;
+        padding: 0;
+        }
+        
+        small {
+        font-size: 80%;
+        }
+        
+        sub,
+        sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+        }
+        
+        sup {
+        top: -0.5em;
+        }
+        
+        sub {
+        bottom: -0.25em;
+        }
+        
+        img {
+        border: 0;
+        max-width: 100%;
+        }
+        
+        ul {
+        list-style-type: none;
+        list-style-image: none;
+        margin: 0;
+        padding: 0.3em 0 0 0;
+        }
+        
+        li {
+        list-style-type: none;
+        list-style-image: none;
+        padding: 0.3em 0 0 0;
+        margin-left: 1em;
+        }
+        
+        .h3 {
+        padding: 0;
+        margin-bottom: 0;
+        font-weight: bold;
+        color: #000000;
+        font-size: 22px;
+        font-family: "Linux Libertine", Georgia, Times, serif;
+        border-bottom: 1px solid #d4d4d4;
+        }
+        
+        table.styledTable {
+        text-align: left;
+        }
+        
+        table.styledTable td,
+        table.styledTable th {
+        width: 50%;
+        }
+        
+        table.styledTable1 {
+        background-color: #F8F9FA;
+        text-align: left;
+        float: left;
+        width: 50%;
+        }
+        
+        table.styledTable1 td,
+        table.styledTable1 th {
+        border: 1px solid #a2a9b1;
+        }
+        
+        table.styledTable2 {
+        background-color: #F8F9FA;
+        text-align: left;
+        border: 1px solid #a2a9b1;
+        width: 100%;
+        padding: 7px;
+        table-layout: fixed;
+        border-collapse: collapse;
+        }
+        
+        table.styledTable2 td,
+        table.styledTable2 th {
+        border: 1px solid #a2a9b1;
+        padding: 7px;
+        }
+        
+        table tr td.td2:last-child {
+        word-break: break-word;
+        }
+        
+        .headedTable1 {
+        background: #EAECF0;
+        }
+        
+        .headedTable2 {
+        background: #c5e4e1;
+        }
+        
+        .headedTable3 {
+        background: #a0d6b4;
+        }
+        
+        .section1 {
+        padding: 0;
+        margin-top: 2em;
+        margin-bottom: 0;
+        color: #000000;
+        font-weight: semibold;
+        font-size: 22px;
+        font-family: Georgia, serif;
+        border-bottom: 1px solid #d4d4d4;
+        }
+        
+        .section2 {
+        line-height: 1.3;
+        margin-bottom: 0.25em;
+        padding: 0;
+        letter-spacing: 0;
+        font-size: 1.1em;
+        text-align: left;
+        font-weight: bold;
+        }
+        
+        .section3 {
+        line-height: 1.3;
+        margin-bottom: 0.25em;
+        padding: 5px;
+        letter-spacing: 0;
+        font-size: 1em;
+        text-align: left;
+        font-weight: bold;
+        text-indent: 5px;
+        }
+        
+        .gallery2 {
+        border: 1px solid #c8ccd1;
+        padding: 3px;
+        background-color: #f8f9fa;
+        font-size: 94%;
+        text-align: center;
+        overflow: hidden;
+        display: inline-block;
+        line-height: 1.4em;
+        margin: 5px 5px 5px 5px;
+        width: 95%;
+        /* height: 95%; */
+        border-left: 1px solid #c8ccd1;
+        border-right: 1px solid #c8ccd1;
+        border-top: 1px solid #c8ccd1;
+        border-bottom: 1px solid #c8ccd1;
+        }
+        
+        .gallery1 {
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        padding: 10px;
+        font-size: 80%;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        line-height: 1.4em;
+        margin: 10px 10px 10px 10px;
+        width: 30%;
+        display: inline-block;
+        box-sizing: border-box;
+        transition: 0.5s;
+        }
+        
+        .gallery1:hover {
+        transform: scale(1.3);
+        }
+        
+        .char {
+        padding-left: 10px;
+        }
+        
+        .reference-text {
+        font-size: 0.8em;
+        }
+        
+        .bottomBox {
+        background: #fdfdfd;
+        border: 1px solid #a2a9b1;
+        clear: both;
+        font-size: 88%;
+        text-align: center;
+        padding: 3px;
+        line-height: 1.7em;
+        margin: 1em auto 0;
+        }
+        
+        .bottomBox .header {
+        background: #cfe3ff;
+        padding: 0.25em 1em;
+        line-height: 1.5em;
+        text-align: center;
+        font-weight: bold;
+        color: #0645ad;
+        font-size: 115%;
+        margin-bottom: 3px;
+        }
+        
+        .categories {
+        border: 1px solid #a2a9b1;
+        background-color: #f8f9fa;
+        padding: 5px;
+        margin-top: 1em;
+        font-size: 0.9em;
+        clear: both;
+        }
+        
+        .pagefooter {
+        padding: 1.5em 1.3em 2em;
+        font-size: 75%;
+        line-height: 2em;
+        }
+
+    /* ------------------------------------------------------------------------------------------ */
