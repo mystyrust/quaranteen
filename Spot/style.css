@@ -7,8 +7,9 @@
     left: 0px;
     bottom: 0px;
     width: 100%;
-    height: 100%;
+    height: 80%;
     position: absolute;
+    z-index: 10;
     background: linear-gradient(to bottom, rgba(255,255,255, 0), white);
   }
 
@@ -32,7 +33,7 @@
   margin-left: -.5em;
   margin-right: -.5em;
   margin-bottom: -2em;
-  text-align: left;
+  text-align: center;
   display: table;
 }
 
@@ -207,6 +208,19 @@
 
 /* ---------------------------------------------------- */
 /* linux (from qab ch 2 by jin ) */
+/* + fake vscode by me */
+
+
+/* not allowed on ao3 */
+/* .vscode li::marker {
+    content: counter(list-item)"\a0\a0";
+} */
+
+.linux-x {
+    position: absolute;
+    left: 0px;
+}
+
 .linux-box-top {
     margin: 0;
     border-width: 1px;
@@ -220,6 +234,8 @@
     max-width: 700px;
     margin: 0 auto;
     position: relative;
+    font-family: "Lucida Console",Monaco,monospace;
+    font-size: 12px;
   }
   
   .linux-box-top > img {
@@ -429,8 +445,61 @@
     padding: 0 3px;
     cursor: pointer;
   }
+
+  .vscode {
+    /* background-color: #2d2d2d; */
+    background-color: #1e1e1e;
+    max-width: 500px;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Consolas,"Lucida Console",Monaco,monospace;
+    font-size: 13px;
+  }
+
+  .vscode table {
+    /* background-color: #2d2d2d; */
+    color: white;
+    font-size: 13px;
+    padding-top: 20px;
+  }
+
+  .vscode td:first-child {
+    padding-right: 10px;
+    color: #848484;
+    text-align: right;
+  }
+
+  .vscode-title {
+    color: #929191;
+    background-color: #2d2d2d;
+    display: inline;
+    padding: 10px;
+    margin: -9px;
+    cursor: pointer;
+  }
+  .vscode-title img {
+    height: 10px;
+    width: 10px;
+    /* padding-right: 6px; */
+  }
+
+  .vscode-blue {
+    color: #5498d1;
+    /* for ?? key words */
+  }
+
+  .vscode-green {
+    color: #689654; 
+    /* for comments */
+  }
+
+  .vscode-orange {
+    color: #c08871;
+    /* for urls or strings or paths */
+  }
   /* ------------------------------------------------------------------------ */
-/* ---------------phone view ladyblog --------------------------- */
+/* ---------------phone view + ladyblog --------------------------- */
   
 .wiki-logo {
     margin: 0 auto;
@@ -782,8 +851,12 @@ p.gmail-up-arrow-gimmick:hover ~ div.gmail-info-box {
     }
 
     /* ------- wikipedia stuff -------*/
+
+    .siteSub {
+        font-size: 65%;
+    }
     .article {
-        padding: 1em;
+        padding: 0em 1em;
         /* border-left: 1px solid #a7d7f9;
         border-right: 1px solid #a7d7f9;
         
@@ -884,6 +957,7 @@ p.gmail-up-arrow-gimmick:hover ~ div.gmail-info-box {
         a,
         a:visited {
         color: #0645ad;
+        cursor: pointer;
         text-decoration: none !important;
         border: none;
         }
@@ -895,6 +969,7 @@ p.gmail-up-arrow-gimmick:hover ~ div.gmail-info-box {
         .fake_a {
         color: #0645ad;
         text-decoration: none;
+        cursor: pointer;
         }
         
         .fake_a:hover {
