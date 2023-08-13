@@ -275,7 +275,50 @@
     padding-left: 20px;
   }
   /* ------------------------------------------------------------------------ */
-/* La_Temperanza https://archiveofourown.org/works/7953412 */
+/* La_Temperanza email window (w modifications) https://archiveofourown.org/works/7953412 */
+/* sticky notes */
+.sticky-yellow {   
+    display: block;   
+    background-color: #ffff99;   
+    color: #000000;   
+    text-decoration: none;   
+    font-family: "Comic Sans MS", "Chalkboard SE", sans-serif;
+    height: 10em;   
+    width: 10em;   
+    padding: 1em;   
+    text-align: left;   
+    margin-left: auto;   
+    margin-right: auto;   
+    -moz-box-shadow: 5px 5px 7px rgba(33,33,33,1);  
+     -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);  
+    -webkit-transform: rotate(-6deg);   
+    -o-transform: rotate(-6deg);   
+    -moz-transform: rotate(-6deg);  
+    transform: rotate(-6deg); 
+}
+
+.sticky-blue {   
+    display: block;   
+    background-color: #add8e6;   
+    color: #000000;   
+    text-decoration: none;   
+    font-family: "Comic Sans MS", "Chalkboard SE", sans-serif;
+    height: 10em;   
+    width: 10em;   
+    padding: 1em;   
+    text-align: left;   
+    margin-left: auto;   
+    margin-right: auto;   
+    -moz-box-shadow: 5px 5px 7px rgba(33,33,33,1);  
+     -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);  
+    -webkit-transform: rotate(-6deg);   
+    -o-transform: rotate(-6deg);   
+    -moz-transform: rotate(-6deg);  
+    transform: rotate(-6deg); 
+}
+
 .ewindow {
     text-align: justify;
     margin: 0 auto 40px auto;
@@ -455,6 +498,7 @@
     border-radius: 5px;
     font-family: Consolas,"Lucida Console",Monaco,monospace;
     font-size: 13px;
+    position: relative;
   }
 
   .vscode table {
@@ -462,6 +506,9 @@
     color: white;
     font-size: 13px;
     padding-top: 20px;
+    margin: 0px;
+    border-collapse: separate;
+    width: initial;
   }
 
   .vscode td:first-child {
@@ -470,17 +517,49 @@
     text-align: right;
   }
 
+  .vscode-header {
+    margin: -10px -10px 10px -10px;
+    padding: 10px 0px 10px 0px;
+    background-color: #2d2d2d;
+    border-bottom: #1d1c1c solid;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    cursor: pointer;
+  }
+
+  .vscode-header span:not(.linux-x)
+  {
+    text-align: center;
+    display: block;
+    color: gray;
+  }
+
+  .vscode-title.inactiveTab {
+    margin: 0px;
+    background-color: #2d2d2d;
+    border: #1e1e1e 1px solid;
+  }
+
+  .vscode-title-container {
+    white-space: nowrap;
+    overflow-x: clip;
+    text-overflow: ellipsis;
+    color: #929191;
+  }
+
   .vscode-title {
     color: #929191;
-    background-color: #2d2d2d;
+    
+    background-color: #1e1e1e;
     display: inline;
     padding: 10px;
     margin: -9px;
     cursor: pointer;
   }
   .vscode-title img {
-    height: 10px;
-    width: 10px;
+    height: 15px;
+    width: 15px;
+    vertical-align: bottom;
     /* padding-right: 6px; */
   }
 
@@ -818,6 +897,8 @@ p.gmail-up-arrow-gimmick:hover ~ div.gmail-info-box {
         text-align: center;
         cursor: pointer;
         color: white;
+        border: none;
+        text-decoration: none !important;
     }
     .ladyblog-bar a:hover {
         background: #f571a2;
@@ -846,8 +927,43 @@ p.gmail-up-arrow-gimmick:hover ~ div.gmail-info-box {
         padding: 10px;
         margin: 10px auto;
         background-color: pink;
-        opacity: 0.7;
+        opacity: 0.8;
         border-radius: 20px;
+        position: relative;
+    }
+
+    .ladyblog .article-content img.pin {
+        position: absolute;
+        right: 15px;
+        /* bottom: 15px; */
+        height: 30px;
+        cursor: pointer;
+    }
+
+    .ladyblog .article-content span.read-more {
+        padding: 6px 12px;
+        background: #ff3881;
+        color: white;
+        cursor: pointer;
+        /* display: inline; */
+        text-align: center;
+        border-radius: 20px;
+        position: absolute;
+        right: 15px;
+        /* bottom: 15px; */
+    }
+
+    img.lb-share, img.lb-heart, img.lb-comment  {
+        height: 30px;
+        cursor: pointer;
+    }
+
+    .ladyblog p.span-cont span {
+        display: inline-flex;
+    }
+
+    .article-content:hover {
+        /* opacity: 1; */
     }
 
     /* ------- wikipedia stuff -------*/
@@ -954,13 +1070,13 @@ p.gmail-up-arrow-gimmick:hover ~ div.gmail-info-box {
         text-align: left;
         }
         
-        a,
+        /* a,
         a:visited {
         color: #0645ad;
         cursor: pointer;
         text-decoration: none !important;
         border: none;
-        }
+        } */
         
         a:hover {
         text-decoration: underline;

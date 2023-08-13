@@ -87,50 +87,110 @@
     [...] <br />
     300 GB of data downloaded <br />
     Total Time: 3.5 hours.  <br />
-    Downloads succeed. Video files placed in ~/videos/cctvfootage/redrobin/paris <br /> 
+    Downloads succeed. Video files placed in ~/videos/cctvfootage/redrobin/paris_data <br /> 
     <span class="linux-green">redrobin@batcave</span>:<span class="linux-blue">~</span>$ sudo exec ./delete-cctvlogs.sh <br>
     [...] <br />
     Access logs deleted successfully. <br />
-    <span class="linux-green">redrobin@batcave</span>:<span class="linux-blue">~</span>$ cd ~/videos/cctvfootage/redrobin/paris<br>
-    <span class="linux-green">redrobin@batcave paris</span>:<span class="linux-blue">~</span>$ sudo exec ./facial-sort.py <br>
+    <span class="linux-green">redrobin@batcave</span>:<span class="linux-blue">~</span>$ cd ~/videos/cctvfootage/redrobin/paris_data<br>
+    <span class="linux-green">redrobin@batcave paris_data</span>:<span class="linux-blue">~</span>$ sudo exec ./facial-sort.py <br>
     [...] <br />
     Data models created and sorted succesfully.  <br />
     See newly created folders in ./Models <br />
     Total Time: 5.75 hours.  <br />
-    <span class="linux-green">redrobin@batcave paris</span>:<span class="linux-blue">~</span>$ sudo python3 ./network-sort.py <br>
+    <span class="linux-green">redrobin@batcave paris_data</span>:<span class="linux-blue">~</span>$ sudo python3 ./network-sort.py <br>
     [...] <br />
+    Timed out. Please try again. <br />
+    Time Elapsed: 4.5 hours. <br />
     <!-- maybe make this fail , then show code, 
         run it again then  , then exit, then show word cloud -->
-    Network cloud created succesfully. <br />
-    Total Time: 2.4 hours. <br />
 </p> 
 
 
 <!-- fake vs code  -->
 
 <div class="vscode">
-    
+    <p class="vscode-header">
+        <span class="linux-x"> &nbsp; 🔴 🟡 🟢 </span>
+        <span>visual studio code</span>
+    </p>
+    <div class="vscode-title-container">
     <p class="vscode-title"> 
         <img src="https://i.imgur.com/MUdCpwx.png"> 
         <span>network-sort.py </span>
+        <img src="https://i.imgur.com/PtZ4beW.png" />
     </p>
+    <p class="vscode-title inactiveTab"> 
+        <img src="https://i.imgur.com/tmGrdkY.png"> 
+        <span>NetworkCloudResult (7).png </span>
+        <img src="https://i.imgur.com/PtZ4beW.png" />
+    </p>
+    </div>
     <table>
         <thead></thead>
         <tbody>
-            <tr> <td>1</td>  <td>import Models</td> </tr>
+            <tr> <td>1</td>  <td><span class="vscode-blue">import</span> Models</td> </tr>
             <tr> <td>2</td>  <td></td> </tr>
-            <tr> <td>3</td>  <td></td> </tr>
-            <tr> <td>4</td>  <td></td> </tr>
-            <tr> <td>5</td>  <td></td> </tr>
-            <tr> <td>6</td>  <td></td> </tr>
-            <tr> <td>7</td>  <td></td> </tr>
-            <tr> <td>8</td>  <td></td> </tr>
+            <tr> <td>3</td>  <td> <span class="vscode-green"># crap this code is gonna be suuuuper slow </span></td> </tr>
+            <tr> <td>4</td>  <td><span class="vscode-blue">for</span> person <span class="vscode-blue">in</span> Models.People:</td> </tr>
+            <tr> <td>5</td>  <td>&nbsp; <span class="vscode-blue">if</span> (person.Akumatized == 1)</td> </tr>
+            <tr> <td>6</td>  <td>&nbsp; &nbsp; person.Circle.Color = "black" <span class="vscode-green"># cant be hawkmoth</span></td> </tr>
+            <tr> <td>7</td>  <td>&nbsp; <span class="vscode-blue">else</span>:</td> </tr>
+            <tr> <td>8</td>  <td>&nbsp; &nbsp; person.Circle.Color = "red" <span class="vscode-green"># could be hawkmoth</span></td> </tr>
             <tr> <td>9</td>  <td></td> </tr>
-            <tr> <td>10</td> <td></td> </tr>
-            <tr> <td>11</td> <td></td> </tr>
+            <tr> <td>10</td> <td>&nbsp; <span class="vscode-blue">for</span> date <span class="vscode-blue">in</span> Models.AkumaAttacks:</td> </tr>
+            <tr> <td>11</td> <td>&nbsp; &nbsp; <span class="vscode-blue">if</span> (person.Location(date) == null)</td> </tr>
+            <tr> <td>12</td> <td>&nbsp; &nbsp; &nbsp; person.Circle.Size++ </td> </tr>
+            <tr> <td>13</td> <td>&nbsp; &nbsp; &nbsp; <span class="vscode-green"># more likely to be hawkmoth </span> </td> </tr>
+            <tr> <td>14</td> <td>&nbsp; &nbsp; <span class="vscode-blue">elif</span> (person.Victim(date) != null)</td> </tr>
+            <tr> <td>15</td> <td>&nbsp; &nbsp; &nbsp; person.Circle.Size--</td> </tr>
+            <tr> <td>16</td> <td>&nbsp; &nbsp; &nbsp; <span class="vscode-green"># they were missing bc they were a victim</span></td> </tr>
+            <tr> <td>17</td> <td></td> </tr>
+            <tr> <td>18</td> <td></td> </tr>
+            <tr> <td>19</td> <td><span class="vscode-blue">for</span> person1 <span class="vscode-blue">in</span> Models.Akumas:</td> </tr>
+            <tr> <td>20</td> <td>&nbsp; <span class="vscode-blue">for</span> person2 <span class="vscode-blue">in</span> Models.People:</td> </tr>
+            <tr> <td>21</td> <td>&nbsp; &nbsp; <span class="vscode-blue">if</span> (person1.AttckedBy(person2))</td> </tr>
+            <tr> <td>22</td> <td>&nbsp; &nbsp; &nbsp; person1.AddConnection(person2)</td> </tr>
+            <tr> <td>23</td> <td> </td> </tr>
+            <tr> <td>24</td> <td> <span class="vscode-green"># WELL this is as clean as the data models will get</span></td> </tr>
+            <tr> <td>25</td> <td> <span class="vscode-green"># doesnt consider like 10 edge cases </span></td> </tr>
+            <tr> <td>26</td> <td> <span class="vscode-green"># but gives me something to start with </span></td> </tr>
+            <tr> <td>27</td> <td> <span class="vscode-green"># after i take a nap</span></td> </tr>
+            <tr> <td>28</td> <td> </td> </tr>
+            <tr> <td>29</td> <td> <span class="vscode-green"># todo factor out heroes day parade and halloween</span></td> </tr>
+            <tr> <td>30</td> <td> </td> </tr>
+            <tr> <td>31</td> <td> print(Models.NetworkCloud)</td> </tr>
+            <tr> <td>32</td> <td> </td> </tr>
+            <tr> <td>33</td> <td> </td> </tr>
         </tbody>
     </table>
 </div>
+
+<p class="linux-box-top"> 
+    <span class="linux-x"> &nbsp; 🔴 🟡 🟢 </span>
+    <!-- <img src="https://i.imgur.com/NnsOvdl.png" /> -->
+    <span>timdrake@wayne-prod</span></p>
+<p class="linux-box-bottom"> 
+    <span class="linux-green">redrobin@batcave paris_data</span>:<span class="linux-blue">~</span>$ sudo python3 ./network-sort.py <br>
+    [...] <br />
+    Timed out. Please try again. <br />
+    Time Elapsed: 3.1 hours. <br />
+    <span class="linux-green">redrobin@batcave paris_data</span>:<span class="linux-blue">~</span>$ sudo python3 ./network-sort.py <br>
+    [...] <br />
+    Timed out. Please try again. <br />
+    Time Elapsed: 2.7 hours. <br />
+    <span class="linux-green">redrobin@batcave paris_data</span>:<span class="linux-blue">~</span>$ sudo python3 ./network-sort.py <br>
+    [...] <br />
+    Network cloud created succesfully. <br />
+    Total Time: 2.4 hours. <br />
+    <span class="linux-green">redrobin@batcave paris_data</span>:<span class="linux-blue">~</span>$ exit <br>
+    <span class="linux-green">timdrake@wayne-prod</span>:<span class="linux-blue">~</span>$ <br>
+</p>
+
+<!-- show network cloud here -->
+
+<!-- sticky -->
+<p class="sticky-yellow">this is a sticky note</p>
+<p class="sticky-blue">this is a blue sticky note</p>
 
 <!-- email work skin (show encryption?) -->
 <!-- consider remake to gmail -->
