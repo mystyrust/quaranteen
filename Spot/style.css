@@ -23,9 +23,9 @@
 
 .fbheader {
   min-width: 300px;
-  background-color: #FFFFFF;
+  /* background-color: #FFFFFF; */
   border-bottom: 1px solid #E7E7E7;
-  color: #000000;
+  /* color: #000000; */
   font-weight: bold;
   padding-left: 1em;
   padding-bottom: 1em;
@@ -38,7 +38,7 @@
 }
 
 .fbmessagebody {
-  background-color: #FFFFFF;
+  /* background-color: #FFFFFF; */
   display: table;
   padding-left: .5em;
   padding-right: .5em;
@@ -571,7 +571,7 @@
   }
 
   .vscode-typer {
-    height: 16px;
+    height: 17px;
     cursor: text;
   }
 
@@ -1627,6 +1627,10 @@
 
       .w100 {
         width: 100px !important;
+      }
+
+      .w90 {
+        width: 90px !important;
       }
       
       /* .convo-right > p > .dia {
