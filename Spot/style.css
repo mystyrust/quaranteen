@@ -13,7 +13,7 @@
     background: linear-gradient(to bottom, rgba(255,255,255, 0), white);
   }
 
-/* ---messenger by rainsong https://archiveofourown.org/works/29809578/chapters/73338768 */
+/* ---------messenger by rainsong https://archiveofourown.org/works/29809578/chapters/73338768 */
 .fbmessenger {
   max-width: 300px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -205,7 +205,75 @@
   display: table;
   clear: both;
 }
+/* ---------------------------------------------------- */
+/* texting by la temperanza https://archiveofourown.org/works/6434845/chapters/14729722#workskin */
 
+
+ .text-phone {
+    float: left;
+    color: #000000;
+    margin: 0 0 0.5em;
+    border-radius: 1em;
+    padding: 0.5em 1em;
+    background: #e5e5ea;
+    max-width: 75%;
+    clear: both;
+    position: relative;
+  }
+  
+ .text-phone::after {
+    content: "";
+    position: absolute;
+    left: -.5em;
+    bottom: 0;
+    width: 0.5em;
+    height: 1em;
+    border-right: 0.5em solid #e5e5ea;
+    border-bottom-right-radius: 1em 0.5em;
+  }
+
+ .greply {
+    float: right;
+    color: #FFFFFF;
+    margin: 0 0 0.5em;
+    border-radius: 1em;
+    padding: 0.5em 1em;
+    background: #35cb24;
+    max-width: 75%;
+    clear: both;
+    position: relative;
+  }
+  
+ .greply::after {
+    content: "";
+    position: absolute;
+    right: -0.5em;
+    bottom: 0;
+    width: 0.5em;
+    height: 1em;
+    border-left: 0.5em solid #35cb24;
+    border-bottom-left-radius: 1em 0.5em;
+  }
+
+  .grouptext-info
+  {
+    /* color: #7B7C80; */
+    color: red;
+    font-size: 12px;
+    float: right;
+    clear: both;
+    margin-top: -9px;
+  }
+
+  .not-sent {
+    left: -25px;
+  }
+  
+  .not-sent::before {
+    content: url(https://i.imgur.com/HYHA5Sz.png);
+    position: absolute;
+    right: -27px;
+  }
 /* ---------------------------------------------------- */
 /* linux (from qab ch 2 by jin ) */
 /* + fake vscode by me */
@@ -236,6 +304,7 @@
     position: relative;
     font-family: "Lucida Console",Monaco,monospace;
     font-size: 12px;
+    cursor: pointer;
   }
   
   .linux-box-top > img {
@@ -501,6 +570,11 @@
     position: relative;
   }
 
+  .vscode-typer {
+    height: 16px;
+    cursor: text;
+  }
+
   .vscode table {
     /* background-color: #2d2d2d; */
     color: white;
@@ -673,7 +747,7 @@
 
 /* jihnari gmail */
 
-p.gmail-up-arrow-gimmick:hover ~ div.gmail-info-box {
+/* p.gmail-up-arrow-gimmick:hover ~ div.gmail-info-box {
     display: none;
     }
     p.gmail-up-arrow-gimmick:hover .gmail-up-arrow{
@@ -698,7 +772,7 @@ p.gmail-up-arrow-gimmick:hover ~ div.gmail-info-box {
       margin-left:2px;
       transform: rotate(-135deg);
       -webkit-transform: rotate(-135deg);
-    }
+    } */
     
     span.gmail-arrow-box:hover ~ div > div.gmail-info-box {
     display: none;
@@ -806,6 +880,7 @@ p.gmail-up-arrow-gimmick:hover ~ div.gmail-info-box {
     .gmail-body{
     
     }
+
     .gmail-up-arrow{
       border: solid #5F6266;
       border-width: 0 1.5px 1.5px 0;
@@ -833,6 +908,7 @@ p.gmail-up-arrow-gimmick:hover ~ div.gmail-info-box {
       color: #2372DB;
       text-decoration: none;
       font-size:.8em;
+      cursor: pointer;
     }
     .gmail-dot{
       height: 40px;
@@ -873,6 +949,65 @@ p.gmail-up-arrow-gimmick:hover ~ div.gmail-info-box {
       white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden;
+    }
+
+    .gmail-font .inline {
+        display: inline-block;
+    }
+
+    .gmail-font details > summary {
+        list-style: none;
+    }
+
+    .gmail-font details summary::-webkit-details-marker,
+    .gmail-font details summary::marker {
+      display: none;
+    }
+
+    .gmail-font details div p {
+        margin: 10px 0px 0px;
+    }
+
+    .gmail-attach
+    {
+        position: relative;
+        white-space: nowrap;
+        overflow-x: clip;
+        text-overflow: ellipsis;
+    }
+
+    .gmail-attach .gmail-box {
+        width: 130px;
+        border: lightgrey solid 1px;
+        height: 130px;
+        display: inline-block;
+        /* margin-top: 80px; */
+        overflow-x: clip;
+        text-overflow: ellipsis;
+        background: whitesmoke;
+        cursor: pointer;
+    }
+
+    .gmail-attach-preview {
+        margin-top: 102px;
+        display: inline-block;
+        border-top: lightgray solid 1px;
+        background: white ;
+    }
+
+    .gmail-attach-preview::before {
+        /* content: url(https://i.imgur.com/A0d9ErL.png); */
+
+        content: "";
+        background-image:url(https://i.imgur.com/A0d9ErL.png);
+        background-size: 100% 100%;
+        display: inline-block;
+
+        /*size of your image*/
+        height: 25px;
+        width:25px;
+        position: relative;
+        vertical-align: middle;
     }
 
     /* ------------------------------------------------------------------------------------------ */
@@ -1332,7 +1467,7 @@ p.gmail-up-arrow-gimmick:hover ~ div.gmail-info-box {
         max-width: 500px;
         margin: 0 auto 25px;
         display: block;
-        box-shadow: 0 1px 3px grey, 0 1px 2px grey;
+        box-shadow: 0 0px 1px grey, 0 0px 1px grey;
         /* box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); */
       }
 
@@ -1345,6 +1480,283 @@ p.gmail-up-arrow-gimmick:hover ~ div.gmail-info-box {
         max-width: 500px;
         margin: 0 auto 25px;
         display: block;
-        box-shadow: 0 1px 3px grey, 0 1px 2px grey;
+        /* box-shadow: 0 1px 3px grey, 0 1px 2px grey; */
         /* box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); */
       }
+
+
+      /* ----------------- convo container ------------------------------------------------------------------------ */
+
+      p {
+        margin: 1.286em auto;
+        padding: 0;
+        line-height: 1.5;
+      }
+      
+      .convo-container {
+        display: table;
+        padding: 10px;
+        min-width: 300px;
+        max-width: 416px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 10px;
+        font-family: sans-serif;
+        font-size: 13px;
+        background-color: green;
+      }
+      
+      p.convo-break {
+        display: flex;
+        width: 100%;
+        margin: 0;
+      }
+      
+      p.convo-pad {
+        display: flex;
+        width: 100%;
+        margin: 24em auto;
+      }
+      
+      .mari-room {
+        background: url("https://i.imgur.com/HqWeLt8.png") repeat center center scroll;
+        background-size: contain;
+        background-attachment: fixed;
+      }
+      
+      
+      .center {
+        text-align: center;
+        font-size: 20px;
+      }
+      
+      .padding-up {
+        padding-top: 3.5em;
+      }
+      
+      /* left aligned icon and dia */
+      .convo-left {
+          min-height: 80px;
+          float: left;
+          display: flex;
+      }
+      
+      .convo-left > p > .dia::after {
+      content: '';
+      border: 10px solid transparent;
+      border-right-color: #8f8e8f;
+      border-left: 0;
+      position: absolute;
+      left: -10px;
+      top: 50%;
+      margin-top: -10px;
+      }
+      
+      /* .convo-left > p:nth-child(1) {
+        margin-top: 50%;
+      } */
+      
+      .convo-left > p > .convo-icon {
+        max-width: 80px;
+        /* max-height: 80px;
+        min-width: 80px; */
+        margin-right: 10px;
+        /* top: 50%; */
+      }
+      
+      /* right aligned icon and dia */
+      .convo-right {
+          float: right;
+          min-height: 80px;
+          display: flex;
+          margin-left: auto;
+      }
+      
+      /* .convo-right > p > .dia {
+        text-align: right;
+      } */
+      
+      /* .convo-right > p:nth-child(2) {
+        margin-top: 50%;
+      } */
+      
+      .convo-right > p > .dia::after {
+        content: '';
+        border: 10px solid transparent;
+        border-left-color: #8f8e8f;
+        border-right: 0;
+        position: absolute;
+        right: -10px;
+        top: 50%;
+        margin-top: -10px;
+      }
+      
+      .convo-right > p > .convo-icon {
+        max-width: 80px;
+        /* max-height: 80px;
+        min-width: 80px; */
+        margin-left: 10px;
+      }
+      
+      .convo-icon {
+        max-width: 80px;
+        /* min-width: 80px; */
+        margin: auto;
+        height: auto;
+      }
+      
+      /* center the dialogue box */
+      .convo-left > p:nth-child(1), .convo-right > p:nth-child(2) {
+        margin: auto;
+      }
+      
+      .dia {
+        position: relative;
+        display: inline-block;
+        text-align: left;
+        border: 2px solid #8f8e8f;
+        border-radius: 10px;
+        max-width: 470px;
+        padding: 10px;
+        margin-top: 3%;
+        margin-bottom: 3%;
+        height: auto;
+        z-index: 5;
+      }
+      
+      .dia-desc {
+        position: relative;
+        text-align: center;
+        border: 2px solid #8f8e8f;
+        border-radius: 10px;
+        max-width: 100px;
+        padding: 10px;
+        margin: 3% auto;
+      }
+      
+      .dia-desc > p {
+        margin: 0;
+      }
+      
+      .white {
+        background-color: white !important;
+        color: black !important;
+      }
+      
+      .black {
+        background-color: black !important;
+        color: white !important;
+      }
+      
+      /* ------------------------------------ thought bubbles ------------------------------------*/
+      
+      /* thought bubbles */
+      .dia-thinking:before, 
+      .dia-thinking:after {
+      content: "";
+      position: absolute;
+      border-radius: 100%;
+      background: white;
+      border: none;
+      
+      }
+      
+      .convo-left > p > .dia-thinking:before {
+      bottom: 0.5em;
+      left: -1.5em;
+      width: 1em;
+      top: 40%;
+      height: 1em;
+      border: #8f8e8f;
+      border-bottom-style: solid;
+      border-left-style: solid;
+      border-top-style: solid;
+      border-width: thin;
+      border-style: single;
+      }
+      
+      .convo-left > p > .dia-thinking:after {
+      bottom: 0.4em;
+      left: -1em;
+      top: 35%;
+      width: 1.5em;
+      height: 1.5em;
+      border: #8f8e8f;
+      border-bottom-style: solid;
+      border-top-style: solid;
+      border-width: thin;
+      }
+      
+      .convo-right > p > .dia-thinking:before {
+      bottom: 0.5em;
+      right: -1.5em;
+      width: 1em;
+      top: 40%;
+      height: 1em;
+      border: #8f8e8f;
+      border-bottom-style: solid;
+      border-left-style: solid;
+      border-top-style: solid;
+      border-width: thin;
+      border-style: single;
+      }
+      
+      .convo-right > p > .dia-thinking:after {
+      bottom: 0.4em;
+      right: -1em;
+      top: 35%;
+      width: 1.5em;
+      height: 1.5em;
+      border: #8f8e8f;
+      border-bottom-style: solid;
+      border-top-style: solid;
+      border-width: thin;
+      }
+      
+      .dia-thinking {
+      position: relative;
+      display: inline-block;
+      text-align: left;
+      border: 2px solid #8f8e8f;
+      border-radius: 10px;
+      max-width: 470px;
+      padding: 10px;
+      margin-top: 3%;
+      margin-bottom: 3%;
+      height: auto;
+      }
+      
+      .thinking-small:after, .thinking-small:before {
+        content: ''
+      } 
+      
+      .convo-left .thinking-small:after {
+        left: -.5em !important;
+        /* top: 31% !important; */
+        width: 1em !important;
+        height: 1em !important;
+        }
+        .convo-left .thinking-small:before {
+        left: -1em !important;
+        width: 0.5em !important;
+        top: 40% !important;
+        height: 0.5em !important;
+        }
+        
+        .convo-right .thinking-small:after {
+        right: -0.75em !important;
+        /* left: -.5em !important; */
+        /* top: 31% !important; */
+        width: 1em !important;
+        height: 1em !important;
+        }
+        .convo-right .thinking-small:before {
+        /* left: -1em !important; */
+        
+        right: -1.1em !important;
+        width: 0.5em !important;
+        top: 40% !important;
+        height: 0.5em !important;
+        }
+      
+      /* ------------------------------------end thought bubbles------------------------------------*/

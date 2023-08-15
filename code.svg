@@ -3,100 +3,69 @@
      width="100%" height="100%"
      xmlns="http://www.w3.org/2000/svg">
   <style>
+    <!-- 19 -->
     @keyframes words {
         0% {content: "";}
-        5% {content: "I";}
-        10% {content: "It";}
-        15% {content: "It ";}
-        20% {content: "It w";}
-        25% {content: "It wa";}
-        30% {content: "It was";}
-        35% {content: "It was ";}
-        40% {content: "It was g";}
-        45% {content: "It was go";}
-        50% {content: "It was goi";}
-        55% {content: "It was goin";}
-        60% {content: "It was going";}
-        65% {content: "It was going ";}
-        70% {content: "It was going t";}
-        75% {content: "It was going to";}
-        80% {content: "It was going to ";}
-        85% {content: "It was going to b";}
-        90% {content: "It was going to be";}
-        95% {content: "It was going to be ";}
-        97% {content: "It was going to be a";}
-        100% {content: "It was going to be a ";}
+        5% {content: "#";}
+        10% {content: "# ";}
+        15% {content: "# t ";}
+        20% {content: "# to";}
+        25% {content: "# tod";}
+        30% {content: "# todo";}
+        35% {content: "# todo ";}
+        40% {content: "# todo f";}
+        45% {content: "# todo fa";}
+        50% {content: "# todo fac";}
+        55% {content: "# todo fact";}
+        60% {content: "# todo facto";}
+        65% {content: "# todo factor";}
+        70% {content: "# todo factor ";}
+        75% {content: "# todo factor o";}
+        80% {content: "# todo factor ou";}
+        85% {content: "# todo factor out";}
+        100% {content: "# todo factor out ";}
     }
 
+    <!-- 39 -->
     @keyframes changeLetter {
         0% {content: "";}
-        1% {content: "p";}
-        3% {content: "pe";}
-        4% {content: "per";}
-        5% {content: "perf";}
-        7% {content: "perfe";}
-        9% {content: "perfec";}
-        10% {content: "perfect";}
-        11% {content: "perfect ";}
-        13% {content: "perfect d";}
-        15% {content: "perfect da";}
-        16% {content: "perfect day";}
-        18% {content: "perfect day.";}
-        19% {content: "perfect day";}
-        21% {content: "perfect da";}
-        23% {content: "perfect d";}
-        25% {content: "perfect ";}
-        27% {content: "perfect";}
-        29% {content: "perfec";}
-        31% {content: "perfe";}
-        33% {content: "perf";}
-        35% {content: "per";}
-        37% {content: "pe";}
-        38% {content: "p";}
-        40% {content: "";}
-        41% {content: "g";}
-        43% {content: "go";}
-        45% {content: "goo";}
-        47% {content: "good";}
-        48% {content: "good ";}
-        49% {content: "good d";}
-        51% {content: "good da";}
-        52% {content: "good day";}
-        53% {content: "good day.";}
-        55% {content: "good day";}
-        57% {content: "good da";}
-        59% {content: "good d";}
-        61% {content: "good ";}
-        63% {content: "good";}
-        64% {content: "goo";}
-        66% {content: "go";}
-        68% {content: "g";}
-        71% {content: "";}      
-        72% {content: "t";}
-        73% {content: "te";}
-        74% {content: "ter";}
-        75% {content: "terr";}
-        76% {content: "terri";}
-        77% {content: "terrib";}
-        78% {content: "terribl";}
-        79% {content: "terrible";}
-        80% {content: "terrible ";}
-        81% {content: "terrible d";}
-        82% {content: "terrible da";}
-        83% {content: "terrible day";}
-        84% {content: "terrible day.";}
-        85% {content: "terrible day";}
-        86% {content: "terrible da";}
-        87% {content: "terrible d";}
-        88% {content: "terrible ";}
-        90% {content: "terrible";}
-        91% {content: "terribl";}
-        93% {content: "terrib";}
-        95% {content: "terri";}
-        96% {content: "terr";}
-        97% {content: "ter";}
-        98% {content: "te";}
-        99% {content: "t";}
+        1% {content: "h";}
+        3% {content: "he";}
+        6% {content: "her";}
+        9% {content: "hero";}
+        12% {content: "heroe";}
+        15% {content: "heroes";}
+        17% {content: "heroes ";}
+        20% {content: "heroes d";}
+        23% {content: "heroes da";}
+        26% {content: "heroes day";}
+        29% {content: "heroes da";}
+        32% {content: "heroes d";}
+        34% {content: "heroes ";}
+        36% {content: "heroes";}
+        40% {content: "heroe";}
+        43% {content: "hero";}
+        46% {content: "her";}
+        49% {content: "he";}
+        52% {content: "h";}
+        54% {content: "";}
+        58% {content: "h";}
+        61% {content: "ha";}
+        64% {content: "hal";}
+        67% {content: "hall";}
+        70% {content: "hallo";}
+        73% {content: "hallow";}
+        75% {content: "hallowe";}
+        77% {content: "hallowee";}
+        80% {content: "halloween";}
+        83% {content: "hallowee";}
+        86% {content: "hallowe";}
+        89% {content: "hallow";}
+        91% {content: "hallo";}
+        93% {content: "hall";}
+        95% {content: "hal";}
+        97% {content: "ha";}
+        99% {content: "h";}
         100% {content: "";}
     }
         
