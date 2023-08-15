@@ -1068,6 +1068,14 @@
         position: relative;
     }
 
+    .article-content img.thumbnail {
+        padding: 10px;
+        width: 85%;
+        margin: 0 auto;
+        display: block;
+        cursor: pointer;
+    }
+
     .ladyblog .article-content img.pin {
         position: absolute;
         right: 15px;
@@ -1460,6 +1468,7 @@
     /* generic box stuff w svgs */
 
     .whitebox {
+        font-family: sans-serif;
         background: #fff;
         color: #000;
         padding: 15px;
@@ -1473,6 +1482,7 @@
 
 
       .blackbox {
+        font-family: sans-serif;
         background: black;
         color: white;
         padding: 15px;
@@ -1483,6 +1493,31 @@
         /* box-shadow: 0 1px 3px grey, 0 1px 2px grey; */
         /* box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); */
       }
+
+      .blackbox table {
+        color: white
+      }
+
+      .blackbox table td:first-child,
+      .whitebox table td:first-child {
+        padding-right: 15px;
+        /* color: #848484; */
+        text-align: left;
+        vertical-align: top;
+      }
+
+      .blackbox table tr {
+       /* padding: 5px; */
+      }
+
+      .blackbox .hm {
+        color: #c8aeff;
+        -webkit-text-stroke-width: 0.4px;
+        -webkit-text-stroke-color: rebeccapurple;
+        text-shadow: #8279ff -1px 0px 10px, #8279ff -1px 0px 10px, #8279ff -1px 0px 15px;
+      }
+
+
 
 
       /* ----------------- convo container ------------------------------------------------------------------------ */
@@ -1536,7 +1571,7 @@
       
       /* left aligned icon and dia */
       .convo-left {
-          min-height: 80px;
+          /* min-height: 80px; */
           float: left;
           display: flex;
       }
@@ -1557,7 +1592,7 @@
       } */
       
       .convo-left > p > .convo-icon {
-        max-width: 80px;
+        width: 100px;
         /* max-height: 80px;
         min-width: 80px; */
         margin-right: 10px;
@@ -1592,14 +1627,14 @@
       }
       
       .convo-right > p > .convo-icon {
-        max-width: 80px;
+        max-width: 100px;
         /* max-height: 80px;
         min-width: 80px; */
         margin-left: 10px;
       }
       
       .convo-icon {
-        max-width: 80px;
+        max-width: 100px;
         /* min-width: 80px; */
         margin: auto;
         height: auto;
