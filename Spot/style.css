@@ -13,6 +13,10 @@
     background: linear-gradient(to bottom, rgba(255,255,255, 0), white);
   }
 
+  #workskin {
+    overflow-x: hidden;
+  }
+
 /* ---------messenger by rainsong https://archiveofourown.org/works/29809578/chapters/73338768 */
 .fbmessenger {
   max-width: 300px;
@@ -381,24 +385,53 @@
     -moz-transform: rotate(6deg);  
     transform: rotate(6deg); 
     position: absolute;
-
     height: 2em;
     width: 2em;
     display: inline-table;
-    font-size: 13px;
+    font-size: 11px;
     left: 0%;
     bottom: 32%;
 
 }
 
-.sticky-blue {   
+.sticky-yellow-2 {   
     display: block;   
+    background-color: #ffff99;   
+    color: #000000;   
+    text-decoration: none;   
+    font-family: "Comic Sans MS", "Chalkboard SE", sans-serif;
+    /* height: 5em;   
+    width: 5em;    */
+    padding: 1em;   
+    text-align: left;   
+    margin-left: auto;   
+    margin-right: auto;   
+    -moz-box-shadow: 5px 5px 7px rgba(33,33,33,1);  
+     -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);  
+    -webkit-transform: rotate(342deg);   
+    -o-transform: rotate(342deg);   
+    -moz-transform: rotate(342deg);  
+    transform: rotate(342deg); 
+    position: absolute;
+    height: 2em;
+    width: 2em;
+    display: inline-table;
+    font-size: 10px;
+    left: 1%;
+    top: 5%;
+
+}
+
+
+.sticky-blue {   
+    /* display: block;    */
     background-color: #add8e6;   
     color: #000000;   
     text-decoration: none;   
     font-family: "Comic Sans MS", "Chalkboard SE", sans-serif;
-    height: 5em;   
-    width: 5em;   
+    /* height: 5em;   
+    width: 5em;    */
     padding: 1em;   
     text-align: left;   
     margin-left: auto;   
@@ -411,14 +444,47 @@
     -moz-transform: rotate(-6deg);  
     transform: rotate(-6deg); 
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 5%;
+    right: 5%;
+    height: 2em;
+    width: 2em;
+    font-size: 12px;
+    display: inline-table;
+}
+
+.sticky-blue-2 {   
+    /* display: block;    */
+    background-color: #add8e6;   
+    color: #000000;   
+    text-decoration: none;   
+    font-family: "Comic Sans MS", "Chalkboard SE", sans-serif;
+    /* height: 5em;   
+    width: 5em;    */
+    padding: 1em;   
+    text-align: left;   
+    margin-left: auto;   
+    margin-right: auto;   
+    -moz-box-shadow: 5px 5px 7px rgba(33,33,33,1);  
+     -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);  
+    -webkit-transform: rotate(6deg);   
+    -o-transform: rotate(6deg);   
+    -moz-transform: rotate(6deg);  
+    transform: rotate(6deg); 
+    position: absolute;
+    top: 35%;
+    right: 10%;
+
+    height: 2em;
+    width: 2em;
+    font-size: 12px;
+    display: inline-table;
 }
 
 .sticky-green
 {
-    right: 44%;
-    top: 61%;
+    right: 52%;
+    top: 57%;
     height: 2em;
     width: 2em;
     font-family: "Comic Sans MS", "Chalkboard SE", sans-serif;
@@ -440,6 +506,62 @@
     -o-transform: rotate(1deg);   
     -moz-transform: rotate(1deg);  
     transform: rotate(1deg); 
+    position: absolute;
+}
+
+.sticky-green-2
+{
+    right: 5%;
+    bottom: 26%;
+    height: 2em;
+    width: 2em;
+    font-family: "Comic Sans MS", "Chalkboard SE", sans-serif;
+    /* margin: 0px; */
+    padding: 0.5em;
+    /* margin: 10px; */
+    /* box-sizing: border-box; */
+    font-size: 13px;
+    background-color: lightgreen;
+    /* font-size: 15px; */
+    display: inline-table;
+    text-align: left;   
+    margin-left: auto;   
+    margin-right: auto;   
+    -moz-box-shadow: 5px 5px 7px rgba(33,33,33,1);  
+     -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);  
+    -webkit-transform: rotate(-11deg);   
+    -o-transform: rotate(-11deg);   
+    -moz-transform: rotate(-11deg);  
+    transform: rotate(-11deg); 
+    position: absolute;
+}
+
+.sticky-green-3
+{
+    right: 11%;
+    bottom: 2%;
+    height: 2em;
+    width: 2em;
+    font-family: "Comic Sans MS", "Chalkboard SE", sans-serif;
+    /* margin: 0px; */
+    padding: 0.5em;
+    /* margin: 10px; */
+    /* box-sizing: border-box; */
+    font-size: 13px;
+    background-color: lightgreen;
+    /* font-size: 15px; */
+    display: inline-table;
+    text-align: left;   
+    margin-left: auto;   
+    margin-right: auto;   
+    -moz-box-shadow: 5px 5px 7px rgba(33,33,33,1);  
+     -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);  
+    -webkit-transform: rotate(11deg);   
+    -o-transform: rotate(11deg);   
+    -moz-transform: rotate(11deg);  
+    transform: rotate(11deg); 
     position: absolute;
 }
 
@@ -1010,6 +1132,9 @@
         display: inline-block;
     }
 
+    .gmail-font details {
+      margin: 0px;
+    }
     .gmail-font details > summary {
         list-style: none;
     }
@@ -1790,7 +1915,7 @@
         /* width: 900px; */
         min-width: 500px;
         display: block;
-        background-image: url(https://i.imgur.com/Jvc6gCz.jpg);
+        /* background-image: url(https://i.imgur.com/Jvc6gCz.jpg); */
         margin: 10px;
         /* border: 30px solid gray; */
         border-radius: 20px;
@@ -1802,9 +1927,9 @@
         border-right: 30px ridge gray;
       }
 
-      /* .board-span img {
-        filter: drop-shadow(2px 3px 2px rgba(0, 0, 0, 0.2));
-      } */
+      .board-span img {
+        display: block;
+      }
       
       /* ------------------------------------ thought bubbles ------------------------------------*/
       
