@@ -198,7 +198,7 @@
   color: #AEAEAE;
   font-size: .75em;
   padding-bottom: 0.5em;
-  padding-top: 0;
+  padding-top: 0px;
   margin-left: 1em;
   margin-bottom: -2.5em;
   text-align: left;
@@ -225,11 +225,26 @@
     content: "";
     position: absolute;
     left: -.5em;
-    bottom: 0;
+    bottom: 0px;
     width: 0.5em;
     height: 1em;
     border-right: 0.5em solid #e5e5ea;
     border-bottom-right-radius: 1em 0.5em;
+  }
+
+  .map-image {
+    float: left;
+    margin: 0 0 0.5em;
+    border-radius: 1em;
+    width: 50%;
+    min-height: 75%;
+    clear: both;
+    position: relative;
+    background-image: url("https://i.imgur.com/OyG3wib.png");
+    background-repeat: no-repeat;
+    /* background-size: 100%; */
+    display: inline-block;
+    padding-top: 50%;
   }
 
  .greply {
@@ -352,8 +367,8 @@
     color: #000000;   
     text-decoration: none;   
     font-family: "Comic Sans MS", "Chalkboard SE", sans-serif;
-    height: 10em;   
-    width: 10em;   
+    /* height: 5em;   
+    width: 5em;    */
     padding: 1em;   
     text-align: left;   
     margin-left: auto;   
@@ -361,10 +376,19 @@
     -moz-box-shadow: 5px 5px 7px rgba(33,33,33,1);  
      -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
     box-shadow: 5px 5px 7px rgba(33,33,33,.7);  
-    -webkit-transform: rotate(-6deg);   
-    -o-transform: rotate(-6deg);   
-    -moz-transform: rotate(-6deg);  
-    transform: rotate(-6deg); 
+    -webkit-transform: rotate(6deg);   
+    -o-transform: rotate(6deg);   
+    -moz-transform: rotate(6deg);  
+    transform: rotate(6deg); 
+    position: absolute;
+
+    height: 2em;
+    width: 2em;
+    display: inline-table;
+    font-size: 13px;
+    left: 0%;
+    bottom: 32%;
+
 }
 
 .sticky-blue {   
@@ -373,8 +397,8 @@
     color: #000000;   
     text-decoration: none;   
     font-family: "Comic Sans MS", "Chalkboard SE", sans-serif;
-    height: 10em;   
-    width: 10em;   
+    height: 5em;   
+    width: 5em;   
     padding: 1em;   
     text-align: left;   
     margin-left: auto;   
@@ -386,6 +410,37 @@
     -o-transform: rotate(-6deg);   
     -moz-transform: rotate(-6deg);  
     transform: rotate(-6deg); 
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.sticky-green
+{
+    right: 44%;
+    top: 61%;
+    height: 2em;
+    width: 2em;
+    font-family: "Comic Sans MS", "Chalkboard SE", sans-serif;
+    /* margin: 0px; */
+    padding: 0.5em;
+    /* margin: 10px; */
+    /* box-sizing: border-box; */
+    font-size: 13px;
+    background-color: lightgreen;
+    /* font-size: 15px; */
+    display: inline-table;
+    text-align: left;   
+    margin-left: auto;   
+    margin-right: auto;   
+    -moz-box-shadow: 5px 5px 7px rgba(33,33,33,1);  
+     -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);  
+    -webkit-transform: rotate(1deg);   
+    -o-transform: rotate(1deg);   
+    -moz-transform: rotate(1deg);  
+    transform: rotate(1deg); 
+    position: absolute;
 }
 
 .ewindow {
@@ -476,7 +531,7 @@
     border-width: 1px;
     border-bottom: none;
     /* margin-top: 0;
-    margin-bottom: 0; */
+    margin-bottom: 0px; */
     /* width: 66%; */
     padding: 2px 2px 2px 10px;
     /* color: #000000;
@@ -536,8 +591,8 @@
     border-style: solid;
     border-width: 1px;
     border-top: none;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-top: 0px;
+    margin-bottom: 0px;
     /* width: 66%; */
     padding: 2px;
   height: 1.5em;
@@ -1398,10 +1453,10 @@
         }
         
         .gallery1 {
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        bottom: 0px;
         padding: 10px;
         font-size: 80%;
         text-align: center;
@@ -1528,7 +1583,7 @@
         width: 530px;
         display: block;
         margin: 0 auto;
-        margin-bottom: -25px;
+        margin-bottom: -20px;
         padding-right: 0px;
       }
 
@@ -1550,7 +1605,7 @@
         padding: 0;
         line-height: 1.5;
       }
-      
+
       .convo-container {
         display: table;
         padding: 10px;
@@ -1570,6 +1625,13 @@
         margin: 0;
       }
       
+      img.bataraang {
+        width: 70%;
+        margin: 0 auto;
+        /* box-shadow: 10px 10px; */
+        /* filter: drop-shadow(7px 5px 3px rgba(0, 0, 0, 0.2)); */
+      }
+
       p.convo-pad {
         display: flex;
         width: 100%;
@@ -1713,6 +1775,36 @@
         background-color: black !important;
         color: white !important;
       }
+
+      .board-div {
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      .board-p {
+        overflow-x: scroll;
+      }
+
+      .board-span
+      {
+        /* width: 900px; */
+        min-width: 500px;
+        display: block;
+        background-image: url(https://i.imgur.com/Jvc6gCz.jpg);
+        margin: 10px;
+        /* border: 30px solid gray; */
+        border-radius: 20px;
+        position: relative;
+
+        border-top: 30px groove gray;
+        border-left: 30px groove gray;
+        border-bottom: 30px ridge gray;
+        border-right: 30px ridge gray;
+      }
+
+      /* .board-span img {
+        filter: drop-shadow(2px 3px 2px rgba(0, 0, 0, 0.2));
+      } */
       
       /* ------------------------------------ thought bubbles ------------------------------------*/
       
