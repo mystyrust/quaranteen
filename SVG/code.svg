@@ -94,7 +94,8 @@
         animation: cursor 0.5s steps(5, start) infinite;
     }
     span {
-        background-color: #1e1e1e;
+        <!-- background-color: #1e1e1e; -->
+        background-color: transparent;
         color: #689654;
         font-size: 13px;
         font-family: Consolas,"Lucida Console",Monaco,monospace;
