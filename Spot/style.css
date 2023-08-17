@@ -186,7 +186,8 @@
 
 .fbtime {
   min-width: 295px;
-  color: #7B7C80;
+  opacity: 0.65;
+  /* color: #7B7C80; */
   font-size: .75em;
   padding-bottom: .5em;
   padding-top: .5em;
@@ -507,6 +508,7 @@
     -moz-transform: rotate(1deg);  
     transform: rotate(1deg); 
     position: absolute;
+    color: #000000; 
 }
 
 .sticky-green-2
@@ -535,6 +537,7 @@
     -moz-transform: rotate(-11deg);  
     transform: rotate(-11deg); 
     position: absolute;
+    color: #000000; 
 }
 
 .sticky-green-3
@@ -563,6 +566,7 @@
     -moz-transform: rotate(11deg);  
     transform: rotate(11deg); 
     position: absolute;
+    color: #000000; 
 }
 
 .ewindow {
@@ -759,7 +763,7 @@
     padding-top: 20px;
     margin: 0px;
     border-collapse: separate;
-    width: initial;
+    /* width: initial; */
   }
 
   .vscode td:first-child {
@@ -929,6 +933,7 @@
     }
     p.gmail-up-arrow-gimmick:hover .gmail-up-arrow{
       border: solid #5F6266;
+      opacity: 0.7;
       border-width: 0 1.5px 1.5px 0;
       display: inline-block;
       padding: 2px;
@@ -943,6 +948,7 @@
     }
     p.gmail-down-arrow-gimmick:hover .gmail-down-arrow {
       border: solid #5F6266;
+      opacity: 0.7;
       border-width: 0 1.5px 1.5px 0;
       display: inline-block;
       padding: 2px;
@@ -976,6 +982,7 @@
       display: inline-block;
       margin-right: -5px;
       float: right;
+      cursor: pointer;
       overflow: hidden;
     }
     
@@ -987,13 +994,15 @@
       margin: 0 auto;
     }
     .gmail-weak-text{
-    color:#5F6266;
+    /* color:#5F6266; */
+    opacity: 0.7;
     }
     .gmail-tail{
     color:#878787;
     }
     .gmail-info-left{
-    color:#5F6266;
+    /* color:#5F6266; */
+    opacity: 0.7;
     padding-right: 10px;
     }
     .gmail-sender{
@@ -1002,10 +1011,12 @@
     }
     .gmail-reciever{
     font-size:.8em;
-    color:#5F6266;
+    /* color:#5F6266; */
+    opacity: 0.7;
     }
     .gmail-send-time{
-    color:#5F6266;
+    /* color:#5F6266; */
+    opacity: 0.7;
     font-size:.7em;
     padding-left:7px;
     
@@ -1060,6 +1071,7 @@
 
     .gmail-up-arrow{
       border: solid #5F6266;
+      /* opacity: 0.7; */
       border-width: 0 1.5px 1.5px 0;
       display: inline-block;
       padding: 2px;
@@ -1069,6 +1081,7 @@
     }
     .gmail-down-arrow{
       border: solid #5F6266;
+      /* opacity: 0.7; */
       border-width: 0 1.5px 1.5px 0;
       display: inline-block;
       padding: 2px;
@@ -1093,9 +1106,13 @@
       border-radius: 50%;
       display: inline-block;
       margin-right: 15px;
-      background-color: #EDEEEF;
+      /* background-color: #EDEEEF; */
       margin-bottom: -15px;
       float: left;
+    }
+
+    .gmail-dot img {
+      border-radius: 50%;
     }
     
     .gmail-red{
@@ -1173,6 +1190,7 @@
         display: inline-block;
         border-top: lightgray solid 1px;
         background: white ;
+        color: black;
     }
 
     .gmail-attach-preview::before {
@@ -1683,16 +1701,24 @@
         color: white
       }
 
+      .whitebox table {
+        color: black;
+      }
+
+      .blackbox table tr:hover ,
+      .whitebox table tr:hover ,
+      .blackbox table td:hover ,
+      .whitebox table td:hover  {
+        background: transparent;
+        color: inherit;
+      }
+
       .blackbox table td:first-child,
       .whitebox table td:first-child {
         padding-right: 15px;
         /* color: #848484; */
         text-align: left;
         vertical-align: top;
-      }
-
-      .blackbox table tr {
-       /* padding: 5px; */
       }
 
       .blackbox .hm {
@@ -1921,9 +1947,9 @@
         border-radius: 20px;
         position: relative;
 
-        border-top: 30px groove gray;
+        border-top: 30px ridge gray;
         border-left: 30px groove gray;
-        border-bottom: 30px ridge gray;
+        border-bottom: 30px groove gray;
         border-right: 30px ridge gray;
       }
 

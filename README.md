@@ -23,6 +23,7 @@ Let's see I used
 * check out the README within the [Quaranteen/CYOA](https://github.com/mystyrust/quaranteen/tree/master/Quaranteens/CYOA) folder for more info about how it was done 
 
 # misc changelog
+* the html parser keeps changing and it reruns everytime you add a new chapter, update an authors note, or edit html tags
 * changed quaranteens ch6 and ch7 to be fully in span elements, after some changes in ao3s html parser in jan 2023 prevented a tags from being siblings with divs. (a tags would be auto enclosed with p tags, preventing the tabbing mechanic from working). now quaranteens 6v2 and 7v2 was deployed
 * changed quaranteens 6v2 to just quaranteens 6 after it was discovered that enclosing the entire html in a figure tag would allow a tags to be siblings with div tags again. left 7v2 as is. saved all the html
 * at this point, ill keep fighting the html parser and just keep all files that have all my different (succcessful) attempts 
