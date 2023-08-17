@@ -17,6 +17,10 @@
     overflow-x: hidden;
   }
 
+  blockquote p {
+    margin: 0px;
+  }
+
 /* ---------messenger by rainsong https://archiveofourown.org/works/29809578/chapters/73338768 */
 .fbmessenger {
   max-width: 300px;
@@ -742,8 +746,8 @@
   .vscode {
     /* background-color: #2d2d2d; */
     background-color: #1e1e1e;
-    max-width: 500px;
-    margin: 10px auto;
+    max-width: 600px;
+    margin: 40px auto;
     padding: 10px;
     border-radius: 5px;
     font-family: Consolas,"Lucida Console",Monaco,monospace;
@@ -1472,15 +1476,15 @@
         list-style-type: none;
         list-style-image: none;
         margin: 0;
-        padding: 0.3em 0 0 0;
+        /* padding: 0.3em 0 0 0; */
         }
         
-        li {
+        /* li {
         list-style-type: none;
         list-style-image: none;
         padding: 0.3em 0 0 0;
         margin-left: 1em;
-        }
+        } */
         
         .h3 {
         padding: 0;
