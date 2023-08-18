@@ -23,7 +23,7 @@
 
 
   .dotted-spaced {
-    background-image: url(https://i.imgur.com/HMofV2s.png);
+    background-image: url(https://i.imgur.com/KC4cz0C.png);
     background-position: top;
     background-size: 50px 50px;
     background-repeat: repeat-x;
@@ -325,6 +325,7 @@
     content: url(https://i.imgur.com/HYHA5Sz.png);
     position: absolute;
     right: -27px;
+    cursor: pointer;
   }
 /* ---------------------------------------------------- */
 /* linux (from qab ch 2 by jin ) */
@@ -390,6 +391,14 @@
   
   .linux-blue {
     color: #5d75b0;
+  }
+
+  .linux-red {
+    color: #ea4654;
+  }
+
+  .linux-yellow {
+    color: #c5c20f;
   }
   
   .half-tab {
