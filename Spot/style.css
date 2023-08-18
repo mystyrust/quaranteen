@@ -314,7 +314,7 @@
     font-size: 12px;
     float: right;
     clear: both;
-    margin-top: -9px;
+    margin-top: -5px;
   }
 
   .not-sent {
@@ -804,7 +804,7 @@
   .vscode {
     /* background-color: #2d2d2d; */
     background-color: #1e1e1e;
-    max-width: 600px;
+    max-width: 580px;
     margin: 40px auto;
     padding: 10px;
     border-radius: 5px;
@@ -1752,6 +1752,48 @@
       }
       .redacted:active, .redacted:hover {
         background-color: lightgray;
+      }
+
+     
+
+      .ai-checker-title {
+        font-size: 30px;
+      }
+
+      .ai-checker-title ~ sub {
+        text-align: center;
+        margin: 0 auto;
+        display: block;
+      }
+
+      .ai-checker-thumbnail {
+        width: 80%;
+        margin: 0 auto;
+        display: block;
+      }
+
+      .ai-checker-cont1 {
+        display: inline-flex !important;
+        margin: 15px auto;
+      }
+
+      .ai-checker-percent
+      {
+        height: 37%;
+        width: 37%;
+      }
+
+      .ai-checker-caption {
+        margin: 20% auto !important;
+      }
+
+      .ai-checker-caption2 {
+        /* text-align: left !important; */
+        font-size: 11px;
+      }
+      
+      .ai-checker-caption2 .gmail-link {
+        display: inline;
       }
 
       .blackbox {
