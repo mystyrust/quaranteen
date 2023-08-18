@@ -17,7 +17,7 @@
     overflow-x: hidden;
   }
 
-  blockquote p {
+  .summary.module blockquote p {
     margin: 0px;
   }
 
