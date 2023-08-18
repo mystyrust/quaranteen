@@ -342,6 +342,10 @@
     left: 0px;
 }
 
+.linux-title {
+  z-index: 5;
+}
+
 .linux-box-top {
     margin: 0;
     border-width: 1px;
@@ -1770,6 +1774,7 @@
         width: 80%;
         margin: 0 auto;
         display: block;
+        cursor: pointer;
       }
 
       .ai-checker-cont1 {
@@ -2052,6 +2057,7 @@
 
       .board-p {
         overflow-x: scroll;
+        /* cursor: pointer; */
       }
 
       /* Hide scrollbar for Chrome, Safari and Opera */
@@ -2068,8 +2074,8 @@
       .board-span
       {
         /* width: 900px; */
-        /* min-width: 500px; */
-        width: 700px;
+        min-width: 500px;
+        /* width: 700px; */
         display: block;
         /* background-image: url(https://i.imgur.com/Jvc6gCz.jpg); */
         margin: 10px;
