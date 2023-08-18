@@ -383,6 +383,27 @@
     margin: 0 auto;
     max-width: 700px;
     font-size: 12px;
+    display: block;
+  }
+
+  .linux-bottom-cont {
+    margin: 0;
+    overflow-x: scroll;
+  }
+
+  .linux-bottom-cont .linux-box-bottom {
+    width: 700px !important;
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .linux-bottom-cont::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .linux-bottom-cont {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
   }
   
   .linux-green {
@@ -1725,6 +1746,14 @@
         margin: 0 auto;
       }
 
+      .redacted {
+        background-color: black;
+        color: black;
+      }
+      .redacted:active, .redacted:hover {
+        background-color: lightgray;
+      }
+
       .blackbox {
         font-family: sans-serif;
         background: black;
@@ -1983,10 +2012,22 @@
         overflow-x: scroll;
       }
 
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .board-p::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .board-p {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+      }
+
       .board-span
       {
         /* width: 900px; */
-        min-width: 500px;
+        /* min-width: 500px; */
+        width: 700px;
         display: block;
         /* background-image: url(https://i.imgur.com/Jvc6gCz.jpg); */
         margin: 10px;
