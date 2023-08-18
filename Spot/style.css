@@ -21,6 +21,34 @@
     margin: 0px;
   }
 
+
+  .dotted-spaced {
+    background-image: url(https://i.imgur.com/HMofV2s.png);
+    background-position: top;
+    background-size: 50px 50px;
+    background-repeat: repeat-x;
+    margin: 0px auto;
+    padding: 0px 10px 40px;
+    max-width: 720px;
+  }
+
+  /* .styled-separator-black {
+    max-width: 700px;
+    min-width: 100px;
+    height: 1px;
+    border-bottom: 10px dotted black;
+    margin: 0px auto;
+    padding-left: 20px;
+  }
+
+  .styled-separator-red {
+    max-width: 700px;
+    min-width: 100px;
+    height: 1px;
+    border-top: 10px dotted red;
+    margin: 0px auto;
+  } */
+
 /* ---------messenger by rainsong https://archiveofourown.org/works/29809578/chapters/73338768 */
 .fbmessenger {
   max-width: 300px;
@@ -1309,7 +1337,7 @@
     }
 
     .article-content:hover {
-        /* opacity: 1; */
+        opacity: 1;
     }
 
     /* ------- wikipedia stuff -------*/
@@ -1795,6 +1823,12 @@
       
       .mari-room {
         background: url("https://i.imgur.com/HqWeLt8.png") repeat center center scroll;
+        background-size: contain;
+        background-attachment: fixed;
+      }
+
+      .hm-lair {
+        background: url("https://i.imgur.com/CMRFnhj.png") repeat center center scroll;
         background-size: contain;
         background-attachment: fixed;
       }
