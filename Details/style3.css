@@ -1,6 +1,7 @@
 
 .parent-container {
     width: fit-content;
+    position: relative;
 }
 
 .parent-container-row {
@@ -36,11 +37,12 @@
 
 .square-cont details {
     margin: 0px;
+    /* cursor: pointer; */
 }
 
 .square-cont details[open] {
     display: none;
-    z-index: 0;
+    z-index: 1;
 }
 
 .square {
@@ -51,6 +53,22 @@
     transition: all 1s ease-out;
 }
 
+.square-answer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    /* display: none; */
+    background-image: url(https://img.icons8.com/ios/300/hand.png);
+    background-color: aqua;
+    transition: opacity 1s ease-in 0.5s;
+    opacity: 0;
+    /* cursor: pointer; */
+}
+
+
+/* ---------------------------------------------------------------- */
 /*
 when there are no more open divs left inside .square-cont,
 change the background color
@@ -59,13 +77,27 @@ and the victory condition can be set by how many times an element in html must b
 */
 .square-cont:not(:has(details:not([open]))) {
     background-color: green;
+    cursor: not-allowed;
 }
 
-/* if the row is empty */
+/* if the row is empty (all details were clicked~) */
 .parent-container-row:not(:has(details:not([open]))) {
     outline: 3px blue solid;
 }
 
+/* the BOX is empty (all details were clicked~) */
+.parent-container:not(:has(details:not([open]))) {
+    outline: 3px plum solid;
+}
+
+.parent-container:not(:has(details:not([open]))) .square-answer {
+    opacity: 1;
+    z-index: 12;
+    cursor: pointer;
+    /* display: block; */
+}
+
+/* ---------------------------------------------------------------- */
 
 /* i did have to hard code these tho lol */
 details[open] ~ .square {
