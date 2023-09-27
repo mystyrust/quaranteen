@@ -23,6 +23,7 @@
     width: 100px;
     height: 100px;
     background-color: pink;
+    transition: all 1s ease-out;
 }
 
 .square-cont summary {
@@ -73,10 +74,6 @@ details[open] ~ .square {
 
 details[open] ~ details[open] ~ .square {
     transform: rotate(180deg);
-}
-
-details[open] ~ .square {
-    transform: rotate(90deg);
 }
 
 details[open] ~ details[open]  ~ details[open] ~ .square {
