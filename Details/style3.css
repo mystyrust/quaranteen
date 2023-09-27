@@ -1,0 +1,88 @@
+
+.parent-container {
+    width: fit-content;
+}
+
+.parent-container-row {
+    display: flex;
+    width: fit-content;
+}
+
+/* hide the summary marker on all browsers */
+.square-cont summary {
+  list-style-type: none;
+}
+
+.square-cont details > summary::-webkit-details-marker,
+.square-cont details > summary::marker {
+  display: none;
+}
+
+.square-cont {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+}
+
+.square-cont summary {
+    position: absolute;
+    /* background-color: yellow; */
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+.square-cont details {
+    margin: 0px;
+}
+
+.square-cont details[open] {
+    display: none;
+    z-index: 0;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background-image: url(https://img.icons8.com/material-rounded/100/thick-arrow-pointing-up.png);
+    /* transition: transform 1s ease-out, background-color 1s ease-out; */
+    transition: all 1s ease-out;
+}
+
+/*
+when there are no more open divs left inside .square-cont,
+change the background color
+using this prevents us from having to hardcode the victory condition
+and the victory condition can be set by how many times an element in html must be pressed
+*/
+.square-cont:not(:has(details:not([open]))) {
+    background-color: green;
+}
+
+/* if the row is empty */
+.parent-container-row:not(:has(details:not([open]))) {
+    outline: 3px blue solid;
+}
+
+
+/* i did have to hard code these tho lol */
+details[open] ~ .square {
+    transform: rotate(90deg);
+}
+
+details[open] ~ details[open] ~ .square {
+    transform: rotate(180deg);
+}
+
+details[open] ~ .square {
+    transform: rotate(90deg);
+}
+
+details[open] ~ details[open]  ~ details[open] ~ .square {
+    transform: rotate(270deg);
+}
+
+details[open] ~ details[open]  ~ details[open] ~ details[open] ~ .square {
+    transform: rotate(360deg);
+}
