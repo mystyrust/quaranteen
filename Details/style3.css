@@ -37,7 +37,7 @@
 
 .square-cont details {
     margin: 0px;
-    /* cursor: pointer; */
+    cursor: pointer;
 }
 
 .square-cont details[open] {
@@ -57,11 +57,12 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    top: 0;
+    /* top: 0; */
     z-index: 0;
     /* display: none; */
     background-image: url(https://img.icons8.com/ios/300/hand.png);
     background-color: aqua;
+    /* transition: opacity 1s ease-in 0.5s, margin-top 1s ease-in 1s; */
     transition: opacity 1s ease-in 0.5s;
     opacity: 0;
     /* cursor: pointer; */
@@ -92,6 +93,7 @@ and the victory condition can be set by how many times an element in html must b
 
 .parent-container:not(:has(details:not([open]))) .square-answer {
     opacity: 1;
+    margin-top: -100%;
     z-index: 12;
     cursor: pointer;
     /* display: block; */
