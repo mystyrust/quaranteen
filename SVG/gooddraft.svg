@@ -1,0 +1,92 @@
+<svg version="1.1"
+     viewBox="0 0 90 18"
+     width="100%" height="100%"
+     xmlns="http://www.w3.org/2000/svg">
+  <style>
+
+    @keyframes changeLetter {
+        0% {content: "";}
+        2% {content: "l";}
+        4% {content: "le";}
+        6% {content: "les";}
+        8% {content: "less";}
+        10% {content: "less ";}
+        12% {content: "less s";}
+        14% {content: "less sh";}
+        16% {content: "less sho";}
+        18% {content: "less shor";}
+        20% {content: "less short";}
+        22% {content: "less shor";}
+        24% {content: "less sho";}
+        26% {content: "less sh";}
+        28% {content: "less s";}
+        30% {content: "less ";}
+        32% {content: "less";}
+        34% {content: "les";}
+        36% {content: "le";}
+        38% {content: "l";}
+        40% {content: "";}
+        42% {content: "a";}
+        44% {content: "a ";}
+        46% {content: "a l";}
+        48% {content: "a li";}
+        50% {content: "a lit";}
+        52% {content: "a litt";}
+        54% {content: "a littl";}
+        56% {content: "a little";}
+        58% {content: "a little ";}
+        60% {content: "a little l";}
+        62% {content: "a little lo";}
+        64% {content: "a little lon";}
+        66% {content: "a little long";}
+        68% {content: "a little longe";}
+        70% {content: "a little longer";}
+        72% {content: "a little longe";}
+        74% {content: "a little long";}
+        76% {content: "a little lon";}
+        78% {content: "a little lo";}
+        80% {content: "a little l";}
+        82% {content: "a little ";}
+        84% {content: "a little";}
+        86% {content: "a littl";}
+        88% {content: "a litt";}
+        90% {content: "a lit";}
+        92% {content: "a li";}
+        94% {content: "a l";}
+        96% {content: "a ";}
+        98% {content: "a";}
+        100% {content: "";}
+    }
+        
+    @keyframes cursor {
+        to { visibility: hidden; }
+    }
+    @-webkit-keyframes cursor {
+        to { visibility: hidden; }
+    }
+    .letter-changer::before {
+        animation: changeLetter 5s linear 1s infinite normal forwards;
+        content: "";
+    }
+    .letter-changer::after {
+        content: "​";
+        position: relative;
+        display: inline-block;
+        padding-right: 2px;
+        border-right: 2px solid currentColor;
+        white-space: nowrap;
+        animation: cursor 0.5s steps(5, start) infinite;
+    }
+    span {
+        background-color: white;
+        color: black;
+        font-family: "times new roman";
+        font-size: 14.5px;
+    }
+</style>
+ 
+  <foreignObject xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+<span xmlns="http://www.w3.org/1999/xhtml" class="letter-changer"></span>
+  </foreignObject>
+  
+</svg>

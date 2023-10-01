@@ -1,7 +1,10 @@
 
+/* consider hardcoding the height and width here?
+or doing min / max width stuff... */
 .parent-container {
     width: fit-content;
     position: relative;
+    margin: 0px auto;
 }
 
 .parent-container-row {

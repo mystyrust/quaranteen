@@ -1,0 +1,139 @@
+<svg version="1.1"
+     viewBox="0 0 350 18"
+     width="100%" height="100%"
+     xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @keyframes words {
+        0% {content: "";}
+        5% {content: "I";}
+        10% {content: "It";}
+        15% {content: "It ";}
+        20% {content: "It w";}
+        25% {content: "It wa";}
+        30% {content: "It was";}
+        35% {content: "It was ";}
+        40% {content: "It was g";}
+        45% {content: "It was go";}
+        50% {content: "It was goi";}
+        55% {content: "It was goin";}
+        60% {content: "It was going";}
+        65% {content: "It was going ";}
+        70% {content: "It was going t";}
+        75% {content: "It was going to";}
+        80% {content: "It was going to ";}
+        85% {content: "It was going to b";}
+        90% {content: "It was going to be";}
+        95% {content: "It was going to be ";}
+        97% {content: "It was going to be a";}
+        100% {content: "It was going to be a ";}
+    }
+
+    @keyframes changeLetter {
+        0% {content: "";}
+        1% {content: "p";}
+        3% {content: "pe";}
+        4% {content: "per";}
+        5% {content: "perf";}
+        7% {content: "perfe";}
+        9% {content: "perfec";}
+        10% {content: "perfect";}
+        11% {content: "perfect ";}
+        13% {content: "perfect d";}
+        15% {content: "perfect da";}
+        16% {content: "perfect day";}
+        18% {content: "perfect day.";}
+        19% {content: "perfect day";}
+        21% {content: "perfect da";}
+        23% {content: "perfect d";}
+        25% {content: "perfect ";}
+        27% {content: "perfect";}
+        29% {content: "perfec";}
+        31% {content: "perfe";}
+        33% {content: "perf";}
+        35% {content: "per";}
+        37% {content: "pe";}
+        38% {content: "p";}
+        40% {content: "";}
+        41% {content: "g";}
+        43% {content: "go";}
+        45% {content: "goo";}
+        47% {content: "good";}
+        48% {content: "good ";}
+        49% {content: "good d";}
+        51% {content: "good da";}
+        52% {content: "good day";}
+        53% {content: "good day.";}
+        55% {content: "good day";}
+        57% {content: "good da";}
+        59% {content: "good d";}
+        61% {content: "good ";}
+        63% {content: "good";}
+        64% {content: "goo";}
+        66% {content: "go";}
+        68% {content: "g";}
+        71% {content: "";}      
+        72% {content: "t";}
+        73% {content: "te";}
+        74% {content: "ter";}
+        75% {content: "terr";}
+        76% {content: "terri";}
+        77% {content: "terrib";}
+        78% {content: "terribl";}
+        79% {content: "terrible";}
+        80% {content: "terrible ";}
+        81% {content: "terrible d";}
+        82% {content: "terrible da";}
+        83% {content: "terrible day";}
+        84% {content: "terrible day.";}
+        85% {content: "terrible day";}
+        86% {content: "terrible da";}
+        87% {content: "terrible d";}
+        88% {content: "terrible ";}
+        90% {content: "terrible";}
+        91% {content: "terribl";}
+        93% {content: "terrib";}
+        95% {content: "terri";}
+        96% {content: "terr";}
+        97% {content: "ter";}
+        98% {content: "te";}
+        99% {content: "t";}
+        100% {content: "";}
+    }
+        
+    @keyframes cursor {
+        to { visibility: hidden; }
+    }
+    @-webkit-keyframes cursor {
+        to { visibility: hidden; }
+    }
+        
+    .words::before {
+        animation: words 1s linear 0s 1 normal forwards;
+        content: "";
+    }
+    .letter-changer::before {
+        animation: changeLetter 7s linear 1s infinite normal forwards;
+        content: "";
+    }
+    .letter-changer::after {
+        content: "​";
+        position: relative;
+        display: inline-block;
+        padding-right: 2px;
+        border-right: 2px solid currentColor;
+        white-space: nowrap;
+        animation: cursor 0.5s steps(5, start) infinite;
+    }
+    span {
+        background-color: white;
+        color: black;
+        font-family: "Lucida Grande";
+        font-size: 15px;
+    }
+</style>
+ 
+  <foreignObject xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+<span xmlns="http://www.w3.org/1999/xhtml" class="words"></span><span xmlns="http://www.w3.org/1999/xhtml" class="letter-changer"></span>
+  </foreignObject>
+  
+</svg>
