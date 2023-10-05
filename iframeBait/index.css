@@ -111,3 +111,12 @@
     position: sticky;
     top: 0;
   }
+
+  figure {
+    margin: 0px;
+  }
+
+.userstuff.module
+{  
+  position: unset;
+}
