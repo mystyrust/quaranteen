@@ -1,0 +1,113 @@
+/* https://archiveofourown.org/skins/903334 */
+#workskin { 
+    width: initial;
+    overflow: inherit;
+    position: relative;
+  }
+  
+  .white-overflow {
+    border: none;
+    right: 0;
+    box-shadow: none;
+    padding: 0;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 10;
+    width: 100vw;
+    margin-left: -50vw;
+    left: 50%;
+  }
+  
+  p.span-cont {
+    line-height: 1.5;
+  }
+  
+  span.hr {
+    width: 33%;
+    margin: 2em auto !important;
+    border: 1px solid;
+    display: block;
+    height: 0px;
+  }
+  
+  .tab,
+  .tab0,
+  :target ~ .default-tab {
+    display: none;
+  }
+  
+  .default-tab {
+    display: block;
+  }
+  
+  .root {
+    margin-top: -1em !important;
+  }
+  
+  #root:target ~ .root,
+  #end-fenton:target ~ .end-fenton,
+  #end-phantom:target ~ .end-phantom,
+  #end-both:target ~ .end-both,
+  :target[name='root'] ~ .root,
+  :target[name='end-fenton'] ~ .end-fenton,
+  :target[name='end-phantom'] ~ .end-phantom,
+  :target[name='end-both'] ~ .end-both {
+    display: block;
+    margin-top: -1em;
+  }
+  
+  .jump {
+    display: none;
+  }
+  
+  .overflow-top {
+    height: 10000px;
+    top: -900px;
+    z-index: 20;
+    overflow: initial;
+    line-height: 1.125;
+  }
+  
+  .overflow-top p {
+    position: sticky;
+    top: 0;
+  }
+  
+  .overflow-top img {
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+  
+  .phone.overflow-top img {
+    width: 338px;
+  }
+  
+  .start-hack span {
+    display: inline-block;
+    font-size: 15px;
+    background: black;
+    color: white;
+    text-decoration: underline;
+    border: 2px solid #8f8e8f;
+    border-radius: 10px;
+    max-width: 470px;
+    padding: 10px;
+    height: auto;
+    width: auto;
+    margin-top: -162px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  
+  p {
+    margin: 1.286em auto;
+    padding: 0;
+    line-height: 1.5;
+  }
+  
+  .overflow-top p {
+    position: sticky;
+    top: 0;
+  }
