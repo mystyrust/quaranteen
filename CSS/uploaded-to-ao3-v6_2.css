@@ -1,0 +1,39 @@
+
+
+
+details {
+    margin: 0px;
+}
+
+details > summary {
+    list-style: none;
+}
+
+details summary::-webkit-details-marker,
+details summary::marker {
+    display: none;
+}
+
+figure:has(details[open]) .tab,
+figure:has(details[open]) .default-tab 
+{
+    display: none;
+    /* height: 0%;
+    opacity: 0; */
+} 
+
+figure:has(details.root[open]) div.root,
+figure:has(details.start[open]) div.start,
+figure:has(details.start2[open]) div.start2,
+figure:has(details.ask-jazz[open]) div.ask-jazz,
+figure:has(details.ask-elle[open]) div.ask-elle,
+figure:has(details.ask-sam[open]) div.ask-sam,
+figure:has(details.ask-tucker[open]) div.ask-tucker,
+figure:has(details.ask-none[open]) div.ask-none,
+figure:has(details.vent[open]) div.vent 
+{
+    display: block;
+    /* opacity: 1;
+    height: 100%; */
+}
+

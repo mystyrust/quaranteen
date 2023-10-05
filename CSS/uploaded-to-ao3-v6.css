@@ -2283,7 +2283,12 @@ p.paperclip > img {
 
 .tab, 
 .tab0,
-:target ~ .default-tab { display: none }
+:target ~ .default-tab 
+{ 
+  display: none; 
+  /* height: 0%; */
+  /* opacity: 0; */
+}
 
 .default-tab { display: block; }
 .root { margin-top: -1em !important; }
@@ -2298,6 +2303,8 @@ p.paperclip > img {
 #ask-none:target ~ .ask-none,
 #vent:target ~ .vent{
   display: block;
+  /* opacity: 1; */
+  /* height: 100%; */
   margin-top: -1em;
 }
 
@@ -2450,7 +2457,7 @@ width: 50%;
 border-bottom: none;
 }
 
-.cyoa-choice-5 span {
+.cyoa-choice-5 span, .cyoa-choice-5 summary {
 text-decoration: underline;
 background: black;
 color: white;
@@ -2467,7 +2474,8 @@ margin-bottom: 3%;
 height: auto;
 }
 
-.cyoa-choice-5 span:after {
+.cyoa-choice-5 span:after,
+.cyoa-choice-5 summary:after {
 content: '';
 border: 10px solid transparent;
 border-right-color: #8f8e8f;
