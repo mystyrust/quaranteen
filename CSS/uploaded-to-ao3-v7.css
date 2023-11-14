@@ -7,6 +7,10 @@ a.clear-link:visited {
 color: white;
 }
 
+.chapter .preface {
+  border-top: none;
+}
+
 div.amongus-room {
   line-height: 1em;
 }
@@ -276,6 +280,7 @@ span.messagebody  {
   max-width: 75%;
   clear: both;
   position: relative;
+  margin-top: 5px;
 }
 
 .reply2 {
