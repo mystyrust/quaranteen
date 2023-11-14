@@ -3,6 +3,7 @@
 * javascript loop tracker https://replit.com/@mystyrust/progress-tracker#index.js 
 * the 'file browser' code is there too 
 * im not very good at explaining things so ill try my best
+* updated in nov 2023 to use repl deployments (boo) (but at least it autoscales ...i think)
 
 # Keeping Track of CYOA Progress
 * There were a couple things I wanted to achieve with this CYOA segment 
