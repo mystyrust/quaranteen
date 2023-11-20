@@ -55,6 +55,11 @@
     display: block;
     margin-top: -1em;
   }
+
+  .end-both.tab ~ .root.default-tab .secondary.logged-in.white-overflow
+  {
+    height: 6000px;
+  }
   
   .jump {
     display: none;
@@ -62,7 +67,7 @@
   
   .overflow-top {
     height: 10000px;
-    top: -900px;
+    top: -9000px;
     z-index: 20;
     overflow: initial;
     line-height: 1.125;
