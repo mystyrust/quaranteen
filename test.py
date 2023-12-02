@@ -8,11 +8,12 @@ import urllib.request
 from bs4 import BeautifulSoup
 from pathlib2 import Path 
 
-quarnateensFilePaths = ["./Quaranteens/quarantine-3.html"]
+quarnateensFilePaths = ["./Quaranteens/quarantine-6.html"]
             # ["./Quaranteens/quarantine-1.html"
             #  "./Quaranteens/quarantine-2.2.html", 
             #  "./Quaranteens/quarantine-3.html", 
             #  "./Quaranteens/quarantine-4.html", 
+            #  "./Quaranteens/quarantine-5.html", 
             #  "./Quaranteens/quarantine-6.html",
             #  "./Quaranteens/quarantine-7v2.html"]
 
@@ -32,10 +33,11 @@ urlRefs = {}
 
 for url in urlSet:
     # ignore progress-tracker and github images
-    print(url)
-    filename="Test/" + url.split('/')[-1] 
-    urllib.request.urlretrieve(url, filename) 
-    urlRefs.update({ url : filename })
+    if (not "replit.app" in url) and (not "githubusercontent" in url):
+        print(url)
+        filename="Test/" + url.split('/')[-1] 
+        urllib.request.urlretrieve(url, filename) 
+        urlRefs.update({ url : filename })
 print(urlRefs)
 
 for filePath in quarnateensFilePaths:
@@ -58,6 +60,8 @@ for filePath in quarnateensFilePaths:
 
 # figure out how to modularize this ^^^^
 # maybe later
+
+# omg then.. .. . . imagine... . . epub this.... . ..
 
 # todo maaaybe organize??
 # after downloading and updating refs for all 7 ch
