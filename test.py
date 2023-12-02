@@ -27,7 +27,9 @@ for filePath in quarnateensFilePaths:
     urlSet.update(urls)
 
 print("len is", len(urlSet))
+
 urlRefs = {}
+
 for url in urlSet:
     # ignore progress-tracker and github images
     print(url)
@@ -39,6 +41,7 @@ print(urlRefs)
 for filePath in quarnateensFilePaths:
     file = Path(filePath) 
     data = file.read_text() 
+    # get the urlRefs for THIS file only, at this step
     for url, location in urlRefs.items():
 
         data = data.replace(url, "../"+location)
@@ -53,26 +56,13 @@ for filePath in quarnateensFilePaths:
     # then open each file , create the set for just that file, 
     # use that set to select only the keys you need from the dict, update refs in place
 
-# xs = ['d', 'e']
-# urlSet.update(xs)
-# print("len is", len(urlSet))
-# print(urlSet)
+# figure out how to modularize this ^^^^
+# maybe later
 
-# for url in urls:
-
-    # filename = re.search(r'/([\w_-]+[.](jpg|gif|png))$', url)
-    # print(filename)
-    #if not filename:
-    #     print("Regex didn't match with the url: {}".format(url))
-    #     continue
-    #with open(filename.group(1), 'wb') as f:
-    #    if 'http' not in url:
-    #        # sometimes an image source can be relative 
-    #        # if it is provide the base url which also happens 
-    #        # to be the site variable atm. 
-    #        url = '{}{}'.format(site, url)
-    #    response = requests.get(url)
-    #    f.write(response.content)
-
-# print(soup) 
-# print(soup.find_all("div", class_="amongus-dead"))
+# todo maaaybe organize??
+# after downloading and updating refs for all 7 ch
+# visually sort into folders by character
+# update file name and ref in html concurrently 
+# something like , all the danny images in 1 folder, name them numberically, 
+# keep dict of updated names,
+# update ref in html at the same time.
