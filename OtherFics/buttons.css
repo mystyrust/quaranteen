@@ -1,0 +1,12 @@
+.js-buttons {
+    padding: 30px;
+}
+
+.css-btn {
+    padding: 20px;
+    margin: 15px;
+    height: 50px;
+    background: lightblue;
+    border-radius: 10px;
+    cursor: pointer;
+}
