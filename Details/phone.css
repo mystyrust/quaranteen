@@ -224,9 +224,9 @@ details[open] div.app-open {
     transition: all 0s 2147483647s;
 }
 
-.app-container:has(.app-icon.app-youtube:active) ~ .app-screens-container .app-open.app-youtube ,
+.phone-container:has(.app-icon.app-youtube:active) .app-screens-container .app-open.app-youtube ,
 /* .screen-buttons:has(.app-icon:active) ~ .app-screens-container .app-open , */
-.screen-buttons:has(.app-icon.app-chrome:active) ~ .app-screens-container .app-open.app-chrome  {
+.phone-container:has(.app-icon.app-chrome:active) .app-screens-container .app-open.app-chrome  {
     display: block !important;
     height: 456px;
     width: 257px;
@@ -265,8 +265,8 @@ details[open] div.app-open {
     transition: all 0s 2147483647s;
 }
 
-.app-container:has(.app-icon.app-youtube:active) ~ .app-tracker-container details.app-tracker.app-youtube,
-.screen-buttons:has(.app-icon.app-chrome:active) ~ .app-tracker-container details.app-tracker.app-chrome {
+.phone-container:has(.app-icon.app-youtube:active) .app-tracker-container details:not([open]).app-tracker.app-youtube,
+.phone-container:has(.app-icon.app-chrome:active) .app-tracker-container details:not([open]).app-tracker.app-chrome {
     display: block !important;
     opacity: 1;
     /* z-index: 4; */
