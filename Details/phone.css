@@ -198,13 +198,13 @@
 
 details[open] div.app-open {
     /* display: none; */
-    background-color: red;
+    /* background-color: red;
     position: absolute;
     height: 456px;
     width: 257px;
     top: 0px;
     left: 0px;
-    overflow: scroll;
+    overflow: scroll; */
 }
 
 .app-open {
@@ -224,8 +224,9 @@ details[open] div.app-open {
     transition: all 0s 2147483647s;
 }
 
-.app-container:has(.app-icon:active) ~ .app-screens-container .app-open ,
-.screen-buttons:has(.app-icon:active) ~ .app-screens-container .app-open  {
+.app-container:has(.app-icon.app-youtube:active) ~ .app-screens-container .app-open.app-youtube ,
+/* .screen-buttons:has(.app-icon:active) ~ .app-screens-container .app-open , */
+.screen-buttons:has(.app-icon.app-chrome:active) ~ .app-screens-container .app-open.app-chrome  {
     display: block !important;
     height: 456px;
     width: 257px;
@@ -234,6 +235,7 @@ details[open] div.app-open {
     transition: all 0.05s;
 }
 
+/* close apps */
 .home-btn:active ~ .app-screens-container .app-open,
 .app-tracker-container:has(details:active) ~ .app-screens-container .app-open {
     height: 0px;
@@ -248,7 +250,7 @@ details[open] div.app-open {
     position: absolute;
     margin-left: 162px;
     margin-top: 555px;
-    cursor: pointer;
+   
     border-radius: 20px;
     background-color: greenyellow;
     /* height: 40px;
@@ -256,18 +258,23 @@ details[open] div.app-open {
     height: 0px;
     opacity: 0;
     width: 0px;
-    left: 0;
+    left: -10000;
     z-index: 2;
+    cursor: pointer;
+    /* display: none; */
     transition: all 0s 2147483647s;
 }
 
-.app-container:has(.app-icon:active) ~ .app-tracker-container details.app-tracker {
-    display: block;
+.app-container:has(.app-icon.app-youtube:active) ~ .app-tracker-container details.app-tracker.app-youtube,
+.screen-buttons:has(.app-icon.app-chrome:active) ~ .app-tracker-container details.app-tracker.app-chrome {
+    display: block !important;
     opacity: 1;
     /* z-index: 4; */
     transition: all 0.05s;
     height: 40px;
     width: 40px;
+    left: 0;
+    cursor: pointer;
 }
 
 details[open].app-tracker, 
@@ -284,11 +291,11 @@ details[open].app-tracker summary {
 } */
 
 /* this tracks the apps you visited, when you click out of them the first time */
-details:not([open]) details.app-visited {
+/* details:not([open]) details.app-visited {
     display: none;
-}
+} */
 
-details[open] summary.app-close-btn {
+/* details[open] summary.app-close-btn {
     position: absolute;
     background-color: green;
     bottom: -45px;
@@ -296,10 +303,10 @@ details[open] summary.app-close-btn {
     cursor: pointer;
     border-radius: 20px;
     /* opacity: 0.1; */
-    height: 40px;
+    /* height: 40px;
     width: 40px;
     z-index: 2;
-}
+}  */
 
 
 /* --------------------scroller --------------------*/
