@@ -1,3 +1,24 @@
+/* --------ao3 specific overrides --------*/
+.phone-arg summary {
+  list-style-type: none;
+}
+  
+.phone-arg details > summary::-webkit-details-marker,
+.phone-arg details > summary::marker {
+  display: none;
+}
+
+.phone-arg details {
+  margin: 0px;
+}
+
+.phone-arg p {
+    margin: 0px;
+    line-height: 1;
+}
+
+/* ---------------------------------------------------- */
+/* create the basic phone div and components/imgs */
 
 .phone-arg {
     /* text-align: center; */
@@ -6,20 +27,6 @@
     justify-content: center;
     height: 700px;
 }
-
-.phone-arg summary {
-    list-style-type: none;
-  }
-  
-  .phone-arg details > summary::-webkit-details-marker,
-  .phone-arg details > summary::marker {
-    display: none;
-  }
-
-  .phone-arg details {
-    margin: 0px;
-  }
-
 
 .phone-container {
     width: 364px;
@@ -59,20 +66,17 @@
 }
 
 .phone-wallpaper {
-    /* pointer-events: none; */
-/* z-index: 1; */
-height: 456px;
-/* background-color: orange; */
-/* background-image: none; */
-/* width: 100%; */
-width: 257px;
-top: 92px;
-margin-left: 54px;
-/* margin: 0 8px; */
-position: absolute;
-background-repeat: no-repeat;
-background-size: cover;
-background-image: url(https://i.imgur.com/vqt7UbC.jpg);
+    height: 456px;
+    /* background-color: orange; */
+    /* background-image: none; */
+    /* width: 100%; */
+    width: 257px;
+    top: 92px;
+    margin-left: 54px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(https://i.imgur.com/vqt7UbC.jpg);
 }
 
 /* ----------------- top status bar ------------------- */
@@ -116,7 +120,7 @@ background-image: url(https://i.imgur.com/vqt7UbC.jpg);
 }
 
 /* ---------------------------------------------------------------- */
-/* home made row and col using flex */
+/* home made row and col using flex, copied from bootstrap */
 
 .row {
     display: flex;
@@ -128,17 +132,11 @@ background-image: url(https://i.imgur.com/vqt7UbC.jpg);
 }
 
 .app-row {
-    /* width: 282px;
-    padding: 12px; */
     height: 90px;
 }
 
-/* .app {
-    background-color: pink;
-    height: auto;
-    padding: 10px;
-    margin: 10px;
-} */
+/* ---------------------------------------------------------------- */
+/* hold the app icons and open an app based on which app-iconc you click */
 
 .app-icon {
     background-size: contain;
@@ -151,10 +149,8 @@ background-image: url(https://i.imgur.com/vqt7UbC.jpg);
     height: auto;
     padding: 10px;
     margin: 10px;
+    z-index: 3;
 }
-/* ---------------------------------------------------------------- */
-
-
 
 .app-container {
     z-index: 1;
@@ -167,6 +163,26 @@ background-image: url(https://i.imgur.com/vqt7UbC.jpg);
     top: 92px;
     margin-left: 54px;
     width: 258px;
+}
+
+.screen-buttons
+{
+    position: absolute;
+    margin-top: 455px;
+    margin-left: 54px;
+    cursor: pointer;
+    width: 255px;
+}
+
+.screen-buttons:after {
+    content: '';
+    width: 258px;
+    height: 90px;
+    border-radius: 26px;
+    position: absolute;
+    background-color: slategray;
+    opacity: 0.5;
+    top: 0;
 }
 
 .screen-container {
@@ -208,7 +224,8 @@ details[open] div.app-open {
     transition: all 0s 2147483647s;
 }
 
-.app-container:has(.app-icon:active) ~ .app-screens-container .app-open  {
+.app-container:has(.app-icon:active) ~ .app-screens-container .app-open ,
+.screen-buttons:has(.app-icon:active) ~ .app-screens-container .app-open  {
     display: block !important;
     height: 456px;
     width: 257px;
@@ -226,6 +243,7 @@ details[open] div.app-open {
     display: none;
 }
 
+/* todo -- make this specific for each app clicked */
 .app-tracker-container details { 
     position: absolute;
     margin-left: 162px;
@@ -265,20 +283,7 @@ details[open].app-tracker summary {
     display: none;
 } */
 
-
-details.app-visited {
-    background-color: blueviolet;
-    height: 20px;
-    width: 20px;
-    /* position: absolute; */
-    cursor: pointer;
-    border-radius: 20px;
-    height: 40px;
-    width: 40px;
-    z-index: 2;
-    top: 0px;
-}
-
+/* this tracks the apps you visited, when you click out of them the first time */
 details:not([open]) details.app-visited {
     display: none;
 }
@@ -297,8 +302,8 @@ details[open] summary.app-close-btn {
 }
 
 
-/* --------------------scroller? --------------------*/
-/* dots to show which screen you are on */
+/* --------------------scroller --------------------*/
+/* dots to show which screen you are on, horizontal "scroll" on phone */
 .scroller {
     position: absolute;
     display: flex;
@@ -320,34 +325,30 @@ details[open] summary.app-close-btn {
     border-style: solid;
     border-width: thin;
     z-index: 4;
-    /* transition: all 0s 0s; */
 }
 
-/* move screens over */
-.chevron-left {
-    background-image: url("https://img.icons8.com/ios-glyphs/30/chevron-left.png");
+/* - move screens over ---*/
+.chevron {
     background-repeat: no-repeat;
     background-size: 30px 30px;
     height: 30px;
-    width: 30px;
-    background-color: pink;
+    width: 30px;   
     cursor: pointer;
     position: absolute;
+    margin-top: -7px;
+}
+
+.chevron-left {
+    background-image: url("https://img.icons8.com/ios-glyphs/30/chevron-left.png");
+    background-color: pink;
   }
   
   .chevron-right {
-    /* margin-top: 50px; */
     background-image: url("https://img.icons8.com/ios-glyphs/30/chevron-right.png");
-    background-size: 30px 30px;
-    background-repeat: no-repeat;
-    height: 30px;
-    width: 30px;
     background-color: orange;
-    cursor: pointer;
-    position: absolute;
   }
 
-  details[open] .chevron-right ~.chevron-left {
+  details[open] .chevron-right ~ .chevron-left {
     left: 0;
   }
 
@@ -357,6 +358,7 @@ details[open] summary.app-close-btn {
     left: 0
   }
 
+/* screen1 active by default */
 .scroller div.scroll-to-screen1 {
     background: white;
 }
@@ -367,25 +369,21 @@ details[open] summary.app-close-btn {
     transform: translateX(-358px);
 }
 
-.scroller:has(details[open]) div.scroll-to-screen2 {
-    background: white;
-}
-.scroller:has(details[open]) div.scroll-to-screen1 {
-    background: slategray;
-}
-
 /* move 2 screens over, to screen 3 */
 .phone-container:has(.scroller details[open] ~ details[open]) .screen-container
 {
     transform: translateX(-716px);
 }
 
-.scroller:has(details[open] ~ details[open]) .scroll-to-screen3
+.scroller:has(details[open]) div.scroll-to-screen2, /* screen2 active */
+.scroller:has(details[open] ~ details[open]) .scroll-to-screen3 /* screen3 active */
 {
     background: white;
 }
-
-.scroller:has(details[open] ~ details[open]) .scroll-to-screen2
- {
+.scroller:has( details[open]) div.scroll-to-screen1, /* screen2 active, prev screen1 inactive */
+.scroller:has(details[open] ~ details[open]) .scroll-to-screen2 /* screen3 active, prev screen2 inactive */
+{
     background: slategray;
 }
+
+/* ------------------------------------------------ */
