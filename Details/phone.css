@@ -7,6 +7,19 @@
     height: 700px;
 }
 
+.phone-arg summary {
+    list-style-type: none;
+  }
+  
+  .phone-arg details > summary::-webkit-details-marker,
+  .phone-arg details > summary::marker {
+    display: none;
+  }
+
+  .phone-arg details {
+    margin: 0px;
+  }
+
 
 .phone-container {
     width: 364px;
@@ -133,7 +146,7 @@ background-image: url(https://i.imgur.com/vqt7UbC.jpg);
     background-position: center;
     width: 98%;
     height: 98%;
-
+    cursor: pointer;
     background-color: pink;
     height: auto;
     padding: 10px;
@@ -148,9 +161,8 @@ background-image: url(https://i.imgur.com/vqt7UbC.jpg);
     height: 456px;
     display: flex;
     flex-flow: column wrap;
-    overflow-x: scroll;
-    overflow-y: clip;
-    cursor: grab;
+    overflow: clip;
+    /* cursor: grab; */
     position: relative;
     top: 92px;
     margin-left: 54px;
@@ -286,17 +298,16 @@ details[open] summary.app-close-btn {
 
 
 /* --------------------scroller? --------------------*/
+/* dots to show which screen you are on */
 .scroller {
     position: absolute;
-    /* top: 92px; */
     display: flex;
     justify-content: center;
     height: 25px;
     width: 259px;
-    /* margin-left: 162px; */
-    /* margin-top: 338px; */
     margin-left: 59px;
     margin-top: 438px;
+    z-index: 3;
 }
 
 .scroller div[class^="scroll-to"] {
@@ -308,14 +319,73 @@ details[open] summary.app-close-btn {
     margin: 0 20px;
     border-style: solid;
     border-width: thin;
-    cursor: pointer;
     z-index: 4;
+    /* transition: all 0s 0s; */
 }
 
-.scroller div[class^="scroll-to"]:first-of-type {
+/* move screens over */
+.chevron-left {
+    background-image: url("https://img.icons8.com/ios-glyphs/30/chevron-left.png");
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    height: 30px;
+    width: 30px;
+    background-color: pink;
+    cursor: pointer;
+    position: absolute;
+  }
+  
+  .chevron-right {
+    /* margin-top: 50px; */
+    background-image: url("https://img.icons8.com/ios-glyphs/30/chevron-right.png");
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    background-color: orange;
+    cursor: pointer;
+    position: absolute;
+  }
+
+  details[open] .chevron-right ~.chevron-left {
+    left: 0;
+  }
+
+  details[open] > summary.chevron-right {
+    opacity: 0;
+    z-index: 3;
+    left: 0
+  }
+
+.scroller div.scroll-to-screen1 {
     background: white;
 }
 
-.phone-container:has(.scroller div.scroll-to-screen2:active) .screen-container {
+/* move 1 screen over, to screen 2 */
+.phone-container:has(.scroller details[open]) .screen-container
+{
     transform: translateX(-358px);
+}
+
+.scroller:has(details[open]) div.scroll-to-screen2 {
+    background: white;
+}
+.scroller:has(details[open]) div.scroll-to-screen1 {
+    background: slategray;
+}
+
+/* move 2 screens over, to screen 3 */
+.phone-container:has(.scroller details[open] ~ details[open]) .screen-container
+{
+    transform: translateX(-716px);
+}
+
+.scroller:has(details[open] ~ details[open]) .scroll-to-screen3
+{
+    background: white;
+}
+
+.scroller:has(details[open] ~ details[open]) .scroll-to-screen2
+ {
+    background: slategray;
 }
