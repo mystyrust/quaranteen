@@ -1,0 +1,321 @@
+
+.phone-arg {
+    /* text-align: center; */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    height: 700px;
+}
+
+
+.phone-container {
+    width: 364px;
+    height: 639px;
+    display: inline-flex;
+    margin-bottom: -120px;
+    position: relative;
+}
+
+.home-btn {
+    position: absolute;
+    margin-left: 162px;
+    margin-top: 555px;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: white;
+    opacity: 0.1;
+    height: 40px;
+    width: 40px;
+    z-index: 2;
+}
+
+.phone-img {
+    background-image: url(https://i.imgur.com/fL9NBiz.png);
+    /* background-size: 100% auto; */
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* max-width: 400px;
+    min-width: 300px; */
+    width: 364px;
+    height: 639px;
+    /* display: inline-flex; */
+    position: absolute;
+    margin-bottom: -120px;
+    /* display: table;
+    margin: 0 auto; */
+}
+
+.phone-wallpaper {
+    /* pointer-events: none; */
+/* z-index: 1; */
+height: 456px;
+/* background-color: orange; */
+/* background-image: none; */
+/* width: 100%; */
+width: 257px;
+top: 92px;
+margin-left: 54px;
+/* margin: 0 8px; */
+position: absolute;
+background-repeat: no-repeat;
+background-size: cover;
+background-image: url(https://i.imgur.com/vqt7UbC.jpg);
+}
+
+/* ----------------- top status bar ------------------- */
+
+.phone-status-backdrop {
+    background: slategray;
+    height: 18px;
+    width: 257px;
+    position: absolute;
+    top: 92px;
+    margin-left: 54px;
+    opacity: 0.5;
+}
+
+.phone-status {
+    /* background: slategray; */
+    height: 18px;
+    width: 257px;
+    position: absolute;
+    top: 92px;
+    margin-left: 54px;
+}
+
+.phone-time {
+    font-size: small;
+    color: white;
+    padding-left: 2px;
+}
+
+.phone-status-icon {
+    height: 18px;
+    width: 18px;
+    display: inline-flex;
+    float: right;
+    /* filter: invert(1); */
+    margin-right: 28px;
+}
+
+.phone-status-icon img {
+    padding: 0px 3px
+}
+
+/* ---------------------------------------------------------------- */
+/* home made row and col using flex */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex: 1 0 0%;
+}
+
+.app-row {
+    /* width: 282px;
+    padding: 12px; */
+    height: 90px;
+}
+
+/* .app {
+    background-color: pink;
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+} */
+
+.app-icon {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 98%;
+    height: 98%;
+
+    background-color: pink;
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+}
+/* ---------------------------------------------------------------- */
+
+
+
+.app-container {
+    z-index: 1;
+    height: 456px;
+    display: flex;
+    flex-flow: column wrap;
+    overflow-x: scroll;
+    overflow-y: clip;
+    cursor: grab;
+    position: relative;
+    top: 92px;
+    margin-left: 54px;
+    width: 258px;
+}
+
+.screen-container {
+    width: 257px;
+    height: 456px;
+    padding-right: 100px;
+    transition: all 1s;
+}
+
+.screen-container:last-of-type {
+    padding-right: 0px;
+}
+
+details[open] div.app-open {
+    /* display: none; */
+    background-color: red;
+    position: absolute;
+    height: 456px;
+    width: 257px;
+    top: 0px;
+    left: 0px;
+    overflow: scroll;
+}
+
+.app-open {
+    /* display: none;  */
+    background-color: red;
+    position: absolute;
+    opacity: 0;
+    z-index: 4;
+    
+    /* top: 0px;
+    left: 0px; */
+    overflow: scroll;
+    height: 0px;
+    width: 0px;
+    top: 92px;
+    left: 54px;
+    transition: all 0s 2147483647s;
+}
+
+.app-container:has(.app-icon:active) ~ .app-screens-container .app-open  {
+    display: block !important;
+    height: 456px;
+    width: 257px;
+    opacity: 1;
+    /* z-index: 4; */
+    transition: all 0.05s;
+}
+
+.home-btn:active ~ .app-screens-container .app-open,
+.app-tracker-container:has(details:active) ~ .app-screens-container .app-open {
+    height: 0px;
+    width: 0px;
+    opacity: 0;
+    transition-delay: 0s !important;
+    display: none;
+}
+
+.app-tracker-container details { 
+    position: absolute;
+    margin-left: 162px;
+    margin-top: 555px;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: greenyellow;
+    /* height: 40px;
+    width: 40px; */
+    height: 0px;
+    opacity: 0;
+    width: 0px;
+    left: 0;
+    z-index: 2;
+    transition: all 0s 2147483647s;
+}
+
+.app-container:has(.app-icon:active) ~ .app-tracker-container details.app-tracker {
+    display: block;
+    opacity: 1;
+    /* z-index: 4; */
+    transition: all 0.05s;
+    height: 40px;
+    width: 40px;
+}
+
+details[open].app-tracker, 
+details[open].app-tracker summary {
+    display: none !important;
+}
+
+/* .app-tracker-container:has(details:active) ~ .app-screens-container .app-open {
+    height: 0px;
+    width: 0px;
+    opacity: 0;
+    transition-delay: 0s !important;
+    display: none;
+} */
+
+
+details.app-visited {
+    background-color: blueviolet;
+    height: 20px;
+    width: 20px;
+    /* position: absolute; */
+    cursor: pointer;
+    border-radius: 20px;
+    height: 40px;
+    width: 40px;
+    z-index: 2;
+    top: 0px;
+}
+
+details:not([open]) details.app-visited {
+    display: none;
+}
+
+details[open] summary.app-close-btn {
+    position: absolute;
+    background-color: green;
+    bottom: -45px;
+    left: 106px;
+    cursor: pointer;
+    border-radius: 20px;
+    /* opacity: 0.1; */
+    height: 40px;
+    width: 40px;
+    z-index: 2;
+}
+
+
+/* --------------------scroller? --------------------*/
+.scroller {
+    position: absolute;
+    /* top: 92px; */
+    display: flex;
+    justify-content: center;
+    height: 25px;
+    width: 259px;
+    /* margin-left: 162px; */
+    /* margin-top: 338px; */
+    margin-left: 59px;
+    margin-top: 438px;
+}
+
+.scroller div[class^="scroll-to"] {
+    display: inline-flex;
+    width: 12px;
+    height: 12px;
+    background: slategray;
+    border-radius: 20px;
+    margin: 0 20px;
+    border-style: solid;
+    border-width: thin;
+    cursor: pointer;
+    z-index: 4;
+}
+
+.scroller div[class^="scroll-to"]:first-of-type {
+    background: white;
+}
+
+.phone-container:has(.scroller div.scroll-to-screen2:active) .screen-container {
+    transform: translateX(-358px);
+}

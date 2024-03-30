@@ -505,6 +505,7 @@ blockquote {
     max-width: 80%;
     /* margin: -2em auto 0 auto; */
     margin: 0.5em auto;
+    cursor: text;
 }
 
 .map-pin {
@@ -664,10 +665,6 @@ blockquote {
     height: 1em;
     border-left: 0.5em solid #1289fe;
     border-bottom-left-radius: 1em 0.5em;
-  }
-  
-  .hide {
-    display: none;
   }
 
   .attach-pdf {
