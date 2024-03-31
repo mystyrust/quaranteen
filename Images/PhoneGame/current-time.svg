@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300">
+  <text x="0" y="15" fill="red"><tspan id="now">(time)</tspan></text>
+  <script>
+    var dateString = (new Date).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+    document.getElementById('now').firstChild.nodeValue = dateString;
+  </script>
+</svg> 
