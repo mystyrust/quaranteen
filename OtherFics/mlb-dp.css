@@ -3,16 +3,21 @@
     cursor: pointer;
   }
 
-
 details.fic-steps[open] > summary ,
 .fic-body details > summary::-webkit-details-marker,
 .fic-body details > summary::marker {
     display: none;
   }
 
-  .fic-steps, .steps-result {
-    display: none;
-  }
+.fic-steps, .steps-result,
+.fic-body:has(details.fic-steps.all[open]) .fic-steps {
+ display: none;
+}
+
+.fic-steps.all,
+.fic-body:has(.fic-steps.all[open]) .steps-result {
+   display: block;
+}
 
   details.fic-steps.step1,
   details.step1[open] ~ .steps-result.step1,
@@ -21,7 +26,83 @@ details.fic-steps[open] > summary ,
   details.step2[open] ~ .steps-result.step2,
   details.step2[open] ~ .fic-steps.step3,
 
-  details.step3[open] ~ .steps-result.step3
+  details.step3[open] ~ .steps-result.step3,
+  details.step3[open] ~ .fic-steps.step4,
+
+  details.step4[open] ~ .steps-result.step4,
+  details.step4[open] ~ .fic-steps.step5,
+
+  details.step5[open] ~ .steps-result.step5,
+  details.step5[open] ~ .fic-steps.step6,
+
+  details.step6[open] ~ .steps-result.step6,
+  details.step6[open] ~ .fic-steps.step7,
+
+  details.step7[open] ~ .steps-result.step7,
+  details.step7[open] ~ .fic-steps.step8,
+
+  details.step8[open] ~ .steps-result.step8,
+  details.step8[open] ~ .fic-steps.step9,
+
+  details.step9[open] ~ .steps-result.step9,
+  details.step9[open] ~ .fic-steps.step10,
+
+  details.step10[open] ~ .steps-result.step10,
+  details.step10[open] ~ .fic-steps.step11,
+
+  details.step11[open] ~ .steps-result.step11,
+  details.step11[open] ~ .fic-steps.step12,
+
+  details.step12[open] ~ .steps-result.step12,
+  details.step12[open] ~ .fic-steps.step13,
+
+  details.step13[open] ~ .steps-result.step13,
+  details.step13[open] ~ .fic-steps.step14,
+
+  details.step14[open] ~ .steps-result.step14,
+  details.step14[open] ~ .fic-steps.step15,
+
+  details.step15[open] ~ .steps-result.step15,
+  details.step15[open] ~ .fic-steps.step16,
+
+  details.step16[open] ~ .steps-result.step16,
+  details.step16[open] ~ .fic-steps.step17,
+
+  details.step17[open] ~ .steps-result.step17,
+  details.step17[open] ~ .fic-steps.step18,
+
+  details.step18[open] ~ .steps-result.step18,
+  details.step18[open] ~ .fic-steps.step19,
+
+  details.step19[open] ~ .steps-result.step19,
+  details.step19[open] ~ .fic-steps.step20,
+
+  details.step20[open] ~ .steps-result.step20,
+  details.step20[open] ~ .fic-steps.step21,
+
+  details.step21[open] ~ .steps-result.step21,
+  details.step21[open] ~ .fic-steps.step22,
+
+  details.step22[open] ~ .steps-result.step22,
+  details.step22[open] ~ .fic-steps.step23,
+
+  details.step23[open] ~ .steps-result.step23,
+  details.step23[open] ~ .fic-steps.step24,
+
+  details.step24[open] ~ .steps-result.step24,
+  details.step24[open] ~ .fic-steps.step25,
+
+  details.step25[open] ~ .steps-result.step25,
+  details.step25[open] ~ .fic-steps.step26,
+
+  details.step26[open] ~ .steps-result.step26,
+  details.step26[open] ~ .fic-steps.step27,
+
+  details.step27[open] ~ .steps-result.step27,
+  details.step27[open] ~ .fic-steps.step28,
+
+  details.step28[open] ~ .steps-result.step28,
+  details.step28[open] ~ .fic-steps.step29
 
   /* .fic-body:has(details.step1[open]) .fic-steps.step2, */
   /* .fic-body:has(details.step2[open]) .steps-result.step2 */
@@ -35,66 +116,4 @@ details.fic-steps[open] > summary ,
     height: 30px;
     width: 30px;
   } */
-
-
-details.fic-steps.step1 {
-    display: block;
-}
-
-.fic-body:has(details.fic-steps.all[open]) .fic-steps {
- display: none;
-}
-
-.fic-steps.all,
-.fic-body:has(.fic-steps.all[open]) .steps-result {
-    display: block;
-   }
-
-
-
-/* details.step1[open] ~ .step2 {
-    display: block;
-}
-
-details.step2:not([open]) {
-    background-color: blueviolet;
-} */
-
-
-  /* ------------------------------------------------------------ */
-
-.fic-steps {
-    transition: all 0s 2147483647s;
-    background-color: pink;
-    cursor: pointer;
-}
-
-
-.fic-steps.step1 {
-    display: block;
-}
-
-.fic-steps:active
-{
-    transition-delay: 0s;
-    background-color: orange;
-}
-
-.step1:not(:active) + p
-{
-    transition: all 0s 2147483647s;
-    /* display: none; */
-    /* height: 0px; */
-    opacity: 0;
-}
-
-.step1:active + p {
-    /* display: block; */
-    opacity: 1;
-    /* height: 30px; */
-    background-color: purple;
-    font-size: 20px;
-}
-
-
 
