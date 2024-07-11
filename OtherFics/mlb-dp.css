@@ -1,0 +1,100 @@
+.fic-body summary {
+    list-style-type: none;
+    cursor: pointer;
+  }
+
+
+details.fic-steps[open] > summary ,
+.fic-body details > summary::-webkit-details-marker,
+.fic-body details > summary::marker {
+    display: none;
+  }
+
+  .fic-steps, .steps-result {
+    display: none;
+  }
+
+  details.fic-steps.step1,
+  details.step1[open] ~ .steps-result.step1,
+  details.step1[open] ~ .fic-steps.step2,
+
+  details.step2[open] ~ .steps-result.step2,
+  details.step2[open] ~ .fic-steps.step3,
+
+  details.step3[open] ~ .steps-result.step3
+
+  /* .fic-body:has(details.step1[open]) .fic-steps.step2, */
+  /* .fic-body:has(details.step2[open]) .steps-result.step2 */
+  {
+    display: block;
+   }
+
+  /* details[open]:before {
+    content: '';
+    background-color: aqua;
+    height: 30px;
+    width: 30px;
+  } */
+
+
+details.fic-steps.step1 {
+    display: block;
+}
+
+.fic-body:has(details.fic-steps.all[open]) .fic-steps {
+ display: none;
+}
+
+.fic-steps.all,
+.fic-body:has(.fic-steps.all[open]) .steps-result {
+    display: block;
+   }
+
+
+
+/* details.step1[open] ~ .step2 {
+    display: block;
+}
+
+details.step2:not([open]) {
+    background-color: blueviolet;
+} */
+
+
+  /* ------------------------------------------------------------ */
+
+.fic-steps {
+    transition: all 0s 2147483647s;
+    background-color: pink;
+    cursor: pointer;
+}
+
+
+.fic-steps.step1 {
+    display: block;
+}
+
+.fic-steps:active
+{
+    transition-delay: 0s;
+    background-color: orange;
+}
+
+.step1:not(:active) + p
+{
+    transition: all 0s 2147483647s;
+    /* display: none; */
+    /* height: 0px; */
+    opacity: 0;
+}
+
+.step1:active + p {
+    /* display: block; */
+    opacity: 1;
+    /* height: 30px; */
+    background-color: purple;
+    font-size: 20px;
+}
+
+
+

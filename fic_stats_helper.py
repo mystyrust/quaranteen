@@ -27,9 +27,8 @@ def series_info(fic_url):
         print("no series")
         
 ficLinks = [ 
-     "https://archiveofourown.org/works/56373862"
-    , "https://archiveofourown.org/works/56424244"
-    , "https://archiveofourown.org/works/56777056"
+    "https://archiveofourown.org/works/19643287"
+    , "https://archiveofourown.org/works/56373862"
 ]
 
 for url in ficLinks:
