@@ -1,24 +1,29 @@
+/* remove markers */
+.fic-spoiler summary,
 .fic-body summary {
     list-style-type: none;
     cursor: pointer;
   }
 
 details.fic-steps[open] > summary ,
+.fic-spoiler details > summary::-webkit-details-marker,
+.fic-spoiler details > summary::marker ,
 .fic-body details > summary::-webkit-details-marker,
 .fic-body details > summary::marker {
     display: none;
   }
 
 .fic-steps, .steps-result,
-.fic-body:has(details.fic-steps.all[open]) .fic-steps {
+#workskin:has(details.fic-spoiler[open]) .fic-steps {
  display: none;
 }
 
-.fic-steps.all,
-.fic-body:has(.fic-steps.all[open]) .steps-result {
+#workskin:has(details.fic-spoiler[open]) .steps-result {
    display: block;
 }
 
+/* go to the next "step", 
+hide the open details so that you cant go backwards */
   details.fic-steps.step1,
   details.step1[open] ~ .steps-result.step1,
   details.step1[open] ~ .fic-steps.step2,
@@ -117,3 +122,58 @@ details.fic-steps[open] > summary ,
     width: 30px;
   } */
 
+/* ------------------------------------------------------------ */
+/* 4th wall stuff */
+
+.hide {
+    display: none;
+}
+/* hide comments */
+#workskin ~ #feedback {
+    display: none;
+}
+
+/* begin notes */
+#workskin .preface.group .note.module {
+
+}
+
+/* end notes */
+#workskin #work_endnotes {
+
+}
+
+div.inline {
+    display: inline-block;
+}
+
+div.inline p {
+    display: inline;
+}
+
+details.fic-spoiler {
+    margin: 0px;
+    display: inline;
+}
+
+.fic-spoiler summary {
+    cursor: text;
+}
+
+#workskin:has(details.fic-steps[open]) .fic-spoiler {
+    cursor: pointer !important;  
+    /* make it obvious after they go through part of the fic*/
+}
+
+.endnotes-div {
+    display: none;
+}
+
+/* show end notes sequentially */
+#workskin:has(details.step1:not([open])) .step0-endnotes, /* first */
+#workskin:has(details.step1[open]):has(details.step2:not([open])) .step1-endnotes,
+#workskin:has(details.step2[open]):has(details.step3:not([open])) .step2-endnotes,
+#workskin:has(details.step3[open]):has(details.step4:not([open])) .step3-endnotes
+{
+    display: block;
+}
