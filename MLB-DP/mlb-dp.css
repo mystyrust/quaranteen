@@ -128,20 +128,21 @@ hide the open details so that you cant go backwards */
 .hide {
     display: none;
 }
-/* hide comments */
+
+/* hide comments by default */
 #workskin ~ #feedback {
     display: none;
 }
 
 /* begin notes */
-#workskin .preface.group .note.module {
+/* #workskin .preface.group .note.module {
 
-}
+} */
 
 /* end notes */
-#workskin #work_endnotes {
+/* #workskin #work_endnotes {
 
-}
+} */
 
 div.inline {
     display: inline-block;
@@ -173,7 +174,54 @@ details.fic-spoiler {
 #workskin:has(details.step1:not([open])) .step0-endnotes, /* first */
 #workskin:has(details.step1[open]):has(details.step2:not([open])) .step1-endnotes,
 #workskin:has(details.step2[open]):has(details.step3:not([open])) .step2-endnotes,
-#workskin:has(details.step3[open]):has(details.step4:not([open])) .step3-endnotes
+#workskin:has(details.step3[open]):has(details.step4:not([open])) .step3-endnotes,
+#workskin:has(details.step4[open]):has(details.step5:not([open])) .step4-endnotes,
+#workskin:has(details.step5[open]):has(details.step6:not([open])) .step5-endnotes,
+#workskin:has(details.step6[open]):has(details.step7:not([open])) .step6-endnotes,
+#workskin:has(details.step7[open]):has(details.step8:not([open])) .step7-endnotes,
+#workskin:has(details.step8[open]):has(details.step9:not([open])) .step8-endnotes,
+#workskin:has(details.step9[open]):has(details.step10:not([open])) .step9-endnotes,
+#workskin:has(details.step10[open]):has(details.step11:not([open])) .step10-endnotes,
+
+#workskin:has(details.step11[open]):has(details.step12:not([open])) .step11-endnotes,
+#workskin:has(details.step12[open]):has(details.step13:not([open])) .step12-endnotes,
+#workskin:has(details.step13[open]):has(details.step14:not([open])) .step13-endnotes,
+#workskin:has(details.step14[open]):has(details.step15:not([open])) .step14-endnotes,
+#workskin:has(details.step15[open]):has(details.step16:not([open])) .step15-endnotes,
+/* #workskin:has(details.step16[open]):has(details.step17:not([open])) .step16-endnotes, */
+#workskin:has(details.step17[open]):has(details.step18:not([open])) .step17-endnotes,
+#workskin:has(details.step18[open]):has(details.step19:not([open])) .step18-endnotes,
+/* #workskin:has(details.step19[open]):has(details.step20:not([open])) .step19-endnotes, */
+/* #workskin:has(details.step20[open]):has(details.step21:not([open])) .step20-endnotes, */
+
+/* #workskin:has(details.step21[open]):has(details.step22:not([open])) .step21-endnotes, */
+/* #workskin:has(details.step22[open]):has(details.step23:not([open])) .step22-endnotes, */
+#workskin:has(details.step23[open]):has(details.step24:not([open])) .step23-endnotes,
+/* #workskin:has(details.step24[open]):has(details.step25:not([open])) .step24-endnotes, */
+/* #workskin:has(details.step25[open]):has(details.step26:not([open])) .step25-endnotes, */
+/* #workskin:has(details.step26[open]):has(details.step27:not([open])) .step26-endnotes, */
+#workskin:has(details.step27[open]):has(details.step28:not([open])) .step27-endnotes
+{
+    display: block;
+}
+
+/* edge cases, hide the entire end notes block 
+16, 19, 20, 21, 22, 24, 25, 26 */
+#workskin:has(details.step16[open]):has(details.step17:not([open])) #work_endnotes,
+#workskin:has(details.step19[open]):has(details.step20:not([open])) #work_endnotes,
+#workskin:has(details.step20[open]):has(details.step21:not([open])) #work_endnotes,
+#workskin:has(details.step21[open]):has(details.step22:not([open])) #work_endnotes,
+#workskin:has(details.step22[open]):has(details.step23:not([open])) #work_endnotes,
+#workskin:has(details.step24[open]):has(details.step25:not([open])) #work_endnotes,
+#workskin:has(details.step25[open]):has(details.step26:not([open])) #work_endnotes,
+#workskin:has(details.step26[open]):has(details.step27:not([open])) #work_endnotes
+{
+    display: none;
+}
+
+/* .fic-spoiler behavior, display comments ku */
+#workskin:has(details.fic-spoiler[open]) ~ #feedback,
+#workskin:has(details.step27[open]) ~ #feedback
 {
     display: block;
 }
