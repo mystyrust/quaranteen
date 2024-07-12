@@ -161,7 +161,7 @@ details.fic-spoiler {
     cursor: text;
 }
 
-#workskin:has(details.fic-steps[open]) .fic-spoiler {
+#workskin:has(details.fic-steps[open]) .fic-spoiler summary {
     cursor: pointer !important;  
     /* make it obvious after they go through part of the fic*/
 }
@@ -205,22 +205,32 @@ details.fic-spoiler {
     display: block;
 }
 
-/* edge cases, hide the entire end notes block 
+/* hide active endnotes-div and only display step27 notes when fic-spoiler is clicked */
+#workskin:has(details.fic-spoiler[open]) .endnotes-div:not(.step27-endnotes)
+{
+    display: none !important;
+}
+/* 
+edge cases, hide the entire end notes block 
 16, 19, 20, 21, 22, 24, 25, 26 */
-#workskin:has(details.step16[open]):has(details.step17:not([open])) #work_endnotes,
-#workskin:has(details.step19[open]):has(details.step20:not([open])) #work_endnotes,
-#workskin:has(details.step20[open]):has(details.step21:not([open])) #work_endnotes,
-#workskin:has(details.step21[open]):has(details.step22:not([open])) #work_endnotes,
-#workskin:has(details.step22[open]):has(details.step23:not([open])) #work_endnotes,
-#workskin:has(details.step24[open]):has(details.step25:not([open])) #work_endnotes,
-#workskin:has(details.step25[open]):has(details.step26:not([open])) #work_endnotes,
-#workskin:has(details.step26[open]):has(details.step27:not([open])) #work_endnotes
+#workskin:has(details.step16[open]):has(details.step17:not([open])) .afterword.preface.group,
+#workskin:has(details.step19[open]):has(details.step20:not([open])) .afterword.preface.group,
+#workskin:has(details.step20[open]):has(details.step21:not([open])) .afterword.preface.group,
+#workskin:has(details.step21[open]):has(details.step22:not([open])) .afterword.preface.group,
+#workskin:has(details.step22[open]):has(details.step23:not([open])) .afterword.preface.group,
+#workskin:has(details.step24[open]):has(details.step25:not([open])) .afterword.preface.group,
+#workskin:has(details.step25[open]):has(details.step26:not([open])) .afterword.preface.group,
+#workskin:has(details.step26[open]):has(details.step27:not([open])) .afterword.preface.group
 {
     display: none;
 }
 
-/* .fic-spoiler behavior, display comments ku */
+/* .fic-spoiler / end of fic behavior, display comments kudos */
+#workskin:has(details.fic-spoiler[open]) #work_endnotes,
+#workskin:has(details.fic-spoiler[open]) .step27-endnotes,
 #workskin:has(details.fic-spoiler[open]) ~ #feedback,
+#workskin:has(details.step27[open]) #work_endnotes,
+#workskin:has(details.step27[open]) .step27-endnotes,
 #workskin:has(details.step27[open]) ~ #feedback
 {
     display: block;
