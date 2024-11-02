@@ -29,10 +29,9 @@ def series_info(fic_url):
         print("no series")
         
 ficLinks = [  
-    #  "https://archiveofourown.org/works/41220345/chapters/106019919" #10
-    # , "https://archiveofourown.org/works/43564573"
+      # oct 
+      "https://archiveofourown.org/works/17866526" #example
 ]
-
 
 for url in ficLinks:
     print("------------------------------------------------------------------------------------------------")
