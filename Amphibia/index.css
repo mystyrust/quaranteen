@@ -1,0 +1,799 @@
+/* ------------------------------------------------------------------------------------------  */
+/* la temperanza texting https://archiveofourown.org/works/6434845/chapters/14729722 */
+.phone {
+  max-width: 300px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: table;
+  margin: auto;
+}
+  
+.header {
+  min-width: 300px;
+  background-color: #f6f6f6;
+  border-bottom: 1px solid #b2b2b2;
+  color: #000000;
+  font-weight: bold;
+  padding-bottom: .5em;
+  padding-top: .5em;
+  margin-left: -.5em;
+  margin-right: -.5em;
+  margin-bottom: -2em;
+  text-align: center;
+  text-transform: capitalize;
+  display: table;
+}
+
+.messagebody {
+    background-color: #FFFFFF;
+    display: table;
+    padding-left: .5em;
+    padding-right: .5em;
+  }
+
+  .text {
+  float: left;
+  color: #000000;
+  margin: 0 0 0.5em;
+  border-radius: 1em;
+  padding: 0.5em 1em;
+  background: #e5e5ea;
+  max-width: 75%;
+  clear: both;
+  position: relative;
+}
+
+.text::after {
+  content: "";
+  position: absolute;
+  left: -.5em;
+  bottom: 0;
+  width: 0.5em;
+  height: 1em;
+  border-right: 0.5em solid #e5e5ea;
+  border-bottom-right-radius: 1em 0.5em;
+}
+
+.breply {
+  float: right;
+  color: #FFFFFF;
+  margin: 0 0 0.5em;
+  border-radius: 1em;
+  padding: 0.5em 1em;
+  background: #1289fe;
+  max-width: 75%;
+  clear: both;
+  position: relative;
+}
+
+.breply::after {
+  content: "";
+  position: absolute;
+  right: -0.5em;
+  bottom: 0;
+  width: 0.5em;
+  height: 1em;
+  border-left: 0.5em solid #1289fe;
+  border-bottom-left-radius: 1em 0.5em;
+}
+
+.texttime {
+  min-width: 295px;
+  color: #7B7C80;
+  font-size: .75em;
+  padding-bottom: .5em;
+  padding-top: .5em;
+  margin-left: -.5em;
+  margin-right: -.5em;
+  margin-bottom: -.5em;
+  text-align: center;
+  display: table;
+}
+
+.grouptext {
+  color: #7B7C80;
+  font-size: .75em;
+  padding-bottom: .5em;
+  padding-top: 0;
+  margin-left: .5em;
+  margin-bottom: -2.5em;
+  text-align: left;
+  display: table;
+  clear: both;
+}
+
+.readreceipt {
+  color: #7B7C80;
+  font-size: .75em;
+  float: right;
+  position: relative;
+  clear: both;
+  margin: -.75em -1.25em 0.5em 0;
+  padding: 0 1em 0.5em;
+}
+  
+
+/* ------------------------------------------------------------------------------------------  */
+/* la temperanza letter document https://archiveofourown.org/works/11549178/chapters/25935135 */
+
+.letter {
+  background: #fff;
+  color: #000;
+  padding: 15px;
+  width: 65%;
+  margin: 0 auto 25px;
+  display: block;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+/* ------------------------------------------------------------------------------------------  */
+/* La_Temperanza email  https://archiveofourown.org/works/7953412 */
+.ewindow {
+    text-align: justify;
+    margin: 0 auto 40px auto;
+    max-width: 600px;
+    min-width: 300px;
+  }
+
+  .attach {
+    /* background-color: #fff; */
+    border-color: #cfcfcf;
+    border-style: solid;
+    border-width: 1px;
+    margin: 0.25em;
+    padding: 0.25em;
+    cursor: pointer;
+    display: inline-table;
+  }
+
+  .attach:hover {
+    background: lightblue;
+  }
+
+  .attach::before {
+    content: '\1F4CE';
+  }
+
+  .attach u {
+    padding-left: 5px;
+  }
+  
+   .topbar {
+    background-color: #404040;
+    color: #FFFFFF;
+    /* border-color: #404040; */
+    border-style: solid;
+    cursor: pointer;
+    /* width: 66%; */
+    padding: 2px;
+  height: 1.5em;
+  /* overflow: hidden; */
+    /* text-overflow: clip; */
+    margin: 0 auto;
+  }
+  
+   .topbar:before {
+    content: 'Email';
+    display: inline-block;
+    position: relative;
+    float: left;
+    font-weight: bold;
+    padding: 0 3px;
+    width: 85%;
+  }
+  
+   .topbar:after {
+    content: ' _ X';
+    display: inline-block;
+    position: relative;
+    font-weight: bold;
+    padding-right: 5px;
+    float: right;
+    color: #cfcfcf;
+    -webkit-transform: scale(1.5, 1.0);
+    -moz-transform: scale(1.5, 1.0);
+    -ms-transform: scale(1.5, 1.0);
+    -o-transform: scale(1.5, 1.0);
+    transform: scale(1.5,1.0);
+    cursor: pointer;
+  }
+  
+   .textfield {
+    border-color: #cfcfcf;
+    border-style: solid;
+    border-width: 1px;
+    border-bottom: none;
+    /* margin-top: 0;
+    margin-bottom: 0; */
+    /* width: 66%; */
+    padding: 2px 2px 2px 10px;
+    /* color: #000000;
+    background-color: #FFFFFF; */
+    /* text-overflow: clip; */
+    margin: 0 auto;
+
+
+  }
+  
+   .ebody {
+    /* width: 66%; */
+    padding: 10px;
+    text-align: justify;
+    /* color: #000000;
+    background-color: #FFFFFF; */
+    /* margin-left: auto;
+    margin-right: auto; */
+    /* overflow: auto; */
+    display: block;
+    /* min-height: 250px; */
+    border-color: #cfcfcf;
+    border-style: solid;
+    border-width: 1px;
+    margin: 0 auto;
+  }
+  
+   .ebody::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+  
+   .ebody::-webkit-scrollbar:vertical {
+    width: 12px;
+  }
+  
+   .ebody::-webkit-scrollbar:horizontal {
+    height: 12px;
+  }
+  
+   .ebody::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+  }
+  
+   .ebody::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #ffffff;
+  }
+  
+   .buttonbar {
+    border-color: #cfcfcf;
+    background-color: #f5f5f5;
+    color: #000000;
+    border-style: solid;
+    border-width: 1px;
+    border-top: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    /* width: 66%; */
+    padding: 2px;
+  height: 1.5em;
+  /* overflow: hidden; */
+    text-overflow: clip;
+    margin: 0 auto;
+
+  }
+  
+   .buttonbar:after {
+    content: 'Reply | Forward | Delete';
+    display: inline-block;
+    position: relative;
+    float: left;
+    padding: 0 3px;
+    cursor: pointer;
+  }
+
+/* ------------------------------------------------------------------------------------------  */
+/* La_temperanza sticky notes  https://archiveofourown.org/works/4390949 */
+
+.sticky {
+    display: block;
+    background-color: #ffff99;
+    color: #000000;
+    text-decoration: none;
+    font-family: "Comic Sans MS", "Chalkboard SE", sans-serif;
+    height: 10em;
+    width: 10em;
+    padding: 1em;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    -moz-box-shadow: 5px 5px 7px rgba(33,33,33,1);
+    -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    -webkit-transform: rotate(-6deg);
+    -o-transform: rotate(-6deg);
+    -moz-transform: rotate(-6deg);
+    transform: rotate(-6deg);
+  }
+  
+  .sticky2 {
+    display: block;
+    background-color: #FF99CC;
+    color: #000000;
+    text-decoration: none;
+    font-family: "Arial", serif;
+    text-align: left;
+    height: 10em;
+    width: 10em;
+    padding: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    -moz-box-shadow: 5px 5px 7px rgba(33,33,33,1);
+    -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    -webkit-transform: rotate(6deg);
+    -o-transform: rotate(6deg);
+    -moz-transform: rotate(6deg);
+    transform: rotate(6deg);
+  }
+  
+  .sticky3 {
+    display: block;
+    background-color: #33FF66;
+    color: #000000;
+    text-decoration: none;
+    font-family: "Comic Sans MS", "Chalkboard SE", sans-serif;
+    text-align: left;
+    height: 20em;
+    width: 20em;
+    padding: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    -moz-box-shadow: 5px 5px 7px rgba(33,33,33,1);
+    -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    -webkit-transform: rotate(-6deg);
+    -o-transform: rotate(-6deg);
+    -moz-transform: rotate(-6deg);
+    transform: rotate(-6deg);
+  }
+  
+  .sticky4 {
+    display: block;
+    background-color: #ffff99;
+    color: #000000;
+    text-decoration: none;
+    font-family: "Comic Sans MS", "Chalkboard SE", sans-serif;
+    height: 10em;
+    width: 10em;
+    padding: 1em;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    -moz-box-shadow: 5px 5px 7px rgba(33,33,33,1);
+    -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  
+
+/* ------------------------------------------------------------------------------------------  */
+/* forums (with edits) https://archiveofourown.org/works/45621295/chapters/114797212 */
+.window2 {
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    /* width: 81.5%; */
+    max-width: 700px;
+  }
+  
+  
+.forumbackground {
+    display: inline-block;
+    background-color: #BAD2E6;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
+  
+.forumnav {
+    color: #3c576b;
+    font-size: small;
+    cursor: pointer;
+  }
+  
+.threadtitle {
+    background-color: #5f8099;
+    color: #FFFFFF;
+    border-color: #5f8099;
+    border-style: solid;
+    border-width: 1px;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 100%;
+    padding: 1px;
+    height: 1.5em;
+    font-size: biggest;
+  }
+
+
+.usernameOP {
+    border-color: #cfcfcf;
+    border-style: solid;
+    border-width: 1px;
+    border-right: none;
+    border-top: none;
+    margin-top: 1px;
+    margin-bottom: 0;
+    width: 15%;
+    height: auto;
+    padding: 2px;
+    color: #000000;
+    background-color: #FFFFFF;
+    display: block;
+    float: left;
+    text-align: center;
+    font-size: small;
+  }
+  
+.postOP {
+    float: left;
+    /* width: 80%; */
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 2%;
+    padding-right: 2%;
+    text-align: justify;
+    color: #000000;
+    background-color: #FFFFFF;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1px;
+    display: block;
+    border-color: #cfcfcf;
+    border-style: solid;
+    border-width: 1px;
+    border-bottom: none;
+    border-top: none;
+    min-height: 200px
+  }
+  
+.importantspacer {
+    width: 15%;
+    height: auto;
+    padding: 2.5px;
+    color: #000000;
+    display: block;
+    float: left;
+    text-align: center;
+    margin: 0px;
+  }
+  
+.postfooterOP {
+    border-color: #cfcfcf;
+    background-color: #FFFFFF;
+    font-size: x-small;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #000000;
+    border-style: solid;
+    border-width: 1px;
+    border-bottom: none;
+    height: 1.5em;
+    float: left;
+    /* width: 80%; */
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin: 0px;
+  }
+  
+/* .postfooterOP:after {
+    content: 'Report | Quote | Block';
+    color: #718595;
+    display: inline-block;
+    position: relative;
+    float: right;
+    padding: 0 3px;
+    cursor: pointer;
+  } */
+  
+.usernameEVEN {
+    border-color: #cfcfcf;
+    border-style: solid;
+    border-width: 1px;
+    border-right: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 15%;
+    height: auto;
+    padding: 2px;
+    color: #000000;
+    background-color: #F7FAFE;
+    display: block;
+    float: left;
+    text-align: center;
+    font-size: small;
+  }
+  
+.postEVEN {
+    float: left;
+    /* width: 80%; */
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 2%;
+    padding-right: 2%;
+    text-align: justify;
+    color: #000000;
+    background-color: #F7FAFE;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-color: #cfcfcf;
+    border-style: solid;
+    border-width: 1px;
+    border-bottom: none;
+    min-height: 200px
+  }
+  
+.postfooterEVEN {
+    border-color: #cfcfcf;
+    background-color: #F7FAFE;
+    font-size: x-small;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #000000;
+    border-style: solid;
+    border-width: 1px;
+    border-bottom: none;
+    height: 1.5em;
+    float: left;
+    /* width: 80%; */
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin: 0px;
+  }
+  
+/* .postfooterEVEN:after {
+    content: 'Report | Quote | Block';
+    color: #718595;
+    display: inline-block;
+    position: relative;
+    float: right;
+    padding: 0 3px;
+    cursor: pointer;
+  } */
+  
+.usernameODD {
+    border-color: #cfcfcf;
+    border-style: solid;
+    border-width: 1px;
+    border-right: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 15%;
+    height: auto;
+    padding: 2px;
+    color: #000000;
+    background-color: #FFFFFF;
+    display: block;
+    float: left;
+    text-align: center;
+    font-size: small;
+  }
+  
+.postODD {
+    float: left;
+    /* width: 80%; */
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 2%;
+    padding-right: 2%;
+    text-align: justify;
+    color: #000000;
+    background-color: #FFFFFF;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-color: #cfcfcf;
+    border-style: solid;
+    border-width: 1px;
+    border-bottom: none;
+    min-height: 200px
+  }
+  
+.postfooterODD {
+    border-color: #cfcfcf;
+    background-color: #FFFFFF;
+    font-size: x-small;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #000000;
+    border-style: solid;
+    border-width: 1px;
+    border-bottom: none;
+    height: 1.5em;
+    float: left;
+    /* width: 80%; */
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin: 0px;
+  }
+  
+/* .postfooterODD:after {
+    content: 'Report | Quote | Block';
+    color: #718595;
+    display: inline-block;
+    position: relative;
+    float: right;
+    padding: 0 3px;
+    cursor: pointer;
+  } */
+  
+.dateandtime {
+   font-size: small;
+   color: #A7AEB4;
+   text-align: right;
+   }
+   
+.userinfo {
+   font-size: small;
+   color: #3c576b;
+   }
+   
+ .quoteinwhite {
+    float: left;
+    width: 96%;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 2%;
+    padding-right: 2%;
+    text-align: justify;
+    color: #000000;
+    background-color: #FFFFFF;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;
+    display: block;
+    border-color: #cfcfcf;
+    border-style: solid;
+    border-width: 1px;
+  }
+  
+ .quoteinblue {
+    float: left;
+    width: 96%;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 2%;
+    padding-right: 2%;
+    text-align: justify;
+    color: #000000;
+    background-color: #F7FAFE;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;
+    display: block;
+    border-color: #cfcfcf;
+    border-style: solid;
+    border-width: 1px;
+  }
+  
+.usernameWROTE {
+    font-weight: bold;
+    color: #5f8099;
+  }
+  
+.usernameMOD {
+    border-color: #cfcfcf;
+    border-style: solid;
+    border-width: 1px;
+    border-right: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 15%;
+    height: auto;
+    padding: 2px;
+    color: #000000;
+    background-color: #faf8e6;
+    display: block;
+    float: left;
+    text-align: center;
+    font-size: small;
+  }
+  
+.postMOD {
+    float: left;
+    /* width: 80%; */
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 2%;
+    padding-right: 2%;
+    text-align: justify;
+    color: #000000;
+    background-color: #faf8e6;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-color: #cfcfcf;
+    border-style: solid;
+    border-width: 1px;
+    border-bottom: none;
+    min-height: 200px
+  }
+  
+.postfooterMOD {
+    border-color: #cfcfcf;
+    background-color: #faf8e6;
+    font-size: x-small;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #000000;
+    border-style: solid;
+    border-width: 1px;
+    border-bottom: none;
+    height: 1.5em;
+    float: left;
+    /* width: 80%; */
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin: 0px;
+  }
+  
+/* .postfooterMOD:after {
+    content: 'Report | Quote | Block';
+    color: #756b42;
+    display: inline-block;
+    position: relative;
+    float: right;
+    padding: 0 3px;
+    cursor: pointer;
+  } */
+  
+.userinfoMOD {
+   font-size: small;
+   color: #756b42;
+   }
+   
+ .dateandtimeMOD {
+   font-size: small;
+   color: #a8a696;
+   text-align: right;
+   }
+  
+.fadingTEXT {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+  }
+  
+.fadingTEXT:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  }
+  
+.readmore {
+    font-size: big;
+    text-align: center;
+    color: #5f8099;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  
+.ModIcon {
+   width: 15px;
+   height: auto;
+   margin-bottom: -2px;
+  }
+  
+.usernameTAG {
+   color: #5f8099;
+   cursor: pointer;
+  }
