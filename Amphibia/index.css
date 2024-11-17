@@ -435,6 +435,63 @@
 
 /* ------------------------------------------------------------------------------------------  */
 /* forums (with edits) https://archiveofourown.org/works/45621295/chapters/114797212 */
+
+
+/* .postODD details {
+  margin: 0px;
+} */
+.postODD details > summary {
+    list-style: none;
+}
+
+.postODD details summary::-webkit-details-marker,
+.postODD details summary::marker {
+  display: none;
+}
+
+summary.checkbox {
+    height: 13px;
+    width: 13px;
+    background: white;
+    border: 1px gray solid;
+    /* position: absolute; */
+    border-radius: 3px;
+    left: 10px;
+    cursor: pointer;
+}
+
+/* .checkbox-cont:not([open]) summary span {
+    display: none;
+}
+
+.checkbox-cont[open] summary span {
+    display: inline;
+} */
+
+.checkbox-cont {
+    margin-top: 12px;
+    margin-bottom: -27px;
+    position: absolute;
+}
+
+.checkbox-cont[open] summary.checkbox{
+    height: 13px;
+    width: 13px;
+    background-color: #3374ec;
+    /* border: 1px gray solid; */
+    /* position: absolute; */
+    border-radius: 3px;
+    /* left: 10px;
+    cursor: pointer;
+    /* position: absolute; */
+    /* background: url(https://i.imgur.com/v2kccYs.png); */
+    background-image: url(https://i.imgur.com/24X7Y59.png);
+}
+
+/* .checkbox-cont[open] summary {
+    display: none;
+} */
+
 .window2 {
     text-align: justify;
     margin-left: auto;
@@ -575,11 +632,11 @@
 
 .username4c {
   color: #3a7050;
-  margin-left: 20px;
+  margin-left: 22px;
 }
 
 .username4c::before {
-    content: '';
+    /* content: ''; */
     height: 13px;
     width: 13px;
     background-color: white;
@@ -596,6 +653,8 @@
 
 .redText {
     color: #b33731;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .darkGrayText {
@@ -624,20 +683,23 @@
     position: relative;
     margin-left: 20px;
     /* min-height: 200px */
+    min-width: 255px;
   }
 
 .postODD::before {
-    content: '>>';
+    content: "\00BB";
     position: absolute;
     color: #bcc4d6;
     left: -20px;
-    font-size: small;
-    top: 12px;
+    font-size: 30px;
+    top: 3px;
 }
 
 .postCONTENT {
     font-size: 14px;
     padding-left: 30px;
+    padding-right: 10px;
+    text-align: left;
 }
 
 .dateandtime {
@@ -645,7 +707,13 @@
    /* color: #A7AEB4;
    text-align: right; */
 }
-   
+
+.dateandtime::after {
+    content: url(https://i.imgur.com/v2kccYs.png);
+    position: absolute;
+    cursor: pointer;
+}
+
 /* .userinfo {
    font-size: small;
    color: #3c576b;
@@ -942,6 +1010,10 @@
     border: 1px solid #EEEFF1;
     cursor: pointer;
   }
+
+  .rd-left {
+    margin-left: 2px;
+  }
   
   .rd-arrow-text{
     padding-top:2px;
@@ -1190,6 +1262,7 @@
   
   .yt-floatdot{
     background-size: contain;
+    cursor: pointer;
     float:left;
     margin-left:8px;
     height: 40px;
@@ -1232,8 +1305,10 @@
   }
 
   .yt-container {
-    max-width: 700px;
+    max-width: 550px;
     min-width: 290px;
+    margin: 10px auto;
+    display: block;
   }
 /* --------------------------------------------------------------- */
   
