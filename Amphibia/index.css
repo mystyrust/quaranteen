@@ -125,6 +125,70 @@
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
+.whitebox {
+    font-family: sans-serif;
+    background: #fff;
+    color: #000;
+    padding: 15px;
+    max-width: 500px;
+    margin: 0 auto 25px;
+    display: block;
+    box-shadow: 0 0px 1px grey, 0 0px 1px grey;
+}
+
+.bottom-rip {
+    height: 41px;
+    width: 530px;
+    display: block;
+    margin: 0 auto;
+    margin-top: -25px;
+    padding-right: 0px;
+}
+
+.top-rip {
+    height: 41px;
+    width: 530px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: -20px;
+    padding-right: 0px;
+}
+
+/* .fade-tobottom {
+    background: linear-gradient(to bottom, currentColor, transparent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} */
+
+/* .fade-totop {
+    background: linear-gradient(to top, currentColor, transparent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} */
+
+.fadeout {
+    position: relative;
+  }
+  
+.fadeout::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(to bottom, rgba(255,255,255, 0), white);
+}
+
+
+.fadeout::after {
+    content: '';
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background: linear-gradient(to top, rgba(255,255,255, 0), white);
+  }
+  
 /* ------------------------------------------------------------------------------------------  */
 /* La_Temperanza email  https://archiveofourown.org/works/7953412 */
 .ewindow {
@@ -384,7 +448,7 @@
   
 .forumbackground {
     display: inline-block;
-    background-color: #BAD2E6;
+    background-color: #eff1fe;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 20px;
@@ -411,7 +475,7 @@
   }
 
 
-.usernameOP {
+/* .usernameOP {
     border-color: #cfcfcf;
     border-style: solid;
     border-width: 1px;
@@ -428,7 +492,7 @@
     float: left;
     text-align: center;
     font-size: small;
-  }
+  } */
   
 .postOP {
     float: left;
@@ -452,7 +516,7 @@
     min-height: 200px
   }
   
-.usernameEVEN {
+/* .usernameEVEN {
     border-color: #cfcfcf;
     border-style: solid;
     border-width: 1px;
@@ -468,7 +532,7 @@
     float: left;
     text-align: center;
     font-size: small;
-  }
+  } */
   
 .postEVEN {
     float: left;
@@ -491,7 +555,7 @@
   }
 
   
-.usernameODD {
+/* .usernameODD {
     border-color: #cfcfcf;
     border-style: solid;
     border-width: 1px;
@@ -507,10 +571,40 @@
     float: left;
     text-align: center;
     font-size: small;
-  }
-  
+  } */
+
+.username4c {
+  color: #3a7050;
+  margin-left: 20px;
+}
+
+.username4c::before {
+    content: '';
+    height: 13px;
+    width: 13px;
+    background-color: white;
+    border: 1px gray solid;
+    position: absolute;
+    border-radius: 3px;
+    left: 10px;
+    cursor: pointer;
+}
+
+.greenText {
+    color: #81954e;
+}
+
+.redText {
+    color: #b33731;
+}
+
+.darkGrayText {
+    color: #323351;
+}
+
 .postODD {
     float: left;
+    font-family: sans-serif;
     /* width: 80%; */
     padding-top: 0;
     padding-bottom: 0;
@@ -518,27 +612,44 @@
     padding-right: 2%;
     text-align: justify;
     color: #000000;
-    background-color: #FFFFFF;
-    margin-left: auto;
+    background-color: #d7d9ee;
+    /* margin-left: auto; */
     margin-right: auto;
+    margin-top: 5px;
     display: block;
-    border-color: #cfcfcf;
+    border-color: #bdc3d4;
     border-style: solid;
     border-width: 1px;
     border-bottom: none;
+    position: relative;
+    margin-left: 20px;
     /* min-height: 200px */
   }
-  
+
+.postODD::before {
+    content: '>>';
+    position: absolute;
+    color: #bcc4d6;
+    left: -20px;
+    font-size: small;
+    top: 12px;
+}
+
+.postCONTENT {
+    font-size: 14px;
+    padding-left: 30px;
+}
+
 .dateandtime {
    font-size: small;
    /* color: #A7AEB4;
    text-align: right; */
 }
    
-.userinfo {
+/* .userinfo {
    font-size: small;
    color: #3c576b;
-   }
+   } */
    
  .quoteinwhite {
     float: left;
@@ -560,7 +671,7 @@
     border-width: 1px;
   }
   
- .quoteinblue {
+ /* .quoteinblue {
     float: left;
     width: 96%;
     padding-top: 0;
@@ -573,19 +684,18 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2%;
-    /* margin-top: 2%; */
     display: block;
     border-color: #cfcfcf;
     border-style: solid;
     border-width: 1px;
-  }
+  } */
   
 .usernameWROTE {
     font-weight: bold;
     color: #5f8099;
   }
   
-.usernameMOD {
+/* .usernameMOD {
     border-color: #cfcfcf;
     border-style: solid;
     border-width: 1px;
@@ -601,7 +711,7 @@
     float: left;
     text-align: center;
     font-size: small;
-  }
+  } */
   
 .postMOD {
     float: left;
@@ -984,18 +1094,6 @@
   }
   
   
-  .yt-dash {
-    background-image: url(https://i.imgur.com/zyTnqD5.png);
-  }
-  
-  .yt-tucker {
-    background-image: url(https://i.imgur.com/KhS2BAv.png);
-  }
-  
-  .yt-paulie {
-    background-image: url(https://i.imgur.com/XUilq3k.png);
-  }
-  
   .yt-techluver {
     background-image: url(https://i.imgur.com/RvjZZi1.png);
     background-size: contain;
@@ -1139,3 +1237,675 @@
   }
 /* --------------------------------------------------------------- */
   
+/* -----------------tumblr style tweaks --------------------------- */
+  /* https://archiveofourown.org/works/11474979 */
+
+
+  .tungle {
+    max-width: 500px;
+    font-family: Gibson,Helvetica Neue,HelveticaNeue,Helvetica,Arial,sans-serif;
+    display: table;
+    margin: auto;
+    /* color: #444444; */
+    /* margin: 10px 0; */
+  }
+  
+  .tunglebody {
+    /* background-color: #ffffff; */
+    border-radius: 3px;
+    border-style: solid;
+    border-width: .1em;
+    border-color: #cccccc;
+    float: left;
+    max-width: 100%;
+    position: relative;
+    padding: 15px 0 0;
+  }
+  
+  .tungleurl {
+    position: relative;
+    top: -.2em;
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: 50px;
+    margin-left: 10px;
+    line-height: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  .tungletext {
+    display: inline-block;
+    margin-top: 15px;
+    margin-left: 10px;
+    line-height: 21px;
+    font-size: 14px;
+    width: 92%;
+    word-wrap: break-word;
+  }
+  
+  .tungletext a {
+    color: #444444;
+  }
+  
+  .tungleh {
+    display: inline-block;
+    margin-left: 20px;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 47px;
+    width: 92%;
+    word-wrap: break-word;
+  }
+  
+  .tungletags {
+    display: inline-block;
+    width: 92%;
+    font-size: 13px;
+    color: #8f8f8f;
+    margin-top: 15px;
+    line-height: 20px;
+    position: relative;
+    margin-left: 10px;
+  }
+  
+  .tungletag {
+    margin-right: 12px;
+    cursor: pointer;
+  }
+  
+  /* .tungletag:first-of-type {
+    margin-left: 0px;
+  } */
+  
+  .tunglenotes {
+    font-size: 14px;
+    font-weight: bold;
+    color: #8f8f8f;
+    line-height: 45px;
+    position: relative;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .tungleicons {
+    height: auto;
+    width: 120px;
+    float: right;
+    margin-right: -7px;
+    margin-top: 6px;
+    cursor: pointer;
+  }
+
+  .tungleimg {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .tunglequote {
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 1px;
+    margin-left: 35px;
+    line-height: 42px;
+    font-size: 36px;
+    width: 89%;
+    word-wrap: break-word;
+    font-family: Georgia, serif;
+    text-indent: -15px;
+  }
+  
+  .tunglequote:before {
+    content: "\201C";
+  }
+  
+  .tunglequote:after {
+    content: "\201D";
+  }
+  
+  .quotesourcedash {
+    width: 20px;
+    margin-left: 20px;
+  }
+  
+  .quotesource {
+    display: inline-block;
+    margin-bottom: 15px;
+    line-height: 21px;
+    font-size: 14px;
+    width: 90%;
+    word-wrap: break-word;
+  }
+  .tungletwo_one {
+    width: 49.5%;
+    height: 177px;
+    margin-top: 4px;
+    display: block;
+    overflow: hidden;
+    float: left;
+  }
+  
+  .tungletwo_two {
+    width: 49.5%;
+    height: 177px;
+    margin-top: 4px;
+    display: block;
+    overflow: hidden;
+    float: right;
+  }
+  
+  .tungletwo_three {
+    width: 49.5%;
+    height: 412px;
+    margin-top: 4px;
+    display: block;
+    overflow: hidden;
+    float: left;
+  }
+  
+  .tungletwo_four {
+    width: 49.5%;
+    height: 412px;
+    margin-top: 4px;
+    display: block;
+    overflow: hidden;
+    float: right;
+  }
+
+  .tunglethree_one {
+    width: 32.8%;
+    height: 120px;
+    margin-top: 4px;
+    display: block;
+    overflow: hidden;
+    float: left;
+  }
+  
+  .tunglethree_two {
+    width: 33%;
+    height: 120px;
+    margin-top: 4px;
+    display: inline-block;
+    overflow: hidden;
+    margin-left: 4px;
+  }
+  
+  .tunglethree_three {
+    width: 32.8%;
+    height: 120px;
+    margin-top: 4px;
+    display: block;
+    overflow: hidden;
+    float: right;
+  }
+
+  .tungleask {
+    /* background-color: #f2f2f2; */
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    float: left;
+    position: relative;
+    padding: 15px 14px 18px;
+    display: inline-block;
+    margin-top: 4px;
+    margin-left: 10px;
+    line-height: 21px;
+    font-size: 14px;
+    /* width: 80%; */
+    word-wrap: break-word;
+    margin-right: 64px;
+    margin-bottom: 10px;
+  }
+  
+  .tungleasktip {
+    display: inline;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid #cccccc;
+    right: -8px;
+    top: 10px;
+  }
+  
+  .tungleaskicon {
+    display: inline-block;
+    /* float: right; */
+    height: 45px;
+    width: 45px;
+    margin-top: -23px;
+    border-radius: 24px;
+    position: absolute;
+    margin-right: -70px;
+    right: 10px;
+    top: 24px;
+    cursor: pointer;
+  }
+  
+  .tungleasker {
+    color: #a6a6a6;
+    font-size: 13px;
+    display: inline-block;
+    width: 100%;
+    line-height: 21px;
+    margin-bottom: 7px;
+  }
+
+  .tungleasker b {
+    cursor: pointer;
+  }
+  
+  
+.tunglechat {
+  display: inline-block;
+  font-size: 14px;
+  width: 92%;
+  line-height: 1.4;
+  font-family: Courier, monospace;
+  padding-top: 3px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 3px;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.tungleline {
+  display: block;
+  padding-top: 6px;
+  padding-right: 0px;
+  padding-bottom: 6px;
+  padding-left: 0px;
+  width: 100%;
+}
+
+.tungleline:first-of-type {
+  padding-top: 0px;
+}
+
+.tungleline:last-of-type {
+  padding-bottom: 0px;
+}
+
+.tungleline:nth-of-type(even) {
+  background: #fdfdfd;
+}
+
+.strong {
+  font-weight: 700;
+}
+
+.tungleline>strong:after {
+  content: "\A0";
+}
+
+.reblog {
+  height: 15px;
+  width: auto;
+  /* margin-bottom: 5px; */
+}
+
+.reblogheader {
+  position: relative;
+  line-height: 25px;
+  padding-top: 15px;
+  padding-left: 10px;
+  width: 98%;
+  display: inline-block;
+  border-top: 1px solid #e7e7e7;
+  margin-top: 5px;
+}
+
+.reblogurl {
+  position: relative;
+  top: -.2em;
+  font-weight: 700;
+  font-size: 13px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  line-height: 25px;
+  height: 25px;
+  color: #8f8f8f;
+  cursor: pointer;
+}
+
+.reblogicon {
+  border-radius: 2px;
+  width: 25px;
+  height: 25px;
+  vertical-align: baseline;
+  cursor: pointer;
+}
+
+.sourceurl {
+  position: relative;
+  font-weight: 700;
+  font-size: 13px;
+  vertical-align: top;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.reblogorigin {
+  width: 100%;
+  word-wrap: break-word;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  padding-right: 20px;
+}
+
+.reblogtext {
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding-right: 5px;
+  margin-bottom: 10px;
+  line-height: 21px;
+  font-size: 14px;
+  width: 92%;
+  word-wrap: break-word;
+}
+
+.reblogtext a {
+  color: #444444;
+}
+
+/* --------------------------------------------------------------- */
+/* twitter, with threads https://archiveofourown.org/works/35006431 */
+
+.tw {
+    max-width: 500px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: auto;
+    border-style: solid;
+    border-width: .1em;
+    border-color: lightgray;
+    padding: 1em;
+  }
+  
+.tw-table {
+    table-layout: fixed;
+    vertical-align: top;
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+.tw-td-icon {
+    width: 45px;
+    height: 45px;
+  }
+  
+.tw-td-thread {
+    border-left-style: solid;
+    border-color: rgb(207, 217, 222);
+    border-width: 2px;
+  }
+  
+.tw-icon-img {
+    width: 45px;
+    height: 45px;
+    float: left;
+    border-radius: 50%;
+  }
+  
+.tw-post-verified {
+    height: 1em;
+    padding-left: 0.2em;
+    position: relative;
+    top: 0.1em;
+    content: url("https://64.media.tumblr.com/5329b0baaaffea259954c6252408cd8d/f2497834d8606ba7-00/s75x75_c1/8d6a425dd1062354689c9efc2b500d8933582f5b.png");
+  }
+  
+.tw-post {
+    overflow: hidden;
+    padding-left: 0.5em;
+  }
+  
+.tw-post-meta-user {
+    font-weight: bold;
+  }
+  
+.tw-post-meta-handle {
+    color: slategray;
+  }
+  
+.tw-post-meta-time {
+    color: slategray;
+  }
+  
+.tw-post-meta-time:before {
+    content: '\0B7';
+    padding-right: 0.2em;
+  }
+  
+.tw-embed {
+    border-style: solid;
+    border-width: .1em;
+    border-color: darkgray;
+    padding: 1em;
+    border-radius: 0.5em;
+  }
+  
+.tw-ref {
+    color: rgb(29, 155, 240);
+  }
+  
+.tw-reply {
+    color: slategray;
+  }
+  
+.tw-share1 {
+    background-image: url("https://i.imgur.com/iwGvFJY.png");
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-top: 1em;
+  }
+  
+.tw-share {
+    background-image: url("https://64.media.tumblr.com/d46b27345c9cea4790756a57e42ccb6c/f2497834d8606ba7-ad/s500x750/10e4a6e3ba606786d94c2d1ddb099bf2516fd704.png");
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-top: 0.2em;
+    margin-bottom: 0.5em;
+    width: 100%;
+    min-height: 25px;
+  }
+  
+.tw-td-rt-1 {
+    width: 45px;
+    background-image: url("https://64.media.tumblr.com/a926f84106d9146ffdff9f264bb67e1f/f2497834d8606ba7-e9/s75x75_c1/1db007980d847c8aa07beb1b230a398652a3a340.png");
+    background-repeat: no-repeat;
+    background-size: 1em;
+    background-position-x: right;
+    background-position-y: center;
+    padding-bottom: 0.2em;
+  }
+  
+.tw-td-rt-2 {
+    padding-left: 0.5em;
+    padding-bottom: 0.2em;
+  }
+  
+.tw-rt {
+    color: rgb(83, 100, 113);
+    font-weight: bold;
+    font-size: small;
+  }
+  
+.tw p {
+    margin: 0;
+  }
+/* --------------------------------------------------------------- */
+
+/* dialog skin by me https://archiveofourown.org/works/43975602/chapters/110571546 */
+
+/* p {
+    margin: 1.286em auto;
+    padding: 0;
+    line-height: 1.5;
+  } */
+
+.convo-container {
+    display: table;
+    padding: 10px;
+    min-width: 300px;
+    max-width: 416px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    font-family: sans-serif;
+    font-size: 13px;
+    background-color: green;
+  }
+  
+  p.convo-break {
+    display: flex;
+    width: 100%;
+    margin: 0;
+  }
+  
+  p.convo-pad {
+    display: flex;
+    width: 100%;
+    margin: 24em auto;
+  }
+  
+  .gz {
+    background: url("https://i.imgur.com/ig6AvJU.png") no-repeat center center fixed;
+    background-size: cover;
+  }
+  
+  .gz2 {
+    background: url("https://i.imgur.com/Ys1XcUY.png") repeat center center scroll;
+    background-size: contain;
+    background-attachment: fixed;
+  }
+  
+  .center {
+    text-align: center;
+    font-size: 20px;
+  }
+  
+  .padding-up {
+    padding-top: 3.5em;
+  }
+  
+  /* left aligned icon and dia */
+  .convo-left {
+      min-height: 80px;
+      float: left;
+      display: flex;
+  }
+  
+  .convo-left > p > .dia::after {
+  content: '';
+  border: 10px solid transparent;
+  border-right-color: #8f8e8f;
+  border-left: 0;
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  margin-top: -10px;
+  }
+  
+  /* .convo-left > p:nth-child(1) {
+    margin-top: 50%;
+  } */
+  
+  .convo-left > p > .convo-icon {
+    max-width: 80px;
+    max-height: 80px;
+    min-width: 80px;
+    margin-right: 10px;
+    /* top: 50%; */
+  }
+  
+  /* right aligned icon and dia */
+  .convo-right {
+      float: right;
+      min-height: 80px;
+      display: flex;
+      margin-left: auto;
+  }
+  
+  /* .convo-right > p > .dia {
+    text-align: right;
+  } */
+  
+  /* .convo-right > p:nth-child(2) {
+    margin-top: 50%;
+  } */
+  
+  .convo-right > p > .dia::after {
+    content: '';
+    border: 10px solid transparent;
+    border-left-color: #8f8e8f;
+    border-right: 0;
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    margin-top: -10px;
+  }
+  
+  .convo-right > p > .convo-icon {
+    max-width: 80px;
+    max-height: 80px;
+    min-width: 80px;
+    margin-left: 10px;
+  }
+  
+  .convo-icon {
+    max-width: 80px;
+    min-width: 80px;
+    margin: auto;
+    height: auto;
+  }
+  
+  /* center the dialogue box */
+  .convo-left > p:nth-child(1), .convo-right > p:nth-child(2) {
+    margin: auto;
+  }
+  
+  .dia {
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    border: 2px solid #8f8e8f;
+    border-radius: 10px;
+    max-width: 470px;
+    padding: 10px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    height: auto;
+    z-index: 5;
+  }
+  
+  .dia-desc {
+    position: relative;
+    text-align: center;
+    border: 2px solid #8f8e8f;
+    border-radius: 10px;
+    max-width: 100px;
+    padding: 10px;
+    margin: 3% auto;
+  }
+  
+  .dia-desc > p {
+    margin: 0;
+  }
+  
+  .white {
+    background-color: white !important;
+    color: black !important;
+  }
+  
+  .black {
+    background-color: black !important;
+    color: white !important;
+  }
+/* --------------------------------------------------------------- */
