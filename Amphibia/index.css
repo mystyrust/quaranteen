@@ -6,6 +6,25 @@
   display: table;
   margin: auto;
 }
+
+.grouptext-info {
+    color: red;
+    font-size: 12px;
+    float: right;
+    clear: both;
+    margin-top: -9px;
+}
+
+.not-sent {
+    left: -25px;
+  }
+  
+.not-sent::before {
+  content: url(https://i.imgur.com/2UV3VBE.png);
+  position: absolute;
+  right: -27px;
+  cursor: pointer;
+}
   
 .header {
   min-width: 300px;
@@ -24,7 +43,7 @@
 }
 
 .messagebody {
-    background-color: #FFFFFF;
+    /* background-color: #FFFFFF; */
     display: table;
     padding-left: .5em;
     padding-right: .5em;
@@ -32,7 +51,7 @@
 
   .text {
   float: left;
-  color: #000000;
+  /* color: #000000; */
   margin: 0 0 0.5em;
   border-radius: 1em;
   padding: 0.5em 1em;
@@ -78,7 +97,8 @@
 
 .texttime {
   min-width: 295px;
-  color: #7B7C80;
+  /* color: #7B7C80; */
+  opacity: 0.5;
   font-size: .75em;
   padding-bottom: .5em;
   padding-top: .5em;
@@ -102,7 +122,8 @@
 }
 
 .readreceipt {
-  color: #7B7C80;
+  /* color: #7B7C80; */
+  opacity: 0.5;
   font-size: .75em;
   float: right;
   position: relative;
@@ -116,10 +137,11 @@
 /* la temperanza letter document https://archiveofourown.org/works/11549178/chapters/25935135 */
 
 .letter {
-  background: #fff;
-  color: #000;
+  /* background: #fff;
+  color: #000; */
   padding: 15px;
-  width: 65%;
+  /* width: 65%; */
+  max-width: 700px;
   margin: 0 auto 25px;
   display: block;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -454,23 +476,14 @@ summary.checkbox {
     width: 13px;
     background: white;
     border: 1px gray solid;
-    /* position: absolute; */
     border-radius: 3px;
     left: 10px;
     cursor: pointer;
 }
 
-/* .checkbox-cont:not([open]) summary span {
-    display: none;
-}
-
-.checkbox-cont[open] summary span {
-    display: inline;
-} */
-
 .checkbox-cont {
-    margin-top: 12px;
-    margin-bottom: -27px;
+    /* margin-top: 12px;
+    margin-bottom: -27px; */
     position: absolute;
 }
 
@@ -478,19 +491,11 @@ summary.checkbox {
     height: 13px;
     width: 13px;
     background-color: #3374ec;
-    /* border: 1px gray solid; */
-    /* position: absolute; */
     border-radius: 3px;
-    /* left: 10px;
-    cursor: pointer;
-    /* position: absolute; */
-    /* background: url(https://i.imgur.com/v2kccYs.png); */
     background-image: url(https://i.imgur.com/24X7Y59.png);
 }
 
-/* .checkbox-cont[open] summary {
-    display: none;
-} */
+
 
 .window2 {
     text-align: justify;
@@ -530,105 +535,6 @@ summary.checkbox {
     height: 1.5em;
     font-size: biggest;
   }
-
-
-/* .usernameOP {
-    border-color: #cfcfcf;
-    border-style: solid;
-    border-width: 1px;
-    border-right: none;
-    border-top: none;
-    margin-top: 1px;
-    margin-bottom: 0;
-    width: 15%;
-    height: auto;
-    padding: 2px;
-    color: #000000;
-    background-color: #FFFFFF;
-    display: block;
-    float: left;
-    text-align: center;
-    font-size: small;
-  } */
-  
-.postOP {
-    float: left;
-    /* width: 80%; */
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-left: 2%;
-    padding-right: 2%;
-    text-align: justify;
-    color: #000000;
-    background-color: #FFFFFF;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1px;
-    display: block;
-    border-color: #cfcfcf;
-    border-style: solid;
-    border-width: 1px;
-    border-bottom: none;
-    border-top: none;
-    min-height: 200px
-  }
-  
-/* .usernameEVEN {
-    border-color: #cfcfcf;
-    border-style: solid;
-    border-width: 1px;
-    border-right: none;
-    margin-top: 0;
-    margin-bottom: 0;
-    width: 15%;
-    height: auto;
-    padding: 2px;
-    color: #000000;
-    background-color: #F7FAFE;
-    display: block;
-    float: left;
-    text-align: center;
-    font-size: small;
-  } */
-  
-.postEVEN {
-    float: left;
-    /* width: 80%; */
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-left: 2%;
-    padding-right: 2%;
-    text-align: justify;
-    color: #000000;
-    background-color: #F7FAFE;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    border-color: #cfcfcf;
-    border-style: solid;
-    border-width: 1px;
-    border-bottom: none;
-    /* min-height: 200px */
-  }
-
-  
-/* .usernameODD {
-    border-color: #cfcfcf;
-    border-style: solid;
-    border-width: 1px;
-    border-right: none;
-    margin-top: 0;
-    margin-bottom: 0;
-    width: 15%;
-    height: auto;
-    padding: 2px;
-    color: #000000;
-    background-color: #FFFFFF;
-    display: block;
-    float: left;
-    text-align: center;
-    font-size: small;
-  } */
 
 .username4c {
   color: #3a7050;
@@ -679,7 +585,6 @@ summary.checkbox {
     border-color: #bdc3d4;
     border-style: solid;
     border-width: 1px;
-    border-bottom: none;
     position: relative;
     margin-left: 20px;
     /* min-height: 200px */
@@ -713,11 +618,6 @@ summary.checkbox {
     position: absolute;
     cursor: pointer;
 }
-
-/* .userinfo {
-   font-size: small;
-   color: #3c576b;
-   } */
    
  .quoteinwhite {
     float: left;
@@ -739,48 +639,11 @@ summary.checkbox {
     border-width: 1px;
   }
   
- /* .quoteinblue {
-    float: left;
-    width: 96%;
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-left: 2%;
-    padding-right: 2%;
-    text-align: justify;
-    color: #000000;
-    background-color: #F7FAFE;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 2%;
-    display: block;
-    border-color: #cfcfcf;
-    border-style: solid;
-    border-width: 1px;
-  } */
-  
 .usernameWROTE {
     font-weight: bold;
     color: #5f8099;
   }
-  
-/* .usernameMOD {
-    border-color: #cfcfcf;
-    border-style: solid;
-    border-width: 1px;
-    border-right: none;
-    margin-top: 0;
-    margin-bottom: 0;
-    width: 15%;
-    height: auto;
-    padding: 2px;
-    color: #000000;
-    background-color: #faf8e6;
-    display: block;
-    float: left;
-    text-align: center;
-    font-size: small;
-  } */
-  
+
 .postMOD {
     float: left;
     /* width: 80%; */
@@ -831,11 +694,7 @@ summary.checkbox {
    height: auto;
    margin-bottom: -2px;
   }
-  
-/* .usernameTAG {
-   color: #5f8099;
-   cursor: pointer;
-  } */
+
   /* ----------------------reddit mock ---------------------------- */
 /* made by jihn https://codepen.io/jihnari/pen/jOmMoQX */
 
@@ -1135,18 +994,21 @@ summary.checkbox {
     border-radius: 50%;
     display: inline-block;
     margin-right: 10px;
-  
+    cursor: pointer;
     background-color: #bbb;
     margin-bottom: -15px;
   }
-  
-  
   
   /*youtube*/
   
   .yt-desc {
     margin: -10px 7px 6px 7px;
     display: inline-block;
+  }
+
+    
+  .yt-profile0 {
+    background-image: url(https://i.imgur.com/wQNwcU9.jpg);
   }
 
   .yt-profile1 {
@@ -1207,8 +1069,8 @@ summary.checkbox {
     overflow: auto;
   }
   .yt-add-comment {
-    margin-top:-8px;
-    overflow: auto;
+    /* margin-top:-8px;
+    overflow: auto; */
     display: block;
     padding-bottom:5px;
   
@@ -1225,6 +1087,7 @@ summary.checkbox {
   }
   
   .yt-link {
+    cursor: pointer;
     color: blue;
     text-decoration: none; 
   }
@@ -1280,10 +1143,12 @@ summary.checkbox {
     color: red;
     padding-right:5px;
     margin-top: 10px;
+    cursor: pointer;
   }
   
   .yt-vid-img{
     width:100%;
+    cursor: pointer;
   }
   
   .yt-views-text{
@@ -1302,6 +1167,7 @@ summary.checkbox {
   
   .yt-border-top-bottom-gray.clear2 {
     font-size: 14px;
+    overflow: hidden;
   }
 
   .yt-container {
@@ -1857,6 +1723,12 @@ summary.checkbox {
   
   .gz2 {
     background: url("https://i.imgur.com/Ys1XcUY.png") repeat center center scroll;
+    background-size: contain;
+    background-attachment: fixed;
+  }
+
+  .fbi-bg {
+    background: url("https://cdn.discordapp.com/attachments/938616134150782996/1308668218126241842/1081257647-preview.gif?ex=673ec7c1&is=673d7641&hm=27bad0e40d6b19a31e40c17f6e53b3304a17110c3d1065c2a42020bb30129d91&") repeat center center scroll;
     background-size: contain;
     background-attachment: fixed;
   }
