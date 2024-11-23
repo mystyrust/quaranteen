@@ -462,6 +462,11 @@
 /* .postODD details {
   margin: 0px;
 } */
+
+.postCONTENT img {
+    max-width: 270px;
+}
+
 .postODD details > summary {
     list-style: none;
 }
@@ -518,7 +523,7 @@ summary.checkbox {
   
 .forumnav {
     color: #3c576b;
-    font-size: small;
+    font-size: medium;
     cursor: pointer;
   }
   
@@ -575,7 +580,7 @@ summary.checkbox {
     padding-bottom: 0;
     padding-left: 2%;
     padding-right: 2%;
-    text-align: justify;
+    text-align: left;
     color: #000000;
     background-color: #d7d9ee;
     /* margin-left: auto; */
@@ -609,6 +614,7 @@ summary.checkbox {
 
 .dateandtime {
    font-size: small;
+   padding-right: 10px;
    /* color: #A7AEB4;
    text-align: right; */
 }
@@ -617,16 +623,21 @@ summary.checkbox {
     content: url(https://i.imgur.com/v2kccYs.png);
     position: absolute;
     cursor: pointer;
+    margin-top: -1px;
 }
    
+.quoteinwhite ~ p {
+    float: left;
+    clear: both;
+}
  .quoteinwhite {
     float: left;
-    width: 96%;
+    /* width: 96%; */
     padding-top: 0;
     padding-bottom: 0;
     padding-left: 2%;
     padding-right: 2%;
-    text-align: justify;
+    text-align: left;
     color: #000000;
     background-color: #FFFFFF;
     margin-left: auto;
@@ -1636,17 +1647,17 @@ summary.checkbox {
     color: slategray;
   }
   
-.tw-share1 {
+/* .tw-share1 {
     background-image: url("https://i.imgur.com/iwGvFJY.png");
     overflow: hidden;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
     margin-top: 1em;
-  }
+  } */
   
 .tw-share {
-    background-image: url("https://64.media.tumblr.com/d46b27345c9cea4790756a57e42ccb6c/f2497834d8606ba7-ad/s500x750/10e4a6e3ba606786d94c2d1ddb099bf2516fd704.png");
+    /* background-image: url("https://64.media.tumblr.com/d46b27345c9cea4790756a57e42ccb6c/f2497834d8606ba7-ad/s500x750/10e4a6e3ba606786d94c2d1ddb099bf2516fd704.png"); */
     overflow: hidden;
     background-repeat: no-repeat;
     background-size: contain;
@@ -1655,6 +1666,78 @@ summary.checkbox {
     margin-bottom: 0.5em;
     width: 100%;
     min-height: 25px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 6px !important;
+    position: relative;
+  }
+
+  .tw-share-icon {
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+    width: 100%;
+    min-height: 25px;
+    margin-top: 0.2em;
+    margin-bottom: 0.5em;
+  }
+
+  .tw-share-quotes {
+    background-image: url("https://i.imgur.com/iqBtdRj.png");
+    /* overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left; */
+    /* margin-top: 0.2em;
+    margin-bottom: 0.5em; */
+    padding-left: 25px;
+    /* width: 100%;
+    min-height: 25px; */
+    background-position-y: -6px;
+  }
+
+  .tw-share-retwts {
+    background-image: url("https://i.imgur.com/GDJfwuN.png");
+    /* overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left; */
+    /* margin-top: 0.2em; */
+    /* margin-bottom: 0.5em; */
+    /* width: 100%;
+    min-height: 25px; */
+    background-position-y: -5px;
+    padding-left: 36px;
+    margin-top: 4px;
+  }
+  .tw-share-hearts {
+    background-image: url("https://i.imgur.com/DGwU3Wp.png");
+    /* overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left; */
+    /* margin-top: 0.2em; */
+    /* margin-bottom: 0.5em;
+    width: 100%;
+    min-height: 25px; */
+    background-position-y: -5px;
+    padding-left: 30px;
+    margin-top: 4px;
+  }
+  .tw-share-links {
+    background-image: url("https://i.imgur.com/FztInZE.png");
+    /* overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left; */
+    /* margin-top: 0.2em; */
+    /* margin-bottom: 0.5em; */
+    /* width: 100%;
+    min-height: 25px; */
+    background-position-y: -5px;
+    padding-left: 35px;
+    margin-top: 4px;
   }
   
 .tw-td-rt-1 {
@@ -1728,7 +1811,7 @@ summary.checkbox {
   }
 
   .fbi-bg {
-    background: url("https://cdn.discordapp.com/attachments/938616134150782996/1308668218126241842/1081257647-preview.gif?ex=673ec7c1&is=673d7641&hm=27bad0e40d6b19a31e40c17f6e53b3304a17110c3d1065c2a42020bb30129d91&") repeat center center scroll;
+    background: url("https://i.imgur.com/JC8YnhX.gif") repeat center center scroll;
     background-size: contain;
     background-attachment: fixed;
   }
