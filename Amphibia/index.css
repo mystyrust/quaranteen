@@ -467,12 +467,15 @@
     max-width: 270px;
 }
 
-.postODD details > summary {
+.postODD details > summary ,
+.tw-share details > summary {
     list-style: none;
 }
 
 .postODD details summary::-webkit-details-marker,
-.postODD details summary::marker {
+.postODD details summary::marker,
+.tw-share details summary::-webkit-details-marker,
+.tw-share details summary::marker {
   display: none;
 }
 
@@ -1606,7 +1609,7 @@ summary.checkbox {
     padding-left: 0.2em;
     position: relative;
     top: 0.1em;
-    content: url("https://64.media.tumblr.com/5329b0baaaffea259954c6252408cd8d/f2497834d8606ba7-00/s75x75_c1/8d6a425dd1062354689c9efc2b500d8933582f5b.png");
+    content: url("https://i.imgur.com/2oTuVdz.png");
   }
   
 .tw-post {
@@ -1647,15 +1650,31 @@ summary.checkbox {
     color: slategray;
   }
   
-/* .tw-share1 {
-    background-image: url("https://i.imgur.com/iwGvFJY.png");
-    overflow: hidden;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    margin-top: 1em;
-  } */
   
+.tw-share details {
+    display: flex;
+    width: 100%;
+}
+
+/* 
+.tw-show-open is displayed when the details is open, 
+hidden when the deatils is closed.
+.tw-show-close is displayed when the deatils is closed
+hidden when the defails is open.
+*/
+.tw-share details[open] .tw-show-open,
+.tw-share details:not([open]) .tw-show-close
+{
+    display: flex;
+}
+
+.tw-share details[open] .tw-show-close,
+.tw-share details:not([open]) .tw-show-open
+{
+    display: none;
+}
+
+
 .tw-share {
     /* background-image: url("https://64.media.tumblr.com/d46b27345c9cea4790756a57e42ccb6c/f2497834d8606ba7-ad/s500x750/10e4a6e3ba606786d94c2d1ddb099bf2516fd704.png"); */
     overflow: hidden;
@@ -1681,63 +1700,50 @@ summary.checkbox {
     min-height: 25px;
     margin-top: 0.2em;
     margin-bottom: 0.5em;
+    cursor: pointer;
   }
 
   .tw-share-quotes {
     background-image: url("https://i.imgur.com/iqBtdRj.png");
-    /* overflow: hidden;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: left; */
-    /* margin-top: 0.2em;
-    margin-bottom: 0.5em; */
     padding-left: 25px;
-    /* width: 100%;
-    min-height: 25px; */
     background-position-y: -6px;
+  }
+
+  .tw-share-quotes.tw-show-open {
+    background-image: url("https://i.imgur.com/VGKlqjE.png");
   }
 
   .tw-share-retwts {
     background-image: url("https://i.imgur.com/GDJfwuN.png");
-    /* overflow: hidden;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: left; */
-    /* margin-top: 0.2em; */
-    /* margin-bottom: 0.5em; */
-    /* width: 100%;
-    min-height: 25px; */
     background-position-y: -5px;
     padding-left: 36px;
     margin-top: 4px;
   }
+
+  .tw-share-retwts.tw-show-open {
+    background-image: url("https://i.imgur.com/yFCxwzr.png");
+  }
+
   .tw-share-hearts {
     background-image: url("https://i.imgur.com/DGwU3Wp.png");
-    /* overflow: hidden;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: left; */
-    /* margin-top: 0.2em; */
-    /* margin-bottom: 0.5em;
-    width: 100%;
-    min-height: 25px; */
     background-position-y: -5px;
     padding-left: 30px;
     margin-top: 4px;
   }
+
+  .tw-share-hearts.tw-show-open {
+    background-image: url("https://i.imgur.com/BQ29Gh8.png");
+  }
+
   .tw-share-links {
     background-image: url("https://i.imgur.com/FztInZE.png");
-    /* overflow: hidden;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: left; */
-    /* margin-top: 0.2em; */
-    /* margin-bottom: 0.5em; */
-    /* width: 100%;
-    min-height: 25px; */
     background-position-y: -5px;
     padding-left: 35px;
     margin-top: 4px;
+  }
+
+  .tw-share-links.tw-show-open {
+    background-image: url("https://i.imgur.com/7y7Gcrx.png");
   }
   
 .tw-td-rt-1 {
