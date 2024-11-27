@@ -1654,6 +1654,8 @@ summary.checkbox {
 .tw-share details {
     display: flex;
     width: 100%;
+    margin: 10px auto;
+    height: 20px;
 }
 
 /* 
@@ -1697,53 +1699,50 @@ hidden when the defails is open.
     background-size: contain;
     background-position: left;
     width: 100%;
-    min-height: 25px;
+    min-height: 20px;
     margin-top: 0.2em;
     margin-bottom: 0.5em;
     cursor: pointer;
   }
 
   .tw-share-quotes {
-    background-image: url("https://i.imgur.com/iqBtdRj.png");
+    background-image: url("https://i.imgur.com/HOvzkw7.png");
     padding-left: 25px;
-    background-position-y: -6px;
+    background-position-y: -1px;
   }
 
   .tw-share-quotes.tw-show-open {
-    background-image: url("https://i.imgur.com/VGKlqjE.png");
+    background-image: url("https://i.imgur.com/xBcBsT9.png");
   }
 
   .tw-share-retwts {
-    background-image: url("https://i.imgur.com/GDJfwuN.png");
-    background-position-y: -5px;
-    padding-left: 36px;
-    margin-top: 4px;
+    background-image: url("https://i.imgur.com/uOLZWeh.png");
+    background-position-y: -1px;
+    padding-left: 27px;
   }
 
   .tw-share-retwts.tw-show-open {
-    background-image: url("https://i.imgur.com/yFCxwzr.png");
+    background-image: url("https://i.imgur.com/hlKje5j.png");
   }
 
   .tw-share-hearts {
-    background-image: url("https://i.imgur.com/DGwU3Wp.png");
-    background-position-y: -5px;
-    padding-left: 30px;
-    margin-top: 4px;
+    background-image: url("https://i.imgur.com/s6gMzzW.png");
+    background-position-y: -1px;
+    padding-left: 27px;
   }
 
   .tw-share-hearts.tw-show-open {
-    background-image: url("https://i.imgur.com/BQ29Gh8.png");
+    background-image: url("https://i.imgur.com/L0R5oMT.png");
   }
 
   .tw-share-links {
-    background-image: url("https://i.imgur.com/FztInZE.png");
-    background-position-y: -5px;
-    padding-left: 35px;
-    margin-top: 4px;
+    background-image: url("https://i.imgur.com/WMCCktQ.png");
+    background-position-y: -4px;
+    padding-left: 25px;
   }
 
   .tw-share-links.tw-show-open {
-    background-image: url("https://i.imgur.com/7y7Gcrx.png");
+    background-image: url("https://i.imgur.com/rcwDeZu.png");
   }
   
 .tw-td-rt-1 {
