@@ -5,6 +5,7 @@
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   display: table;
   margin: auto;
+  font-size: 16px;
 }
 
 .grouptext-info {
@@ -24,6 +25,78 @@
   position: absolute;
   right: -27px;
   cursor: pointer;
+}
+
+.not-sent-cont {
+    float: right;
+    clear: both;
+}
+
+.not-sent-cont .breply {
+    left: -25px;
+}
+
+.not-sent-pic {
+    position: absolute;
+    right: -4px;
+    cursor: pointer;
+    top: 7px;
+}
+
+.not-sent-cont details.outer-menu, 
+.not-sent-cont .outer-menu summary {
+    position: relative;
+}
+
+.outer-menu:not([open]) .inner-menu
+{
+    display: none;
+}
+
+.outer-menu[open] .inner-menu
+{
+    display: flex;
+    padding: 10px;
+    position: absolute;
+    background: white;
+    right: -3px;
+    border: 1px lightgray solid;
+    top: 35px;
+    z-index: 10;
+}
+
+.outer-menu[open] .inner-menu:hover {
+    background-color: lightblue;
+    cursor: pointer;
+}
+
+/* if we allow the resent message to "work" */
+.not-sent-cont:has(.send-true.inner-menu[open]) .grouptext-info,
+.not-sent-cont:has(.send-true.inner-menu[open]) .outer-menu
+{
+    display: none;
+}
+
+.not-sent-cont:has(.send-true.inner-menu[open]) .breply
+{
+    left: 0px;
+}
+
+/* if we do NOT allow the resent message to "work" */
+.not-sent-cont:has(.send-false.inner-menu[open]) .resend-response,
+.not-sent-cont:has(.send-false.inner-menu:not([open])) .resend-prompt
+{
+    display: inline-block;
+}
+
+.not-sent-cont:has(.send-false.inner-menu:not([open])) .resend-response,
+.not-sent-cont:has(.send-false.inner-menu[open]) .resend-prompt
+{
+    display: none;
+}
+
+p.header {
+    margin-bottom: 20px;
 }
   
 .header {
@@ -51,7 +124,7 @@
 
   .text {
   float: left;
-  /* color: #000000; */
+  color: black;
   margin: 0 0 0.5em;
   border-radius: 1em;
   padding: 0.5em 1em;
@@ -467,11 +540,14 @@
     max-width: 270px;
 }
 
+.not-sent-cont details > summary ,
 .postODD details > summary ,
 .tw-share details > summary {
     list-style: none;
 }
 
+.not-sent-cont details summary::-webkit-details-marker,
+.not-sent-cont details summary::marker,
 .postODD details summary::-webkit-details-marker,
 .postODD details summary::marker,
 .tw-share details summary::-webkit-details-marker,
@@ -490,9 +566,9 @@ summary.checkbox {
 }
 
 .checkbox-cont {
-    /* margin-top: 12px;
-    margin-bottom: -27px; */
     position: absolute;
+    /* margin: 18px auto;
+    padding: 0px; */
 }
 
 .checkbox-cont[open] summary.checkbox{
@@ -502,8 +578,6 @@ summary.checkbox {
     border-radius: 3px;
     background-image: url(https://i.imgur.com/24X7Y59.png);
 }
-
-
 
 .window2 {
     text-align: justify;
@@ -526,7 +600,7 @@ summary.checkbox {
   
 .forumnav {
     color: #3c576b;
-    font-size: medium;
+    font-size: small;
     cursor: pointer;
   }
   
@@ -1641,6 +1715,11 @@ summary.checkbox {
     padding: 1em;
     border-radius: 0.5em;
   }
+
+  img.tw-embed
+  {
+    width: 85%;
+  }
   
 .tw-ref {
     color: rgb(29, 155, 240);
@@ -1778,6 +1857,21 @@ hidden when the defails is open.
     padding: 0;
     line-height: 1.5;
   } */
+
+.announce-div
+{
+  border-radius: 10px;
+  border: thin black solid;
+  /* max-width: 270px !important; */
+  opacity: 0.85;
+}
+
+.announce-p {
+    display: inline-block;
+    margin: auto;
+    padding: 10px;
+    word-wrap: break-word;
+}
 
 .convo-container {
     display: table;
