@@ -1,3 +1,9 @@
+.chart-img {
+    display: block;
+    margin: 0px auto;
+    max-width: 500px;
+}
+
 /* ------------------------------------------------------------------------------------------  */
 /* la temperanza texting https://archiveofourown.org/works/6434845/chapters/14729722 */
 .phone {
@@ -21,7 +27,7 @@
   }
   
 .not-sent::before {
-  content: url(https://i.imgur.com/2UV3VBE.png);
+  content: url(https://i.imgur.com/HYHA5Sz.png);
   position: absolute;
   right: -27px;
   cursor: pointer;
@@ -213,11 +219,20 @@ p.header {
   /* background: #fff;
   color: #000; */
   padding: 15px;
+  position: relative;
   /* width: 65%; */
   max-width: 700px;
   margin: 0 auto 25px;
   display: block;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.indent {
+    padding-left: 10px;
+}
+
+.large-text {
+    font-size: 20px;
 }
 
 .whitebox {
@@ -492,8 +507,8 @@ p.header {
     text-decoration: none;
     font-family: "Comic Sans MS", "Chalkboard SE", sans-serif;
     text-align: left;
-    height: 20em;
-    width: 20em;
+    height: 10em;
+    width: 10em;
     padding: 1em;
     margin-left: auto;
     margin-right: auto;
@@ -508,7 +523,7 @@ p.header {
   
   .sticky4 {
     display: block;
-    background-color: #ffff99;
+    background-color: lightskyblue;
     color: #000000;
     text-decoration: none;
     font-family: "Comic Sans MS", "Chalkboard SE", sans-serif;
@@ -526,7 +541,36 @@ p.header {
     -moz-transform: rotate(0deg);
     transform: rotate(0deg);
   }
+
+  .sticky-cont
+  {
+    position: absolute;
+    /* top: 0; */
+    right: 40px;
+    bottom: -40px;
+  }
+
+  .dental-visit {
+    max-width: 630px !important;
+  }
+
+  .dental-xray {
+    width: 270px;
+    position: absolute;
+    top: 0;
+    right: 17px;
+    transform: rotate(3deg);
+    -webkit-transform: rotate(3deg);
+    filter: drop-shadow(3px 3px 3px black);
+  }
   
+  .paper-clip {
+    position: absolute;
+    right: 20px;
+    top: -7px;
+    height: 100px;
+    filter: drop-shadow(2px 4px 6px black);
+  }
 
 /* ------------------------------------------------------------------------------------------  */
 /* forums (with edits) https://archiveofourown.org/works/45621295/chapters/114797212 */
@@ -540,12 +584,15 @@ p.header {
     max-width: 270px;
 }
 
+.polaroid-cont-outer details > summary ,
 .not-sent-cont details > summary ,
 .postODD details > summary ,
 .tw-share details > summary {
     list-style: none;
 }
 
+.polaroid-cont-outer details summary::-webkit-details-marker,
+.polaroid-cont-outer details summary::marker,
 .not-sent-cont details summary::-webkit-details-marker,
 .not-sent-cont details summary::marker,
 .postODD details summary::-webkit-details-marker,
@@ -785,6 +832,11 @@ summary.checkbox {
 
   /* ----------------------reddit mock ---------------------------- */
 /* made by jihn https://codepen.io/jihnari/pen/jOmMoQX */
+
+.reddit-img {
+    max-width: 350px;
+    /* filter: blur(0.7px); */
+}
 
 .text-color-gray {
     color: #9F9FA1;
@@ -1369,6 +1421,7 @@ summary.checkbox {
   .tungleimg {
     max-width: 100%;
     height: auto;
+    cursor: pointer;
   }
   
   .tunglequote {
@@ -2037,4 +2090,185 @@ hidden when the defails is open.
     background-color: black !important;
     color: white !important;
   }
+
+  /* polaroids */
+
+  .polaroid {
+    margin: 10px auto;
+    max-width: min-content;
+    background: white;
+    padding: 10px;
+    filter: drop-shadow(1px 2px 5px black);
+    height: fit-content;
+  }
+
+   /* Hide scrollbar for Chrome, Safari and Opera */
+   .polaroid-cont-inner::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .polaroid-cont-inner {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  .polaroid-cont-inner {
+    overflow-x: scroll;
+  }
+
+  .polaroid-cont-outer {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .polaroid-cont-inner2
+  {
+    /* width: 900px; */
+    min-width: 650px;
+    /* width: 700px; */
+    display: block;
+    background-image: url(https://i.imgur.com/Jvc6gCz.jpg);
+    margin: 10px;
+    /* border: 30px solid gray; */
+    border-radius: 20px;
+    position: relative;
+
+    border-top: 20px ridge gray;
+    border-left: 20px groove gray;
+    border-bottom: 20px groove gray;
+    border-right: 20px ridge gray;
+
+    height: auto;
+  }
+
+
+  .polaroid img {
+    max-width: 150px;
+    filter: blur(1.4px);
+  }
+
+  .polaroid-caption {
+    font-family: "Comic Sans MS", "Chalkboard SE", sans-serif;
+    display: inline-block;
+    text-align: left;
+    padding: 6px;
+  }
+
+  .polaroid1 {
+    -webkit-transform: rotate(-6deg);
+    -o-transform: rotate(-6deg);
+    -moz-transform: rotate(-6deg);
+    transform: rotate(-6deg);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+
+
+  /* .polaroid3:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0), white);
+    top: 0px;
+    left: 0px;
+  } */
+
+  .polaroid2 {
+    -webkit-transform: rotate(4deg);
+    -o-transform: rotate(4deg);
+    -moz-transform: rotate(4deg);
+    transform: rotate(4deg);
+  }
+
+  /* .polaroid3 img, .polaroid4 img {
+   filter: unset;
+   max-width: 350px;
+  } */
+
+  /* .polaroid.polaroid3, .polaroid.polaroid4 {
+    max-width: 350px;
+  } */
+
+  .polaroid3 {
+    transform: rotate(12deg);
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+
+  .polaroid6, .polaroid6 img {
+    max-width: 250px;
+  }
+
+  .polaroid2, .polaroid2 img ,
+  .polaroid4, .polaroid4 img ,
+  .polaroid5, .polaroid5 img {
+    max-width: 200px;
+  }
+
+  .sticky4 {
+    position: absolute;
+    right: 0px;
+    bottom: 10px;
+  }
+
+  .polaroid6 {
+    position: absolute;
+    left: 10px;
+    bottom: -30px;
+  }
+
+
+  .polaroid-pin {
+    background-image: url(https://i.imgur.com/yH46vgD.png);
+    position: absolute;
+    height: 35px;
+    width: 40px;
+    background-size: cover;
+  }
+
+  .pin1 {
+    left: 31px;
+    top: 0px;
+  }
+
+  .pin2 {
+    top: 0px;
+    left: 200px
+  }
+
+  .polaroid-pin summary {
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+  }
+
+  .polaroid-pin[open] summary {
+    display: none;
+  }
+
+  .thread {
+    /* display: none; */
+    width: 0px;
+  }
+
+  .polaroid-cont-outer:has(.pin1[open]):has(.pin2[open]) .thread-1-2 {
+    /* display: inline; */
+    width: 312px;
+    transition: all 1s;
+  }
+
+  .thread-1-2 {
+    position: absolute;
+    z-index: 5;
+    /* width: 312px; */
+    height: auto;
+    left: 42px;
+    top: 9px;
+    filter: drop-shadow(2px 4px 6px black);
+  }
+
 /* --------------------------------------------------------------- */
