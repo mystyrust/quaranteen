@@ -2102,6 +2102,10 @@ hidden when the defails is open.
     height: fit-content;
   }
 
+  .polaroid p {
+    margin: 0;
+  }
+
    /* Hide scrollbar for Chrome, Safari and Opera */
    .polaroid-cont-inner::-webkit-scrollbar {
     display: none;
