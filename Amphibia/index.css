@@ -1,3 +1,7 @@
+#workskin {
+    overflow: hidden;
+}
+
 .chart-img {
     display: block;
     margin: 0px auto;
@@ -536,10 +540,22 @@ p.header {
     -moz-box-shadow: 5px 5px 7px rgba(33,33,33,1);
     -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
     box-shadow: 5px 5px 7px rgba(33,33,33,.7);
-    -webkit-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    transform: rotate(0deg);
+    -webkit-transform: rotate(-7deg);
+    -o-transform: rotate(-7deg);
+    -moz-transform: rotate(-7deg);
+    transform: rotate(-7deg);
+    z-index: 5;
+  }
+
+  .sticky5 {
+    position: absolute;
+    bottom: -50px;
+    z-index: 10;
+
+    -webkit-transform: rotate(6deg);
+    -o-transform: rotate(6deg);
+    -moz-transform: rotate(6deg);
+    transform: rotate(6deg);
   }
 
   .sticky-cont
@@ -584,6 +600,7 @@ p.header {
     max-width: 270px;
 }
 
+.comp-cont details > summary ,
 .polaroid-cont-outer details > summary ,
 .not-sent-cont details > summary ,
 .postODD details > summary ,
@@ -591,6 +608,8 @@ p.header {
     list-style: none;
 }
 
+.comp-cont details summary::-webkit-details-marker,
+.comp-cont details summary::marker,
 .polaroid-cont-outer details summary::-webkit-details-marker,
 .polaroid-cont-outer details summary::marker,
 .not-sent-cont details summary::-webkit-details-marker,
@@ -627,11 +646,8 @@ summary.checkbox {
 }
 
 .window2 {
-    text-align: justify;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0;
-    margin-bottom: 0;
+    text-align: left;
+    margin: 20px auto;
     /* width: 81.5%; */
     max-width: 700px;
   }
@@ -747,7 +763,7 @@ summary.checkbox {
     content: url(https://i.imgur.com/v2kccYs.png);
     position: absolute;
     cursor: pointer;
-    margin-top: -1px;
+    margin-top: 0px;
 }
    
 .quoteinwhite ~ p {
@@ -1699,7 +1715,7 @@ summary.checkbox {
 .tw {
     max-width: 500px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    margin: auto;
+    margin: 20px auto;
     border-style: solid;
     border-width: .1em;
     border-color: lightgray;
@@ -1729,6 +1745,7 @@ summary.checkbox {
     height: 45px;
     float: left;
     border-radius: 50%;
+    cursor: pointer;
   }
   
 .tw-post-verified {
@@ -1776,6 +1793,7 @@ summary.checkbox {
   
 .tw-ref {
     color: rgb(29, 155, 240);
+    cursor: pointer;
   }
   
 .tw-reply {
@@ -2091,6 +2109,131 @@ hidden when the defails is open.
     color: white !important;
   }
 
+  .tab {
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    color: black;
+    padding-top: 5px;
+    cursor: pointer;
+    margin-top: 2px;
+    font-size: 13px;
+  }
+
+  .bg-tab {
+    color: black;
+    background: lightgray;
+  }
+
+  .active-tab {
+    background-color: gray;
+    color: lightgray;
+  }
+
+  .tab-cont {
+    height: 24px;
+    background: lightgray;
+  }
+
+  .tab-cont details, .tab-cont p {
+    display: inline;
+  }
+
+  /* tab marker toggle show hide*/
+  .tab-cont:has(details[open]) .bg-tab.tab1,
+  .tab-cont:has(details[open]) .active-tab.tab2,
+  .tab-cont:has(details:not([open])) .active-tab.tab1,
+  .tab-cont:has(details:not([open])) .bg-tab.tab2
+  {
+    display: inline-block;
+  }
+
+  .tab-cont:has(details[open]) .bg-tab.tab2,
+  .tab-cont:has(details[open]) .active-tab.tab1,
+  .tab-cont:has(details:not([open])) .bg-tab.tab1,
+  .tab-cont:has(details:not([open])) .active-tab.tab2
+  {
+    display: none;
+  }
+
+
+  /* tab content toggle show / hide */
+  .comp-cont:has(details:not([open])) .tab-content.tab1,
+  .comp-cont:has(details[open]) .tab-content.tab2 
+  {
+    display: block;
+  }
+
+  .tab-content.tab2,
+  .comp-cont:has(details:not([open])) .tab-content.tab2,
+  .comp-cont:has(details[open]) .tab-content.tab1 {
+    display: none;
+  }
+
+  .comp-cont {
+    margin: 20px auto;
+    max-width: 500px;
+    min-width: 300px;
+    position: relative;
+    border-top: 30px solid gray;
+    border-radius: 10px;
+    border-right: 4px solid gray;
+    border-left: 4px solid gray;
+    border-bottom: 4px solid gray;
+  }
+
+  .comp-cont p {
+    margin: 0px;
+  }
+
+  .comp-cont img {
+    width: 100%;
+  }
+
+  .dot-cont {
+    position: absolute;
+    /* background: pink; */
+    top: -22px;
+    left: 0px;
+    width: 50px;
+  }
+
+  .comp-dot {
+    width: 15px;
+    position: absolute;
+    height: 15px;
+    /* background: red; */
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  .red-dot {
+    background: red;
+    left: 0px;
+  }
+
+  .yellow-dot {
+    background: yellow;
+    left: 20px;
+  }
+
+  .green-dot {
+    background: lightgreen;
+    left: 40px;
+  }
+
+  .comp-info {
+    position: absolute;
+    color: #dd5f30;
+    left: 39%;
+    bottom: 51%;
+    padding: 3px;
+    background-color: white;
+    font-family: monospace;
+    filter: drop-shadow(0px 1px 6px white);
+  }
+
   /* polaroids */
 
   .polaroid {
@@ -2103,7 +2246,7 @@ hidden when the defails is open.
   }
 
   .polaroid p {
-    margin: 0;
+    margin: 0px;
   }
 
    /* Hide scrollbar for Chrome, Safari and Opera */
@@ -2119,6 +2262,8 @@ hidden when the defails is open.
 
   .polaroid-cont-inner {
     overflow-x: scroll;
+    overflow-y: hidden;
+    padding-bottom: 50px;
   }
 
   .polaroid-cont-outer {
@@ -2130,6 +2275,7 @@ hidden when the defails is open.
   {
     /* width: 900px; */
     min-width: 650px;
+    height: 600px;
     /* width: 700px; */
     display: block;
     background-image: url(https://i.imgur.com/Jvc6gCz.jpg);
@@ -2142,10 +2288,7 @@ hidden when the defails is open.
     border-left: 20px groove gray;
     border-bottom: 20px groove gray;
     border-right: 20px ridge gray;
-
-    height: auto;
   }
-
 
   .polaroid img {
     max-width: 150px;
@@ -2185,6 +2328,9 @@ hidden when the defails is open.
     -o-transform: rotate(4deg);
     -moz-transform: rotate(4deg);
     transform: rotate(4deg);
+    position: absolute;
+    top: -13px;
+    left: 33%;
   }
 
   /* .polaroid3 img, .polaroid4 img {
@@ -2201,6 +2347,18 @@ hidden when the defails is open.
     position: absolute;
     top: 0px;
     right: 0px;
+  }
+
+  .polaroid4 {
+    position: absolute;
+    left: 0px;
+    top: 41%;
+  }
+
+  .polaroid5 {
+    position: absolute;
+    right: 0px;
+    top: 25%;
   }
 
   .polaroid6, .polaroid6 img {
@@ -2221,8 +2379,15 @@ hidden when the defails is open.
 
   .polaroid6 {
     position: absolute;
-    left: 10px;
-    bottom: -30px;
+    left: 29%;
+    bottom: -45px;
+    z-index: 3;
+  }
+
+  .polaroid7 {
+    position: absolute;
+    top: 28%;
+    left: 38%;
   }
 
 
@@ -2248,6 +2413,11 @@ hidden when the defails is open.
     height: 35px;
     width: 35px;
     cursor: pointer;
+  }
+
+  .polaroid-pin[open]
+  {
+    filter: brightness(1.5) drop-shadow(2px 4px 6px blue);
   }
 
   .polaroid-pin[open] summary {
