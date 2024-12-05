@@ -600,6 +600,8 @@ p.header {
     max-width: 270px;
 }
 
+
+.snap-cont-outer details > summary ,
 .comp-cont details > summary ,
 .polaroid-cont-outer details > summary ,
 .not-sent-cont details > summary ,
@@ -608,6 +610,8 @@ p.header {
     list-style: none;
 }
 
+.snap-cont-outer details summary::-webkit-details-marker,
+.snap-cont-outer details summary::marker,
 .comp-cont details summary::-webkit-details-marker,
 .comp-cont details summary::marker,
 .polaroid-cont-outer details summary::-webkit-details-marker,
@@ -2451,10 +2455,95 @@ hidden when the defails is open.
 
 
   /* snapchats / be reals */
+
+.snap-cont-outer {
+  width: 300px;
+  height: 502px;
+  margin: 20px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.snap-cont-outer details {
+    display: inline;
+}
+
+.snap-cont-outer summary {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    z-index: 10;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.snap-cont-outer details:not([open]) summary {
+    right: 0px;
+
+    /* opacity: 0.05;
+    border-top-left-radius: 90%;
+    border-bottom-left-radius: 90%; */
+
+    /* background-image: url(https://i.imgur.com/8GGZP4N.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.1;
+    filter: blur(10px); */
+}
+
+.snap-cont-outer details[open] summary {
+    left: 0px;
+    /* background-color: red; */
+}
+
+/* --------------------- snapchat gimmick lmao ---------------------*/
+.snap-cont-inner:has(details[open]
+):has(
+    details:not([open]) ~ details:not([open]) ~ details:not([open]) ~ details:not([open]) ~ details:not([open])
+) {
+    transform: translateY(-502px);
+}
+
+.snap-cont-inner:has(details[open] ~ details[open]
+):has(
+    details:not([open]) ~ details:not([open]) ~ details:not([open]) ~ details:not([open])
+) {
+    transform: translateY(-1004px);
+}
+
+.snap-cont-inner:has(details[open] ~ details[open] ~ details[open]
+):has(
+    details:not([open]) ~ details:not([open]) ~ details:not([open])
+) {
+    transform: translateY(-1506px);
+}
+
+.snap-cont-inner:has(details[open] ~ details[open] ~ details[open] ~ details[open]
+):has(
+    details:not([open]) ~ details:not([open])
+) {
+    transform: translateY(-2008px);
+}
+
+.snap-cont-inner:has(details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open]
+):has(
+    details:not([open]) 
+) {
+    transform: translateY(-2510px);
+}
+
+.snap-cont-inner:has(details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open]
+) {
+    transform: translateY(-3012px);
+}
+
+/* ---------------------------------------------------------------*/
+
+
 .snap-cont {
     max-width: 300px;
     display: block;
-    margin: 20px auto;
+    margin: 0px auto;
     border: solid black 1px;
     position: relative;
 }
