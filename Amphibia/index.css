@@ -1985,7 +1985,7 @@ hidden when the defails is open.
   }
 
   .fbi-bg {
-    background: url("https://i.imgur.com/JC8YnhX.gif") repeat center center scroll;
+    background: url("https://i.imgur.com/6ZZCvx7.png") repeat center center scroll;
     background-size: contain;
     background-attachment: fixed;
   }
@@ -2477,6 +2477,19 @@ hidden when the defails is open.
     overflow: hidden;
 }
 
+.snap-cont-outer:has(details[open]) summary:nth-of-type(1) {
+    border-left: 25px darkslategray solid;
+    opacity: 0.07;
+    filter: blur(8px);
+}
+
+
+.snap-cont-outer:has(details:not([open])) summary:nth-of-type(1) {
+    border-right: 25px darkslategray solid;
+    opacity: 0.07;
+    filter: blur(8px);
+}
+
 .snap-cont-outer details:not([open]) summary {
     right: 0px;
 
@@ -2568,6 +2581,7 @@ hidden when the defails is open.
     opacity: 0.75;
     font-weight: bold;
     text-align: center;
+    z-index: 10;
 }
 
 .snap-pos-1 {
@@ -2591,6 +2605,7 @@ hidden when the defails is open.
     position: absolute;
     right: 10px;
     top: 10px;
+    z-index: 10;
 }
 
 .snap-bereal {
@@ -2601,6 +2616,112 @@ hidden when the defails is open.
     top: 10px;
     border: thin black solid;
     border-radius: 10px;
+}
+
+
+/* --------------------------------------------------------------- */
+/* la_temperanza notebook lined paper  https://archiveofourown.org/collections/A_Guide_to_Coding_and_Fanworks/works/4414436  */
+.paper tr:hover, .paper td:hover { background: none; }
+
+.paper {
+  /* width: 97%;
+  height: 100%; */
+  max-width: 600px;
+  min-width: 300px;
+  background: linear-gradient(to bottom,#FFFFFF 24px,#00b0d7 1px);
+  margin: 10px auto;
+  background-size: 100% 25px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  -webkit-box-shadow: 3px 3px 3px rgba(0,0,0,.2),0px 0px 6px rgba(0,0,0,.2);
+  -moz-box-shadow: 3px 3px 3px rgba(0,0,0,.2),0px 0px 6px rgba(0,0,0,.2);
+  -ms-box-shadow: 3px 3px 3px rgba(0,0,0,.2),0px 0px 6px rgba(0,0,0,.2);
+  -o-box-shadow: 3px 3px 3px rgba(0,0,0,.2),0px 0px 6px rgba(0,0,0,.2);
+  box-shadow: 3px 3px 3px rgba(0,0,0,.2),0px 0px 6px rgba(0,0,0,.2);
+}
+
+.paper::before {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 10%;
+  height: 100%;
+  width: 1px;
+  background: #db4034;
+}
+
+.paper::after {
+  content: '';
+}
+
+.header-writing {
+  height: 80px;
+  width: 100%;
+  background: #FFFFFF;
+  background-size: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-radius: 5px;
+}
+
+.titletext {
+  font-size: 15px;
+  line-height: 15px;
+  padding-left: 0;
+  text-align: center;
+  margin-left: 8%;
+  margin-top: 84px;
+  margin-bottom: 10px;
+  color: #000000;
+  font-weight: bold;
+  text-decoration: underline;
+  font-family: helvetica neue, helvetica, arial, sans-serif;
+}
+
+ .textwmar {
+  margin-left: 11%;
+  margin-top: 100px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 25px;
+  color: #000000;
+  font-family: helvetica neue, helvetica, arial, sans-serif;
+}
+
+.text-handwriting {
+  margin-left: 11%;
+  font-size: 15px;
+  line-height: 25px;
+  color: #000000;
+  font-family: helvetica neue, helvetica, arial, sans-serif;
+}
+
+.hide {
+  display: none;
+}
+
+.polly-img {
+  width: 40%;
+  float: right;
+  transform: rotate(5deg);
+  padding: 10px;
+  margin-top: -10px;
+  filter: drop-shadow(1px 1px 2px black);
+}
+
+.textwmar .tape {
+  width: 100px;
+  position: absolute;
+  right: 0;
+  z-index: 100;
+  transform: rotate(45deg);
+  opacity: 0.8;
 }
 
 
