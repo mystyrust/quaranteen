@@ -2,6 +2,10 @@
     overflow: hidden;
 }
 
+#workskin details {
+  margin: 0px;
+}
+
 .chart-img {
     display: block;
     margin: 0px auto;
@@ -601,6 +605,11 @@ p.header {
 }
 
 
+.reddit-comment-react details > summary ,
+.rd-bubble details > summary ,
+.yt-like-cont details > summary ,
+details.yt-subscribe-cont > summary ,
+.tunglenotes-cont details > summary ,
 .snap-cont-outer details > summary ,
 .comp-cont details > summary ,
 .polaroid-cont-outer details > summary ,
@@ -610,6 +619,16 @@ p.header {
     list-style: none;
 }
 
+.reddit-comment-react details summary::-webkit-details-marker,
+.reddit-comment-react details summary::marker,
+.rd-bubble details summary::-webkit-details-marker,
+.rd-bubble details summary::marker,
+.yt-like-cont details summary::-webkit-details-marker,
+.yt-like-cont details summary::marker,
+details.yt-subscribe-cont summary::-webkit-details-marker,
+details.yt-subscribe-cont summary::marker,
+.tunglenotes-cont details summary::-webkit-details-marker,
+.tunglenotes-cont details summary::marker,
 .snap-cont-outer details summary::-webkit-details-marker,
 .snap-cont-outer details summary::marker,
 .comp-cont details summary::-webkit-details-marker,
@@ -1020,15 +1039,74 @@ summary.checkbox {
   .rd-gray-text {
     color: #657685;
   }
-  .rd-bubble{
+
+  .rd-bubble {
     color: #787C7F;
     font-size: .8em;
     padding: 12px 5px 3px 5px;
     margin-bottom:5px;
     border-radius: 16px;
     border: 1px solid #EEEFF1;
-    cursor: pointer;
+    /* cursor: pointer; */
+    display: inline;
   }
+
+  .rd-bubble p {
+    display: inline;
+    cursor: text;
+  }
+  
+  .rd-bubble details, .rd-bubble summary {
+    display: inline-block;
+  }
+
+  /* toggle reddit up / down vote, fake tri state */
+  details.rd-up-cont[open] .unliked,
+  details.rd-down-cont[open] .unliked,
+  details.rd-up-cont:not([open]) .liked,
+  details.rd-down-cont:not([open]) .liked {
+    display: none;
+  }
+
+  details.rd-up-cont:not([open]) .unliked,
+  details.rd-down-cont:not([open]) .unliked,
+  details.rd-up-cont[open] .liked,
+  details.rd-down-cont[open] .liked {
+    display: inline-block;
+  }
+
+  .inactive {
+    display: none;
+    cursor: not-allowed !important;
+  }
+
+  .rd-bubble:has(details[open]) details:not([open]) {
+    display: none;
+  }
+
+ .rd-bubble:has(.rd-down-cont[open]) .rd-arrow-up.inactive,
+ .rd-bubble:has(.rd-up-cont[open]) .rd-arrow-down.inactive {
+    display: inline-block;
+  }
+
+  .rd-div1 p, .rd-vr.rd-div2 p {
+    margin: 0px;
+  }
+
+  .reddit-comment-react details {
+    margin: 0px;
+  }
+
+/* toggle liked reddit COMMENT (like only) */
+.reddit-comment-react:has(details[open]) .unliked,
+.reddit-comment-react:has(details:not([open])) .liked {
+  display: none;
+}
+
+.reddit-comment-react:has(details:not([open])) .unliked,
+.reddit-comment-react:has(details[open]) .liked {
+  display: inline;
+}
 
   .rd-left {
     margin-left: 2px;
@@ -1037,18 +1115,20 @@ summary.checkbox {
   .rd-arrow-text{
     padding-top:2px;
     mmargin-bottom:10px;
-    vertical-align:top;
+    vertical-align: super;
     display: inline-block;
   }
   .rd-arrow-up{
     padding-top:0px;
     padding-bottom:0px;
     height:1.5em;
+    cursor: pointer;
   }
   .rd-arrow-down{
     -webkit-transform: scaleY(-1);
     transform: scaleY(-1);
       height:1.5em;
+      cursor: pointer;
   }
   .rd-elispes{
     float:right;
@@ -1270,6 +1350,10 @@ summary.checkbox {
     display: inline-block;
     float: right;
   }
+
+  p.margin-0 {
+    margin: 0px;
+  }
   
   .yt-stats{
     width: 18%;
@@ -1336,6 +1420,60 @@ summary.checkbox {
     margin: 10px auto;
     display: block;
   }
+
+  .yt-border-top-bottom-gray.clear2 p ,
+  .yt-subscribe-cont {
+    margin: 0px;
+  }
+
+  /* toggle subscribed */
+  .yt-subscribe-cont[open] .not-subscribed,
+  .yt-subscribe-cont:not([open]) .subscribed {
+    display: none;
+  }
+
+  .yt-subscribe-cont:not([open]) .not-subscribed,
+  .yt-subscribe-cont[open] .subscribed {
+    display: inline;
+  }
+
+  /* toggle liked video */
+  .yt-like-cont:has(details[open]) .unliked,
+  .yt-like-cont:has(details:not([open])) .liked {
+    display: none;
+  }
+
+  .yt-like-cont:has(details:not([open])) .unliked,
+  .yt-like-cont:has(details[open]) .liked {
+    display: inline;
+  }
+
+  .yt-like-cont summary {
+    /* width: 50px;
+    height: 50px; */
+    width: 100%;
+    height: 50px;
+    /* background-color: blue; */
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .yt-like-cont details {
+    margin: 0px;
+  }
+
+  .yt-like-cont {
+    /* display: flex;
+    justify-content: space-around; */
+    /* margin-left: 20px; */
+  }
+
+  .yt-like-imgs {
+    /* margin-top: -60px; */
+    z-index: 5;
+  }
+
+
 /* --------------------------------------------------------------- */
   
 /* -----------------tumblr style tweaks --------------------------- */
@@ -1361,6 +1499,10 @@ summary.checkbox {
     max-width: 100%;
     position: relative;
     padding: 15px 0 0;
+  }
+
+  .tunglebody p {
+    margin: 0px;
   }
   
   .tungleurl {
@@ -1436,6 +1578,27 @@ summary.checkbox {
     margin-right: -7px;
     margin-top: 6px;
     cursor: pointer;
+  }
+
+  .tunglenotes-cont p {
+    display: inline;
+  }
+
+  .tunglenotes-cont details {
+    display: inline-block;
+    float: right;
+    margin: 0px;
+    clear: both;
+  }
+
+  .tunglenotes-cont:has(details[open]) .unliked,
+  .tunglenotes-cont:has(details:not([open])) .liked {
+    display: none;
+  }
+
+  .tunglenotes-cont:has(details:not([open])) .unliked,
+  .tunglenotes-cont:has(details[open]) .liked {
+    display: block;
   }
 
   .tungleimg {
@@ -2142,6 +2305,7 @@ hidden when the defails is open.
   .tab-cont {
     height: 24px;
     background: lightgray;
+    padding-bottom: 5px;
   }
 
   .tab-cont details, .tab-cont p {
@@ -2179,6 +2343,10 @@ hidden when the defails is open.
     display: none;
   }
 
+  .tab-content {
+    margin-bottom: -7px;
+  }
+
   .comp-cont {
     margin: 20px auto;
     max-width: 500px;
@@ -2189,6 +2357,7 @@ hidden when the defails is open.
     border-right: 4px solid gray;
     border-left: 4px solid gray;
     border-bottom: 4px solid gray;
+    background: gray;
   }
 
   .comp-cont p {
@@ -2197,6 +2366,7 @@ hidden when the defails is open.
 
   .comp-cont img {
     width: 100%;
+    margin-bottom: -6px;
   }
 
   .dot-cont {
