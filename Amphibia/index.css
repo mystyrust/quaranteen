@@ -2,6 +2,11 @@
     overflow: hidden;
 }
 
+/* .userstuff p, .userstuff details {
+  margin: 1.286em auto;
+  padding: 0;
+} */
+
 /* 
 #workskin details {
   margin: 0px;
@@ -606,6 +611,7 @@ p.header {
 }
 
 
+.yt-container details > summary ,
 .reddit-comment-react details > summary ,
 .rd-bubble details > summary ,
 .yt-like-cont details > summary ,
@@ -620,6 +626,8 @@ details.yt-subscribe-cont > summary ,
     list-style: none;
 }
 
+.yt-container details summary::-webkit-details-marker,
+.yt-container details summary::marker,
 .reddit-comment-react details summary::-webkit-details-marker,
 .reddit-comment-react details summary::marker,
 .rd-bubble details summary::-webkit-details-marker,
@@ -1098,15 +1106,38 @@ summary.checkbox {
     margin: 0px;
   }
 
+  .reddit-comment-react {
+    display: inline-flex;
+  }
+
 /* toggle liked reddit COMMENT (like only) */
-.reddit-comment-react:has(details[open]) .unliked,
-.reddit-comment-react:has(details:not([open])) .liked {
+.reddit-react-like[open] .unliked,
+.reddit-react-like:not([open]) .liked,
+.reddit-react-dislike[open] .unliked,
+.reddit-react-dislike:not([open]) .liked {
   display: none;
 }
 
-.reddit-comment-react:has(details:not([open])) .unliked,
-.reddit-comment-react:has(details[open]) .liked {
+.reddit-react-like:not([open]) .unliked,
+.reddit-react-like[open] .liked,
+.reddit-react-dislike:not([open]) .unliked,
+.reddit-react-dislike[open] .liked {
   display: inline;
+}
+
+.reddit-comment-react:has(details[open]) details:not([open]) {
+  display: none;
+}
+
+.reddit-comment-react:has(.reddit-react-like[open]) .react-dislike.inactive,
+.reddit-comment-react:has(.reddit-react-dislike[open]) .react-like.inactive
+{
+   display: inline-block;
+}
+
+.rd-comment-react-reply {
+  padding-left: 13px;
+  margin-top: -7px;
 }
 
   .rd-left {
@@ -1149,6 +1180,7 @@ summary.checkbox {
   /*universal*/
   .wrapper {
     position: relative;
+    height: 308px;
   }
   /* .sticky {
     position: -webkit-sticky;
@@ -1278,26 +1310,42 @@ summary.checkbox {
   font-family: 'Roboto', sans-serif;
   font-size: 12px;
   }
+
+  .yt-red-line-cont {
+    position:absolute;
+    width:100%;
+    height:5px;
+    bottom: 30px;
+    background-color: rgba(246,246,246,.3);
+  }
+
+  .yt-red-line {
+    background-color: red;
+    width: 30%;
+    height: 100%;
+    transition: all 1s ease-in;
+  }
+
   .yt-red-line-50 {
     position:absolute;
     width:100%;
     height:5px;
     background:linear-gradient(to right, red 50%,rgba(246,246,246,.3) 50%);  
-    bottom:0px;
+    bottom: 30px;
   }
   .yt-red-line-30 {
     position:absolute;
     width:100%;
     height:5px;
     background:linear-gradient(to right, red 30%,rgba(246,246,246,.3) 70%);  
-    bottom:4px;
+    bottom: 30px;
   }
   .yt-red-line-70 {
     position:absolute;
     width:100%;
     height:5px;
     background:linear-gradient(to right, red 70%,rgba(246,246,246,.3) 30%);  
-    bottom:4px;
+    bottom: 30px;
   }
   
   .yt-border-bottom-gray  {
@@ -1390,12 +1438,168 @@ summary.checkbox {
     margin-top: 10px;
     cursor: pointer;
   }
+
+  .yt-buttons-cont {
+    display: inline;
+  }
   
   .yt-vid-img{
     width:100%;
+    /* height: 40%; */
+    /* cursor: pointer; */
+    margin-bottom: -8px;
+  }
+
+  .yt-play-vid , .yt-pause-vid {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding: 0px 5px;
     cursor: pointer;
+    width: 25px;
+    height: 25px;
   }
   
+  .yt-skip-vid , .yt-replay-vid {
+    position: absolute;
+    bottom: -2px;
+    /* left: 32px; */
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    /* margin-bottom: -4px; */
+  }
+
+  .skip-toggle:not([open]) .yt-skip-vid,
+  .skip-toggle[open] .yt-replay-vid {
+    display: inline-block;
+  }
+
+  .skip-toggle[open] .yt-skip-vid,
+  .skip-toggle:not([open]) .yt-replay-vid {
+    display: none;
+  }
+
+  /* play toggle */
+  .play-toggle:not([open]) .yt-pause-vid ,
+  .play-toggle[open] .yt-play-vid {
+    display: none;
+  }
+  
+  .play-toggle:not([open]) .yt-play-vid ,
+  .play-toggle[open] .yt-pause-vid {
+    display: inline-block;
+  }
+
+  .yt-container:has(.play-toggle[open]) .yt-red-line {
+    width: 75%;
+    transition: all 5s ease;
+    /* transition-duration: 1000s; */
+  }
+
+  /* toggle playing video result */
+  .yt-container:has(.play-toggle:not([open])) .playing,
+  .yt-container:has(.play-toggle[open]) .thumbnail {
+    display: none;
+  }
+
+  .yt-container:has(.play-toggle:not([open])) .thumbnail,
+  .yt-container:has(.play-toggle[open]) .playing {
+    display: inline-block;
+  }
+
+  .yt-container p {
+    margin: 0px;
+  }
+
+  .play-toggle {
+    position: absolute;
+    display: inline-flex;
+    left: 0px;
+    bottom: -3px;
+    height: 30px;
+    width: 30px;
+    margin: 0px;
+  }
+
+  .yt-vid-end {
+    background-color: black;
+    width: 100%;
+    display: block;
+    /* height: 40%; */
+    display: none;
+    margin-bottom: -8px;
+  }
+
+  .yt-vid-end img {
+    display: block;
+    margin: auto;
+    padding-top: 50px;
+    width: 30%;
+  }
+
+  /* vol toggle */
+  .vol-toggle:not([open]) .vol-unmuted ,
+  .vol-toggle[open] .vol-muted {
+    display: none;
+  }
+  
+  .vol-toggle:not([open]) .vol-muted ,
+  .vol-toggle[open] .vol-unmuted {
+    display: inline-block;
+  }
+
+  .vol-toggle {
+    position: absolute;
+    display: inline-flex;
+    left: 80px;
+    bottom: -3px;
+    height: 30px;
+    width: 30px;
+    margin: 0px;
+  }
+
+  .vol-toggle img {
+    width: 100%;
+  }
+
+  .audio-button {
+    position: absolute;
+    /* font-size: 20pt; */
+    /* left: 10px; */
+    text-decoration: none;
+  }
+
+  audio {
+    position: absolute;
+    /* width: 100px; */
+    opacity: 0;
+    left: 0;
+  }
+    
+  .skip-toggle {
+      position: absolute;
+      display: inline-flex;
+      left: 38px;
+      bottom: -3px;
+      height: 29px;
+      width: 30px;
+      margin: 0px;
+  }
+
+  .yt-container:has(.skip-toggle[open]) .yt-red-line {
+    width: 100%;
+    transition: all 1s ease;
+  }
+
+  .yt-container:has(.skip-toggle[open]) .yt-vid-end {
+    display: block;
+  }
+
+  .yt-container:has(.skip-toggle[open]) .yt-vid-img {
+    display: none;
+  }
+
   .yt-views-text{
     font-size:0.8em;
     font-weight: normal;
@@ -1405,9 +1609,9 @@ summary.checkbox {
     font-size:1.2em;
     font-weight: bold;
   }
-  .yt-title-shift{
-  margin-top:0px;
-  margin-left: 5px;
+  .yt-title-shift {
+    margin-top:15px !important;
+  /* margin-left: 5px !important; */
   }
   
   .yt-border-top-bottom-gray.clear2 {
@@ -1439,14 +1643,34 @@ summary.checkbox {
   }
 
   /* toggle liked video */
-  .yt-like-cont:has(details[open]) .unliked,
-  .yt-like-cont:has(details:not([open])) .liked {
+  .yt-thumbsup-cont[open] .unliked,
+  .yt-thumbsup-cont:not([open]) .liked,
+  .yt-thumbsdown-cont[open] .unliked,
+  .yt-thumbsdown-cont:not([open]) .liked {
     display: none;
   }
 
-  .yt-like-cont:has(details:not([open])) .unliked,
-  .yt-like-cont:has(details[open]) .liked {
+  .yt-thumbsdown-cont:not([open]) .unliked,
+  .yt-thumbsdown-cont[open] .liked,
+  .yt-thumbsdown-cont:not([open]) .unliked,
+  .yt-thumbsdown-cont[open] .liked
+  {
     display: inline;
+  }
+
+  .yt-like-cont 
+  {
+    display: inline-flex;
+  }
+
+  .yt-like-cont:has(details[open]) details:not([open]) {
+    display: none;
+  }
+  
+  .yt-like-cont:has(.yt-thumbsup-cont[open]) .yt-thumbsdown-cont.inactive,
+  .yt-like-cont:has(.yt-thumbsdown-cont[open]) .yt-thumbsup-cont.inactive
+  {
+     display: inline-block;
   }
 
   .yt-like-cont summary {
@@ -1463,17 +1687,9 @@ summary.checkbox {
     margin: 0px;
   }
 
-  .yt-like-cont {
-    /* display: flex;
-    justify-content: space-around; */
-    /* margin-left: 20px; */
+  .yt-like-cont p {
+    margin-bottom: 0px;
   }
-
-  .yt-like-imgs {
-    /* margin-top: -60px; */
-    z-index: 5;
-  }
-
 
 /* --------------------------------------------------------------- */
   
@@ -2311,6 +2527,7 @@ hidden when the defails is open.
 
   .tab-cont details, .tab-cont p {
     display: inline-block;
+    margin: 0px;
   }
 
   /* tab marker toggle show hide*/
@@ -2934,7 +3151,7 @@ hidden when the defails is open.
 .stain-doodle {
   position: absolute;
   z-index: 10;
-  width: 150;
+  width: 150px;
   opacity: 0.3;
   right: 0px;
 }
