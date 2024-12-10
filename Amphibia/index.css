@@ -290,6 +290,18 @@ p.header {
     -webkit-text-fill-color: transparent;
 } */
 
+.fadeout2 {
+  position: relative;
+}
+
+.fadeout2::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(to bottom, rgba(255,255,255, 0), white);
+}
+
 .fadeout {
     position: relative;
   }
@@ -611,6 +623,8 @@ p.header {
 }
 
 
+.ch-sub-header details > summary ,
+.ch-x-cell details > summary ,
 .yt-container details > summary ,
 .reddit-comment-react details > summary ,
 .rd-bubble details > summary ,
@@ -626,6 +640,10 @@ details.yt-subscribe-cont > summary ,
     list-style: none;
 }
 
+.ch-sub-header details summary::-webkit-details-marker,
+.ch-sub-header details summary::marker,
+.ch-x-cell details summary::-webkit-details-marker,
+.ch-x-cell details summary::marker,
 .yt-container details summary::-webkit-details-marker,
 .yt-container details summary::marker,
 .reddit-comment-react details summary::-webkit-details-marker,
@@ -3163,4 +3181,201 @@ hidden when the defails is open.
 }
 
 
+/* ---------------chrome history, made by jihn------------------------- */
+/* https://codepen.io/jihnari/pen/jOaNgNZ */
+
+/*chrome history*/
+div.ch-table p
+{
+  margin-top:0;
+  margin-bottom:0;
+}
+
+.ch-header{
+  font-family: 'Uni sans', 'Whitney', sans-serif;
+  border-bottom: 1px solid #E0E0E0;
+  margin-bottom: 20px;
+  padding: 4px 5px 0px;
+}
+.ch-title{
+  font-size:1.4em;
+  padding-top:5px;
+}
+.ch-search-icon{
+  float:right;
+  height:2em;
+  clear:both; /*this clear might not work in ao3*/
+}
+
+.ch-sub-header{
+  color: #1A72E8;
+  font-size: 11px;
+  margin-bottom: 8px;
+  margin-top: 9px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.ch-sub-header p {
+  margin: 0px;
+}
+
+.ch-date{
+  color: #5f6267;
+  font-size: 12px;
+  margin-left: 10px;
+  margin-top: -8px;
+  /* padding-bottom: 10px; */
+}
+
+.ch-table {
+  display: table;
+  width: 95%;
+  table-layout: fixed;
+  /* position: relative; */
+  /* background: pink; */
+  padding-left: 8px;
+  margin-top: -13px;
+  padding-right: 4px;
+}
+
+.ch-row{
+  display: table-row;
+  /* font-size: 14px; */
+  /* width: 100%; */
+  /* height: 21px; */
+  border: 1px solid gray;
+  /* margin: 0px 0 0px 0px; */
+  /* padding-left: 10px; */
+  bbackground: blue;
+  /* margin-bottom: -10px; */
+}
+
+.ch-dot-cell{
+  display: table-cell;
+  width:40px;
+  vertical-align: middle;
+}
+.ch-dot{
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #F2F3F5;
+}
+.ch-site-cell{
+  display: table-cell;
+  padding-right:15px;
+}
+.ch-page-name{
+  font-size: 12px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: block;
+  margin-top: 10px;
+}
+.ch-page-link{
+  font-size: 11px;
+  color: #5f6267;
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+.ch-x-cell{
+  width:30px;
+  display:table-cell;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.ch-x{
+  margin:0 10px 0 5px;
+  width:20px;
+}
+
+.ch-hide {
+  display: none;
+}
+
+
+/* delete later */
+.ch-name-wrapper{
+  display:inline-block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.signal-gc-dot {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom:5px;
+  background-color: #bbb;
+}
+.signal-gc-name{
+  font-size:1.1em;
+  margin-top:5px;
+  display: block;
+}
+.signal-gc-subname{
+  font-size:.9em;
+  display:block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.signal-gc-name-line{
+  padding-bottom:5px;
+  box-shadow: 0px 8px 8px -10px #888888;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.clear{
+  clear:both;
+}
+table
+{
+    width: 100%;
+}
+
+.chrome-window {
+  background-color: white;
+  max-width: 600px;
+  margin: 10px auto;
+  border: 1px darkgray solid;
+  /* padding-top: 10px; */
+}
+
+.ch-row:has(details[open]) {
+  display: none;
+}
+
+.ch-restore {
+  display: none;
+  margin: 0px;
+}
+
+.chrome-window:has(details:not(.ch-restore)[open]) .ch-restore {
+  display: inline;
+}
+
+.chrome-window:has(.ch-restore[open]) .ch-row {
+  display: table-row !important;
+}
+
+.ch-restore:not([open]) .ch-hist-clear-open,
+.ch-restore[open] .ch-hist-clear {
+  display: none;
+}
+
+.ch-restore[open] .ch-hist-clear-open,
+.ch-restore:not([open]) .ch-hist-clear {
+  display: inilne;
+}
 /* --------------------------------------------------------------- */
