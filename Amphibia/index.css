@@ -623,8 +623,7 @@ p.header {
 }
 
 
-.ch-sub-header details > summary ,
-.ch-x-cell details > summary ,
+.chrome-window-ext details > summary ,
 .yt-container details > summary ,
 .reddit-comment-react details > summary ,
 .rd-bubble details > summary ,
@@ -640,10 +639,8 @@ details.yt-subscribe-cont > summary ,
     list-style: none;
 }
 
-.ch-sub-header details summary::-webkit-details-marker,
-.ch-sub-header details summary::marker,
-.ch-x-cell details summary::-webkit-details-marker,
-.ch-x-cell details summary::marker,
+.chrome-window-ext details summary::-webkit-details-marker,
+.chrome-window-ext details summary::marker,
 .yt-container details summary::-webkit-details-marker,
 .yt-container details summary::marker,
 .reddit-comment-react details summary::-webkit-details-marker,
@@ -1198,7 +1195,7 @@ summary.checkbox {
   /*universal*/
   .wrapper {
     position: relative;
-    height: 308px;
+    /* height: 308px; */
   }
   /* .sticky {
     position: -webkit-sticky;
@@ -1371,7 +1368,7 @@ summary.checkbox {
   }
   .yt-comment{
     border-bottom: 1px solid #b1b1b3;
-    margin-top:-10px;
+    margin-top: 10px !important;
     padding-bottom:10px;
     overflow: auto;
   }
@@ -1581,6 +1578,11 @@ summary.checkbox {
     width: 100%;
   }
 
+  .vol-muted {
+    height: 25px;
+    margin-top: 4px;
+  }
+
   .audio-button {
     position: absolute;
     /* font-size: 20pt; */
@@ -1611,7 +1613,7 @@ summary.checkbox {
   }
 
   .yt-container:has(.skip-toggle[open]) .yt-vid-end {
-    display: block;
+    display: inline-block;
   }
 
   .yt-container:has(.skip-toggle[open]) .yt-vid-img {
@@ -2610,7 +2612,8 @@ hidden when the defails is open.
     /* background: pink; */
     top: -22px;
     left: 0px;
-    width: 50px;
+    width: 100%;
+    display: flex;
   }
 
   .comp-dot {
@@ -2620,6 +2623,7 @@ hidden when the defails is open.
     /* background: red; */
     border-radius: 20px;
     cursor: pointer;
+    z-index: 10;
   }
 
   .red-dot {
@@ -3203,6 +3207,7 @@ div.ch-table p
 }
 .ch-search-icon{
   float:right;
+  cursor: pointer;
   height:2em;
   clear:both; /*this clear might not work in ao3*/
 }
@@ -3226,7 +3231,7 @@ div.ch-table p
   font-size: 12px;
   margin-left: 10px;
   margin-top: -8px;
-  /* padding-bottom: 10px; */
+  padding-bottom: 10px;
 }
 
 .ch-table {
@@ -3346,14 +3351,125 @@ table
 
 .chrome-window {
   background-color: white;
-  max-width: 600px;
-  margin: 10px auto;
-  border: 1px darkgray solid;
+  font-family: sans-serif;
+  overflow-y: hidden;
+  /* max-width: 600px; */
+  position: relative;
+  /* padding: 10px; */
+  /* border: 1px solid gray; */
+  /* margin: 10px; */
+  
+  /* border-top: 30px solid gray;
+  border-right: 1px solid gray;
+  border-left: 1px solid gray;
+  border-bottom: 1px solid gray;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px; */
   /* padding-top: 10px; */
+}
+
+.chrome-window-ext {
+  /* width: 100%;
+  position: relative;
+  height: 15px;
+  background-color: gray;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px; */
+  max-width: 600px;
+  min-width: 250px;
+  position: relative;
+  border-top: 30px solid gray;
+  border-right: 1px solid gray;
+  border-left: 1px solid gray;
+  border-bottom: 1px solid gray;
+  border-radius: 10px;
+  margin: 10px auto;
+}
+
+.ch-window-ext-title {
+  font-family: monospace;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  display: block;
+  margin: auto;
+}
+
+.chrome-window-ext .dot-cont {
+  top: -36px;
+  left: 10px;
+  z-index: 10;
 }
 
 .ch-row:has(details[open]) {
   display: none;
+}
+
+.ch-restore-icon {
+  margin: 0px 10px 0px 5px;
+  /* width:20px; */
+  background: lightgray;
+  border-radius: 30px;
+  padding: 2.5px;
+  height: 15px;
+  width: 15px;
+}
+
+.read-toggle-img {
+  margin: 0px auto;
+}
+
+/* toggle read more */
+.readmore-div:has(details:not([open])) .read-toggle-img.more, 
+.readmore-div:has(details[open]) .read-toggle-img.less {
+  display: block;
+}
+
+.readmore-div:has(details:not([open])) .read-toggle-img.less,
+.readmore-div:has(details[open]) .read-toggle-img.more {
+  display: none;
+}
+
+.chrome-window-ext:has(.readmore-toggle:not([open])) .chrome-window {
+  height: 50%;
+}
+
+.chrome-window-ext:has(.readmore-toggle[open]) .chrome-window {
+  height: auto;
+}
+
+.readmore-div {
+  /* position: absolute; */
+  z-index: 10;
+  /* bottom: 0;
+  left: 50%; */
+  cursor: pointer;
+  position: relative;
+  margin-top: -30px;
+}
+
+/* .readmore-div p {
+  margin: 5px;
+} */
+
+/* .readmore-div summary:after {
+  content: '';
+  bottom: 0px;
+  width: 100%;
+  height: 10%;
+  position: absolute;
+  background: linear-gradient(to bottom, rgba(255,255,255, 0), white);
+} */
+
+/* toggle history items in chrome */
+.ch-row:has(:not([open])) .ch-restore-icon,
+.ch-row:has(details[open]) .ch-x {
+  display: none;
+}
+
+.ch-row:has(:not([open])) .ch-x,
+.ch-row:has(details[open]) .ch-restore-icon {
+  display: inline;
 }
 
 .ch-restore {
