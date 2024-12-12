@@ -197,9 +197,17 @@ p.header {
   padding-top: .5em;
   margin-left: -.5em;
   margin-right: -.5em;
-  margin-bottom: -.5em;
+  margin-bottom: 0.5em;
   text-align: center;
   display: table;
+}
+
+.texttime img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  display: inline-flex;
+  margin-bottom: -5px;
 }
 
 .grouptext {
@@ -2864,7 +2872,16 @@ hidden when the defails is open.
   }
 
 
+  .spotify-img {
+    display: block;
+    max-width: 500px;
+    margin: 20px auto;
+  }
+
   /* snapchats / be reals */
+.snap-all .snap-cont {
+  margin: 20px auto;
+}
 
 .snap-cont-outer {
   width: 300px;
@@ -3253,7 +3270,6 @@ div.ch-table p
   border: 1px solid gray;
   /* margin: 0px 0 0px 0px; */
   /* padding-left: 10px; */
-  bbackground: blue;
   /* margin-bottom: -10px; */
 }
 
@@ -3352,6 +3368,7 @@ table
 .chrome-window {
   background-color: white;
   font-family: sans-serif;
+  min-height: 450px;
   overflow-y: hidden;
   /* max-width: 600px; */
   position: relative;
@@ -3485,6 +3502,7 @@ table
   display: table-row !important;
 }
 
+/* history restore in chrome toggle , for each row */
 .ch-restore:not([open]) .ch-hist-clear-open,
 .ch-restore[open] .ch-hist-clear {
   display: none;
