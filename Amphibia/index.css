@@ -15,7 +15,7 @@
 .chart-img {
     display: block;
     margin: 0px auto;
-    max-width: 500px;
+    /* max-width: 500px; */
 }
 
 /* ------------------------------------------------------------------------------------------  */
@@ -991,11 +991,11 @@ summary.checkbox {
     background-color: #bbb;
     margin-bottom: -15px;
   }
-  .rd-div1{
+  .rd-div1 {
     border-bottom: 8px solid #EEEFF1;
-    padding-bottom:18px;
-    padding-left:8px;
-    margin-bottom: 10px;
+    /* padding-bottom:18px; */
+    /* padding-left:8px; */
+    /* margin-bottom: 10px; */
     margin-left: -6px;
     margin-right: -6px;
   }
@@ -1650,7 +1650,7 @@ summary.checkbox {
   .yt-container {
     max-width: 550px;
     min-width: 290px;
-    margin: 10px auto;
+    margin: 30px auto;
     display: block;
   }
 
@@ -1729,7 +1729,7 @@ summary.checkbox {
     max-width: 500px;
     font-family: Gibson,Helvetica Neue,HelveticaNeue,Helvetica,Arial,sans-serif;
     display: table;
-    margin: auto;
+    margin: 30px auto;
     /* color: #444444; */
     /* margin: 10px 0; */
   }
@@ -2347,6 +2347,7 @@ hidden when the defails is open.
   border: thin black solid;
   /* max-width: 270px !important; */
   opacity: 0.85;
+  margin: 20px auto;
 }
 
 .announce-p {
@@ -2361,8 +2362,7 @@ hidden when the defails is open.
     padding: 10px;
     min-width: 300px;
     max-width: 416px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 20px auto;
     border-radius: 10px;
     font-family: sans-serif;
     font-size: 13px;
@@ -2612,7 +2612,7 @@ hidden when the defails is open.
 
   .comp-cont img {
     width: 100%;
-    margin-bottom: -6px;
+    /* margin-bottom: -6px; */
   }
 
   .dot-cont {
@@ -2881,6 +2881,12 @@ hidden when the defails is open.
   /* snapchats / be reals */
 .snap-all .snap-cont {
   margin: 20px auto;
+  height: 500px;
+}
+
+.snap-cont p {
+  margin: 0px;
+  height: 500px;
 }
 
 .snap-cont-outer {
@@ -2905,17 +2911,17 @@ hidden when the defails is open.
 }
 
 .snap-cont-outer:has(details[open]) summary:nth-of-type(1) {
-    border-left: 25px darkslategray solid;
+    /* border-left: 25px darkslategray solid;
     opacity: 0.07;
-    filter: blur(8px);
+    filter: blur(8px); */
 }
 
 
 .snap-cont-outer:has(details:not([open])) summary:nth-of-type(1) {
-    border-right: 25px darkslategray solid;
+    /* border-right: 25px darkslategray solid;
     opacity: 0.07;
     filter: blur(8px);
-    z-index: 12;
+    z-index: 12; */
 }
 
 .snap-cont-outer details:not([open]) summary {
@@ -2938,48 +2944,98 @@ hidden when the defails is open.
 }
 
 /* --------------------- snapchat gimmick lmao ---------------------*/
-.snap-cont-inner:has(details[open]
+.snap-cont-outer:has(details[open]
 ):has(
     details:not([open]) ~ details:not([open]) ~ details:not([open]) ~ details:not([open]) ~ details:not([open])
-) {
+) .snap-cont-inner {
     transform: translateY(-502px);
 }
 
-.snap-cont-inner:has(details[open] ~ details[open]
+.snap-cont-outer:has(details[open] ~ details[open]
 ):has(
     details:not([open]) ~ details:not([open]) ~ details:not([open]) ~ details:not([open])
-) {
+) .snap-cont-inner {
     transform: translateY(-1004px);
 }
 
-.snap-cont-inner:has(details[open] ~ details[open] ~ details[open]
+.snap-cont-outer:has(details[open] ~ details[open] ~ details[open]
 ):has(
     details:not([open]) ~ details:not([open]) ~ details:not([open])
-) {
+) .snap-cont-inner {
     transform: translateY(-1506px);
 }
 
-.snap-cont-inner:has(details[open] ~ details[open] ~ details[open] ~ details[open]
+.snap-cont-outer:has(details[open] ~ details[open] ~ details[open] ~ details[open]
 ):has(
     details:not([open]) ~ details:not([open])
-) {
+) .snap-cont-inner {
     transform: translateY(-2008px);
 }
 
-.snap-cont-inner:has(details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open]
+.snap-cont-outer:has(details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open]
 ):has(
     details:not([open]) 
-) {
+) .snap-cont-inner {
     transform: translateY(-2510px);
 }
 
-.snap-cont-inner:has(details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open]
-) {
+.snap-cont-outer:has(details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] 
+) .snap-cont-inner {
     transform: translateY(-3012px);
 }
-
 /* ---------------------------------------------------------------*/
 
+.snap-controllers {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.snap-controllers details {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+}
+
+.snap-controllers details p {
+  margin: 0px;
+}
+
+.snap-controllers details:not([open]) summary {
+  height: 100%;
+  width: 50%;
+  right: 0px;
+}
+
+.snap-controllers details[open] summary {
+  height: 100%;
+  width: 50%;
+  left: 0px;
+}
+
+.snap-controllers details:not([open]) .snap-back,
+.snap-controllers details[open] .snap-fwd {
+  display: none;
+}
+
+.snap-fwd {
+  position: absolute;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  bottom: 10px;
+}
+
+.snap-back {
+  position: absolute;
+  left: 10px;
+  width: 40px;
+  height: 40px;
+  bottom: 10px;
+}
 
 .snap-cont {
     max-width: 300px;
@@ -2992,6 +3048,7 @@ hidden when the defails is open.
 .snap-img {
     width: 100%;
     height: 500px;
+    /* margin-bottom: -6px; */
 }
 
 .snap-blur {
@@ -3046,7 +3103,6 @@ hidden when the defails is open.
     border-radius: 10px;
 }
 
-
 /* --------------------------------------------------------------- */
 /* la_temperanza notebook lined paper  https://archiveofourown.org/collections/A_Guide_to_Coding_and_Fanworks/works/4414436  */
 .paper tr:hover, .paper td:hover { background: none; }
@@ -3055,9 +3111,9 @@ hidden when the defails is open.
   /* width: 97%;
   height: 100%; */
   max-width: 600px;
-  min-width: 300px;
+  min-width: 260px;
   background: linear-gradient(to bottom,#FFFFFF 24px,#00b0d7 1px);
-  margin: 10px auto;
+  margin: 30px auto;
   background-size: 100% 25px;
   position: relative;
   /* overflow: hidden; */
@@ -3173,10 +3229,10 @@ hidden when the defails is open.
   position: absolute;
   z-index: 10;
   /* filter: opacity(0.5); */
-  right: 0;
+  right: 0px;
   width: 150px;
   opacity: 0.5;
-  top: -4px;
+  top: 10px;
 }
 
 .eraser-doodle {
@@ -3218,15 +3274,22 @@ div.ch-table p
   margin-bottom: 20px;
   padding: 4px 5px 0px;
 }
+
+.ch-header p {
+  margin: 0px;
+}
 .ch-title{
   font-size:1.4em;
   padding-top:5px;
 }
 .ch-search-icon{
-  float:right;
+  /* float:right; */
   cursor: pointer;
   height:2em;
-  clear:both; /*this clear might not work in ao3*/
+  /* clear:both; */
+  position: absolute;
+  top: 0px;
+  right: 0px;
 }
 
 .ch-sub-header{
@@ -3413,8 +3476,8 @@ table
 }
 
 .chrome-window-ext .dot-cont {
-  top: -36px;
-  left: 10px;
+  top: -41px;
+  left: 5px;
   z-index: 10;
 }
 
@@ -3448,7 +3511,7 @@ table
 }
 
 .chrome-window-ext:has(.readmore-toggle:not([open])) .chrome-window {
-  height: 50%;
+  height: 450px;
 }
 
 .chrome-window-ext:has(.readmore-toggle[open]) .chrome-window {
@@ -3465,9 +3528,9 @@ table
   margin-top: -30px;
 }
 
-/* .readmore-div p {
+.readmore-div p , .readmore-div details {
   margin: 5px;
-} */
+}
 
 /* .readmore-div summary:after {
   content: '';
