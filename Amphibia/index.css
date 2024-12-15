@@ -665,6 +665,7 @@ p.header {
 }
 
 
+.spotify-cont-outer details > summary ,
 .chrome-window-ext details > summary ,
 .yt-container details > summary ,
 .reddit-comment-react details > summary ,
@@ -681,6 +682,8 @@ details.yt-subscribe-cont > summary ,
     list-style: none;
 }
 
+.spotify-cont-outer details summary::-webkit-details-marker,
+.spotify-cont-outer details summary::marker,
 .chrome-window-ext details summary::-webkit-details-marker,
 .chrome-window-ext details summary::marker,
 .yt-container details summary::-webkit-details-marker,
@@ -1366,8 +1369,8 @@ summary.checkbox {
   .yt-font{
   font-family: 'Roboto', sans-serif;
   font-size: 12px;
-  overflow-x: scroll;
-  overflow-y: hidden;
+    overflow-x: scroll;
+    overflow-y: hidden;
   }
 
   .yt-red-line-cont {
@@ -1763,12 +1766,6 @@ summary.checkbox {
     -ms-overflow-style: none;  
     scrollbar-width: none;  
   } */
-
-  .yt-font {
-    overflow-x: scroll;
-    overflow-y: scroll;
-    /* overflow-y: hidden; */
-  }
 
   .yt-cont-outer {
     max-width: 500px;
@@ -3170,11 +3167,30 @@ hidden when the defails is open.
   }
 
 
-  .spotify-img {
+  /* .spotify-img {
     display: block;
     max-width: 500px;
     margin: 20px auto;
-  }
+  } */
+
+.spotify-cont-outer {
+  width: 300px;
+  height: 502px;
+  margin: 20px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.spotify-cont-outer p {
+  margin: 0px auto;
+}
+
+.spotify-img {
+  width: 300px;
+  height: 500px;
+  /* border: 1px black solid; */
+}
 
   /* snapchats / be reals */
 .snap-all .snap-cont {
@@ -3195,11 +3211,15 @@ hidden when the defails is open.
   overflow: hidden;
 }
 
-.snap-cont-outer details {
+.spotify-cont-outer details ,
+.snap-cont-outer details 
+{
     display: inline;
 }
 
-.snap-cont-outer summary {
+.spotify-cont-outer summary,
+.snap-cont-outer summary
+ {
     position: absolute;
     width: 50%;
     height: 100%;
@@ -3208,13 +3228,27 @@ hidden when the defails is open.
     overflow: hidden;
 }
 
-.snap-cont-outer details:not([open]) summary {
+.spotify-cont-outer details:not([open]) summary ,
+.snap-cont-outer details:not([open]) summary 
+{
     right: 0px;
 }
 
-.snap-cont-outer details[open] summary {
+.spotify-cont-outer details[open] summary ,
+.snap-cont-outer details[open] summary 
+{
     left: 0px;
 }
+
+/* --------------------- spotify gimmick lmao ---------------------*/
+.spotify-cont-outer:has(details[open]):has(details:not([open])) .spotify-cont-inner {
+  transform: translateY(-504px); 
+}
+
+.spotify-cont-outer:has(details[open] ~ details[open]) .spotify-cont-inner {
+  transform: translateY(-1008px); 
+}
+/* ---------------------------------------------------------------*/
 
 /* --------------------- snapchat gimmick lmao ---------------------*/
 .snap-cont-outer:has(details[open]
@@ -3258,6 +3292,7 @@ hidden when the defails is open.
 }
 /* ---------------------------------------------------------------*/
 
+.spotify-controllers,
 .snap-controllers {
   position: absolute;
   left: 0px;
@@ -3266,6 +3301,7 @@ hidden when the defails is open.
   height: 100%;
 }
 
+.spotify-controllers details,
 .snap-controllers details {
   position: absolute;
   width: 100%;
@@ -3273,24 +3309,32 @@ hidden when the defails is open.
   margin: 0px;
 }
 
+.spotify-cont-outer details p,
 .snap-controllers details p {
   margin: 0px;
 }
 
+.spotify-controllers details:not([open]) summary,
 .snap-controllers details:not([open]) summary {
   height: 100%;
   width: 50%;
   right: 0px;
+  /* z-index: 10; */
 }
 
+.spotify-controllers details[open] summary,
 .snap-controllers details[open] summary {
   height: 100%;
   width: 50%;
   left: 0px;
+  /* z-index: 10; */
 }
 
+.spotify-controllers details:not([open]) .snap-back,
+.spotify-controllers details[open] .snap-fwd,
 .snap-controllers details:not([open]) .snap-back,
-.snap-controllers details[open] .snap-fwd {
+.snap-controllers details[open] .snap-fwd 
+{
   display: none;
 }
 
@@ -3309,6 +3353,7 @@ hidden when the defails is open.
   height: 40px;
   bottom: 10px;
   transform: rotate(180deg);
+  z-index: 1;
 }
 
 .snap-cont {
