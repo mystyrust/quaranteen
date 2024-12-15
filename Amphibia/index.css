@@ -583,10 +583,20 @@ p.header {
     z-index: 10;
     width: 7em;
     height: 7em;
-    -webkit-transform: rotate(6deg);
-    -o-transform: rotate(6deg);
-    -moz-transform: rotate(6deg);
-    transform: rotate(6deg);
+    transform: translateY(1000px) rotate(6deg);
+  }
+
+  .sticky6 {
+    position: absolute;
+    background-color: orange;
+    width: 15em;
+    height: 15em;
+    transform: rotate(0deg) translateY(-1000px);
+    left: 3%;
+    top: 15%;
+    z-index: 30;
+    font-size: 24px;
+    margin: 0px;
   }
 
   .sticky-cont
@@ -1356,6 +1366,8 @@ summary.checkbox {
   .yt-font{
   font-family: 'Roboto', sans-serif;
   font-size: 12px;
+  overflow-x: scroll;
+  overflow-y: hidden;
   }
 
   .yt-red-line-cont {
@@ -1652,6 +1664,69 @@ summary.checkbox {
     display: none;
   }
 
+  .caption-toggle {
+    position: absolute;
+    display: inline-flex;
+    right: 45px;
+    bottom: -3px;
+    height: 30px;
+    width: 30px;
+    margin: 0px;
+    cursor: pointer;
+  }
+
+  .caption-toggle img, .size-toggle img {
+    width: 100%;
+    cursor: pointer
+  }
+
+  .yt-caption-text {
+    position: absolute;
+    bottom: 30px;
+    width: 70%;
+    background: #252d2d;
+    color: white;
+    padding: 10px;
+    opacity: 0.8;
+    text-align: center;
+    /* margin-bottom: 9px; */
+    /* display: block; */
+    margin: 10px auto !important;
+    font-size: 15px;
+    display: none;
+  }
+
+  .yt-container:has(.caption-toggle[open]) .yt-caption-text {
+    display: block;
+    left: 10%;
+  }
+
+  .size-toggle {
+    position: absolute;
+    display: inline-flex;
+    right: 5px;
+    bottom: -3px;
+    height: 30px;
+    width: 30px;
+    margin: 0px;
+    cursor: pointer;
+  }
+  .yt-container:has(.size-toggle[open]) 
+  {
+    border: 19px black solid;
+  }
+
+  .yt-container:has(.size-toggle[open]) .wrapper {
+    transform: scale(1.5);
+    transform-origin: bottom left;
+    z-index: 20;
+  }
+
+  .yt-container:has(.size-toggle[open]) .yt-comment-container {
+    display: none;
+  }
+
+
   .yt-views-text{
     font-size:0.8em;
     font-weight: normal;
@@ -1676,6 +1751,28 @@ summary.checkbox {
     min-width: 290px;
     margin: 30px auto;
     display: block;
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  /* .yt-font::-webkit-scrollbar {
+    display: none;
+  } */
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  /* .yt-font {
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+  } */
+
+  .yt-font {
+    overflow-x: scroll;
+    overflow-y: scroll;
+    /* overflow-y: hidden; */
+  }
+
+  .yt-cont-outer {
+    max-width: 500px;
+    margin: 0 auto;
   }
 
   .yt-border-top-bottom-gray.clear2 p ,
@@ -2828,6 +2925,7 @@ hidden when the defails is open.
     bottom: 10px;
     height: 7em;
     width: 7em;
+    transform: translateY(1000px) rotate(-7deg);
   }
 
   .polaroid6 {
@@ -2847,6 +2945,7 @@ hidden when the defails is open.
   .polaroid-pin {
     position: absolute;
     z-index: 15;
+    margin-top: 14px;
   }
 
   .polaroid-pin img {
@@ -2911,47 +3010,48 @@ hidden when the defails is open.
   .thread {
     /* display: none; */
     /* transform: translateX(-1000px); */
-    translate: -1000px;
+    transition: all 1s;
+    /* translate: -1000px; */
     width: 0px;
     position: absolute;
     z-index: 12;
     filter: drop-shadow(2px 2px 8px black);
   }
 
-  /* threads showing up */
-  .polaroid-cont-outer:has(.pin1[open]):has(.pin2[open]) .thread-1-2 ,
-  .polaroid-cont-outer:has(.pin1[open]):has(.pin3[open]) .thread-1-3,
-  .polaroid-cont-outer:has(.pin2[open]):has(.pin3[open]) .thread-2-3,
-  .polaroid-cont-outer:has(.pin4[open]):has(.pin5[open]) .thread-4-5,
-  .polaroid-cont-outer:has(.pin4[open]):has(.pin7[open]) .thread-4-7,
-  .polaroid-cont-outer:has(.pin5[open]):has(.pin7[open]) .thread-5-7,
-  .polaroid-cont-outer:has(.pin6[open]):has(.pin7[open]) .thread-6-7,
-  .polaroid-cont-outer:has(.pin2[open]):has(.pin7[open]) .thread-2-7,
-  .polaroid-cont-outer:has(.pin3[open]):has(.pin6[open]) .thread-3-6,
-  /* stickies showing up  */
-  .polaroid-cont-outer:has(.pin1[open]):has(.pin2[open]):has(.pin3[open]) .sticky4,
   .polaroid-cont-outer:has(.pin4[open]):has(.pin5[open]):has(.pin7[open]) .sticky5
   {
-    /* display: inline; */
-    /* width: 312px; */
-    translate: 0px;
-    /* translate: translateX(0px); */
-    transition: all 1s;
-    /* transition-delay: 0.5ms; */
+    transform: translateY(0px) rotate(6deg);
+    transition: 1s all 0.5s;
+  }
+
+  .polaroid-cont-outer:has(.pin1[open]):has(.pin2[open]):has(.pin3[open]) .sticky4 
+  {
+    transform: translateY(0px) rotate(-7deg);
+    transition: 1s all 0.5s;
+  }
+
+  .polaroid-cont-outer:has(.pin1[open] ~ .pin2[open] ~ .pin3[open] ~ .pin4[open] ~ .pin5[open] ~ .pin6[open] ~ .pin7[open]) .sticky6
+  {
+    transform: translateY(0px) rotate(0deg);
+    transition: 1s all 1.5s;
+  }
+
+  .polaroid-cont-outer:has(.pin1[open]):has(.pin2[open]) .thread-1-2 
+  {
+    transform: translate(0px);
   }
 
   .thread-1-2 {
-    /* position: absolute; */
-    /* z-index: 5; */
-    /* width: 312px; */
-    /* width: 243px !important; */
     height: 57px;
     width: 86%;
     left: 29px;
     top: 2px;
-    
-    /* transform: rotate(-89deg);
-    transform-origin: top; */
+    transform: translate(-1000px);
+  }
+
+  .polaroid-cont-outer:has(.pin1[open]):has(.pin3[open]) .thread-1-3 
+  {
+    transform: translateX(0px) rotate(49deg);
   }
 
   .thread-1-3 {
@@ -2960,9 +3060,14 @@ hidden when the defails is open.
     width: 267px;
     height: 71px;
     left: 48px;
-    transform: rotate(49deg);
+    transform: translate(-1000px) rotate(49deg);
     transform-origin: left;
     top: -22px;
+  }
+
+  .polaroid-cont-outer:has(.pin2[open]):has(.pin3[open]) .thread-2-3 
+  {
+    transform: translate(0px) rotate(-39deg);
   }
 
   .thread-2-3 {
@@ -2973,8 +3078,13 @@ hidden when the defails is open.
     /* left: 0px; */
     top: -15px;
     right: 37px;
-    transform: rotate(-39deg);
+    transform: translate(-1000px) rotate(-39deg);
     transform-origin: right;
+  }
+
+  .polaroid-cont-outer:has(.pin4[open]):has(.pin5[open]) .thread-4-5
+  {
+    transform: translate(0px) rotate(-5deg);
   }
 
   .thread-4-5 {
@@ -2983,59 +3093,80 @@ hidden when the defails is open.
     left: 51px;
     height: 38px;
     /* height: 43px; */
-    transform: rotate(-5deg);
+    transform: translate(-1000px) rotate(-5deg);
     transform-origin: right;
+  }
+
+  .polaroid-cont-outer:has(.pin4[open]):has(.pin7[open]) .thread-4-7
+  {
+    transform: translate(0px) rotate(45deg);
   }
 
   .thread-4-7 {
     width: 273px;
     top: 33%;
     left: 64px;
-    transform: rotate(45deg);
+    transform: translate(-1000px) rotate(45deg);
     transform-origin: left;
+  }
+
+  .polaroid-cont-outer:has(.pin5[open]):has(.pin7[open]) .thread-5-7
+  {
+    transform: translate(0px) rotate(-52deg);
   }
 
   .thread-5-7 {
     width: 262px;
     right: 60px;
     top: 30%;
-    transform: rotate(-52deg);
+    transform: translate(-1000px) rotate(-52deg);
     transform-origin: right;
+  }
+
+  .polaroid-cont-outer:has(.pin6[open]):has(.pin7[open]) .thread-6-7
+  {
+    transform:  translate(0px) rotate(-90deg);
   }
 
   .thread-6-7 {
     width: 460px;
-    transform: rotate(-90deg);
+    transform:  translate(-1000px) rotate(-90deg);
     transform-origin: right;
     right: 45%;
     height: 36px;
     top: -45px;
   }
 
+  .polaroid-cont-outer:has(.pin2[open]):has(.pin7[open]) .thread-2-7
+  {
+    transform: translate(0px) rotate(-66deg);
+  }
+
   .thread-2-7 {
     width: 462px;
     height: 53px;
-    right: 31px;
-    transform: rotate(-66deg);
+    right: 36px;
+    transform: translate(-1000px) rotate(-66deg);
     transform-origin: right;
-    top: -30px;
+    top: -19px;
+  }
+
+  .polaroid-cont-outer:has(.pin3[open]):has(.pin6[open]) .thread-3-6
+  {
+    transform:  translate(0px) rotate(-80deg);
   }
 
   .thread-3-6 {
     width: 211px;
     left: 38px;
-    transform: rotate(-80deg);
+    transform:  translate(-1000px) rotate(-80deg);
     transform-origin: right;
     top: -25px;
   }
 
-  .hide-sticky {
-    translate: 0px 500px;
-  }
-
-  p:has(.thread), details:has(.polaroid-pin) p {
+  p:has(.thread), details.polaroid-pin p {
     margin: 0px;
-    display: inline;
+    /* display: inline; */
   }
 
 
@@ -3077,37 +3208,12 @@ hidden when the defails is open.
     overflow: hidden;
 }
 
-.snap-cont-outer:has(details[open]) summary:nth-of-type(1) {
-    /* border-left: 25px darkslategray solid;
-    opacity: 0.07;
-    filter: blur(8px); */
-}
-
-
-.snap-cont-outer:has(details:not([open])) summary:nth-of-type(1) {
-    /* border-right: 25px darkslategray solid;
-    opacity: 0.07;
-    filter: blur(8px);
-    z-index: 12; */
-}
-
 .snap-cont-outer details:not([open]) summary {
     right: 0px;
-
-    /* opacity: 0.05;
-    border-top-left-radius: 90%;
-    border-bottom-left-radius: 90%; */
-
-    /* background-image: url(https://i.imgur.com/8GGZP4N.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0.1;
-    filter: blur(10px); */
 }
 
 .snap-cont-outer details[open] summary {
     left: 0px;
-    /* background-color: red; */
 }
 
 /* --------------------- snapchat gimmick lmao ---------------------*/
