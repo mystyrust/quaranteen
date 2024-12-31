@@ -284,7 +284,7 @@ details.texttime.call-status summary {
     height: 41px;
     width: 530px;
     display: block;
-    margin: 0 auto;
+    margin: 0px auto;
     margin-top: -25px;
     padding-right: 0px;
 }
@@ -293,7 +293,7 @@ details.texttime.call-status summary {
     height: 41px;
     width: 530px;
     display: block;
-    margin: 0 auto;
+    margin: 0px auto;
     margin-bottom: -20px;
     padding-right: 0px;
 }
@@ -774,7 +774,7 @@ summary.checkbox {
   .forum-cont-outer {
     max-width: 700px;
     min-width: 250px;
-    margin: 20px auto;
+    margin: 50px auto;
   }
 
     /* Hide scrollbar for Chrome, Safari and Opera */
@@ -1391,7 +1391,7 @@ summary.checkbox {
   }
 
   .yt-profile1 {
-    background-image: url(https://i.imgur.com/7wS9Bxb.png);
+    background-image: url(https://i.imgur.com/vefmh9o.png);
   }
 
   .yt-profile2 {
@@ -1801,7 +1801,7 @@ summary.checkbox {
   .yt-container {
     max-width: 550px;
     min-width: 290px;
-    margin: 30px auto;
+    margin: 100px auto;
     display: block;
   }
 
@@ -1911,7 +1911,7 @@ summary.checkbox {
     max-width: 500px;
     font-family: Gibson,Helvetica Neue,HelveticaNeue,Helvetica,Arial,sans-serif;
     display: table;
-    margin: 30px auto;
+    margin: 50px auto;
     /* color: #444444; */
     /* margin: 10px 0; */
   }
@@ -2343,7 +2343,7 @@ summary.checkbox {
 .tw {
     max-width: 500px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    margin: 20px auto;
+    margin: 50px auto;
     border-style: solid;
     border-width: .1em;
     border-color: lightgray;
@@ -2602,6 +2602,11 @@ hidden when the defails is open.
   /* max-width: 270px !important; */
   opacity: 0.85;
   margin: 20px auto;
+}
+
+.announce-div:not(.timeline)
+{
+  margin: 50px auto;
 }
 
 .announce-div img {
@@ -3620,7 +3625,7 @@ hidden when the defails is open.
   max-width: 600px;
   min-width: 260px;
   background: linear-gradient(to bottom,#FFFFFF 24px,#00b0d7 1px);
-  margin: 30px auto;
+  margin: 100px auto;
   background-size: 100% 25px;
   position: relative;
   /* overflow: hidden; */
