@@ -1916,6 +1916,25 @@ summary.checkbox {
     /* margin: 10px 0; */
   }
 
+.tungle .twVerified {
+    line-height: normal;
+}
+
+.twVerified {
+    position: relative;
+    bottom: 9px;
+    display: inline-block;
+    font-weight: normal;
+    text-align: center;
+    font-size: 10px;
+    width: 15px;
+    height: 15px;
+    margin-left: 0.3em;
+    background-color: #1DA1F2;
+    color: #fff;
+    border-radius: 50%;
+}
+
   .tungledate {
     float: right;
     padding-right: 20px;
@@ -2372,6 +2391,7 @@ summary.checkbox {
     position: relative;
     top: 0.1em;
     content: url("https://i.imgur.com/2oTuVdz.png");
+    filter: drop-shadow(1px 1px 0px white);
   }
   
 .tw-post {
@@ -2555,7 +2575,7 @@ hidden when the defails is open.
 .timeline-taper img {
   width: 30px;
   height: 200px;
-  filter: drop-shadow(4px 0px 0px white) drop-shadow(-4px 0px 0px white);
+  filter: drop-shadow(1px 1px 0px white) drop-shadow(-1px -1px 0px white);
   margin-bottom: -6px;
 }
 
