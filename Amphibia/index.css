@@ -435,6 +435,12 @@ details.texttime.call-status summary {
 
 
   }
+
+  .email-sign {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+    display: inline-flex;
+  }
   
    .ebody {
     /* width: 66%; */
@@ -872,6 +878,7 @@ summary.checkbox {
     left: -20px;
     font-size: 30px;
     top: 3px;
+    cursor: pointer;
 }
 
 .postCONTENT {
@@ -1501,8 +1508,8 @@ summary.checkbox {
     float: right;
   }
 
-  p.margin-0 {
-    margin: 0px;
+  .margin-0 {
+    margin: 0px !important;
   }
   
   .yt-stats{
@@ -1908,6 +1915,13 @@ summary.checkbox {
     /* color: #444444; */
     /* margin: 10px 0; */
   }
+
+  .tungledate {
+    float: right;
+    padding-right: 20px;
+    font-size: 12px;
+    opacity: 0.5;
+  }
   
   .tunglebody {
     /* background-color: #ffffff; */
@@ -2295,6 +2309,11 @@ summary.checkbox {
   word-wrap: break-word;
 }
 
+.reblogtext img {
+  margin: 5px auto;
+  width: 100%;
+}
+
 .reblogtext a {
   color: #444444;
 }
@@ -2528,6 +2547,34 @@ hidden when the defails is open.
     line-height: 1.5;
   } */
 
+.timeline-taper  {
+  margin: -20px auto;
+  width: 30px;
+}
+
+.timeline-taper img {
+  width: 30px;
+  height: 200px;
+  filter: drop-shadow(4px 0px 0px white) drop-shadow(-4px 0px 0px white);
+  margin-bottom: -6px;
+}
+
+.taper-top 
+{
+  margin-top: 50px;
+}
+
+.taper-bottom
+{
+  transform: rotate(180deg);
+  margin-bottom: 50px;
+}
+
+.timeline {
+  position: relative;
+  min-width: unset !important;
+}
+
 .announce-div
 {
   border-radius: 10px;
@@ -2537,11 +2584,27 @@ hidden when the defails is open.
   margin: 20px auto;
 }
 
+.announce-div img {
+  max-width: none;
+}
+
 .announce-p {
     display: inline-block;
     margin: auto;
     padding: 10px;
     word-wrap: break-word;
+}
+
+.announce-date {
+  font-size: 30px;
+}
+
+.announce-medium {
+  font-size: 20px;
+}
+
+.font-small {
+  font-size: 10px;
 }
 
 .convo-container {
@@ -3238,6 +3301,10 @@ hidden when the defails is open.
 
   .sticky6 p {
     margin: 0;
+  }
+
+  .move-sticky {
+    margin: -25px;
   }
 
   .move-sticky summary img.move-left {
@@ -3994,6 +4061,6 @@ table
 
 .ch-restore[open] .ch-hist-clear-open,
 .ch-restore:not([open]) .ch-hist-clear {
-  display: inilne;
+  display: inline;
 }
 /* --------------------------------------------------------------- */
