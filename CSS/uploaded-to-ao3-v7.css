@@ -387,7 +387,7 @@ span.messagebody  {
   /* color: #999999; */
   font-size: .75em;
   padding-bottom: .6em;
-  padding-top: 0;
+  padding-top: 10px;
   margin-left: .75em;
   margin-bottom: -2.4em;
   text-align: left;
@@ -1740,9 +1740,9 @@ position: relative;
 /* transform: rotate(45deg); */
 }
 
-/* .img-holder.vacc {
-  filter: drop-shadow(5px 5px 1px #fff);
-} */
+.img-holder.vacc {
+  filter: drop-shadow(3px 3px 0px white) drop-shadow(-3px -3px 0px white);
+}
 
 .img-text {
 margin: 0;
