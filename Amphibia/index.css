@@ -3454,7 +3454,6 @@ hidden when the defails is open.
 ):has(
     details:not([open]) ~ details:not([open]) ~ details:not([open]) ~ details:not([open]) ~ details:not([open])
 ) .snap-cont-inner {
-    /* transform: translateY(-502px); */
     transform: translateY(-500px);
 }
 
@@ -3462,7 +3461,6 @@ hidden when the defails is open.
 ):has(
     details:not([open]) ~ details:not([open]) ~ details:not([open]) ~ details:not([open])
 ) .snap-cont-inner {
-    /* transform: translateY(-1004px); */
     transform: translateY(-1000px);
 }
 
@@ -3470,7 +3468,6 @@ hidden when the defails is open.
 ):has(
     details:not([open]) ~ details:not([open]) ~ details:not([open])
 ) .snap-cont-inner {
-    /* transform: translateY(-1506px); */
     transform: translateY(-1500px);
 }
 
@@ -3478,7 +3475,6 @@ hidden when the defails is open.
 ):has(
     details:not([open]) ~ details:not([open])
 ) .snap-cont-inner {
-    /* transform: translateY(-2008px); */
     transform: translateY(-2000px);
 }
 
@@ -3486,13 +3482,11 @@ hidden when the defails is open.
 ):has(
     details:not([open]) 
 ) .snap-cont-inner {
-    /* transform: translateY(-2510px); */
     transform: translateY(-2500px);
 }
 
 .snap-cont-outer:has(details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] ~ details[open] 
 ) .snap-cont-inner {
-    /* transform: translateY(-3012px); */
     transform: translateY(-3000px);
 }
 /* ---------------------------------------------------------------*/
@@ -3569,11 +3563,13 @@ hidden when the defails is open.
     position: relative;
     height: 500px !important;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .snap-img {
     width: 100%;
     height: 500px;
+    overflow: hidden;
     /* margin-bottom: -6px; */
 }
 
