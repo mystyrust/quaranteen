@@ -2,6 +2,10 @@
     overflow: hidden;
 }
 
+#work_endnotes details {
+  cursor: pointer;
+}
+
 /* .userstuff p, .userstuff details {
   margin: 1.286em auto;
   padding: 0;
