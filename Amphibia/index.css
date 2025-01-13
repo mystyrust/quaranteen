@@ -2,7 +2,7 @@
     overflow: hidden;
 }
 
-#work_endnotes details {
+#work_endnotes details summary {
   cursor: pointer;
 }
 
@@ -156,7 +156,7 @@ details.texttime.call-status summary {
   .text {
   float: left;
   color: black;
-  margin: 0 0 0.5em;
+  margin: 0px 0px 0.5em;
   border-radius: 1em;
   padding: 0.5em 1em;
   background: #e5e5ea;
@@ -169,7 +169,7 @@ details.texttime.call-status summary {
   content: "";
   position: absolute;
   left: -.5em;
-  bottom: 0;
+  bottom: 0px;
   width: 0.5em;
   height: 1em;
   border-right: 0.5em solid #e5e5ea;
@@ -179,7 +179,7 @@ details.texttime.call-status summary {
 .breply {
   float: right;
   color: #FFFFFF;
-  margin: 0 0 0.5em;
+  margin: 0px 0px 0.5em;
   border-radius: 1em;
   padding: 0.5em 1em;
   background: #1289fe;
@@ -192,7 +192,7 @@ details.texttime.call-status summary {
   content: "";
   position: absolute;
   right: -0.5em;
-  bottom: 0;
+  bottom: 0px;
   width: 0.5em;
   height: 1em;
   border-left: 0.5em solid #1289fe;
@@ -225,7 +225,7 @@ details.texttime.call-status summary {
   color: #7B7C80;
   font-size: .75em;
   padding-bottom: .5em;
-  padding-top: 0;
+  padding-top: 0px;
   margin-left: .5em;
   margin-bottom: -2.5em;
   text-align: left;
@@ -240,8 +240,8 @@ details.texttime.call-status summary {
   float: right;
   position: relative;
   clear: both;
-  margin: -.75em -1.25em 0.5em 0;
-  padding: 0 1em 0.5em;
+  margin: -.75em -1.25em 0.5em 0em;
+  padding: 0px 1em 0.5em;
 }
   
 
@@ -255,9 +255,9 @@ details.texttime.call-status summary {
   position: relative;
   /* width: 65%; */
   max-width: 700px;
-  margin: 0 auto 25px;
+  margin: 0px auto 25px;
   display: block;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), inset 0px 0px 5px 0px #cfcfcf;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), inset 0px 0px 5px 0px #cfcfcf;
 }
 
 .letter-bigger-text
@@ -280,9 +280,9 @@ details.texttime.call-status summary {
     color: #000;
     padding: 15px;
     max-width: 500px;
-    margin: 0 auto 25px;
+    margin: 0px auto 25px;
     display: block;
-    box-shadow: 0 0px 1px grey, 0 0px 1px grey;
+    box-shadow: 0px 0px 1px grey, 0px 0px 1px grey;
 }
 
 .bottom-rip {
@@ -354,7 +354,7 @@ details.texttime.call-status summary {
 /* La_Temperanza email  https://archiveofourown.org/works/7953412 */
 .ewindow {
     text-align: justify;
-    margin: 0 auto 40px auto;
+    margin: 0px auto 40px auto;
     max-width: 600px;
     min-width: 250px;
   }
@@ -393,7 +393,7 @@ details.texttime.call-status summary {
     height: 1.5em;
   /* overflow: hidden; */
     /* text-overflow: clip; */
-    margin: 0 auto;
+    margin: 0px auto;
     border: 1px solid #cfcfcf;
     border-bottom: none;
   }
@@ -404,7 +404,7 @@ details.texttime.call-status summary {
     position: relative;
     float: left;
     font-weight: bold;
-    padding: 0 3px;
+    padding: 0px 3px;
     width: 85%;
   }
   
@@ -436,7 +436,7 @@ details.texttime.call-status summary {
     /* color: #000000;
     background-color: #FFFFFF; */
     /* text-overflow: clip; */
-    margin: 0 auto;
+    margin: 0px auto;
 
 
   }
@@ -461,7 +461,7 @@ details.texttime.call-status summary {
     border-color: #cfcfcf;
     border-style: solid;
     border-width: 1px;
-    margin: 0 auto;
+    margin: 0px auto;
   }
   
    .ebody::-webkit-scrollbar {
@@ -494,14 +494,14 @@ details.texttime.call-status summary {
     border-style: solid;
     border-width: 1px;
     border-top: none;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-top: 0px;
+    margin-bottom: 0px;
     /* width: 66%; */
     padding: 2px;
   height: 1.5em;
   /* overflow: hidden; */
     text-overflow: clip;
-    margin: 0 auto;
+    margin: 0px auto;
 
   }
   
@@ -510,7 +510,7 @@ details.texttime.call-status summary {
     display: inline-block;
     position: relative;
     float: left;
-    padding: 0 3px;
+    padding: 0px 3px;
     cursor: pointer;
   }
 
@@ -662,7 +662,7 @@ details.texttime.call-status summary {
   .dental-xray {
     width: 270px;
     position: absolute;
-    top: 0;
+    top: 0px;
     right: 17px;
     transform: rotate(3deg);
     -webkit-transform: rotate(3deg);
@@ -856,8 +856,8 @@ summary.checkbox {
     float: left;
     font-family: sans-serif;
     /* width: 80%; */
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 0px;
+    padding-bottom: 0px;
     padding-left: 2%;
     padding-right: 2%;
     text-align: left;
@@ -914,8 +914,8 @@ summary.checkbox {
  .quoteinwhite {
     float: left;
     /* width: 96%; */
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 0px;
+    padding-bottom: 0px;
     padding-left: 2%;
     padding-right: 2%;
     text-align: left;
@@ -939,8 +939,8 @@ summary.checkbox {
 .postMOD {
     float: left;
     /* width: 80%; */
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 0px;
+    padding-bottom: 0px;
     padding-left: 2%;
     padding-right: 2%;
     text-align: justify;
@@ -967,8 +967,8 @@ summary.checkbox {
     position: absolute;
     width: 100%;
     height: 100%;
-    right: 0;
-    top: 0;
+    right: 0px;
+    top: 0px;
     background-image: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
   }
   
@@ -1036,7 +1036,7 @@ summary.checkbox {
     color: white;
     font-weight:bold;
     padding: 7px;
-    margin: 0 5px -5px 5px;
+    margin: 0px 5px -5px 5px;
     cursor: pointer;
   }
   .rd-signup-box {
@@ -1066,7 +1066,7 @@ summary.checkbox {
   .rd-header{
     font-weight:bold;
     font-size:1.1em;
-    margin:-5px 0 -5px 0;
+    margin: -5px 0px -5px 0px;
   }
   .rd-dot { /*idx if i wanna go down this path*/
     height: 20px;
@@ -1114,12 +1114,12 @@ summary.checkbox {
   }
   .rd-down-arrow {
     border: solid black;
-    border-width: 0 2px 2px 0;
+    border-width: 0px 2px 2px 0px;
     display: inline-block;
     padding: 2.5px;
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
-    margin: 0px 0 2px 7px;
+    margin: 0px 0px 2px 7px;
   }
   .rd-small{
     font-size: .8em;
@@ -1134,13 +1134,13 @@ summary.checkbox {
 
   .rd-vr0 {
     display: table;
-    padding: 10px 0 0px 30px;
+    padding: 10px 0px 0px 30px;
     border-bottom: 1px solid #EEEFF1;
   }
   .rd-vr1 {
     display: table;
     padding: 0px 0px 0px 10px;
-    margin: 0px 0 5px 5px;
+    margin: 0px 0px 5px 5px;
     border-left: 1px solid #EEEFF1;
   }
   .rd-vr2 {
@@ -1152,7 +1152,7 @@ summary.checkbox {
   .rd-vr-not {
     display: table;
     padding: 0px 0px 0px 0px;
-    margin: 0px 0 5px 0;
+    margin: 0px 0px 5px 0px;
   }
   .rd-gray-text {
     /* color: #657685; */
@@ -1163,7 +1163,7 @@ summary.checkbox {
     color: #787C7F;
     font-size: .8em;
     padding: 12px 5px 3px 5px;
-    margin-bottom:5px;
+    margin-bottom: 5px;
     border-radius: 16px;
     border: 1px solid #EEEFF1;
     /* cursor: pointer; */
@@ -1362,7 +1362,7 @@ summary.checkbox {
   
   
   .shift-zero{
-  margin-top:0;
+  margin-top:0px;
   }
   .shift-up{
   margin-top:-15px;
@@ -1694,7 +1694,7 @@ summary.checkbox {
     position: absolute;
     /* width: 100px; */
     opacity: 0;
-    left: 0;
+    left: 0px;
   }
     
   .skip-toggle {
@@ -1838,7 +1838,7 @@ summary.checkbox {
 
   .yt-cont-outer {
     max-width: 500px;
-    margin: 0 auto;
+    margin: 0px auto;
   }
 
   .yt-border-top-bottom-gray.clear2 p ,
@@ -1956,7 +1956,7 @@ summary.checkbox {
     float: left;
     max-width: 100%;
     position: relative;
-    padding: 15px 0 0;
+    padding: 15px 0px 0px;
   }
 
   .tunglebody p {
@@ -2185,8 +2185,8 @@ summary.checkbox {
   .tungleasktip {
     display: inline;
     position: absolute;
-    width: 0;
-    height: 0;
+    width: 0px;
+    height: 0px;
     border-top: 8px solid transparent;
     border-bottom: 8px solid transparent;
     border-left: 8px solid #cccccc;
@@ -2560,7 +2560,7 @@ hidden when the defails is open.
   }
   
 .tw p {
-    margin: 0;
+    margin: 0px;
   }
 /* --------------------------------------------------------------- */
 
@@ -2653,7 +2653,7 @@ hidden when the defails is open.
   p.convo-break {
     display: flex;
     width: 100%;
-    margin: 0;
+    margin: 0px;
   }
   
   p.convo-pad {
@@ -2699,7 +2699,7 @@ hidden when the defails is open.
   content: '';
   border: 10px solid transparent;
   border-right-color: #8f8e8f;
-  border-left: 0;
+  border-left: 0px;
   position: absolute;
   left: -10px;
   top: 50%;
@@ -2738,7 +2738,7 @@ hidden when the defails is open.
     content: '';
     border: 10px solid transparent;
     border-left-color: #8f8e8f;
-    border-right: 0;
+    border-right: 0px;
     position: absolute;
     right: -10px;
     top: 50%;
@@ -2789,7 +2789,7 @@ hidden when the defails is open.
   }
   
   .dia-desc > p {
-    margin: 0;
+    margin: 0px;
   }
   
   .white {
@@ -2975,7 +2975,7 @@ hidden when the defails is open.
 
   .polaroid-cont-outer {
     max-width: 500px;
-    margin: 0 auto;
+    margin: 0px auto;
   }
 
   .polaroid-cont-inner2
@@ -3331,7 +3331,7 @@ hidden when the defails is open.
   }
 
   .sticky6 p {
-    margin: 0;
+    margin: 0px;
   }
 
   .move-sticky {
@@ -3652,7 +3652,7 @@ hidden when the defails is open.
   display: block;
   position: absolute;
   z-index: 1;
-  top: 0;
+  top: 0px;
   left: 10%;
   height: 100%;
   width: 1px;
@@ -3669,16 +3669,16 @@ hidden when the defails is open.
   background: #FFFFFF;
   background-size: 100%;
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0px;
+  left: 0px;
+  right: 0px;
   border-radius: 5px;
 }
 
 .titletext {
   font-size: 15px;
   line-height: 15px;
-  padding-left: 0;
+  padding-left: 0px;
   text-align: center;
   margin-left: 8%;
   margin-top: 84px;
@@ -3786,8 +3786,8 @@ hidden when the defails is open.
 /*chrome history*/
 div.ch-table p
 {
-  margin-top:0;
-  margin-bottom:0;
+  margin-top:0px;
+  margin-bottom:0px;
 }
 
 .ch-header{
@@ -3853,7 +3853,7 @@ div.ch-table p
   /* width: 100%; */
   /* height: 21px; */
   border: 1px solid gray;
-  /* margin: 0px 0 0px 0px; */
+  /* margin: 0px 0px 0px 0px; */
   /* padding-left: 10px; */
   /* margin-bottom: -10px; */
 }
@@ -3897,7 +3897,7 @@ div.ch-table p
 }
 
 .ch-x{
-  margin:0 10px 0 5px;
+  margin:0px 10px 0px 5px;
   width:20px;
 }
 
