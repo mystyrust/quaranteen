@@ -1187,10 +1187,28 @@ summary.checkbox {
     display: none;
   }
 
+  .default-vote,
   details.rd-up-cont:not([open]) .unliked,
   details.rd-down-cont:not([open]) .unliked,
   details.rd-up-cont[open] .liked,
   details.rd-down-cont[open] .liked {
+    display: inline-block;
+  }
+
+  /* toggle voter count on up / down */
+  .rd-bubble:has(.rd-up-cont:not([open])):has(.rd-down-cont:not([open])) .up-vote,
+  .rd-bubble:has(.rd-up-cont:not([open])):has(.rd-down-cont:not([open])) .down-vote,
+  .rd-bubble:has(.rd-up-cont[open]) .down-vote,
+  .rd-bubble:has(.rd-up-cont[open]) .default-vote,
+  .rd-bubble:has(.rd-down-cont[open]) .up-vote,
+  .rd-bubble:has(.rd-down-cont[open]) .default-vote
+  {
+    display: none;
+  }
+
+  .rd-bubble:has(.rd-up-cont[open]) .up-vote,
+  .rd-bubble:has(.rd-down-cont[open]) .down-vote 
+  {
     display: inline-block;
   }
 
@@ -2058,7 +2076,7 @@ summary.checkbox {
 
   .tunglenotes-cont:has(details:not([open])) .unliked,
   .tunglenotes-cont:has(details[open]) .liked {
-    display: block;
+    display: inline;
   }
 
   .tungleimg {
