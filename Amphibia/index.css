@@ -2388,6 +2388,12 @@ summary.checkbox {
 {
   border-bottom: solid transparent 30px;
 } 
+
+tr.tw-border-pad + tr td.tw-td-icon,
+tr.tw-border-pad + tr td.tw-post
+{
+  padding-top: 10px;
+}
   
 .tw-td-icon {
     width: 45px;
