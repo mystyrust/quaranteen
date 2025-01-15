@@ -89,6 +89,7 @@
     top: 92px;
     margin-left: 54px;
     opacity: 0.5;
+    z-index: 1;
 }
 
 .phone-status {
@@ -98,6 +99,7 @@
     position: absolute;
     top: 92px;
     margin-left: 54px;
+    z-index: 1;
 }
 
 .phone-time {
@@ -111,7 +113,6 @@
     width: 18px;
     display: inline-flex;
     float: right;
-    /* filter: invert(1); */
     margin-right: 28px;
 }
 
@@ -190,21 +191,11 @@
     height: 456px;
     padding-right: 100px;
     transition: all 1s;
+    padding-top: 15px;
 }
 
 .screen-container:last-of-type {
     padding-right: 0px;
-}
-
-details[open] div.app-open {
-    /* display: none; */
-    /* background-color: red;
-    position: absolute;
-    height: 456px;
-    width: 257px;
-    top: 0px;
-    left: 0px;
-    overflow: scroll; */
 }
 
 .app-open {
@@ -225,14 +216,13 @@ details[open] div.app-open {
 }
 
 .phone-container:has(.app-icon.app-youtube:active) .app-screens-container .app-open.app-youtube ,
-/* .screen-buttons:has(.app-icon:active) ~ .app-screens-container .app-open , */
 .phone-container:has(.app-icon.app-chrome:active) .app-screens-container .app-open.app-chrome  {
     display: block !important;
     height: 456px;
     width: 257px;
     opacity: 1;
     /* z-index: 4; */
-    transition: all 0.05s;
+    transition: all 0s;
 }
 
 /* close apps */
@@ -250,18 +240,14 @@ details[open] div.app-open {
     position: absolute;
     margin-left: 162px;
     margin-top: 555px;
-   
     border-radius: 20px;
     background-color: greenyellow;
-    /* height: 40px;
-    width: 40px; */
     height: 0px;
     opacity: 0;
     width: 0px;
     left: -10000;
     z-index: 2;
     cursor: pointer;
-    /* display: none; */
     transition: all 0s 2147483647s;
 }
 
@@ -270,7 +256,7 @@ details[open] div.app-open {
     display: block !important;
     opacity: 1;
     /* z-index: 4; */
-    transition: all 0.05s;
+    transition: all 0s;
     height: 40px;
     width: 40px;
     left: 0;
@@ -334,7 +320,7 @@ details[open].app-tracker summary {
     z-index: 4;
 }
 
-/* - move screens over ---*/
+/*--- move screens over ---*/
 .chevron {
     background-repeat: no-repeat;
     background-size: 30px 30px;
@@ -346,28 +332,23 @@ details[open].app-tracker summary {
 }
 
 .chevron-left {
-    background-image: url("https://img.icons8.com/ios-glyphs/30/chevron-left.png");
-    background-color: pink;
-  }
-  
-  .chevron-right {
-    background-image: url("https://img.icons8.com/ios-glyphs/30/chevron-right.png");
-    background-color: orange;
-  }
+  background-image: url("https://img.icons8.com/ios-glyphs/30/chevron-left.png");
+  background-color: pink;
+}
 
-  details[open] .chevron-right ~ .chevron-left {
-    left: 0;
-  }
+.chevron-right {
+  background-image: url("https://img.icons8.com/ios-glyphs/30/chevron-right.png");
+  background-color: orange;
+}
 
-  details[open] > summary.chevron-right {
-    opacity: 0;
-    z-index: 3;
-    left: 0
-  }
+details[open] .chevron-right ~ .chevron-left {
+  left: 4px;
+}
 
-/* screen1 active by default */
-.scroller div.scroll-to-screen1 {
-    background: white;
+details[open] > summary.chevron-right {
+  opacity: 0;
+  z-index: 3;
+  left: 4px;
 }
 
 /* move 1 screen over, to screen 2 */
@@ -379,15 +360,18 @@ details[open].app-tracker summary {
 /* move 2 screens over, to screen 3 */
 .phone-container:has(.scroller details[open] ~ details[open]) .screen-container
 {
+    /* 1 screen = 358, 2 screens = 716 */
     transform: translateX(-716px);
 }
 
+.scroller div.scroll-to-screen1, /* screen1 active by default */
 .scroller:has(details[open]) div.scroll-to-screen2, /* screen2 active */
 .scroller:has(details[open] ~ details[open]) .scroll-to-screen3 /* screen3 active */
 {
     background: white;
 }
-.scroller:has( details[open]) div.scroll-to-screen1, /* screen2 active, prev screen1 inactive */
+
+.scroller:has(details[open]) div.scroll-to-screen1, /* screen2 active, prev screen1 inactive */
 .scroller:has(details[open] ~ details[open]) .scroll-to-screen2 /* screen3 active, prev screen2 inactive */
 {
     background: slategray;
