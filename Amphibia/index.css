@@ -2386,18 +2386,21 @@ summary.checkbox {
 }
 .tw-border-pad 
 {
-  border-bottom: solid transparent 30px;
+  /* border-bottom: solid transparent 30px; */
+  border-bottom: solid 2px rgb(207, 217, 222);
 } 
 
 tr.tw-border-pad + tr td.tw-td-icon,
 tr.tw-border-pad + tr td.tw-post
 {
-  padding-top: 10px;
+  padding-top: 13px;
+  /* border-top: solid thin rgb(207, 217, 222); */
 }
   
 .tw-td-icon {
     width: 45px;
     height: 45px;
+    padding: 0px 4px;
   }
   
 .tw-td-thread {
@@ -2426,6 +2429,7 @@ tr.tw-border-pad + tr td.tw-post
 .tw-post {
     overflow: hidden;
     padding-left: 0.5em;
+    /* display: inherit; */
   }
   
 .tw-post-meta-user {
