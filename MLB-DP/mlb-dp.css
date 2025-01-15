@@ -13,9 +13,12 @@ details.fic-steps[open] > summary ,
     display: none;
   }
 
-.fic-steps, .steps-result,
+.fic-steps, .steps-result {
+   display: none;
+}
+
 #workskin:has(details.fic-spoiler[open]) .fic-steps {
- display: none;
+    display: none !important;
 }
 
 #workskin:has(details.fic-spoiler[open]) .steps-result {
@@ -154,7 +157,11 @@ div.inline p {
 
 details.fic-spoiler {
     margin: 0px;
-    display: inline;
+    display: inline-flex;
+}
+
+.notes.modules:not(.end) .userstuff {
+    font-size: 14px;
 }
 
 .fic-spoiler summary {
