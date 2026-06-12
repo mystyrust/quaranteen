@@ -125,31 +125,3 @@
 {  
   position: unset;
 }
-
-/* attempts to work around the #work-skin container which restricts overflow hacks. 
-added this div in ./phone.html
-<!-- <div class="tab secondary logged-in white-overflow white-overflow-top"><p> &nbsp;</p></div> -->
-+ some extra css rules to make it work.
-(no longer needed but kept for future use) 
-*/ 
-
-/* #workskin:not(:has(:target)) .white-overflow-top {
-  display: block;
-}
-
-.white-overflow-top {
-    top: -130em;
-    height: 130em;
-    z-index: 31;
-}
-.secondary {
-    color: unset;
-} */
-
-#workskin:has(#chapter-1), #workskin:has(#chapter-2) 
-{
-  overflow: inherit;
-  position: revert;
-  height: 1000em;
-  opacity: 10;
-}
