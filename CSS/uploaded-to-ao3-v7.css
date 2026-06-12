@@ -3574,3 +3574,8 @@ figure {
   height: 1000em;
   opacity: 10;
 }
+
+#workskin:has(#chapter-6):has(:target[name='vent'])
+{
+  height: revert;
+}
