@@ -2466,7 +2466,7 @@ display: block;
 text-align: right;
 float: right;
 display: block;
-margin: 19px 0;
+margin: 19px 30px 19px 0px;
 }
 
 a.button-end {
@@ -3565,4 +3565,12 @@ iframe { margin: 0 auto; display:block; }
 
 figure {
   margin: 0px;
+}
+
+#workskin:has(#chapter-6)
+{
+  overflow: inherit;
+  position: revert;
+  height: 1000em;
+  opacity: 10;
 }
