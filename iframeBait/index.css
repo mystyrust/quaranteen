@@ -152,4 +152,5 @@ added this div in ./phone.html
   position: revert;
   height: 1000em;
   opacity: 10;
+  margin-top: -400px;
 }
